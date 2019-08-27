@@ -3,7 +3,7 @@ import VueScrollReveal from 'vue-scroll-reveal'
 
 Vue.use(VueScrollReveal, {
   class: 'v-scroll-reveal',
-  duration: 500,
+  duration: 2000,
   scale: 1,
-  distance: '0px'
+  distance: '-10px'
 })

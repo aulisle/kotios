@@ -44,3 +44,9 @@ body .md-button.md-accent.alt.md-raised:not(:disabled) {
   text-align: center;
   margin-top: 40px;
 }
+
+body {
+  .md-theme-default.md-button.md-raised:not(:disabled).md-primary {
+    color: $color-text-alt;
+  }
+}

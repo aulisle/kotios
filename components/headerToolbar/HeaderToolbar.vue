@@ -81,7 +81,7 @@ export default {
 
     routes() {
       return [
-        { name: 'projects', exact: false },
+        { name: 'search', exact: false },
         { name: 'what-is', exact: false },
         { name: 'add-project', exact: false }
       ]

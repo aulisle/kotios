@@ -1,7 +1,13 @@
 <template>
   <div class="featured">
-    <v-card v-for="item in featured" :key="item._id" class="featured-card">
-      <nuxt-link :to="{ name: 'projects-id', params: { id: item.projectId } }">
+    <v-card
+      v-for="item in featured"
+      :key="item._id"
+      v-scroll-reveal
+      class="featured-card"
+      :elevation="3"
+    >
+      <nuxt-link :to="{ name: 'project-id', params: { id: item.projectId } }">
         <v-img :src="item.previewImageUrl" class="white--text">
           <div class="fill-height featured-text">
             <v-card-title>
@@ -38,6 +44,7 @@ $featured-margin-between: 20px;
 
 .featured-card {
   margin-bottom: #{$featured-margin-between};
+  overflow: hidden;
 }
 
 .featured-card:nth-child(odd) {
@@ -75,8 +82,9 @@ $featured-margin-between: 20px;
   background: linear-gradient(
     180deg,
     rgba(2, 0, 36, 0) 0%,
-    rgba(0, 0, 0, 0.5) 70%,
-    rgba(0, 0, 0, 0.5) 100%
+    rgba(2, 0, 36, 0) 20%,
+    rgba(0, 0, 0, 0.7) 60%,
+    rgba(0, 0, 0, 0.7) 100%
   );
 }
 </style>

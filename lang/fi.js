@@ -12,8 +12,9 @@ const translations = {
     'manage-users-edit': 'Muokkaa käyttäjätiliä',
     'data-privacy': 'Tietosuojakäytäntö',
     'what-is': 'Asukasläheisyys',
-    projects: 'Hankkeet',
-    'add-project': 'Jätä ilmoitus'
+    search: 'Hankkeet',
+    'add-project': 'Jätä ilmoitus',
+    'for-partners': 'Kumppaneille'
   },
   settings: {
     'change-password': 'Vaihda salasana',

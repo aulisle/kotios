@@ -164,17 +164,7 @@ hr {
     font-size: 36px;
   }
 
-  a,
-  a:visited {
-    margin-top: 20px;
-    color: $color-text-alt !important;
-    text-transform: uppercase;
-    font-family: $font-stack-button;
-    letter-spacing: $tracking-wide;
-  }
-
   a:hover {
-    color: $color-text-alt-hover !important;
     text-decoration: none !important;
   }
 }

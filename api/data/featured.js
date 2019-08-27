@@ -7,7 +7,7 @@ const createItem = idx => {
     contentType: 'Ryhmähaku',
     description:
       'Torppala järjestää tontinluovutuskilpailun. Kaarinan ja Turun rajalla, ekologinen kylä Itämeren rannalla. ',
-    previewImageUrl: '/torppala.jpg',
+    previewImageUrl: `/torppala/torppala${idx % 2}.jpg`,
     projectId: '0'
   }
 }

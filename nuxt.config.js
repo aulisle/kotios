@@ -24,6 +24,13 @@ export default {
         rel: 'stylesheet',
         href: '//fonts.googleapis.com/icon?family=Material+Icons'
       }
+    ],
+    script: [
+      {
+        // TODO: Only FA brands!!
+        src: 'https://kit.fontawesome.com/ad4e228f5e.js',
+        defer: true
+      }
     ]
   },
 
@@ -89,6 +96,7 @@ export default {
     '~/plugins/filters.js',
     '~/plugins/i18n.js',
     '~/plugins/vuelidate.js',
+    { src: '~/plugins/socialSharing.js', ssr: false },
     { src: '~/plugins/directives.js', ssr: false }
   ],
 
