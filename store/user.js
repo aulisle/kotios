@@ -42,11 +42,15 @@ export const actions = {
       })
   },
 
-  changePassword({ commit }, { $axios, oldPassword, password, passwordAgain }) {
+  changePassword(
+    { commit, rootState },
+    { $axios, oldPassword, password, passwordAgain }
+  ) {
     return $axios
       .patch('/api/user', { oldPassword, password, passwordAgain })
       .then(() => {
         commit('setWorking', false)
+        changeState(commit, rootState, { canLocalLogin: true })
       })
       .catch(err => {
         commit('setWorking', false)

@@ -36,7 +36,6 @@ import { createEmailErrors } from '@/plugins/vuelidate'
 import { required, email } from 'vuelidate/lib/validators'
 
 export default {
-  layout: 'guest',
   auth: 'guest',
 
   head() {
@@ -66,7 +65,7 @@ export default {
 
   methods: {
     requestReset() {
-      this.$v.touch()
+      this.$v.$touch()
 
       if (this.$v.$invalid) {
         return

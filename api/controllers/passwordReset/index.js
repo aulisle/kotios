@@ -118,7 +118,7 @@ const controller = {
    * Sends a password reset token to the user's if
    * the user has already verified their email
    */
-  requestReset: async (req, res) => {
+  requestReset: async (req, res, next) => {
     const { email } = req.body
     if (!email || !validator.isEmail(email)) {
       return res.status(422).json({
@@ -132,30 +132,37 @@ const controller = {
     addResetTokenToUser({
       email,
       isVerified: true
-    }).then(({ token, user }) => {
-      emailer.sendResetToken(user.email, token)
     })
+      .then(({ token, user }) => {
+        if (!user) {
+          return res.sendStatus(200)
+        }
 
-    res.sendStatus(200)
+        emailer.sendResetToken(user.email, token)
+        return res.sendStatus(200)
+      })
+      .catch(next)
   },
 
   /**
    * Sends another invitation to a user, if the
    * user has not yet verified their email.
    */
-  resendInvitation: async (req, res) => {
+  resendInvitation: async (req, res, next) => {
     const { userId } = req.body
     addResetTokenToUser({
       _id: userId,
       isVerified: false
     })
       .then(({ token, user }) => {
+        if (!user) {
+          return res.sendStatus(200)
+        }
+
         emailer.sendInvitation(user.email, token)
-        res.sendStatus(200)
+        return res.sendStatus(200)
       })
-      .catch(() => {
-        res.sendStatus(404)
-      })
+      .catch(next)
   },
 
   /**

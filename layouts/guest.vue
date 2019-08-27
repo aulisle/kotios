@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import HeaderToolbar from '~/components/HeaderToolbar.vue'
+import HeaderToolbar from '~/components/headerToolbar/HeaderToolbar.vue'
 import FooterToolbar from '~/components/Footer.vue'
 import CookieConsent from '~/components/CookieConsent.vue'
 

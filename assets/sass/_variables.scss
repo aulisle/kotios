@@ -3,9 +3,9 @@ $font-stack-body: 'Lato', sans-serif;
 $font-stack-button: 'Lato', sans-serif;
 
 $color-primary: #1bb8d1;
-$color-accent: #C2185A;
+$color-accent: #edf900;
 
-$color-accent-alt: #F48FB1;
+$color-accent-alt: lighten(#edf900, 30%);
 $color-text-accent-alt: #000000;
 
 $color-text-primary: lighten(#000, 13%);

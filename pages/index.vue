@@ -11,13 +11,6 @@
         <nuxt-link :to="{ name: 'what-is' }">
           Mitä on asukasläheinen rakennuttaminen?
         </nuxt-link>
-
-        <div>
-          <base-input v-model="search" label="Kohde" />
-          <base-button class="md-raised md-primary">
-            Hae
-          </base-button>
-        </div>
       </div>
     </div>
 

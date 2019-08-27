@@ -5,7 +5,7 @@ const translations = {
     login: 'Kirjaudu sisään',
     plans: 'Oma kokoelma',
     'manage-users': 'Käyttäjähallinta',
-    account: 'Asetukset',
+    account: 'Profiili',
     activate: 'Aktivoi tilisi',
     'reset-password': 'Aseta salasana',
     'request-password-reset': 'Unohtuiko salasana?',
@@ -64,7 +64,8 @@ const translations = {
       'Mikäli tunnus on olemassa, salasanan uusimisohjeet lähetetty',
     'reset-error': 'Muutosten tallentamisessa tapahtui virhe {err}',
     'first-name': 'Etunimi',
-    'last-name': 'Sukunimi'
+    'last-name': 'Sukunimi',
+    register: 'Luo uusi tunnus'
   },
   details: {
     'details-title': 'Ratkaisut',
@@ -122,7 +123,9 @@ const translations = {
     'password-not-strong-enough': 'Salasana ei ole tarpeeksi vahva',
     'passwords-do-not-match': 'Salasanat eivät täsmää'
   },
-  'this-action-cannot-be-undone': 'Tätä toimintoa ei voi kumota'
+  'this-action-cannot-be-undone': 'Tätä toimintoa ei voi kumota',
+  'login-facebook': 'Kirjaudu Facebookilla',
+  'login-google': 'Kirjaudu Googlella'
 }
 
 export default translations

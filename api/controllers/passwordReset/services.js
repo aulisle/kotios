@@ -109,6 +109,13 @@ export const addResetTokenToUser = query => {
     .select('+passwordResetTokens')
     .exec()
     .then(user => {
+      if (!user) {
+        return {
+          token: false,
+          user: false
+        }
+      }
+
       // If adding the token to the user's data succeeded,
       // return the new token
       const newToken = user.passwordResetTokens.slice(-1)[0]

@@ -79,6 +79,7 @@
 <script>
 import SetPasswordMixin from '@/components/setPassword/SetPasswordMixin'
 import { email, required } from 'vuelidate/lib/validators'
+import { createEmailErrors } from '@/plugins/vuelidate'
 
 export default {
   mixins: [SetPasswordMixin],
@@ -108,23 +109,7 @@ export default {
 
   computed: {
     emailErrors() {
-      const errors = []
-
-      if (this.$v.email.$dirty) {
-        if (!this.$v.email.required) {
-          errors.push(
-            this.$t('errors.is-required-field', {
-              field: this.$t('email')
-            })
-          )
-        }
-
-        if (!this.$v.email.email) {
-          errors.push(this.$t('errors.invalid-email'))
-        }
-      }
-
-      return errors
+      return createEmailErrors(this.$v.email, this)
     },
 
     firstNameErrors() {

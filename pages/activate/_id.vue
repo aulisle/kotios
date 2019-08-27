@@ -7,7 +7,6 @@
 <script>
 export default {
   auth: 'guest',
-  layout: 'guest',
 
   head() {
     return {

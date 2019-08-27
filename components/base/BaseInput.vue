@@ -5,6 +5,7 @@
       :value="value"
       :placeholder="placeholder"
       :type="type"
+      :disabled="disabled"
       @input="input"
     />
     <span v-if="errors && errors.length > 0" class="md-error">
@@ -22,7 +23,8 @@ export default {
     placeholder: { type: String, default: '' },
     type: { type: String, default: 'text' },
     label: { type: String, default: '' },
-    errors: { type: Array, default: () => [] }
+    errors: { type: Array, default: () => [] },
+    disabled: { type: Boolean, default: false }
   },
 
   methods: {

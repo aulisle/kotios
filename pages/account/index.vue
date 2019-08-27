@@ -4,11 +4,7 @@
       <h1>{{ $t('routes.account') }}</h1>
       <template v-if="!working">
         <div class="form-main">
-          <base-input
-            v-model="$v.email.$model"
-            :errors="emailErrors"
-            :label="$t('settings.email')"
-          />
+          <base-input v-model="email" disabled :label="$t('settings.email')" />
 
           <h2 class="heading-no-bold">{{ $t('settings.pic') }}</h2>
           <div class="pic-wrapper">
@@ -51,15 +47,27 @@
         </div>
 
         <div>
-          Lokaali sisäänkirjautuminen:
-          <md-icon>{{ !!user.canLocalLogin ? 'check' : 'clear' }}</md-icon>
+          <v-tooltip top>
+            <template v-slot:activator="{ on }">
+              <div v-on="on">
+                Normaali sisäänkirjautuminen <md-icon>info</md-icon>
+                <md-icon>{{
+                  !!user.canLocalLogin ? 'check' : 'clear'
+                }}</md-icon>
+              </div>
+            </template>
+            <span
+              >Aseta tunnuksellesi salasana, jotta voit kirjautua sisään
+              sisäänkirjautumislomakkeella</span
+            >
+          </v-tooltip>
         </div>
         <div>
-          Google yhdistetty:
+          Google-sisäänkirjautuminen:
           <md-icon>{{ !!user.googleConnected ? 'check' : 'clear' }}</md-icon>
         </div>
         <div>
-          Facebook yhdistetty:
+          Facebook-sisäänkirjautuminen:
           <md-icon>{{ !!user.fbConnected ? 'check' : 'clear' }}</md-icon>
         </div>
       </template>
@@ -75,7 +83,6 @@
 <script>
 import { mapGetters } from 'vuex'
 import { required, email } from 'vuelidate/lib/validators'
-import { createEmailErrors } from '@/plugins/vuelidate'
 
 export default {
   middleware: 'auth',
@@ -102,10 +109,7 @@ export default {
   },
 
   computed: {
-    ...mapGetters('user', ['user']),
-    emailErrors() {
-      return createEmailErrors(this.$v.email, this)
-    }
+    ...mapGetters('user', ['user'])
   },
 
   watch: {

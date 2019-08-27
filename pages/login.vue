@@ -1,50 +1,56 @@
 <template>
   <form @submit.prevent="login">
     <md-content class="container page-content">
-      <div class="form-column">
-        <h1>{{ $t('login') }}</h1>
+      <div class="side-by-side">
+        <div class="column">
+          <h1>{{ $t('login') }}</h1>
+          <base-input
+            v-model="$v.email.$model"
+            :label="$t('email')"
+            :errors="emailErrors"
+          />
 
-        <base-input
-          v-model="$v.email.$model"
-          :label="$t('email')"
-          :errors="emailErrors"
-        />
+          <base-input
+            v-model="$v.password.$model"
+            type="password"
+            :label="$t('password')"
+            :errors="passwordErrors"
+          />
 
-        <base-input
-          v-model="$v.password.$model"
-          type="password"
-          :label="$t('password')"
-          :errors="passwordErrors"
-        />
+          <base-button
+            class="md-primary md-raised b-full-width"
+            :disabled="$v.$invalid"
+            @click.stop.prevent="login"
+          >
+            {{ $t('login-prompt') }}
+          </base-button>
 
-        <base-button
-          class="md-primary md-raised b-full-width"
-          :disabled="$v.$invalid"
-          @click.stop.prevent="login"
-        >
-          {{ $t('login-prompt') }}
-        </base-button>
-
-        <base-button
-          class="md-primary md-raised b-full-width"
-          @click.stop.prevent="facebookLogin"
-        >
-          {{ $t('login-facebook') }}
-        </base-button>
-
-        <base-button
-          class="md-secondary md-raised b-full-width"
-          @click.stop.prevent="googleLogin"
-        >
-          {{ $t('login-google') }}
-        </base-button>
-
-        <div class="login-form-return-button">
-          <nuxt-link :to="{ name: 'request-password-reset' }">
-            {{ $t('user.forgot-password') }}
-          </nuxt-link>
+          <div class="login-form-return-button">
+            <nuxt-link :to="{ name: 'request-password-reset' }">
+              {{ $t('user.forgot-password') }}
+            </nuxt-link>
+          </div>
         </div>
+        <div class="column social-login">
+          <base-button
+            class="facebook md-raised b-full-width"
+            @click.stop.prevent="facebookLogin"
+          >
+            <img src="/fb-icon.svg" class="social-icon" alt="facebook icon" />
+            {{ $t('login-facebook') }}
+          </base-button>
 
+          <base-button
+            class="google md-raised b-full-width"
+            @click.stop.prevent="googleLogin"
+          >
+            <img src="/google-icon.svg" class="social-icon" alt="google icon" />
+            {{ $t('login-google') }}
+          </base-button>
+        </div>
+      </div>
+
+      <div>
         <div class="login-form-return-button">
           <nuxt-link :to="{ name: 'register' }">
             {{ $t('user.register') }}
@@ -59,8 +65,6 @@
 import { required } from 'vuelidate/lib/validators'
 
 export default {
-  layout: 'guest',
-
   middleware: 'auth',
   auth: 'guest',
 
@@ -142,4 +146,45 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+$column-margin: 40px;
+
+.side-by-side {
+  display: flex;
+  justify-content: center;
+
+  margin-left: -$column-margin;
+  margin-right: -$column-margin;
+
+  .column {
+    max-width: 350px;
+    width: 100%;
+    margin-left: $column-margin;
+    margin-right: $column-margin;
+  }
+
+  .social-login {
+    margin-top: 55px;
+
+    button {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.social-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+.facebook {
+  background-color: #3c5a99 !important;
+  color: white !important;
+}
+
+.google {
+  background-color: white !important;
+  color: $color-text-primary !important;
+}
+</style>

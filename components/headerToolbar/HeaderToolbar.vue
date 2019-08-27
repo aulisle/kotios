@@ -8,17 +8,6 @@
       </nuxt-link>
 
       <div class="md-toolbar-section-end links">
-        <div class="lg-only link-container">
-          <nuxt-link
-            v-for="route in routes"
-            :key="route.name"
-            :to="{ name: route.name }"
-            :class="{ exact: route.exact }"
-          >
-            {{ $t(`routes.${route.name}`) }}
-          </nuxt-link>
-        </div>
-
         <base-button
           v-if="loggedIn"
           class="md-icon-button lg-hide"
@@ -26,39 +15,28 @@
         >
           <md-icon>menu</md-icon>
         </base-button>
+        <div class="link-container">
+          <nuxt-link
+            v-for="route in routes"
+            :key="route.name"
+            :to="{ name: route.name }"
+            :class="{ exact: route.exact }"
+            class="lg-only"
+          >
+            {{ $t(`routes.${route.name}`) }}
+          </nuxt-link>
 
-        <v-menu v-if="loggedIn" offset-y>
-          <template v-slot:activator="{ on }">
-            <button v-on="on">
-              <v-avatar color="blue" size="36">
-                <span class="white--text headline">
-                  {{ user.initials }}
-                </span>
-              </v-avatar>
-            </button>
-          </template>
-          <v-list>
-            <nuxt-link
-              v-for="route in personalRoutes"
-              :key="route.name"
-              :to="{ name: route.name }"
-              :class="{ exact: route.exact }"
-            >
-              <v-list-item>
-                <v-list-item-title>
-                  {{ $t(`routes.${route.name}`) }}
-                </v-list-item-title>
-              </v-list-item>
-            </nuxt-link>
-            <v-list-item @click.prevent.stop="logout">
-              <v-list-item-title>{{ $t('logout') }}</v-list-item-title>
-            </v-list-item>
-          </v-list>
-        </v-menu>
+          <nuxt-link v-if="!loggedIn" :to="{ name: 'login' }">
+            {{ $t('login') }}
+          </nuxt-link>
+        </div>
 
-        <nuxt-link v-if="!loggedIn" :to="{ name: 'login' }">
-          {{ $t('login') }}
-        </nuxt-link>
+        <account-menu
+          v-if="loggedIn"
+          :user="user"
+          :routes="personalRoutes"
+          @logout="logout"
+        />
       </div>
     </md-toolbar>
 
@@ -84,8 +62,13 @@
 
 <script>
 import { mapState } from 'vuex'
+import AccountMenu from './AccountMenu'
 
 export default {
+  components: {
+    AccountMenu
+  },
+
   data() {
     return {
       panelOpen: false
@@ -147,10 +130,6 @@ export default {
   height: 70px;
   padding: 0px $margin-page;
   background-color: white;
-}
-
-.headline {
-  font-size: 1.2rem !important;
 }
 
 .link-container {
