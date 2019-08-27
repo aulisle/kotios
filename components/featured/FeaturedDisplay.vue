@@ -1,0 +1,82 @@
+<template>
+  <div class="featured">
+    <v-card v-for="item in featured" :key="item._id" class="featured-card">
+      <nuxt-link :to="{ name: 'projects-id', params: { id: item.projectId } }">
+        <v-img :src="item.previewImageUrl" class="white--text">
+          <div class="fill-height featured-text">
+            <v-card-title>
+              {{ item.title }}
+            </v-card-title>
+            <v-card-text>
+              {{ item.contentType }}
+            </v-card-text>
+            <v-card-text>
+              {{ item.description }}
+            </v-card-text>
+          </div>
+        </v-img>
+      </nuxt-link>
+    </v-card>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    featured: { type: Array, required: true }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+$featured-margin-between: 20px;
+
+.featured {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.featured-card {
+  margin-bottom: #{$featured-margin-between};
+}
+
+.featured-card:nth-child(odd) {
+  margin-left: calc(#{$featured-margin-between} / 2);
+}
+
+.featured-card:nth-child(even) {
+  margin-right: calc(#{$featured-margin-between} / 2);
+}
+
+.featured-card:nth-child(5n + 2),
+.featured-card:nth-child(5n + 3),
+.featured-card:nth-child(5n + 4),
+.featured-card:nth-child(5n + 5) {
+  width: calc(50% - #{$featured-margin-between} / 2);
+  .v-image {
+    height: 300px;
+  }
+}
+
+.featured-card:nth-child(5n + 1) {
+  width: 100%;
+  .v-image {
+    height: 300px;
+  }
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.featured-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 0) 0%,
+    rgba(0, 0, 0, 0.5) 70%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+</style>

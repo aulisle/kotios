@@ -208,10 +208,4 @@ export default {
 .pic-wrapper {
   padding: 24px 0px;
 }
-
-.loader {
-  display: flex;
-  justify-content: center;
-  padding: 50px;
-}
 </style>

@@ -9,12 +9,12 @@
 
       <div class="md-toolbar-section-end links">
         <base-button
-          v-if="loggedIn"
           class="md-icon-button lg-hide"
           @click.prevent="togglePanel"
         >
           <md-icon>menu</md-icon>
         </base-button>
+
         <div class="link-container">
           <nuxt-link
             v-for="route in routes"
@@ -41,12 +41,7 @@
     </md-toolbar>
 
     <!-- Mobile menu -->
-    <md-drawer
-      v-if="loggedIn"
-      :md-active.sync="panelOpen"
-      md-swipeable
-      class="lg-hide"
-    >
+    <md-drawer :md-active.sync="panelOpen" md-swipeable class="lg-hide">
       <md-list>
         <md-list-item v-for="route in routes" :key="route.name">
           <nuxt-link :to="{ name: route.name }">

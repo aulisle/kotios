@@ -15,18 +15,21 @@
     </div>
 
     <div class="container">
-      <h2>Upeita hankkeita</h2>
+      <h2 class="featured-heading">Upeita hankkeita</h2>
+      <featured-display :featured="featured" />
     </div>
   </div>
 </template>
 
 <script>
-import smoothReflow from 'vue-smooth-reflow'
+import FeaturedDisplay from '@/components/featured/FeaturedDisplay'
 
 export default {
   auth: false,
 
-  mixins: [smoothReflow],
+  components: {
+    FeaturedDisplay
+  },
 
   head() {
     return {
@@ -35,9 +38,15 @@ export default {
   },
 
   data() {
-    return {
-      search: ''
-    }
+    return {}
+  },
+
+  asyncData({ $axios }) {
+    return $axios.get('/api/featured').then(({ data }) => {
+      return {
+        featured: data
+      }
+    })
   }
 }
 </script>
@@ -45,32 +54,6 @@ export default {
 <style scoped lang="scss">
 .hero {
   background: rgba(37, 48, 59, 1);
-  background: -moz-linear-gradient(
-    -45deg,
-    rgba(37, 48, 59, 1) 0%,
-    rgba(11, 19, 43, 1) 100%
-  );
-  background: -webkit-gradient(
-    left top,
-    right bottom,
-    color-stop(0%, rgba(37, 48, 59, 1)),
-    color-stop(100%, rgba(11, 19, 43, 1))
-  );
-  background: -webkit-linear-gradient(
-    -45deg,
-    rgba(37, 48, 59, 1) 0%,
-    rgba(11, 19, 43, 1) 100%
-  );
-  background: -o-linear-gradient(
-    -45deg,
-    rgba(37, 48, 59, 1) 0%,
-    rgba(11, 19, 43, 1) 100%
-  );
-  background: -ms-linear-gradient(
-    -45deg,
-    rgba(37, 48, 59, 1) 0%,
-    rgba(11, 19, 43, 1) 100%
-  );
   background: linear-gradient(
     135deg,
     rgba(37, 48, 59, 1) 0%,
@@ -80,5 +63,10 @@ export default {
 
 .product-name {
   text-transform: uppercase;
+}
+
+.featured-heading {
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 </style>

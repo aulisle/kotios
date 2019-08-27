@@ -1,4 +1,9 @@
 import ClientModel from './oauth2/client'
+import FeaturedModel from './app/featured'
+
+import featuredData from '../data/featured'
+
+import Logger from '../../plugins/logger'
 
 const updateClient = async (apiClientId, apiClientSecret) => {
   // Updates the client list to use the new client
@@ -27,9 +32,21 @@ const updateClient = async (apiClientId, apiClientSecret) => {
 
 const initUsers = async () => {}
 
+const initFeatured = async () => {
+  featuredData.forEach(async item => {
+    await FeaturedModel.updateOne({ _id: item._id }, item, {
+      upsert: true,
+      setDefaultsOnInsert: true
+    }).catch(err => {
+      Logger.error(`Error updating featured ${err}`)
+    })
+  })
+}
+
 const initDb = async (apiClientId, apiClientSecret) => {
   await updateClient(apiClientId, apiClientSecret)
   await initUsers()
+  await initFeatured()
 }
 
 export default initDb

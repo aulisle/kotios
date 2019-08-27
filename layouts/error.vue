@@ -5,7 +5,7 @@
         {{ error.statusCode }}
       </h1>
 
-      <h2 class="info">
+      <h2 class="error-info">
         {{ error.message }}
       </h2>
 
@@ -33,12 +33,14 @@ export default {
   margin-top: 15px;
   font-size: 5em;
 }
-.info {
+
+.error-info {
   font-weight: 300;
   color: #9aabb1;
   padding-top: 20px;
   margin-top: 20px;
 }
+
 .button {
   margin-top: 50px;
 }

@@ -15,6 +15,7 @@ import oauthRoutes from './routes/oauth2'
 import userRoutes from './routes/users'
 import passwordResetRoutes from './routes/passwordReset'
 import searchRoutes from './routes/search'
+import featuredRoutes from './routes/featured'
 
 import scheduleJobs from './scheduled'
 
@@ -87,6 +88,7 @@ const startup = async () => {
   userRoutes(app)
   passwordResetRoutes(app)
   searchRoutes(app)
+  featuredRoutes(app)
 
   scheduleJobs()
 }

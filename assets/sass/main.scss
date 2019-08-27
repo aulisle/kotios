@@ -224,29 +224,32 @@ body {
   }
 }
 
-@media (min-width: 576px){
-  .container {
-      max-width: 540px;
+body {
+  @media (min-width: 576px){
+    .container {
+        max-width: 540px;
+    }
+  }
+  
+  @media (min-width: 768px){
+    .container {
+        max-width: 720px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
   }
 }
 
-@media (min-width: 768px){
-  .container {
-      max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-      max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-      max-width: 1140px;
-  }
-}
 
 
 
@@ -284,4 +287,10 @@ body {
 /* Hide dropdowns when loading the page */
 .md-field .md-list.md-theme-default {
   display: none;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
 }
