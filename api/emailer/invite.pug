@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+  title #{title}
+  link(rel="stylesheet", href=css, data-inline)
+  link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap", data-inline)
+  body
+    div(class='hero')
+      img(src=publicUrl + "/rento-logo.svg", data-inline)
+      h1 Rento - #{title}
+    a(class='button', href=tokenUrl) Aktivoi tunnus.
+    p Linkki vanhenee #{tokenExpires}

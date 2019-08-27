@@ -1,0 +1,15 @@
+@import "_variables.scss";
+
+body {
+  .toasted-container.bottom-center {
+    bottom: 0;
+  }
+
+  .toasted-container.top-center {
+    top: 0;
+  }
+  
+  .toasted .primary.success, .toasted.toasted-primary.success {
+    background-color: $color-snackbar;
+  }
+}

@@ -1,0 +1,46 @@
+@import "_variables.scss";
+
+.md-button.b-full-width {
+  width: 100%;
+  display: block;
+  margin: 0px;
+}
+
+.md-button .md-button-content {
+  display: flex;
+  align-items: center;
+}
+
+button, .md-button-content {
+  font-family: $font-stack-button;
+}
+
+.button-margin,
+.button-margin.md-button.b-full-width {
+  margin-top: 10px;
+}
+
+body .md-button.md-accent.alt.md-raised:not(:disabled) {
+  background-color: $color-accent-alt;
+  color: $color-text-accent-alt;
+  .md-button-content {
+    display: flex;
+    align-items: center;
+    i {
+      color: $color-text-accent-alt;
+    }
+  }
+}
+
+.action-button {
+  letter-spacing: $tracking-mid;
+  .md-icon {
+    margin-right: 10px;
+  }
+}
+
+.login-form-return-button {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}

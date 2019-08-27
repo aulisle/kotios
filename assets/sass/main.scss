@@ -1,0 +1,287 @@
+
+@import "~vue-material/dist/theme/engine"; // Import the theme engine
+@import "_variables.scss";
+@import "toast.scss";
+@import "dialog.scss";
+@import "button.scss";
+@import "attachment.scss";
+
+@include md-register-theme("default", (
+  primary: $color-primary, // The primary color of the application
+  accent: $color-accent // The accent or secondary color
+));
+
+@import "~vue-material/dist/theme/all"; // Apply the theme
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+html, body
+{
+  background-color: #F9FAFB;
+  color: $color-text-primary;
+  letter-spacing: 0.5px;
+  font-family: $font-stack-body;
+  height: 100vh;
+  margin: 0;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+a, a:hover, a:focus, a:visited
+{
+  color: #000;
+}
+
+.container {
+  margin: 0;
+  width: 100%;
+}
+
+.container-wide {
+  margin: 0px 80px;
+}
+
+.form-column {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 350px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.page-content {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.page-content-padding {
+  padding: 40px 0px;
+}
+
+.page-heading {
+  font-size: 28px;
+  font-weight: 500;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $color-hr;
+}
+
+.md-card {
+  border-radius: 5px;
+}
+
+.md-table {
+  flex-flow: initial !important;
+}
+
+.md-overlay.md-fixed, body > .md-overlay {
+  z-index: 10;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+h1, h2, h3, h4 {
+  font-family: $font-stack-heading;
+  color: $color-text-secondary;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+hr {
+  border: none; 
+  border-top: 0.05rem solid #{$color-hr};
+  height: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.fixed-right-bottom {
+  position: fixed;
+  right: $margin-page;
+  bottom: 80px;
+  z-index: 10;
+}
+
+.hero {
+  background-color: $color-primary;
+  text-align: left;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    color: $color-text-alt;
+    font-family: $font-stack-heading;
+    line-height: 100%;
+    padding-top: 40px;
+  }
+
+  h1 {
+    padding-bottom: 40px;
+  }
+
+  h2 {
+    padding-bottom: 20px;
+  }
+
+  h3 {
+    color: $color-text-alt-hover;
+    font-size: 28px;
+    font-weight: normal;
+    max-width: 600px;
+    margin-top: 50px;
+    line-height: 100%;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 36px;
+  }
+
+  a,
+  a:visited {
+    margin-top: 20px;
+    color: $color-text-alt !important;
+    text-transform: uppercase;
+    font-family: $font-stack-button;
+    letter-spacing: $tracking-wide;
+  }
+
+  a:hover {
+    color: $color-text-alt-hover !important;
+    text-decoration: none !important;
+  }
+}
+
+div.back-link {
+  padding-top: 25px;
+  margin-bottom: -20px;
+}
+
+.form-main {
+  padding-top: 50px;
+}
+
+
+body {
+  .v-application {
+    font-family: $font-stack-body;
+  }
+
+  .md-drawer.md-temporary {
+    position: fixed;
+  }
+  .md-drawer {
+    z-index: 12;
+  }
+  
+  .md-overlay {
+    position: fixed !important;
+    z-index: 11;
+  }  
+}
+
+
+@media (max-width: 600px) {
+  .container-wide {
+    margin: 0px 30px;
+  }
+
+  .hero {
+    h3 {
+      font-size: 23px;
+    }
+  }
+
+  .md-drawer.md-permanent {
+    position: fixed !important;
+  }
+}
+
+@media (min-width: 576px){
+  .container {
+      max-width: 540px;
+  }
+}
+
+@media (min-width: 768px){
+  .container {
+      max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+      max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+      max-width: 1140px;
+  }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .lg-only {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .lg-hide {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .sm-only {
+    display: none !important;
+  }
+}
+
+/* Default page transition */
+.page-enter-active,
+.page-leave-active {
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 200ms;
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+/* Hide dropdowns when loading the page */
+.md-field .md-list.md-theme-default {
+  display: none;
+}
