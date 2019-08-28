@@ -17,7 +17,7 @@ import passwordResetRoutes from './routes/passwordReset'
 import searchRoutes from './routes/search'
 import featuredRoutes from './routes/featured'
 
-import scheduleJobs from './scheduled'
+// import scheduleJobs from './scheduled'
 
 import express from 'express'
 import mongoose from 'mongoose'
@@ -65,6 +65,7 @@ const startup = async () => {
       Logger.info(`Connected successfully to "${mongoUri}"`)
     }
   )
+
   try {
     await elasticsearch.init(elasticHost)
 
@@ -90,7 +91,7 @@ const startup = async () => {
   searchRoutes(app)
   featuredRoutes(app)
 
-  scheduleJobs()
+  Logger.info('STARTUP FINISHED!')
 }
 
 startup()
