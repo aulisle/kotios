@@ -20,6 +20,7 @@
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/toast": "^3.2.1",
     "@sendgrid/mail": "^6.4.0",
+    "@nuxtjs/vuetify": "^1.4.0",
     "aws-sdk": "^2.502.0",
     "axios": "^0.18.1",
     "bcrypt": "^3.0.6",
@@ -63,7 +64,6 @@
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
-    "@nuxtjs/vuetify": "^1.4.0",
     "@vue/eslint-config-prettier": "^5.0.0",
     "babel-eslint": "^7.2.3",
     "eslint": "^4.19.1",
