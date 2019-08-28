@@ -79,6 +79,7 @@ export default {
       {
         baseURL: `http://${process.env.HOST || 'localhost'}:${process.env
           .PORT || 3000}/`,
+
         https: process.env.NODE_ENV === 'production'
       }
     ],
