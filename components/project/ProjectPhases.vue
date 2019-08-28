@@ -12,7 +12,7 @@
         </div>
         <div class="card-column">
           <v-card-text class="card-type">
-            {{ phaseType.name }}
+            {{ $t(`project.phases.${phaseType.name}`) }}
           </v-card-text>
           <v-card-title class="card-title">
             {{ phaseType.phase }}
