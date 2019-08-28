@@ -40,7 +40,7 @@ const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost/rento'
 const apiClientId = process.env.API_CLIENT_ID || 'api-client-id'
 const apiClientSecret = process.env.API_CLIENT_SECRET || 'api-client-secret'
 
-const elasticHost = process.env.ELASTIC_SEARCH_HOST || 'localhost:9200'
+const elasticHost = process.env.BONSAI_URL || 'localhost:9200'
 
 // Create express instance
 const app = express()

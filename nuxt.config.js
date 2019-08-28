@@ -102,7 +102,8 @@ export default {
     '~/plugins/vuelidate.js',
     { src: '~/plugins/googleMaps.js', ssr: false },
     { src: '~/plugins/socialSharing.js', ssr: false },
-    { src: '~/plugins/directives.js', ssr: false }
+    { src: '~/plugins/directives.js', ssr: false },
+    { src: '~/plugins/imageViewer.js', ssr: false }
   ],
 
   router: {

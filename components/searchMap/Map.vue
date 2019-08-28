@@ -128,6 +128,7 @@ export default {
           if (!div) {
             div = this.div = document.createElement('div')
             selfie.vueInstance = new Vue({
+              router: self.$router,
               render: h =>
                 h(Marker, {
                   props: {
@@ -156,7 +157,11 @@ export default {
       })
     }
   },
-
+  beforeDestroy() {
+    this.markers.forEach(marker => {
+      marker.vueInstance.$destroy()
+    })
+  },
   methods: {
     drawMarkers() {
       if (!process.client) {

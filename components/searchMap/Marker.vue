@@ -38,6 +38,8 @@ export default {
     onClick(evt) {
       evt.preventDefault()
       evt.stopPropagation()
+
+      this.$router.push({ name: 'project-id', params: { id: this.id } })
     }
   }
 }
