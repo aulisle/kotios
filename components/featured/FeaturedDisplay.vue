@@ -9,7 +9,7 @@
     >
       <nuxt-link :to="{ name: 'project-id', params: { id: item.projectId } }">
         <v-img :src="item.previewImageUrl" class="white--text">
-          <div class="fill-height featured-text">
+          <div class="featured-text">
             <v-card-title>
               {{ item.title }}
             </v-card-title>
@@ -86,5 +86,6 @@ $featured-margin-between: 20px;
     rgba(0, 0, 0, 0.7) 60%,
     rgba(0, 0, 0, 0.7) 100%
   );
+  height: 100%;
 }
 </style>
