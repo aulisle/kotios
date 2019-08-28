@@ -27,9 +27,13 @@ export default {
     ],
     script: [
       {
-        // TODO: Only FA brands!!
+        // TODO: Only FontAwesome brands!!
         src: 'https://kit.fontawesome.com/ad4e228f5e.js',
         defer: true
+      },
+      {
+        src:
+          'https://polyfill.io/v3/polyfill.min.js?features=Object.values%2CArray.from'
       }
     ]
   },
@@ -96,6 +100,7 @@ export default {
     '~/plugins/filters.js',
     '~/plugins/i18n.js',
     '~/plugins/vuelidate.js',
+    { src: '~/plugins/googleMaps.js', ssr: false },
     { src: '~/plugins/socialSharing.js', ssr: false },
     { src: '~/plugins/directives.js', ssr: false }
   ],
@@ -141,7 +146,8 @@ export default {
 
   env: {
     apiClientId: process.env.API_CLIENT_ID || 'api-client-id',
-    apiClientSecret: process.env.API_CLIENT_SECRET || 'api-client-secret'
+    apiClientSecret: process.env.API_CLIENT_SECRET || 'api-client-secret',
+    gMapsApiKey: process.env.GOOGLE_MAPS_API_KEY || 'google-maps-api-key'
   },
 
   styleResources: {
@@ -151,7 +157,7 @@ export default {
   pageTransition: 'page',
 
   loading: {
-    color: '#C2185A',
+    color: '#1bb8d1',
     height: '2px'
   }
 }

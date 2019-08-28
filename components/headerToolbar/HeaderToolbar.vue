@@ -122,7 +122,7 @@ export default {
 }
 
 .header-toolbar {
-  height: 70px;
+  height: $top-bar-height;
   padding: 0px $margin-page;
   background-color: white;
 }
