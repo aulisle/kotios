@@ -78,8 +78,8 @@ export default {
       '@nuxtjs/axios',
       {
         baseURL: `http://${process.env.HOST || 'localhost'}:${process.env
-          .PORT || 3000}/`
-        // https: process.env.NODE_ENV === 'production'
+          .PORT || 3000}/`,
+        https: process.env.NODE_ENV === 'production'
       }
     ],
     '@nuxtjs/auth',
@@ -142,7 +142,7 @@ export default {
 
   serverMiddleware: [
     // API middleware
-    // 'redirect-ssl'
+    'redirect-ssl'
   ],
 
   env: {

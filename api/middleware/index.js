@@ -4,12 +4,15 @@
 
 import bodyParser from 'body-parser'
 import cookieParser from 'cookie-parser'
+import redirectSSL from 'redirect-ssl'
 import { default as OAuth2Server } from 'oauth2-server'
 import { default as model } from '../models/oauth2'
 import { init as initUtils } from './utils'
 
 const applyBaseMiddlewares = app => {
   initUtils(app)
+
+  app.use(redirectSSL)
 
   app.oauth = new OAuth2Server({
     model,
