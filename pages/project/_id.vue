@@ -10,7 +10,6 @@
             <span class="text">{{ projectType }}</span>
           </h2>
         </div>
-        Haluatko projektin menestyvän? Jaa se kavereillesi
         <project-social-share />
       </div>
 
@@ -66,7 +65,7 @@ export default {
   data() {
     return {
       project: {
-        projectType: 1, // Ryhmärakennus
+        projectType: 0, // Ryhmärakennus
         title: 'Torppala',
         tagline:
           'Torppala Kaarinan ja Turun rajalla, ekologinen kylä Itämeren rannalla, Ihmisen hyvä asua ja olla.',
@@ -130,7 +129,7 @@ export default {
 }
 
 .project-phases {
-  margin-top: 30px;
+  margin-top: 50px;
   margin-bottom: 30px;
 }
 
@@ -138,5 +137,10 @@ export default {
   min-height: 600px;
   width: 100%;
   margin-bottom: 60px;
+}
+
+.project-events {
+  margin-top: 60px;
+  margin-bottom: 30px;
 }
 </style>

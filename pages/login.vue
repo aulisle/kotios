@@ -195,7 +195,7 @@ $column-margin: 40px;
 }
 
 .facebook {
-  background-color: #3c5a99 !important;
+  background-color: $color-facebook !important;
   color: white !important;
 }
 

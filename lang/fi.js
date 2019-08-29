@@ -126,7 +126,29 @@ const translations = {
   },
   'this-action-cannot-be-undone': 'Tätä toimintoa ei voi kumota',
   'login-facebook': 'Kirjaudu Facebookilla',
-  'login-google': 'Kirjaudu Googlella'
+  'login-google': 'Kirjaudu Googlella',
+  project: {
+    phases: {
+      project: 'Projektin tila',
+      plot: 'Tontin tila',
+      group: 'Ryhmän tila'
+    },
+    project: {
+      0: 'Alustava keräys',
+      1: 'Suunnittelu',
+      2: 'Rakennuttaminen',
+      3: 'Valmis'
+    },
+    plot: {
+      0: 'Ei tonttia',
+      1: 'Tontti olemassa'
+    },
+    group: {
+      0: 'Ydinryhmähaku',
+      1: 'Haku avoinna',
+      2: 'Ryhmä täysi'
+    }
+  }
 }
 
 export default translations
