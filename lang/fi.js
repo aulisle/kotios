@@ -147,6 +147,12 @@ const translations = {
       0: 'Ydinryhmähaku',
       1: 'Haku avoinna',
       2: 'Ryhmä täysi'
+    },
+    values: {
+      eco: 'Ekologisuus',
+      resources: 'Resurssien optimointi',
+      natural: 'Luonnollisuus',
+      solar: 'Aurinkoenergia'
     }
   }
 }

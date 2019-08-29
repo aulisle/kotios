@@ -9,26 +9,38 @@
             <md-icon>{{ projectTypeIcon }}</md-icon>
             <span class="text">{{ projectType }}</span>
           </h2>
+
+          <project-values class="project-values" />
         </div>
         <project-social-share />
       </div>
 
       <project-phases class="project-phases" />
-
-      <project-events class="project-events" />
     </div>
     <md-content>
       <div class="container-base">
         <h2 class="project-tagline">{{ project.tagline }}</h2>
         <project-map class="project-map" />
-        <p v-for="(paragraph, idx) in project.description" :key="idx">
-          {{ paragraph }}
-        </p>
+        <div class="columns">
+          <div class="long-description">
+            <p
+              v-for="(paragraph, idx) in project.description"
+              :key="idx"
+              class="description-paragraph"
+            >
+              {{ paragraph }}
+            </p>
+          </div>
+          <div>
+            <project-neighbourhood class="project-events" />
+            <project-events class="project-events" />
+          </div>
+        </div>
       </div>
     </md-content>
 
     <div class="container-base">
-      <project-contact />
+      <project-contact class="project-contact" />
     </div>
   </div>
 </template>
@@ -40,13 +52,19 @@ import ProjectPhases from '@/components/project/ProjectPhases'
 import ProjectMap from '@/components/project/ProjectMap'
 import ProjectContact from '@/components/project/ProjectContact'
 import ProjectEvents from '@/components/project/ProjectEvents'
+import ProjectValues from '@/components/project/ProjectValues'
+import ProjectNeighbourhood from '@/components/project/ProjectNeighbourhood'
 
+const lorem =
+  'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\n'
+const randomIntFromInterval = (min, max) => {
+  // min and max included
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
 const createLoremIpsum = paragraphs => {
   let strs = []
   for (let i = 0; i < paragraphs; i++) {
-    strs.push(
-      'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\n'
-    )
+    strs.push(lorem.substring(0, randomIntFromInterval(100, lorem.length - 1)))
   }
 
   return strs
@@ -59,7 +77,9 @@ export default {
     ProjectPhases,
     ProjectMap,
     ProjectContact,
-    ProjectEvents
+    ProjectEvents,
+    ProjectValues,
+    ProjectNeighbourhood
   },
 
   data() {
@@ -69,7 +89,7 @@ export default {
         title: 'Torppala',
         tagline:
           'Torppala Kaarinan ja Turun rajalla, ekologinen kylä Itämeren rannalla, Ihmisen hyvä asua ja olla.',
-        description: createLoremIpsum(3)
+        description: createLoremIpsum(5)
       }
     }
   },
@@ -125,7 +145,13 @@ export default {
   align-items: center;
   .text {
     margin-left: 10px;
+    flex-grow: 1;
+    flex-shrink: 0;
   }
+}
+
+.project-values {
+  margin-top: 25px;
 }
 
 .project-phases {
@@ -140,7 +166,45 @@ export default {
 }
 
 .project-events {
-  margin-top: 60px;
   margin-bottom: 30px;
+  margin-top: 30px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.description-paragraph {
+  text-align: justify;
+}
+
+.columns {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-contact {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 992px) {
+  .long-description {
+    max-width: 500px;
+    flex-shrink: 0;
+  }
+
+  .columns {
+    flex-direction: row;
+  }
+
+  .project-events {
+    margin-top: 0px;
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .long-description {
+    max-width: 600px;
+  }
 }
 </style>

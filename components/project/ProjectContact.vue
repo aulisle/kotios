@@ -20,13 +20,13 @@ export default {
   data() {
     return {
       contacts: [
-        {
+        /*{
           name: 'Maija Meikäläinen',
           role: 'consultant',
           email: 'email@email.com',
           phone: '040 1234567',
           initials: 'MM'
-        }
+        }*/
       ]
     }
   }

@@ -34,6 +34,12 @@ export default {
           rotateControl: false,
           fullscreenControl: false
         })
+
+        new google.maps.Marker({
+          position: center,
+          map: self.gmap,
+          title: 'Sijainti'
+        })
       })
     }
   }

@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <div class="column">
+    <div class="column copyright">
       <img src="/rento-logo.svg" class="logo" alt="logo" />
       © Rento 2019 – rentopaikka.fi
     </div>
@@ -100,6 +100,10 @@ footer {
 
 .logo {
   margin-bottom: 15px;
+}
+
+.column.copyright {
+  align-items: center;
 }
 </style>
 

@@ -1,8 +1,11 @@
 <template>
   <div class="project-social">
-    <h2>
-      Tee kohteesta menestys jakamalla se kavereillesi
+    <h2 class="align-right">
+      Tee kohteesta menestys
     </h2>
+    <p class="align-right">
+      Jaa kohde
+    </p>
 
     <template v-if="showSocial">
       <social-sharing :url="path()" inline-template>
@@ -82,8 +85,10 @@ export default {
 
 <style lang="scss">
 .project-social {
-  h2 {
-    padding-bottom: 10px;
+  .align-right {
+    padding-bottom: 5px;
+    padding-top: 0px;
+    margin: 0px !important;
     text-align: right;
   }
   .network-icons {
