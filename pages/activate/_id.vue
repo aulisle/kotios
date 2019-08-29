@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-base">
     <h1>Tilisi on aktivoitu!</h1>
   </div>
 </template>

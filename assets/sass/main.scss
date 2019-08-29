@@ -26,6 +26,13 @@ html, body
   margin: 0;
 }
 
+html {
+  body {
+    font-size: 1.0rem;
+  }
+}
+
+
 .app {
   min-height: 100vh;
   display: flex;
@@ -44,7 +51,7 @@ a, a:hover, a:focus, a:visited
   color: #000;
 }
 
-.container {
+.container-base {
   margin: 0;
   width: 100%;
 }
@@ -111,7 +118,7 @@ hr {
   box-sizing: border-box;
 }
 
-.container {
+.container-base {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -216,25 +223,25 @@ body {
 
 body {
   @media (min-width: 576px){
-    .container {
+    .container-base {
         max-width: 540px;
     }
   }
   
   @media (min-width: 768px){
-    .container {
+    .container-base {
         max-width: 720px;
     }
   }
   
   @media (min-width: 992px) {
-    .container {
+    .container-base {
         max-width: 960px;
     }
   }
   
   @media (min-width: 1200px) {
-    .container {
+    .container-base {
         max-width: 1140px;
     }
   }
@@ -283,4 +290,10 @@ body {
   display: flex;
   justify-content: center;
   padding: 50px;
+}
+
+body {
+  .v-card__text {
+    font-size: 1rem;
+  }
 }

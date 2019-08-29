@@ -1,5 +1,5 @@
 <template>
-  <md-content class="container page-content">
+  <md-content class="container-base page-content">
     <form class="form-column" @submit.prevent="login">
       <h1>
         {{ $t('user.forgot-password') }}

@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="register">
-    <md-content class="container page-content">
+    <md-content class="container-base page-content">
       <div class="form-column">
         <div v-if="status === null || !status.success">
           <h1>Rekisteröidy</h1>

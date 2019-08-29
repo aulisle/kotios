@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="login">
-    <md-content class="container page-content">
+    <md-content class="container-base page-content">
       <template v-if="!working">
         <div class="side-by-side">
           <div class="column">

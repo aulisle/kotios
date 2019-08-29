@@ -1,7 +1,7 @@
 <template>
   <div>
     <project-images />
-    <div class="container page-content">
+    <div class="container-base page-content">
       <div class="heading-row">
         <div>
           <h1 class="project-heading">{{ project.title }}</h1>
@@ -19,7 +19,7 @@
       <project-events class="project-events" />
     </div>
     <md-content>
-      <div class="container">
+      <div class="container-base">
         <h2 class="project-tagline">{{ project.tagline }}</h2>
         <project-map class="project-map" />
         <p v-for="(paragraph, idx) in project.description" :key="idx">
@@ -28,7 +28,7 @@
       </div>
     </md-content>
 
-    <div class="container">
+    <div class="container-base">
       <project-contact />
     </div>
   </div>

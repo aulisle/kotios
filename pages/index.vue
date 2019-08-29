@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div class="hero">
-      <div class="container">
+      <div class="container-base">
         <h1 class="product-name">
           <img src="/rento-logo.svg" class="hero-logo" />
           <span>Rento</span>
@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container-base">
       <h2 class="featured-heading">Upeita hankkeita</h2>
       <featured-display :featured="featured" />
     </div>

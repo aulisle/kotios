@@ -97,6 +97,7 @@ export default {
   ],
 
   plugins: [
+    { src: '~/plugins/babel.js', ssr: false },
     '~/plugins/globalComponents.js',
     '~/plugins/filters.js',
     '~/plugins/i18n.js',
