@@ -7,6 +7,9 @@
       Jaa kohde
     </p>
 
+    <!-- import v-tooltip so it works with the social sharing -->
+    <v-tooltip v-show="false" />
+
     <template v-if="showSocial">
       <social-sharing :url="path()" inline-template>
         <div class="network-icons">
@@ -83,7 +86,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" global>
 .project-social {
   .align-right {
     padding-bottom: 5px;
