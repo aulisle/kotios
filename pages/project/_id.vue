@@ -1,6 +1,6 @@
 <template>
   <div>
-    <project-images />
+    <project-images :images="project.images" />
     <div class="container-base page-content">
       <div class="heading-row">
         <div>
@@ -76,6 +76,20 @@ const createLoremIpsum = paragraphs => {
 }
 
 export default {
+  head() {
+    return {
+      title: this.$createTitle(this.project.title),
+      meta: [
+        ...this.$createSocialMeta({
+          title: this.project.title,
+          description: this.project.tagline,
+          image: this.project.images[0],
+          url: process.env.publicUrl + this.$route.path.substring(1)
+        })
+      ]
+    }
+  },
+
   components: {
     ProjectImages,
     ProjectSocialShare,
@@ -95,7 +109,13 @@ export default {
         title: 'Torppala',
         tagline:
           'Torppala Kaarinan ja Turun rajalla, ekologinen kylä Itämeren rannalla, Ihmisen hyvä asua ja olla.',
-        description: createLoremIpsum(5)
+        description: createLoremIpsum(5),
+        images: [
+          '/torppala/header.png',
+          '/torppala/torppala0.jpg',
+          '/torppala/torppala1.jpg',
+          '/torppala/torppala2.jpg'
+        ]
       }
     }
   },

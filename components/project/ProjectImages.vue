@@ -13,15 +13,8 @@
 
 <script>
 export default {
-  data() {
-    return {
-      images: [
-        '/torppala/header.png',
-        '/torppala/torppala0.jpg',
-        '/torppala/torppala1.jpg',
-        '/torppala/torppala2.jpg'
-      ]
-    }
+  props: {
+    images: { type: Array, required: true }
   },
 
   computed: {

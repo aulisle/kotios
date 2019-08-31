@@ -103,8 +103,8 @@ export default {
     '~/plugins/i18n.js',
     '~/plugins/vuelidate.js',
     '~/plugins/vueCheckView.js',
+    '~/plugins/socialSharing.js',
     { src: '~/plugins/googleMaps.js', ssr: false },
-    { src: '~/plugins/socialSharing.js', ssr: false },
     { src: '~/plugins/directives.js', ssr: false },
     { src: '~/plugins/imageViewer.js', ssr: false }
   ],
@@ -151,7 +151,8 @@ export default {
   env: {
     apiClientId: process.env.API_CLIENT_ID || 'api-client-id',
     apiClientSecret: process.env.API_CLIENT_SECRET || 'api-client-secret',
-    gMapsApiKey: process.env.GOOGLE_MAPS_API_KEY || 'google-maps-api-key'
+    gMapsApiKey: process.env.GOOGLE_MAPS_API_KEY || 'google-maps-api-key',
+    publicUrl: process.env.PUBLIC_URL || 'locahost:3000'
   },
 
   styleResources: {
