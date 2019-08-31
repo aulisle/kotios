@@ -102,6 +102,7 @@ export default {
     '~/plugins/filters.js',
     '~/plugins/i18n.js',
     '~/plugins/vuelidate.js',
+    '~/plugins/vueCheckView.js',
     { src: '~/plugins/googleMaps.js', ssr: false },
     { src: '~/plugins/socialSharing.js', ssr: false },
     { src: '~/plugins/directives.js', ssr: false },

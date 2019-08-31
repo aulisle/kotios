@@ -153,6 +153,10 @@ const translations = {
       resources: 'Resurssien optimointi',
       natural: 'Luonnollisuus',
       solar: 'Aurinkoenergia'
+    },
+    role: {
+      consultant: 'Konsultti',
+      facilitator: 'Fasilitaattori'
     }
   }
 }

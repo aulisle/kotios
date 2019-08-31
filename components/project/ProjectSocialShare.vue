@@ -1,14 +1,11 @@
 <template>
   <div class="project-social">
-    <h2 class="align-right">
+    <h2 class="align-right-lg">
       Tee kohteesta menestys
     </h2>
-    <p class="align-right">
+    <p class="align-right-lg">
       Jaa kohde
     </p>
-
-    <!-- import v-tooltip so it works with the social sharing -->
-    <v-tooltip v-show="false" />
 
     <template v-if="showSocial">
       <social-sharing :url="path()" inline-template>
@@ -88,15 +85,8 @@ export default {
 
 <style lang="scss" global>
 .project-social {
-  .align-right {
-    padding-bottom: 5px;
-    padding-top: 0px;
-    margin: 0px !important;
-    text-align: right;
-  }
   .network-icons {
     display: flex;
-    justify-content: flex-end;
     margin-left: -5px;
   }
 
@@ -127,6 +117,19 @@ export default {
       font-size: 20px;
       line-height: 50px;
     }
+  }
+}
+
+@media (min-width: 992px) {
+  .align-right-lg {
+    padding-bottom: 5px;
+    padding-top: 0px;
+    margin: 0px !important;
+    text-align: right;
+  }
+
+  .network-icons {
+    justify-content: flex-end;
   }
 }
 </style>

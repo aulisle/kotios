@@ -42,6 +42,10 @@
     <div class="container-base">
       <project-contact class="project-contact" />
     </div>
+
+    <div class="fab">
+      <project-interested-fab :title="project.title" />
+    </div>
   </div>
 </template>
 
@@ -54,6 +58,7 @@ import ProjectContact from '@/components/project/ProjectContact'
 import ProjectEvents from '@/components/project/ProjectEvents'
 import ProjectValues from '@/components/project/ProjectValues'
 import ProjectNeighbourhood from '@/components/project/ProjectNeighbourhood'
+import ProjectInterestedFab from '@/components/project/ProjectInterestedFab'
 
 const lorem =
   'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\n'
@@ -79,7 +84,8 @@ export default {
     ProjectContact,
     ProjectEvents,
     ProjectValues,
-    ProjectNeighbourhood
+    ProjectNeighbourhood,
+    ProjectInterestedFab
   },
 
   data() {
@@ -137,7 +143,7 @@ export default {
 
 .heading-row {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .project-type {
@@ -186,7 +192,19 @@ export default {
   margin-bottom: 50px;
 }
 
+.fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  left: auto;
+}
+
 @media (min-width: 992px) {
+  .heading-row {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
   .long-description {
     max-width: 500px;
     flex-shrink: 0;

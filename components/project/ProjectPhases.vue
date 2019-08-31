@@ -17,12 +17,15 @@
           <v-card-title class="card-title">
             {{ $t(`project.${phaseType.name}.${phaseType.phase}`) }}
           </v-card-title>
-          <div class="progress">
-            <div
-              class="bar"
-              :style="{ width: progress(phaseType) }"
-              :class="phaseType.name"
-            />
+          <div v-view="viewHandler" class="progress">
+            <transition name="expand">
+              <div
+                v-if="showProgress"
+                class="bar"
+                :style="{ width: progress(phaseType) }"
+                :class="phaseType.name"
+              />
+            </transition>
           </div>
         </div>
       </div>
@@ -34,6 +37,7 @@
 export default {
   data() {
     return {
+      showProgress: false,
       phaseTypes: [
         {
           name: 'project',
@@ -56,7 +60,7 @@ export default {
 
   methods: {
     calcPercentage(curPhase, totalPhases) {
-      return (curPhase + 0.1) / (totalPhases - 1 + 0.1)
+      return (curPhase + 0.05) / (totalPhases - 1 + 0.05)
     },
     progress(phaseType) {
       let percentage = 0
@@ -69,6 +73,12 @@ export default {
       }
 
       return `${percentage * 100}%`
+    },
+
+    viewHandler(e) {
+      if (e.percentInView > 0.98) {
+        this.showProgress = true
+      }
     }
   }
 }
@@ -101,6 +111,17 @@ $group-gradient: linear-gradient(
   #b400b3,
   #b912eb
 );
+
+.expand-enter-active,
+.expand-leave-active {
+  transition: transform 1s ease-out;
+  transform-origin: left center;
+}
+
+.expand-enter,
+.expand-leave-to {
+  transform: scaleX(0);
+}
 
 .phases {
   display: grid;

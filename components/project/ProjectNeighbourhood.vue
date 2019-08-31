@@ -1,6 +1,7 @@
 <template>
   <div>
     <v-card :elevation="3" class="card">
+      <p>Valokuvat</p>
       <v-card-title>
         Torppala
       </v-card-title>
@@ -20,7 +21,7 @@
         </p>
         <p><md-icon class="rento">timeline</md-icon>5km Kauppatorilta</p>
         <p><md-icon class="rento">timeline</md-icon>2km Torppalan koulu</p>
-
+        <p>Kirjoituksia asuinalueista</p>
         <a href="#">
           <base-button class="md-primary read-more">Lue lisää</base-button>
         </a>
