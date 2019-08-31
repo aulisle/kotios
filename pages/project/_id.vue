@@ -12,7 +12,7 @@
 
           <project-values class="project-values" />
         </div>
-        <project-social-share />
+        <project-social-share :project="project" />
       </div>
 
       <project-phases class="project-phases" />

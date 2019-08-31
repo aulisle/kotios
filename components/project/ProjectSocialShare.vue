@@ -8,50 +8,36 @@
     </p>
 
     <template v-if="showSocial">
-      <social-sharing :url="path()" inline-template>
+      <social-sharing
+        :url="path()"
+        :title="project.title"
+        :description="project.tagline"
+        :image="project.images[0]"
+        inline-template
+      >
         <div class="network-icons">
           <network network="email">
-            <v-tooltip top>
-              <template v-slot:activator="{ on }">
-                <button class="social-btn email" v-on="on">
-                  <md-icon class="icon">email</md-icon>
-                </button>
-              </template>
-              <span>{{ $t('email') }}</span>
-            </v-tooltip>
+            <button class="social-btn email">
+              <md-icon class="icon">email</md-icon>
+            </button>
           </network>
 
           <network network="facebook">
-            <v-tooltip top>
-              <template v-slot:activator="{ on }">
-                <button class="social-btn facebook" v-on="on">
-                  <i class="fab fa-facebook-f icon" />
-                </button>
-              </template>
-              <span>Facebook</span>
-            </v-tooltip>
+            <button class="social-btn facebook">
+              <i class="fab fa-facebook-f icon" />
+            </button>
           </network>
 
           <network network="twitter">
-            <v-tooltip top>
-              <template v-slot:activator="{ on }">
-                <button class="social-btn twitter" v-on="on">
-                  <i class="fab fa-twitter icon" />
-                </button>
-              </template>
-              <span>Twitter</span>
-            </v-tooltip>
+            <button class="social-btn twitter">
+              <i class="fab fa-twitter icon" />
+            </button>
           </network>
 
           <network network="whatsapp">
-            <v-tooltip top>
-              <template v-slot:activator="{ on }">
-                <button class="social-btn whatsapp" v-on="on">
-                  <i class="fab fa-whatsapp icon"></i>
-                </button>
-              </template>
-              <span>Whatsapp</span>
-            </v-tooltip>
+            <button class="social-btn whatsapp" v-on="on">
+              <i class="fab fa-whatsapp icon"></i>
+            </button>
           </network>
         </div>
       </social-sharing>
@@ -60,11 +46,9 @@
 </template>
 
 <script>
-import { VTooltip } from 'vuetify'
-
 export default {
-  components: {
-    VTooltip
+  props: {
+    project: { type: Object, required: true }
   },
 
   data() {
