@@ -60,7 +60,13 @@
 </template>
 
 <script>
+import { VTooltip } from 'vuetify'
+
 export default {
+  components: {
+    VTooltip
+  },
+
   data() {
     return {
       showSocial: false
