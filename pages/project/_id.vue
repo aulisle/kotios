@@ -40,7 +40,9 @@
     </md-content>
 
     <div class="container-base">
+      <project-households class="project-households" />
       <project-contact class="project-contact" />
+      <project-extra-table class="project-extra-table" />
     </div>
 
     <div class="fab">
@@ -59,6 +61,8 @@ import ProjectEvents from '@/components/project/ProjectEvents'
 import ProjectValues from '@/components/project/ProjectValues'
 import ProjectNeighbourhood from '@/components/project/ProjectNeighbourhood'
 import ProjectInterestedFab from '@/components/project/ProjectInterestedFab'
+import ProjectHouseholds from '@/components/project/ProjectHouseholds'
+import ProjectExtraTable from '@/components/project/ProjectExtraTable'
 
 const lorem =
   'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\n'
@@ -99,7 +103,9 @@ export default {
     ProjectEvents,
     ProjectValues,
     ProjectNeighbourhood,
-    ProjectInterestedFab
+    ProjectInterestedFab,
+    ProjectHouseholds,
+    ProjectExtraTable
   },
 
   data() {
@@ -207,7 +213,9 @@ export default {
   flex-direction: column;
 }
 
-.project-contact {
+.project-households,
+.project-contact,
+.project-extra-table {
   margin-top: 40px;
   margin-bottom: 50px;
 }
