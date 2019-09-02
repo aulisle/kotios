@@ -31,6 +31,9 @@ import './utils/setupMoment'
 dotenv.config()
 
 const sendgridApiKey = process.env.SENDGRID_API_KEY || ''
+// eslint-disable-next-line
+console.log('SENDGRID API KEY', sendgridApiKey)
+
 const sendgridSenderEmail = process.env.SENDGRID_SENDER_EMAIL || ''
 const frontEndUrl = process.env.PUBLIC_URL || ''
 
