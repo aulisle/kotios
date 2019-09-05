@@ -8,7 +8,7 @@
         @click="onClick"
       >
         <div class="background">
-          <md-icon>comment</md-icon>
+          <md-icon class="icon">apartment</md-icon>
         </div>
       </div>
     </template>
@@ -126,5 +126,9 @@ export default {
   z-index: 0;
   box-sizing: border-box;
   pointer-events: none;
+}
+
+.icon {
+  color: white !important;
 }
 </style>
