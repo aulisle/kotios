@@ -161,6 +161,8 @@ export default {
 
   pageTransition: 'page',
 
+  layoutTransition: 'page',
+
   loading: {
     color: '#1bb8d1',
     height: '2px'

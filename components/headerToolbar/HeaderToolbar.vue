@@ -1,6 +1,6 @@
 <template>
   <div>
-    <md-toolbar class="header-toolbar">
+    <md-toolbar class="header-toolbar elevation-1">
       <nuxt-link :to="{ name: 'index' }">
         <div class="logo">
           <img src="/rento-logo.svg" class="logo-img" />

@@ -78,6 +78,7 @@ footer {
   color: $color-text-alt;
   display: flex;
   justify-content: space-between;
+  z-index: 1;
 }
 
 .column {

@@ -1,26 +1,37 @@
 <template>
-  <v-tooltip top>
-    <template v-slot:activator="{ on }">
-      <div
-        class="marker"
-        :style="{ 'z-index': hype }"
-        v-on="on"
-        @click="onClick"
-      >
-        <div class="background">
-          <md-icon class="icon">apartment</md-icon>
-        </div>
+  <div
+    v-on-click-outside="closeCard"
+    class="marker-wrapper"
+    :class="{ open: cardOpen, hovered: isHovered }"
+  >
+    <nuxt-link
+      :to="{ name: 'project-id', params: { id } }"
+      class="card-wrapper"
+    >
+      <v-slide-y-reverse-transition>
+        <v-card v-if="cardOpen" class="card">
+          <v-card-title class="card-title">
+            {{ title }}
+          </v-card-title>
+        </v-card>
+      </v-slide-y-reverse-transition>
+    </nuxt-link>
+    <div class="marker" :style="{ 'z-index': hype }" @click="onClick">
+      <div class="background">
+        <md-icon class="icon">house</md-icon>
       </div>
-    </template>
-    <span>
-      {{ title }}
-    </span>
-  </v-tooltip>
+    </div>
+  </div>
 </template>
 
 <script>
+import { mixin as onClickOutside } from 'vue-on-click-outside'
+import { mapState } from 'vuex'
+
 export default {
   name: 'MapMarker',
+
+  mixins: [onClickOutside],
 
   props: {
     id: { type: [String, Number], required: true },
@@ -28,7 +39,19 @@ export default {
     hype: { type: Number, required: true }
   },
 
+  data() {
+    return {
+      cardOpen: false
+    }
+  },
+
   computed: {
+    ...mapState('search', ['hoveredId']),
+
+    isHovered() {
+      return this.hoveredId == this.id
+    },
+
     animDuration() {
       return (10 / this.hype + 2).toString() + 's'
     }
@@ -39,7 +62,15 @@ export default {
       evt.preventDefault()
       evt.stopPropagation()
 
-      this.$router.push({ name: 'project-id', params: { id: this.id } })
+      document.body.click()
+
+      this.cardOpen = true
+
+      // this.$router.push({ name: 'project-id', params: { id: this.id } })
+    },
+
+    closeCard() {
+      this.cardOpen = false
     }
   }
 }
@@ -58,42 +89,59 @@ export default {
   }
 }
 
-@keyframes example {
-  0% {
-    width: 48px;
-    height: 48px;
-    opacity: 0;
+.marker-wrapper {
+  position: relative;
+
+  &:hover,
+  &.open,
+  &.hovered {
+    z-index: 10000 !important;
   }
 
-  10% {
-    width: 48px;
-    height: 48px;
-    opacity: 1;
+  &.hovered {
+    .background {
+      background-color: $color-primary;
+    }
+    .icon {
+      color: $color-text-alt;
+    }
   }
+}
 
-  100% {
-    width: 100px;
-    height: 100px;
-    opacity: 0;
-  }
+$card-width: 200px;
+$card-height: 120px;
+$marker-size: 38px;
+
+.card {
+  position: absolute;
+  max-width: $card-width;
+  width: $card-width;
+  height: $card-height;
+  top: -$card-height - ($marker-size / 2) - 3px;
+  left: -($card-width / 2);
+}
+
+.card-wrapper {
+  position: relative;
+}
+
+.card-title {
+  width: 100%;
 }
 
 .marker {
   position: relative;
-  width: 48px;
-  height: 48px;
+  width: $marker-size;
+  height: $marker-size;
   display: flex;
   justify-content: center;
   align-items: center;
   transform: translate(-50%, -50%);
-
-  &:hover {
-    z-index: 10000 !important;
-  }
 }
 
 .background {
-  background-color: $color-primary;
+  background-color: white;
+  border: 1px solid $color-hr;
   cursor: pointer;
   border-radius: 50%;
   transition: all 0.2s;
@@ -109,7 +157,7 @@ export default {
   animation-timing-function: ease-in;
 
   &:hover {
-    transform: scale(1.3);
+    transform: scale(1.2);
   }
 }
 
@@ -129,6 +177,7 @@ export default {
 }
 
 .icon {
-  color: white !important;
+  color: $color-text-secondary;
+  font-size: 19px !important;
 }
 </style>

@@ -1,10 +1,12 @@
 <template>
-  <div ref="gmap" class="map" />
+  <div>
+    <div ref="gmap" class="map" />
+  </div>
 </template>
 
 <script>
 import Marker from './Marker.vue'
-import mockResults from './mockResults'
+import { mapState } from 'vuex'
 
 import Vue from 'vue'
 
@@ -54,7 +56,6 @@ export default {
       gmap: {},
       google: null,
       markers: [],
-      results: mockResults,
       firstDraw: false,
       mapCenter: {
         latitude: 64.002306,
@@ -63,7 +64,9 @@ export default {
     }
   },
 
-  computed: {},
+  computed: {
+    ...mapState('search', ['results'])
+  },
 
   watch: {
     gmap() {
@@ -78,7 +81,8 @@ export default {
     // Only load if in browser
     if (process.client) {
       const self = this
-      //eslint-disable-next-line
+
+      // eslint-disable-next-line
       console.log('MAPS', this.$gMapsLoader)
       this.$gMapsLoader.load(google => {
         self.google = google
@@ -128,6 +132,7 @@ export default {
           if (!div) {
             div = this.div = document.createElement('div')
             selfie.vueInstance = new Vue({
+              store: self.$store,
               router: self.$router,
               render: h =>
                 h(Marker, {
@@ -245,8 +250,12 @@ export default {
 .map {
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   flex-grow: 1;
   position: relative;
+  width: 100%;
+  height: 100%;
 
   // Google Maps do not need alt
   img[alt=''],
