@@ -92,7 +92,7 @@ export default {
       }
     ],
     '@nuxtjs/style-resources',
-    '@nuxtjs/vuetify',
+    ['@nuxtjs/vuetify', { treeShake: false }],
     '~/modules/api'
   ],
 
