@@ -55,7 +55,7 @@ export const a = [
       latitude: 60.45148,
       longitude: 22.26869
     },
-    title: 'Turku',
+    title: 'Skanssin asunto-osuuskunta',
     description: 'Elämisen iloa',
     memberCount: 8
   },

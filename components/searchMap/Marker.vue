@@ -8,13 +8,13 @@
       :to="{ name: 'project-id', params: { id } }"
       class="card-wrapper"
     >
-      <v-slide-y-reverse-transition>
+      <transition name="slide-y-reverse-transition">
         <v-card v-if="cardOpen" class="card">
           <v-card-title class="card-title">
             {{ title }}
           </v-card-title>
         </v-card>
-      </v-slide-y-reverse-transition>
+      </transition>
     </nuxt-link>
     <div class="marker" :style="{ 'z-index': hype }" @click="onClick">
       <div class="background">
