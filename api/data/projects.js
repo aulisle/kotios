@@ -241,11 +241,7 @@ export const a = [
 export default a
 
 export const populate = async search => {
-  return Promise(resolve => {
-    a.forEach(async project => {
-      await search.indexProject(project)
-    })
-
-    resolve()
+  a.forEach(async project => {
+    await search.indexProject(project)
   })
 }
