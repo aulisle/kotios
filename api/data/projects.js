@@ -240,10 +240,12 @@ export const a = [
 
 export default a
 
-export const populate = search => {
-  const promises = a.map(project => {
-    return search.indexProject(project)
-  })
+export const populate = async search => {
+  return Promise(resolve => {
+    a.forEach(async project => {
+      await search.indexProject(project)
+    })
 
-  return Promise.allSettled(promises)
+    resolve()
+  })
 }
