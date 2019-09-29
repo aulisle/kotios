@@ -13,27 +13,30 @@ import Vue from 'vue'
 let RentoMarker = null
 
 const createMarker = (result, self) => {
-  const marker = new RentoMarker()
-  marker.latlng = {
-    lat: () => result.location.latitude,
-    lng: () => result.location.longitude
+  if (RentoMarker) {
+    const marker = new RentoMarker()
+    marker.latlng = {
+      lat: () => result.location.lat,
+      lng: () => result.location.lng
+    }
+    marker.resultId = result.id
+    marker.project = result
+    marker.setMap(self.gmap)
+    return marker
   }
-  marker.hype = result.memberCount
-  marker.resultId = result.id
-  marker.title = result.title
-  marker.setMap(self.gmap)
-  return marker
+
+  return null
 }
 
 const updateMarker = (marker, result) => {
   if (!result) {
     return
   }
-  marker.hype = result.memberCount
+
   marker.title = result.title
   marker.latlng = {
-    lat: () => result.location.latitude,
-    lng: () => result.location.longitude
+    lat: () => result.location.lat,
+    lng: () => result.location.lng
   }
 }
 
@@ -56,24 +59,50 @@ export default {
       gmap: {},
       google: null,
       markers: [],
-      firstDraw: false,
-      mapCenter: {
-        latitude: 64.002306,
-        longitude: 25.583254
-      }
+      firstDraw: false
     }
   },
 
   computed: {
-    ...mapState('search', ['results'])
+    ...mapState('search', ['results', 'boundingBox'])
   },
 
   watch: {
     gmap() {
       this.drawMarkers()
     },
+
     results() {
       this.drawMarkers()
+    },
+
+    boundingBox(newBoundingBox) {
+      if (
+        !process.client ||
+        !LatLng ||
+        !LatLngBounds ||
+        !newBoundingBox ||
+        !newBoundingBox.southwest ||
+        !newBoundingBox.northeast
+      ) {
+        return
+      }
+
+      const a = new LatLng(
+        newBoundingBox.southwest.lat,
+        newBoundingBox.southwest.lng
+      )
+      const b = new LatLng(
+        newBoundingBox.northeast.lat,
+        newBoundingBox.northeast.lng
+      )
+
+      const bounds = new LatLngBounds(a, b)
+      // eslint-disable-next-line
+      console.log('BOUNDS', bounds)
+
+      this.gmap.fitBounds(bounds)
+      this.gmap.panToBounds(bounds)
     }
   },
 
@@ -89,17 +118,7 @@ export default {
         LatLngBounds = google.maps.LatLngBounds
         LatLng = google.maps.LatLng
 
-        const center = {
-          lat: this.mapCenter.latitude,
-          lng: this.mapCenter.longitude
-        }
-
-        //eslint-disable-next-line
-        console.log('CENTER', center)
-
         self.gmap = new google.maps.Map(self.$refs.gmap, {
-          center,
-          zoom: 6,
           zoomControl: true,
           mapTypeControl: false,
           scaleControl: false,
@@ -107,6 +126,23 @@ export default {
           rotateControl: false,
           fullscreenControl: false
         })
+
+        const a = new LatLng(
+          self.boundingBox.southwest.lat,
+          self.boundingBox.southwest.lng
+        )
+
+        const b = new LatLng(
+          self.boundingBox.northeast.lat,
+          self.boundingBox.northeast.lng
+        )
+
+        const bounds = new LatLngBounds(a, b)
+        // eslint-disable-next-line
+        console.log('BOUNDS', bounds)
+
+        self.gmap.fitBounds(bounds)
+        self.gmap.panToBounds(bounds)
 
         RentoMarker = () => {}
 
@@ -125,21 +161,17 @@ export default {
 
         RentoMarker.prototype.draw = function() {
           const selfie = this
-          const hype = selfie.hype
-          const resultId = selfie.resultId
-          const title = selfie.title
           let div = this.div
           if (!div) {
             div = this.div = document.createElement('div')
             selfie.vueInstance = new Vue({
               store: self.$store,
               router: self.$router,
+              i18n: self.$i18n,
               render: h =>
                 h(Marker, {
                   props: {
-                    title,
-                    hype,
-                    id: resultId
+                    project: selfie.project
                   }
                 })
             })
@@ -211,31 +243,11 @@ export default {
           }
         })
 
-        let bounds = null
-        // If not drawn yet
-        if (!this.firstDraw && LatLngBounds) {
-          bounds = new LatLngBounds()
-        }
-
         // Add them
         addables.forEach(result => {
           const marker = createMarker(result, this)
-
-          if (!this.firstDraw && LatLng && bounds) {
-            const loc = new LatLng(
-              result.location.latitude,
-              result.location.longitude
-            )
-            bounds.extend(loc)
-          }
-
           self.markers.push(marker)
         })
-
-        if (this.results.length !== 0 && bounds) {
-          this.gmap.fitBounds(bounds)
-          this.gmap.panToBounds(bounds)
-        }
 
         if (!this.firstDraw) {
           this.firstDraw = true

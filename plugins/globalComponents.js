@@ -10,7 +10,7 @@ import BaseToggle from '~/components/base/BaseToggle.vue'
 import BaseRadioGroup from '~/components/base/BaseRadioGroup.vue'
 import BaseSelect from '~/components/base/BaseSelect.vue'
 import BaseFile from '~/components/base/BaseFile.vue'
-
+import BaseAutocomplete from '~/components/base/BaseAutocomplete.vue'
 import TransitionPop from '~/components/base/TransitionPop.vue'
 
 Vue.use(VueMaterial)
@@ -22,6 +22,7 @@ Vue.component('base-password-input', BasePasswordInput)
 Vue.component('base-radio-group', BaseRadioGroup)
 Vue.component('base-select', BaseSelect)
 Vue.component('base-file', BaseFile)
+Vue.component('base-autocomplete', BaseAutocomplete)
 Vue.component('transition-pop', TransitionPop)
 
 const createTitle = {

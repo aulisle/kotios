@@ -3,7 +3,7 @@ const ITEM_COUNT = 5
 const createItem = idx => {
   return {
     _id: idx,
-    title: 'Torppala tontinluovutus',
+    title: 'Torppalan kaavoitus',
     contentType: 'Ryhmähaku',
     description:
       'Torppala järjestää tontinluovutuskilpailun. Kaarinan ja Turun rajalla, ekologinen kylä Itämeren rannalla. ',

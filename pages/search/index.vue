@@ -26,11 +26,21 @@ export default {
       scrollPos: 0
     }
   },
+
   computed: {
     isFixed() {
       return this.scrollPos > 70
     }
   },
+
+  fetch({ store, query, $axios }) {
+    if (!query.query || typeof query.query !== 'string') {
+      query.query = 'Suomi'
+    }
+
+    return store.dispatch('search/initSearch', { query, $axios })
+  },
+
   mounted() {
     if (process.client) {
       window.addEventListener('scroll', this.onScroll)
@@ -47,7 +57,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$search-res-width: 40vw;
+$search-res-width: 900px;
 
 .page {
   display: flex;

@@ -18,10 +18,7 @@
             Löydä hankkeita
           </v-card-title>
           <v-card-title class="actions">
-            <base-input v-model="searchQuery" label="Sinua kiinnostava alue" />
-            <base-button class="md-primary md-raised" @click="search"
-              >Hae</base-button
-            >
+            <front-place-search-input />
           </v-card-title>
         </v-card>
       </div>
@@ -36,23 +33,19 @@
 
 <script>
 import FeaturedDisplay from '@/components/featured/FeaturedDisplay'
+import FrontPlaceSearchInput from '@/components/searchMap/FrontPlaceSearchInput'
 
 export default {
   auth: false,
 
   components: {
-    FeaturedDisplay
+    FeaturedDisplay,
+    FrontPlaceSearchInput
   },
 
   head() {
     return {
       title: this.$createTitle(this.$t('routes.index'))
-    }
-  },
-
-  data() {
-    return {
-      searchQuery: ''
     }
   },
 

@@ -11,11 +11,7 @@ import { default as applyMiddlewares } from './middleware'
 import elasticsearch from './search'
 
 import initDb from './models'
-import oauthRoutes from './routes/oauth2'
-import userRoutes from './routes/users'
-import passwordResetRoutes from './routes/passwordReset'
-import searchRoutes from './routes/search'
-import featuredRoutes from './routes/featured'
+import initRoutes from './routes'
 
 // import scheduleJobs from './scheduled'
 
@@ -88,11 +84,7 @@ const startup = async () => {
     publicUrl: frontEndUrl
   })
 
-  oauthRoutes(app)
-  userRoutes(app)
-  passwordResetRoutes(app)
-  searchRoutes(app)
-  featuredRoutes(app)
+  initRoutes(app)
 
   Logger.info('STARTUP FINISHED!')
 }

@@ -34,47 +34,22 @@
 </template>
 
 <script>
+import projectPhaseMixin from './projectPhaseMixin'
+
 export default {
+  mixins: [projectPhaseMixin],
+
+  props: {
+    phases: { type: Object, required: true }
+  },
+
   data() {
     return {
-      showProgress: false,
-      phaseTypes: [
-        {
-          name: 'project',
-          icon: 'account_tree',
-          phase: 0
-        },
-        {
-          name: 'plot',
-          icon: 'layers',
-          phase: 1
-        },
-        {
-          name: 'group',
-          icon: 'group',
-          phase: 0
-        }
-      ]
+      showProgress: false
     }
   },
 
   methods: {
-    calcPercentage(curPhase, totalPhases) {
-      return (curPhase + 0.05) / (totalPhases - 1 + 0.05)
-    },
-    progress(phaseType) {
-      let percentage = 0
-      if (phaseType.name === 'project') {
-        percentage = this.calcPercentage(phaseType.phase, 4)
-      } else if (phaseType.name === 'plot') {
-        percentage = this.calcPercentage(phaseType.phase, 2)
-      } else if (phaseType.name === 'group') {
-        percentage = this.calcPercentage(phaseType.phase, 3)
-      }
-
-      return `${percentage * 100}%`
-    },
-
     viewHandler(e) {
       if (e.percentInView > 0.98) {
         this.showProgress = true

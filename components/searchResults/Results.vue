@@ -1,24 +1,36 @@
 <template>
   <div class="results">
-    <h2 class="results-header">Kohteita {{ results.length }}</h2>
+    <h2 class="results-header">Kohteita {{ resultsTotal }}</h2>
 
     <nuxt-link
       v-for="result in results"
       :key="result.id"
       :to="{ name: 'project-id', params: { id: result.id } }"
+      class="result-link"
     >
       <v-card
-        class="result-card elevation-1"
+        class="result-card elevation-0"
         @mouseover="setHover(result.id)"
         @mouseleave="setHover(null)"
       >
-        <img src="torppala/header.png" class="thumbnail" />
+        <img :src="result.thumbnail" class="thumbnail" />
         <div>
-          <v-card-title>
+          <v-card-title class="result-title">
             {{ result.title }}
           </v-card-title>
           <v-card-text>
-            {{ result.description }}
+            <p class="result-type">{{ getProjectType(result) }}</p>
+            <p class="result-phases">
+              <span
+                v-for="phase in getPhases(result.phases)"
+                :key="phase.name"
+                class="phase-display"
+              >
+                <md-icon>{{ phase.icon }}</md-icon>
+                {{ $t(`project.${phase.name}.${phase.phase}`) }}
+              </span>
+            </p>
+            <p class="result-tagline">{{ result.tagline }}</p>
           </v-card-text>
         </div>
       </v-card>
@@ -28,10 +40,12 @@
 
 <script>
 import { mapState } from 'vuex'
+import { getPhaseTypes } from '../project/projectPhaseMixin'
+import { getProjectType } from '../project/projectTypeMixin'
 
 export default {
   computed: {
-    ...mapState('search', ['results'])
+    ...mapState('search', ['results', 'resultsTotal', 'searchQuery'])
   },
 
   beforeDestroy() {
@@ -41,6 +55,14 @@ export default {
   methods: {
     setHover(id) {
       this.$store.commit('search/setHoveredId', id)
+    },
+
+    getPhases(phases) {
+      return getPhaseTypes(phases)
+    },
+
+    getProjectType(project) {
+      return getProjectType(project)
     }
   }
 }
@@ -57,12 +79,68 @@ export default {
   padding: 35px;
 }
 
+$result-border: 1px solid $color-hr;
+
 .result-card {
   margin-bottom: 20px;
   display: flex;
+  height: 200px;
+  transition: transform 0.2s ease-in-out;
+  border: $result-border !important;
+
+  &:hover {
+    transform: scale(1.02);
+  }
 }
 
 .thumbnail {
   width: 40%;
+  flex-shrink: 0;
+  flex-grow: 0;
+  object-fit: cover;
+}
+
+.result-link:hover {
+  text-decoration: none !important;
+}
+
+.result-title {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-weight: 800;
+}
+
+.result-type {
+  text-transform: uppercase;
+  letter-spacing: $tracking-mid;
+  font-size: $font-s;
+  color: $color-text-secondary;
+  margin-top: 0px;
+}
+
+$margin-result-x: 5px;
+.result-phases {
+  display: flex;
+  margin-left: -$margin-result-x;
+  margin-right: -$margin-result-x;
+}
+
+.phase-display {
+  display: flex;
+  align-items: center;
+  margin-left: $margin-result-x;
+  margin-right: $margin-result-x;
+  font-size: $font-s;
+  color: $color-text-secondary;
+
+  i {
+    margin-right: 5px;
+    color: $color-text-faint !important;
+  }
+}
+
+.result-tagline {
+  font-size: $font-s;
+  color: $color-text-secondary;
 }
 </style>

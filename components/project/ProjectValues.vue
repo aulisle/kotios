@@ -10,10 +10,8 @@
 
 <script>
 export default {
-  data() {
-    return {
-      values: ['eco', 'resources', 'natural', 'solar']
-    }
+  props: {
+    values: { type: Array, required: true }
   }
 }
 </script>

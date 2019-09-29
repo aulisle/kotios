@@ -11,6 +11,7 @@ $color-text-accent-alt: #000000;
 $color-text-primary: lighten(#000, 13%);
 $color-text-primary-hover: lighten(#000, 40%);
 $color-text-secondary: lighten(#000, 40%);
+$color-text-faint: lighten(#000, 60%);
 $color-text-alt: #fff;
 $color-text-alt-hover: rgba(255, 255, 255, 0.8);
 $color-text-black: black;
@@ -28,3 +29,5 @@ $tracking-mid: 1.2px;
 $tracking-wide: 2px;
 
 $top-bar-height: 70px;
+
+$font-s: 0.9rem;

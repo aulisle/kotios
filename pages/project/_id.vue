@@ -10,39 +10,48 @@
             <span class="text">{{ projectType }}</span>
           </h2>
 
-          <project-values class="project-values" />
+          <project-values
+            v-if="project.values"
+            class="project-values"
+            :values="project.values"
+          />
         </div>
         <project-social-share :project="project" />
       </div>
 
-      <project-phases class="project-phases" />
+      <project-phases class="project-phases" :phases="project.phases" />
     </div>
     <md-content>
       <div class="container-base">
         <h2 class="project-tagline">{{ project.tagline }}</h2>
-        <project-map class="project-map" />
+        <project-map class="project-map" :location="project.location" />
         <div class="columns">
           <div class="long-description">
-            <p
-              v-for="(paragraph, idx) in project.description"
-              :key="idx"
-              class="description-paragraph"
-            >
-              {{ paragraph }}
-            </p>
+            <template v-if="project.description">
+              <p
+                v-for="(paragraph, idx) in project.description"
+                :key="idx"
+                class="description-paragraph"
+              >
+                {{ paragraph }}
+              </p>
+            </template>
           </div>
           <div>
-            <project-neighbourhood class="project-events" />
-            <project-events class="project-events" />
+            <project-neighbourhood
+              v-if="project.neighbourhood"
+              class="project-events"
+            />
+            <project-events class="project-events" :events="project.events" />
           </div>
         </div>
       </div>
     </md-content>
 
     <div class="container-base">
-      <project-households class="project-households" />
-      <project-contact class="project-contact" />
-      <project-extra-table class="project-extra-table" />
+      <!-- <project-households class="project-households" /> -->
+      <project-contact class="project-contact" :contacts="project.contacts" />
+      <project-extra-table class="project-extra-table" :project="project" />
     </div>
 
     <div class="fab">
@@ -61,25 +70,27 @@ import ProjectEvents from '@/components/project/ProjectEvents'
 import ProjectValues from '@/components/project/ProjectValues'
 import ProjectNeighbourhood from '@/components/project/ProjectNeighbourhood'
 import ProjectInterestedFab from '@/components/project/ProjectInterestedFab'
-import ProjectHouseholds from '@/components/project/ProjectHouseholds'
+// import ProjectHouseholds from '@/components/project/ProjectHouseholds'
 import ProjectExtraTable from '@/components/project/ProjectExtraTable'
-
-const lorem =
-  'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\n'
-const randomIntFromInterval = (min, max) => {
-  // min and max included
-  return Math.floor(Math.random() * (max - min + 1) + min)
-}
-const createLoremIpsum = paragraphs => {
-  let strs = []
-  for (let i = 0; i < paragraphs; i++) {
-    strs.push(lorem.substring(0, randomIntFromInterval(100, lorem.length - 1)))
-  }
-
-  return strs
-}
+import projectTypeMixin from '@/components/project/projectTypeMixin'
 
 export default {
+  components: {
+    ProjectImages,
+    ProjectSocialShare,
+    ProjectPhases,
+    ProjectMap,
+    ProjectContact,
+    ProjectEvents,
+    ProjectValues,
+    ProjectNeighbourhood,
+    ProjectInterestedFab,
+    // ProjectHouseholds,
+    ProjectExtraTable
+  },
+
+  mixins: [projectTypeMixin],
+
   head() {
     return {
       title: this.$createTitle(this.project.title),
@@ -94,56 +105,14 @@ export default {
     }
   },
 
-  components: {
-    ProjectImages,
-    ProjectSocialShare,
-    ProjectPhases,
-    ProjectMap,
-    ProjectContact,
-    ProjectEvents,
-    ProjectValues,
-    ProjectNeighbourhood,
-    ProjectInterestedFab,
-    ProjectHouseholds,
-    ProjectExtraTable
-  },
-
-  data() {
-    return {
-      project: {
-        projectType: 0, // Ryhmärakennus
-        title: 'Torppala',
-        tagline:
-          'Torppala Kaarinan ja Turun rajalla, ekologinen kylä Itämeren rannalla, Ihmisen hyvä asua ja olla.',
-        description: createLoremIpsum(5),
-        images: [
-          '/torppala/header.png',
-          '/torppala/torppala0.jpg',
-          '/torppala/torppala1.jpg',
-          '/torppala/torppala2.jpg'
-        ]
+  asyncData({ $axios, params }) {
+    return $axios.get(`/api/projects/${params.id}`).then(({ data }) => {
+      // eslint-disable-next-line
+      console.log('DATA', data)
+      return {
+        project: data
       }
-    }
-  },
-
-  computed: {
-    projectType() {
-      if (!this.project || typeof this.project.projectType === 'undefined') {
-        return ''
-      }
-
-      const projectTypes = ['Ryhmärakennushanke', 'Tontin luovutus']
-      return projectTypes[this.project.projectType]
-    },
-
-    projectTypeIcon() {
-      if (!this.project || typeof this.project.projectType === 'undefined') {
-        return ''
-      }
-
-      const icons = ['home_work', 'layers']
-      return icons[this.project.projectType]
-    }
+    })
   }
 }
 </script>
@@ -234,7 +203,7 @@ export default {
   }
 
   .long-description {
-    max-width: 500px;
+    width: 500px;
     flex-shrink: 0;
   }
 
@@ -250,7 +219,7 @@ export default {
 
 @media (min-width: 1200px) {
   .long-description {
-    max-width: 600px;
+    width: 600px;
   }
 }
 </style>

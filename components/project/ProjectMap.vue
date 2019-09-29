@@ -4,14 +4,13 @@
 
 <script>
 export default {
-  data() {
-    return {
-      location: {
-        latitude: 60.395198,
-        longitude: 22.289812
-      }
+  props: {
+    location: {
+      type: Object,
+      required: true
     }
   },
+
   mounted() {
     // Only load if in browser
     if (process.client) {
@@ -20,8 +19,8 @@ export default {
         self.google = google
 
         const center = {
-          lat: this.location.latitude,
-          lng: this.location.longitude
+          lat: this.location.lat,
+          lng: this.location.lng
         }
 
         self.gmap = new google.maps.Map(self.$refs.gmap, {

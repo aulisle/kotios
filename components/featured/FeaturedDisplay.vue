@@ -7,7 +7,10 @@
       class="featured-card"
       :elevation="3"
     >
-      <nuxt-link :to="{ name: 'project-id', params: { id: item.projectId } }">
+      <nuxt-link
+        class="featured-link"
+        :to="{ name: 'project-id', params: { id: item.projectId } }"
+      >
         <v-img :src="item.previewImageUrl" class="white--text">
           <div class="featured-text">
             <v-card-title>
@@ -45,6 +48,9 @@ $featured-margin-between: 20px;
 .featured-card {
   margin-bottom: #{$featured-margin-between};
   overflow: hidden;
+  &:hover {
+    transform: scale(1.02) !important;
+  }
 }
 
 .featured-card:nth-child(odd) {
@@ -87,5 +93,9 @@ $featured-margin-between: 20px;
     rgba(0, 0, 0, 0.7) 100%
   );
   height: 100%;
+}
+
+.featured-link:hover {
+  text-decoration: none !important;
 }
 </style>

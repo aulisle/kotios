@@ -1,46 +1,36 @@
 <template>
   <div>
     <h2>Kohteen tulevat tapahtumat</h2>
-    <p>
-      Voit osallistua näihin tapahtumiin saadaksesi lisätietoa hankkeesta ja
-      tavataksesi ryhmäläisiä.
-    </p>
-    <v-card v-for="(event, idx) in events" :key="idx" class="card">
-      <div class="card-content">
-        <div class="card-icon-wrapper">
-          <md-icon class="card-icon">calendar_today</md-icon>
+    <template v-if="events && events.length > 0">
+      <p>
+        Voit osallistua näihin tapahtumiin saadaksesi lisätietoa hankkeesta ja
+        tavataksesi ryhmäläisiä.
+      </p>
+      <v-card v-for="(event, idx) in events" :key="idx" class="card">
+        <div class="card-content">
+          <div class="card-icon-wrapper">
+            <md-icon class="card-icon">calendar_today</md-icon>
+          </div>
+          <div class="card-details">
+            <v-card-title class="subject">{{ event.subject }}</v-card-title>
+            <v-card-text class="date">{{ event.date }}</v-card-text>
+            <v-card-text class="address">{{ event.address }}</v-card-text>
+          </div>
         </div>
-        <div class="card-details">
-          <v-card-title class="subject">{{ event.subject }}</v-card-title>
-          <v-card-text class="date">{{ event.date }}</v-card-text>
-          <v-card-text class="address">{{ event.address }}</v-card-text>
-        </div>
-      </div>
-    </v-card>
+      </v-card>
+    </template>
+    <template v-else>
+      <p>Ei tulevia tapahtumia.</p>
+    </template>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      events: [
-        {
-          date: '13.8.2019',
-          subject: 'Esittely',
-          address: 'Kiinamyllynkatu 10 B2, 20520 TURKU'
-        },
-        {
-          date: '16.8.2019',
-          subject: 'I heart Pukki -kisakatsomo',
-          address: 'Kiinamyllynkatu 10 B2, 20520 TURKU'
-        },
-        {
-          date: '18.8.2019',
-          subject: 'Esittely 2',
-          address: 'Kiinamyllynkatu 10 B2, 20520 TURKU'
-        }
-      ]
+  props: {
+    events: {
+      validator: val => Array.isArray(val) || val == null,
+      default: () => []
     }
   }
 }

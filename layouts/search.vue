@@ -1,6 +1,6 @@
 <template>
   <v-app class="app">
-    <header-toolbar />
+    <header-toolbar show-search />
     <div class="app-container">
       <nuxt />
     </div>

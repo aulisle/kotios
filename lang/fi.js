@@ -152,7 +152,8 @@ const translations = {
       eco: 'Ekologisuus',
       resources: 'Resurssien optimointi',
       natural: 'Luonnollisuus',
-      solar: 'Aurinkoenergia'
+      solar: 'Aurinkoenergia',
+      rento: 'Rento-rakennuttaminen'
     },
     role: {
       consultant: 'Konsultti',

@@ -5,18 +5,35 @@
     :class="{ open: cardOpen, hovered: isHovered }"
   >
     <nuxt-link
-      :to="{ name: 'project-id', params: { id } }"
+      :to="{ name: 'project-id', params: { id: project.id } }"
       class="card-wrapper"
     >
-      <transition name="slide-y-reverse-transition">
+      <v-slide-y-reverse-transition>
         <v-card v-if="cardOpen" class="card">
-          <v-card-title class="card-title">
-            {{ title }}
-          </v-card-title>
+          <img :src="project.thumbnail" class="thumbnail" />
+          <div>
+            <v-card-title class="result-title">
+              {{ project.title }}
+            </v-card-title>
+            <v-card-text>
+              <p class="result-type">{{ projectType }}</p>
+              <p class="result-phases">
+                <span
+                  v-for="phase in phaseTypes"
+                  :key="phase.name"
+                  class="phase-display"
+                >
+                  <md-icon>{{ phase.icon }}</md-icon>
+                  {{ $t(`project.${phase.name}.${phase.phase}`) }}
+                </span>
+              </p>
+              <p class="result-tagline">{{ project.tagline }}</p>
+            </v-card-text>
+          </div>
         </v-card>
-      </transition>
+      </v-slide-y-reverse-transition>
     </nuxt-link>
-    <div class="marker" :style="{ 'z-index': hype }" @click="onClick">
+    <div class="marker" @click="onClick">
       <div class="background">
         <md-icon class="icon">house</md-icon>
       </div>
@@ -27,16 +44,19 @@
 <script>
 import { mixin as onClickOutside } from 'vue-on-click-outside'
 import { mapState } from 'vuex'
+import { getPhaseTypes } from '../project/projectPhaseMixin'
+import projectTypeMixin from '../project/projectTypeMixin'
 
 export default {
   name: 'MapMarker',
 
-  mixins: [onClickOutside],
+  mixins: [onClickOutside, projectTypeMixin],
 
   props: {
-    id: { type: [String, Number], required: true },
-    title: { type: String, required: true },
-    hype: { type: Number, required: true }
+    project: {
+      type: Object,
+      required: true
+    }
   },
 
   data() {
@@ -49,11 +69,11 @@ export default {
     ...mapState('search', ['hoveredId']),
 
     isHovered() {
-      return this.hoveredId == this.id
+      return this.hoveredId == this.project.id
     },
 
-    animDuration() {
-      return (10 / this.hype + 2).toString() + 's'
+    phaseTypes() {
+      return getPhaseTypes(this.project.phases)
     }
   },
 
@@ -65,8 +85,6 @@ export default {
       document.body.click()
 
       this.cardOpen = true
-
-      // this.$router.push({ name: 'project-id', params: { id: this.id } })
     },
 
     closeCard() {
@@ -108,8 +126,8 @@ export default {
   }
 }
 
-$card-width: 200px;
-$card-height: 120px;
+$card-width: 400px;
+$card-height: 450px;
 $marker-size: 38px;
 
 .card {
@@ -119,6 +137,13 @@ $marker-size: 38px;
   height: $card-height;
   top: -$card-height - ($marker-size / 2) - 3px;
   left: -($card-width / 2);
+  font-family: $font-stack-heading !important;
+
+  img {
+    width: $card-width;
+    height: 200px;
+    object-fit: cover;
+  }
 }
 
 .card-wrapper {
@@ -127,6 +152,7 @@ $marker-size: 38px;
 
 .card-title {
   width: 100%;
+  font-weight: 800;
 }
 
 .marker {
@@ -179,5 +205,16 @@ $marker-size: 38px;
 .icon {
   color: $color-text-secondary;
   font-size: 19px !important;
+}
+
+.result-phases {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.phase-display {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
 }
 </style>

@@ -1,6 +1,8 @@
 import elasticsearch from 'elasticsearch'
 
 import users from './users'
+import projects from './projects'
+import { populate } from '../data/projects'
 
 let $client = null
 
@@ -10,14 +12,20 @@ const search = {
       host
     })
 
-    return Promise.all([this.userIndexMapping()])
+    return Promise.all([
+      this.userIndexMapping(),
+      this.projectIndexMapping()
+    ]).then(() => {
+      return populate(this)
+    })
   },
 
   client() {
     return $client
   },
 
-  ...users
+  ...users,
+  ...projects
 }
 
 export default search

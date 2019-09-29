@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="rows && rows.length > 0">
     <h2 class="heading">Lisätiedot</h2>
     <v-card>
       <v-simple-table class="table">
@@ -18,42 +18,50 @@
 
 <script>
 export default {
-  data() {
-    return {
-      project: {
-        numberOfApartments: 100,
-        moveInDate: '2022',
-        creationDate: '2019',
-        socialLiving: 0,
-        housingAssociation: 'Koti kaupungissa ry'
-      }
-    }
+  props: {
+    project: { type: Object, required: true }
   },
 
   computed: {
     rows() {
-      return [
-        {
+      const res = []
+
+      if (typeof this.project.numberOfApartments !== 'undefined') {
+        res.push({
           title: 'Asuntojen määrä (suunniteltu/toteutunut)',
           value: this.project.numberOfApartments
-        },
-        {
+        })
+      }
+
+      if (typeof this.project.moveInDate !== 'undefined') {
+        res.push({
           title: 'Muuttoajankohta (suunniteltu/toteutunut)',
           value: this.project.moveInDate
-        },
-        {
+        })
+      }
+
+      if (typeof this.project.creationDate !== 'undefined') {
+        res.push({
           title: 'Projektin luontiajankohta',
           value: this.project.creationDate
-        },
-        {
+        })
+      }
+
+      if (typeof this.project.socialLiving !== 'undefined') {
+        res.push({
           title: 'Yhteisöllinen asuminen',
           value: this.project.socialLiving
-        },
-        {
+        })
+      }
+
+      if (typeof this.project.housingAssociation !== 'undefined') {
+        res.push({
           title: 'Yhdistys',
           value: this.project.housingAssociation
-        }
-      ]
+        })
+      }
+
+      return res
     }
   }
 }

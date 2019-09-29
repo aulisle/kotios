@@ -1,11 +1,15 @@
 <template>
   <div>
-    <md-toolbar class="header-toolbar elevation-1">
-      <nuxt-link :to="{ name: 'index' }">
-        <div class="logo">
-          <img src="/rento-logo.svg" class="logo-img" />
-        </div>
-      </nuxt-link>
+    <md-toolbar class="header-toolbar elevation-0" elevation="0">
+      <div class="toolbar-section-start">
+        <nuxt-link :to="{ name: 'index' }">
+          <div class="logo">
+            <img src="/rento-logo.svg" class="logo-img" />
+          </div>
+        </nuxt-link>
+
+        <place-search-input v-if="showSearch" class="search" />
+      </div>
 
       <div class="md-toolbar-section-end links">
         <base-button
@@ -58,10 +62,16 @@
 <script>
 import { mapState } from 'vuex'
 import AccountMenu from './AccountMenu'
+import PlaceSearchInput from '../searchMap/ToolbarPlaceSearchInput'
 
 export default {
   components: {
-    AccountMenu
+    AccountMenu,
+    PlaceSearchInput
+  },
+
+  props: {
+    showSearch: { type: Boolean, default: false }
   },
 
   data() {
@@ -107,6 +117,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.toolbar-section-start {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   display: flex;
   font-family: $font-stack-button;
@@ -125,6 +140,8 @@ export default {
   height: $top-bar-height;
   padding: 0px $margin-page;
   background-color: white;
+  border-bottom: 1px solid $color-hr;
+  box-sizing: border-box;
 }
 
 .link-container {
@@ -156,5 +173,10 @@ export default {
   .nuxt-link-active:not(.exact) {
     color: $color-primary;
   }
+}
+
+.search {
+  margin-left: 30px;
+  width: 20vw;
 }
 </style>
