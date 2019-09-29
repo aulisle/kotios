@@ -245,5 +245,5 @@ export const populate = search => {
     return search.indexProject(project)
   })
 
-  return Promise.all(promises)
+  return Promise.race(promises)
 }
