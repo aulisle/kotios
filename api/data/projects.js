@@ -127,8 +127,8 @@ export const a = [
       lat: 60.80043,
       lng: 21.40841
     },
-    projectType: 0,
-    title: 'Uudenkaupungin ryhmärakennushanke',
+    projectType: 4,
+    title: 'Uudenkaupungin puukerrostalo',
     tagline: 'Elämisen iloa',
     values: ['eco'],
     phases: {
@@ -155,7 +155,7 @@ export const a = [
       lat: 60.45148,
       lng: 22.26869
     },
-    projectType: 0,
+    projectType: 3,
     values: ['natural'],
     title: 'Skanssin asunto-osuuskunta',
     tagline: 'Elämisen iloa',
@@ -186,7 +186,7 @@ export const a = [
       lng: 22.291013
     },
     title: 'Torppalan kaavoitus',
-    projectType: 0,
+    projectType: 4,
     tagline:
       'Torppala Kaarinan ja Turun rajalla, ekologinen kylä Itämeren rannalla, Ihmisen hyvä asua ja olla.',
     description: ['Torppala on Torppala'],
@@ -239,12 +239,3 @@ export const a = [
 ]
 
 export default a
-
-// const delay = ms => new Promise(res => setTimeout(res, ms))
-
-export const populate = async search => {
-  /*for (var i = 0; i < a.length; i++) {
-    await search.indexProject(a[i])
-    await delay(600)
-  }*/
-}

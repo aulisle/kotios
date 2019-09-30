@@ -2,7 +2,6 @@ import elasticsearch from 'elasticsearch'
 
 import users from './users'
 import projects from './projects'
-import { populate } from '../data/projects'
 
 let $client = null
 
@@ -17,7 +16,7 @@ const search = {
         return this.projectIndexMapping()
       })
       .then(() => {
-        return populate(this)
+        return this.populateProjects()
       })
   },
 

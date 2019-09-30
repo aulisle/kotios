@@ -6,7 +6,9 @@ export const getProjectType = project => {
   const projectTypes = [
     'Ryhmärakennushanke',
     'Tontin luovutus',
-    'Konsulttivetoinen hanke'
+    'Konsulttivetoinen hanke',
+    'Asunto-osuuskunta',
+    'Osallistava asuntohanke'
   ]
   return projectTypes[project.projectType]
 }
@@ -16,7 +18,7 @@ export const getProjectTypeIcon = project => {
     return ''
   }
 
-  const icons = ['home_work', 'layers', 'build']
+  const icons = ['home_work', 'layers', 'build', 'home_work', 'home_work']
   return icons[project.projectType]
 }
 

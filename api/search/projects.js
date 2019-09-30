@@ -1,3 +1,6 @@
+import projects from '../data/projects'
+import Logger from '../../plugins/logger'
+
 const IDX_NAME = 'project'
 const IDX_TYPE = 'project'
 
@@ -13,12 +16,12 @@ const userModule = {
       await client.indices.create({
         index: IDX_NAME
       })
-    } /*else {
+    } else {
       await client.indices.delete({ index: IDX_NAME })
       await client.indices.create({
         index: IDX_NAME
       })
-    }*/
+    }
 
     return client.indices.putMapping({
       index: IDX_NAME,
@@ -73,6 +76,36 @@ const userModule = {
     } catch (e) {
       //eslint-disable-next-line
       console.log('INDEXING ERROR', e)
+    }
+  },
+
+  async populateProjects() {
+    let body = []
+    projects.forEach(project => {
+      body = [
+        ...body,
+        { index: { _index: IDX_NAME, _id: project.id } },
+        {
+          title: project.title,
+          tagline: project.tagline,
+          projectType: project.projectType,
+          location: {
+            lat: project.location.lat,
+            lon: project.location.lng
+          },
+          thumbnail: project.thumbnail,
+          phases: project.phases,
+          values: project.values
+        }
+      ]
+    })
+
+    try {
+      await this.client().bulk({ refresh: true, body })
+      Logger.info('Populated projects')
+    } catch (e) {
+      // eslint-disable-next-line
+      console.error('FAILED POPULATING: ', e)
     }
   },
 
