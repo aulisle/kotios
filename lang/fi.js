@@ -129,12 +129,12 @@ const translations = {
   'login-google': 'Kirjaudu Googlella',
   project: {
     phases: {
-      project: 'Projektin tila',
-      plot: 'Tontin tila',
-      group: 'Ryhmän tila'
+      project: 'Projektin vaihe',
+      plot: 'Tontin vaihe',
+      group: 'Ryhmän vaihe'
     },
     project: {
-      0: 'Alustava keräys',
+      0: 'Kokoontuminen',
       1: 'Suunnittelu',
       2: 'Rakennuttaminen',
       3: 'Valmis'

@@ -13,12 +13,12 @@ const userModule = {
       await client.indices.create({
         index: IDX_NAME
       })
-    } else {
+    } /*else {
       await client.indices.delete({ index: IDX_NAME })
       await client.indices.create({
         index: IDX_NAME
       })
-    }
+    }*/
 
     return client.indices.putMapping({
       index: IDX_NAME,

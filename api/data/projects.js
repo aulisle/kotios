@@ -240,11 +240,11 @@ export const a = [
 
 export default a
 
-const delay = ms => new Promise(res => setTimeout(res, ms))
+// const delay = ms => new Promise(res => setTimeout(res, ms))
 
 export const populate = async search => {
-  for (var i = 0; i < a.length; i++) {
+  /*for (var i = 0; i < a.length; i++) {
     await search.indexProject(a[i])
     await delay(600)
-  }
+  }*/
 }
