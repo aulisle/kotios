@@ -12,12 +12,13 @@ const search = {
       host
     })
 
-    return Promise.all([
-      this.userIndexMapping(),
-      this.projectIndexMapping()
-    ]).then(() => {
-      return populate(this)
-    })
+    return this.userIndexMapping()
+      .then(() => {
+        return this.projectIndexMapping()
+      })
+      .then(() => {
+        return populate(this)
+      })
   },
 
   client() {
