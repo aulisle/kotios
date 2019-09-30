@@ -245,6 +245,6 @@ const delay = ms => new Promise(res => setTimeout(res, ms))
 export const populate = async search => {
   a.forEach(async project => {
     await search.indexProject(project)
-    await delay(300)
+    await delay(400)
   })
 }

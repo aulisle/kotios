@@ -14,7 +14,8 @@ const mixin = {
 
       this.$axios
         .get('/api/search/place-suggestions', {
-          params: { query: this.mSearchQuery }
+          params: { query: this.mSearchQuery },
+          progress: false
         })
         .then(({ data }) => {
           if (this.suggestionQueryId === queryId) {

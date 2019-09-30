@@ -16,6 +16,12 @@ import Results from '@/components/searchResults/Results'
 export default {
   layout: 'search',
 
+  head() {
+    return {
+      title: this.$createTitle(this.$route.query.query)
+    }
+  },
+
   components: {
     RentoMap,
     Results
@@ -30,6 +36,19 @@ export default {
   computed: {
     isFixed() {
       return this.scrollPos > 70
+    }
+  },
+
+  watch: {
+    $route(to) {
+      if (!to.query.query || typeof to.query.query !== 'string') {
+        to.query.query = 'Suomi'
+      }
+
+      this.$store.dispatch('search/initSearch', {
+        query: to.query,
+        $axios: this.$axios
+      })
     }
   },
 
