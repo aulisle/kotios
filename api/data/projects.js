@@ -24,7 +24,7 @@ export const a = [
     contacts: [
       {
         name: 'V-P Rajala',
-        role: 'facilitator',
+        role: 'project-advisor',
         email: 'email@email.com',
         phone: '040 1234567',
         initials: 'VR'
@@ -55,7 +55,7 @@ export const a = [
     contacts: [
       {
         name: 'V-P Rajala',
-        role: 'facilitator',
+        role: 'project-advisor',
         email: 'email@email.com',
         phone: '040 1234567',
         initials: 'VR'
@@ -86,7 +86,7 @@ export const a = [
     contacts: [
       {
         name: 'V-P Rajala',
-        role: 'facilitator',
+        role: 'project-advisor',
         email: 'email@email.com',
         phone: '040 1234567',
         initials: 'VR'
@@ -114,7 +114,7 @@ export const a = [
     contacts: [
       {
         name: 'V-P Rajala',
-        role: 'facilitator',
+        role: 'project-advisor',
         email: 'email@email.com',
         phone: '040 1234567',
         initials: 'VR'
@@ -142,7 +142,7 @@ export const a = [
     contacts: [
       {
         name: 'V-P Rajala',
-        role: 'facilitator',
+        role: 'project-advisor',
         email: 'email@email.com',
         phone: '040 1234567',
         initials: 'VR'
@@ -152,30 +152,50 @@ export const a = [
   {
     id: 5,
     location: {
-      lat: 60.45148,
-      lng: 22.26869
+      lat: 60.426251,
+      lng: 22.323354
     },
-    projectType: 3,
-    values: ['natural'],
-    title: 'Skanssin asunto-osuuskunta',
-    tagline: 'Elämisen iloa',
+    projectType: 4,
+    values: ['natural', '0', '1', '2', '3', '4', '5', '6', '7'],
+    title: 'Skanssin Rento-hanke',
+    tagline: 'TERVETULOA SKANSSIIN – edistyksellisen energiatehokkuuden kotiin',
     phases: {
-      project: 1,
-      plot: 1,
-      group: 1
+      project: 0,
+      plot: 0,
+      group: 0
     },
-    thumbnail: '/torppala/torppala0.jpg',
-    images: ['/torppala/torppala0.jpg'],
-    events: [],
+    thumbnail: '/skanssi/1.jpg',
+    images: [
+      '/skanssi/1.jpg',
+      '/skanssi/viitesuunnitelma-1.jpg',
+      '/skanssi/viitesuunnitelma-2.jpg',
+      '/skanssi/viitesuunnitelma-3.jpg'
+    ],
+    events: [
+      {
+        date: '31.10.2019',
+        subject: 'Tontinluovutuskilpailu päättyy',
+        address: ''
+      }
+    ],
     contacts: [
       {
         name: 'V-P Rajala',
-        role: 'facilitator',
+        role: 'project-advisor',
         email: 'email@email.com',
         phone: '040 1234567',
         initials: 'VR'
       }
-    ]
+    ],
+    description: [
+      'Turun kaupunki asettaa yleisellä tarjouskilpailulla ammattirakentajille tarjottavaksi vapaarahoitteiseen asuntotuotantoon asuinkerrostalojen korttelialueen (AK-1) ja sitä palvelevan autopaikoitukselle varatun korttelialueen (LPA-1) osan Skanssin kaupunginosassa.',
+      'Skanssissa pyritään kehittämään uudenlaisia energian tuotannon, käytön ja seurannan ratkaisuja. Alueella halutaan kehittää ja pilotoida rakennuskohtaisten ratkaisujen lisäksi myös alueellisia uusia energiaratkaisuja, kuten matalalämpöistä kaukolämpöverkkoa. Skanssin alueelle on laadittu energialiite, jossa sovitaan tavoista, joilla osapuolet edistävät uusiutuvan ja kierrätetyn energian käyttöä, veden- ja energiakulutuksen tehokkuutta sekä kaksisuuntaista energiakauppaa Skanssin alueella. Tontinsaajan tulee toteuttaa energialiitteen mukaiset pakolliset vaatimukset, minkä lisäksi tarjousten vertailussa lisäarvoa tuo sitoutuminen energialiitteen valinnaisten kohtien täyttämiseen.',
+      'Kaupungin tavoitteena on korttelin nopea toteutuminen, laadukas suunnittelu ja rakentaminen sekä monipuolinen asuntojakauma.',
+      'Tule toteuttamaan fiksumpi tapa omantyyliseen asumiseen!'
+    ],
+    history: [],
+    neighbourhood: 'skanssi',
+    housingAssociation: 'Asukasyhdistys perustetaan myöhemmin'
   },
 
   // Torppala
@@ -185,7 +205,7 @@ export const a = [
       lat: 60.394134,
       lng: 22.291013
     },
-    title: 'Torppalan kaavoitus',
+    title: 'Torppalan aluesuunnittelu',
     projectType: 4,
     tagline:
       'Torppala Kaarinan ja Turun rajalla, ekologinen kylä Itämeren rannalla, Ihmisen hyvä asua ja olla.',
@@ -223,7 +243,7 @@ export const a = [
     contacts: [
       {
         name: 'V-P Rajala',
-        role: 'facilitator',
+        role: 'project-advisor',
         email: 'email@email.com',
         phone: '040 1234567',
         initials: 'VR'

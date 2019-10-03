@@ -129,35 +129,47 @@ const translations = {
   'login-google': 'Kirjaudu Googlella',
   project: {
     phases: {
-      project: 'Projektin vaihe',
-      plot: 'Tontin vaihe',
+      project: 'Hankkeen vaihe',
+      plot: 'Rakennuspaikan vaihe',
       group: 'Ryhmän vaihe'
     },
     project: {
-      0: 'Kokoontuminen',
-      1: 'Suunnittelu',
-      2: 'Rakennuttaminen',
-      3: 'Valmis'
+      0: 'Etsitään kiinnostuneita',
+      1: 'Tavoitteen asettaminen',
+      2: 'Suunnittelu',
+      3: 'Rakennuttaminen',
+      4: 'Valmis'
     },
     plot: {
-      0: 'Ei tonttia',
-      1: 'Tontti olemassa'
+      0: 'Haetaan kiinnitystä',
+      1: 'Alustava varaus',
+      2: 'Rakennuspaikka varmistunut'
     },
     group: {
-      0: 'Ydinryhmähaku',
-      1: 'Haku avoinna',
-      2: 'Ryhmä täysi'
+      0: 'Etsitään kiinnostuneita',
+      1: 'Ydinryhmä muodostunut',
+      2: 'Liittyminen avoinna',
+      3: 'Hanke täynnä'
     },
     values: {
       eco: 'Ekologisuus',
       resources: 'Resurssien optimointi',
       natural: 'Luonnollisuus',
       solar: 'Aurinkoenergia',
-      rento: 'Rento-rakennuttaminen'
+      rento: 'Rento-rakennuttaminen',
+      0: 'Ryhmärakennuttaminen',
+      1: 'Asunto-osuuskunta',
+      2: 'Rakennetaan yhdessä',
+      3: 'Kestävä kehitys',
+      4: 'Laadukasta asumista',
+      5: 'Moderni',
+      6: 'Kaukolämpöverkko',
+      7: 'Energian kysyntäjousto'
     },
     role: {
       consultant: 'Konsultti',
-      facilitator: 'Fasilitaattori'
+      facilitator: 'Fasilitaattori',
+      'project-advisor': 'Hankeneuvoja'
     }
   }
 }

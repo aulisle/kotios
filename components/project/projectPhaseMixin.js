@@ -1,6 +1,14 @@
 export const getPhaseTypes = phases => {
   const res = []
 
+  if (typeof phases.group !== 'undefined') {
+    res.push({
+      name: 'group',
+      icon: 'group',
+      phase: phases.group
+    })
+  }
+
   if (typeof phases.project !== 'undefined') {
     res.push({
       name: 'project',
@@ -14,14 +22,6 @@ export const getPhaseTypes = phases => {
       name: 'plot',
       icon: 'layers',
       phase: phases.plot
-    })
-  }
-
-  if (typeof phases.group !== 'undefined') {
-    res.push({
-      name: 'group',
-      icon: 'group',
-      phase: phases.group
     })
   }
 

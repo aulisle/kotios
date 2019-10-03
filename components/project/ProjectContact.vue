@@ -1,6 +1,6 @@
 <template>
   <div class="contact-form">
-    <h2>Avainhenkilöt</h2>
+    <h2>Yhteyshenkilöt</h2>
     <div class="cards">
       <v-card v-for="(contact, idx) in contacts" :key="idx">
         <div class="card-content">

@@ -75,6 +75,8 @@ export default {
 
 <style lang="scss" global>
 .project-social {
+  flex-shrink: 0;
+
   .network-icons {
     display: flex;
     margin-left: -5px;
