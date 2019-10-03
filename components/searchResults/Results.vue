@@ -76,7 +76,7 @@ export default {
 }
 
 .results {
-  padding: 35px;
+  padding: 35px 17px 35px 35px;
 }
 
 $result-border: 1px solid $color-hr;
@@ -84,9 +84,9 @@ $result-border: 1px solid $color-hr;
 .result-card {
   margin-bottom: 20px;
   display: flex;
-  height: 200px;
   transition: transform 0.2s ease-in-out;
   border: $result-border !important;
+  flex-direction: column;
 
   &:hover {
     transform: scale(1.02);
@@ -94,9 +94,10 @@ $result-border: 1px solid $color-hr;
 }
 
 .thumbnail {
-  width: 40%;
+  width: 100%;
   flex-shrink: 0;
   flex-grow: 0;
+  height: 200px !important;
   object-fit: cover;
 }
 
@@ -132,6 +133,7 @@ $margin-result-x: 5px;
   margin-right: $margin-result-x;
   font-size: $font-s;
   color: $color-text-secondary;
+  line-height: 1;
 
   i {
     margin-right: 5px;
@@ -142,5 +144,22 @@ $margin-result-x: 5px;
 .result-tagline {
   font-size: $font-s;
   color: $color-text-secondary;
+}
+
+@media screen and (min-width: #{$search-breakpoint-sm}) {
+  .thumbnail {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: #{$search-breakpoint-xl}) {
+  .result-card {
+    height: 200px;
+    flex-direction: row;
+  }
+
+  .thumbnail {
+    width: 40%;
+  }
 }
 </style>

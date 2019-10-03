@@ -1,11 +1,30 @@
 <template>
   <div class="page">
-    <v-card class="result-column">
+    <v-card class="result-column" :class="{ 'show-mobile': !showMap }">
       <v-navigation-drawer permanent width="100%">
+        <div class="show-map-container">
+          <base-button
+            class="switch-show-button md-raised md-primary"
+            @click="showMap = !showMap"
+          >
+            Näytä kartta
+          </base-button>
+        </div>
+
         <results />
       </v-navigation-drawer>
     </v-card>
-    <rento-map class="search-map" :class="{ fixed: isFixed }" />
+    <div class="search-map" :class="{ fixed: isFixed, 'show-mobile': showMap }">
+      <div class="show-list-container">
+        <base-button
+          class="switch-show-button md-raised md-primary"
+          @click="showMap = !showMap"
+        >
+          Näytä listaus
+        </base-button>
+      </div>
+      <rento-map class="map-content" />
+    </div>
   </div>
 </template>
 
@@ -29,7 +48,8 @@ export default {
 
   data() {
     return {
-      scrollPos: 0
+      scrollPos: 0,
+      showMap: false
     }
   },
 
@@ -76,7 +96,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$search-res-width: 900px;
+$search-res-width-md: 490px;
+$search-res-width-l: 600px;
+$search-res-width-lg: 900px;
 
 .page {
   display: flex;
@@ -86,19 +108,96 @@ $search-res-width: 900px;
 }
 
 .search-map {
-  width: calc(100vw - #{$search-res-width} - 15px);
+  width: 100vw;
   height: 100vh;
+  display: flex;
+  position: absolute;
+
+  justify-content: stretch;
+  align-items: stretch;
+  z-index: 0;
+
+  .map-content {
+    flex-grow: 1;
+  }
 }
 
 .result-column {
-  width: $search-res-width;
+  width: 100vw;
   flex-shrink: 0;
+  z-index: 1;
+  display: none;
 }
 
-.fixed {
-  position: fixed;
-  top: 0;
-  margin-left: $search-res-width;
-  z-index: 0;
+.show-mobile {
+  &.result-column {
+    display: block;
+  }
+}
+
+.show-map-container,
+.show-list-container {
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
+.show-list-container {
+  position: absolute;
+  width: 100%;
+}
+
+@media screen and (min-width: #{$search-breakpoint-md}) {
+  .show-list-container,
+  .show-map-container {
+    display: none;
+  }
+
+  .search-map {
+    position: relative;
+    display: flex;
+    width: calc(100vw - #{$search-res-width-md} - 15px);
+  }
+
+  .result-column {
+    display: block;
+    width: $search-res-width-md;
+    flex-shrink: 0;
+  }
+
+  .fixed {
+    position: fixed;
+    top: 0;
+    margin-left: $search-res-width-md;
+    z-index: 0;
+  }
+}
+
+@media screen and (min-width: #{$search-breakpoint-l}) {
+  .search-map {
+    width: calc(100vw - #{$search-res-width-l} - 15px);
+  }
+
+  .result-column {
+    width: $search-res-width-l;
+  }
+
+  .fixed {
+    margin-left: $search-res-width-l;
+  }
+}
+
+@media screen and (min-width: #{$search-breakpoint-xl}) {
+  .search-map {
+    width: calc(100vw - #{$search-res-width-lg} - 15px);
+  }
+
+  .result-column {
+    width: $search-res-width-lg;
+  }
+
+  .fixed {
+    margin-left: $search-res-width-lg;
+  }
 }
 </style>

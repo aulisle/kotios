@@ -144,6 +144,9 @@ $group-gradient: linear-gradient(
   .card-type {
     margin-bottom: 0px;
     padding-bottom: 0px;
+    color: $color-text-faint;
+    line-height: 1;
+    margin-top: 10px;
   }
 
   .card-title {
@@ -152,6 +155,8 @@ $group-gradient: linear-gradient(
     text-align: right;
     display: block;
     white-space: nowrap;
+    font-size: 1.2rem;
+    line-height: 1;
   }
 }
 
