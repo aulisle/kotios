@@ -164,9 +164,9 @@ export const a = [
       plot: 0,
       group: 0
     },
-    thumbnail: '/skanssi/1.jpg',
+    thumbnail: '/skanssi/thumbnail.jpg',
     images: [
-      '/skanssi/1.jpg',
+      '/skanssi/header.jpg',
       '/skanssi/viitesuunnitelma-1.jpg',
       '/skanssi/viitesuunnitelma-2.jpg',
       '/skanssi/viitesuunnitelma-3.jpg'
