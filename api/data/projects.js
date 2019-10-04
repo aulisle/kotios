@@ -277,7 +277,7 @@ export const a = [
       lng: 24.911837
     },
     title: 'Casa Urbana',
-    projectType: 4,
+    projectType: 2,
     address: 'Järkäsaari, Helsinki',
     tagline:
       'Konsulttialoitteinen Hitas-kerrostalohanke Helsingin Jätkäsaaressa.',
@@ -313,7 +313,7 @@ export const a = [
       lng: 24.936071
     },
     title: 'Romeo ja Julia',
-    projectType: 4,
+    projectType: 2,
     address: 'Pojamankatu 6, Kruunuvuorenranta, Helsinki',
     tagline: 'Uniikkia asumista Kruunuvuorenrannassa',
     description: [
@@ -349,7 +349,7 @@ export const a = [
       lng: 24.98003
     },
     title: 'Polariksenkatu 9',
-    projectType: 4,
+    projectType: 2,
     address: 'Pojamankatu 6, Kruunuvuorenranta, Helsinki',
     tagline: 'Uusi kaupunkikoti meren äärellä',
     description: [
@@ -395,7 +395,7 @@ export const a = [
       lng: 24.919417
     },
     title: 'Juutinraumankatu 6',
-    projectType: 4,
+    projectType: 2,
     address: 'Juutinraumankatu 6, Jätkäsaari, Helsinki',
     tagline: 'Saracon ensimmäinen ryhmärakennuttamiskohde',
     description: [

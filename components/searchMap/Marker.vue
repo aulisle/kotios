@@ -17,7 +17,7 @@
             </v-card-title>
             <v-card-text>
               <p class="result-type">{{ projectType }}</p>
-              <p class="result-phases">
+              <!--<p class="result-phases">
                 <span
                   v-for="phase in phaseTypes"
                   :key="phase.name"
@@ -27,6 +27,7 @@
                   {{ $t(`project.${phase.name}.${phase.phase}`) }}
                 </span>
               </p>
+              -->
               <p class="result-tagline">{{ project.tagline }}</p>
             </v-card-text>
           </div>

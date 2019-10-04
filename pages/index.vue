@@ -7,12 +7,13 @@
           <span>Rento</span>
         </h1>
         <h2>
-          Kaikki Suomen asukasläheiset rakennuttamishankkeet ja henkilöt yhdessä
-          paikassa.
+          Suomen asukasläheinen rakennuttaminen yhdessä paikassa.
         </h2>
+
         <nuxt-link :to="{ name: 'what-is' }" class="what-is-link">
-          Mitä on asukasläheinen rakennuttaminen?
+          Mitä tämä on?
         </nuxt-link>
+
         <v-card class="search-card" :elevation="7">
           <v-card-title class="search-title">
             Löydä hankkeita

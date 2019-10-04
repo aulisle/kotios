@@ -7,7 +7,7 @@ export const getProjectType = project => {
     'Ryhmärakennushanke',
     'Tontin luovutus',
     'Konsulttivetoinen hanke',
-    'Asunto-osuuskunta',
+    'Asunto-osuuskuntahanke',
     'Osallistava asuntohanke'
   ]
   return projectTypes[project.projectType]
