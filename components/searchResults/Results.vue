@@ -138,8 +138,8 @@ $result-border: 1px solid $color-hr;
   }
 
   &.complete {
-    color: $color-primary;
-    border: 1px solid #{$color-primary};
+    color: $color-text-primary;
+    border: 1px solid #{$color-text-primary};
   }
 }
 
