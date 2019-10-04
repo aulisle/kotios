@@ -31,7 +31,7 @@
               v-else-if="result.phases && result.phases.project === 4"
               class="notice complete"
             >
-              Hanke valmistunut
+              Valmistunut hanke
             </div>
           </v-card-text>
           <v-card-title class="result-title">
