@@ -96,7 +96,8 @@ export default {
 }
 
 .search-card {
-  margin-top: 80px;
+  margin-top: 50px;
+  margin-bottom: 320px;
   max-width: 600px;
   background-color: rgba(#fff, 1);
   background-image: url('/architecture-1857175_1280.jpg');
