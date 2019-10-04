@@ -71,18 +71,42 @@ const controller = {
     }
 
     let boundingBox = null
+    let getBoundingBox = () => {
+      return autocompletePlace(req.query.query.toLowerCase()).then(
+        ({ json }) => {
+          if (json.predictions.length === 0) {
+            // eslint-disable-next-line
+            console.log('NO PREDICTIONS')
 
-    autocompletePlace(req.query.query.toLowerCase())
-      .then(({ json }) => {
-        if (json.predictions.length === 0) {
-          // eslint-disable-next-line
-          console.log('NO PREDICTIONS')
-          return res.json(getGeometry(FINLAND_ID))
+            return res.json(getGeometry(FINLAND_ID))
+          }
+
+          return getGeometry(json.predictions[0].place_id)
         }
+      )
+    }
 
-        return getGeometry(json.predictions[0].place_id)
-      })
+    if (req.query.bounds) {
+      const bounds = JSON.parse(req.query.bounds)
+
+      getBoundingBox = () => {
+        return new Promise(resolve => {
+          return resolve({
+            viewport: null,
+            location: {
+              lat: (bounds.northeast.lat + bounds.southwest.lat) / 2,
+              lng: (bounds.northeast.lng + bounds.southwest.lng) / 2
+            }
+          })
+        })
+      }
+    }
+
+    getBoundingBox()
       .then(geometry => {
+        // eslint-disable-next-line
+        console.log('GEOMETRY', geometry)
+
         boundingBox = geometry.viewport
         return search.searchProjects({
           query: {

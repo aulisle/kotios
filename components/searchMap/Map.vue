@@ -7,6 +7,7 @@
 <script>
 import Marker from './Marker.vue'
 import { mapState } from 'vuex'
+import { debounce } from 'lodash'
 
 import Vue from 'vue'
 
@@ -126,6 +127,8 @@ export default {
           rotateControl: false,
           fullscreenControl: false
         })
+
+        self.gmap.addListener('bounds_changed', self.mapBoundsChanged)
 
         const a = new LatLng(
           self.boundingBox.southwest.lat,
@@ -253,7 +256,26 @@ export default {
           this.firstDraw = true
         }
       }
-    }
+    },
+
+    mapBoundsChanged: debounce(function() {
+      const bounds = this.gmap.getBounds()
+
+      this.$store.dispatch('search/search', {
+        query: {
+          bounds: {
+            northeast: {
+              lat: bounds.getNorthEast().lat(),
+              lng: bounds.getNorthEast().lng()
+            },
+            southwest: {
+              lat: bounds.getSouthWest().lat(),
+              lng: bounds.getSouthWest().lng()
+            }
+          }
+        }
+      })
+    }, 500)
   }
 }
 </script>

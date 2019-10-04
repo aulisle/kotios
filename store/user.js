@@ -27,10 +27,10 @@ const changeState = (commit, rootState, values) => {
 }
 
 export const actions = {
-  changeEmail({ commit, rootState }, { $axios, email }) {
+  changeEmail({ commit, rootState }, { email }) {
     commit('setWorking', true)
 
-    return $axios
+    return this.$axios
       .patch('/api/user', { email })
       .then(() => {
         changeState(commit, rootState, { email })
@@ -44,9 +44,9 @@ export const actions = {
 
   changePassword(
     { commit, rootState },
-    { $axios, oldPassword, password, passwordAgain }
+    { oldPassword, password, passwordAgain }
   ) {
-    return $axios
+    return this.$axios
       .patch('/api/user', { oldPassword, password, passwordAgain })
       .then(() => {
         commit('setWorking', false)
@@ -58,11 +58,11 @@ export const actions = {
       })
   },
 
-  updatePic({ commit, rootState }, { $axios, pic }) {
+  updatePic({ commit, rootState }, { pic }) {
     const form = new FormData()
     form.append('image', pic)
 
-    return $axios
+    return this.$axios
       .patch('/api/user/pic', form, {
         headers: {
           'Content-Type': 'multipart/form-data'

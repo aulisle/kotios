@@ -1,5 +1,6 @@
 export const state = () => ({
   searchQuery: '',
+  searchBounds: null,
   searchRequestId: 0,
 
   results: [],
@@ -18,6 +19,11 @@ export const mutations = {
 
   setSearchQuery: (state, query) => {
     state.searchQuery = query
+    state.searchBounds = null
+  },
+
+  setSearchBounds: (state, bounds) => {
+    state.searchBounds = bounds
   },
 
   setResultsLoading: (state, loading) => {
@@ -53,46 +59,59 @@ export const mutations = {
 export const getters = {}
 
 export const actions = {
-  initSearch({ commit, dispatch }, { query, $axios }) {
+  initSearch({ commit, dispatch }, { query }) {
     if (query.query) {
       commit('setSearchQuery', query.query)
     } else {
       commit('setSearchQuery', '')
     }
 
-    return dispatch('doSearch', { $axios })
+    return dispatch('doSearch')
   },
 
-  search({ commit, state, dispatch }, { query, $axios, $router }) {
+  search({ commit, state, dispatch }, { query, $router }) {
     if (query.query) {
       commit('setSearchQuery', query.query)
-    } else {
-      commit('setSearchQuery', '')
     }
 
-    if ($router) {
+    if (query.bounds) {
+      commit('setSearchBounds', query.bounds)
+    }
+
+    if ($router && query.query) {
       $router.push({
         name: 'search',
         query: { query: state.searchQuery }
       })
     }
 
-    return dispatch('doSearch', { $axios })
+    return dispatch('doSearch', { setBoundingBox: !query.bounds })
   },
 
-  doSearch({ commit, state }, { $axios }) {
+  doSearch({ commit, state }, params) {
+    let setBoundingBox = true
+
+    if (params) {
+      setBoundingBox = params.boundingBox
+    }
+
     commit('setResultsLoading', true)
     const searchRequestId = state.searchRequestId + 1
     commit('setSearchRequestId', searchRequestId)
 
-    return $axios
+    return this.$axios
       .get('/api/search/projects', {
-        params: { query: state.searchQuery }
+        params: { query: state.searchQuery, bounds: state.searchBounds }
       })
       .then(({ data }) => {
         if (searchRequestId === state.searchRequestId) {
           commit('setResults', { results: data.results, total: data.total })
-          commit('setBoundingBox', data.boundingBox)
+
+          if (setBoundingBox) {
+            // If bounds have been set by the user by dragging the map
+            // do not update
+            commit('setBoundingBox', data.boundingBox)
+          }
         }
       })
       .catch(e => {

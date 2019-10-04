@@ -78,7 +78,7 @@ export const a = [
     projectType: 2,
     title: 'Välimerenkatu 24',
     address: 'Välimerenkatu 24, Helsinki',
-    tagline: 'Saraco D&M konsulttivetoinen hanke',
+    tagline: 'Merellistä asumista kantakaupungissa',
     values: ['resources'],
     phases: {
       project: 4,
@@ -86,18 +86,30 @@ export const a = [
       group: 3
     },
     thumbnail:
-      'https://www.ryhmarakennuttajat.fi/api/thumbnail?img=/files/ryhmarakennuttajat.kotisivukone.com/Vlimerenkatu_havainnekuva_katujulkisivu.jpg&width=216',
+      'https://www.saraco.fi/wp-content/uploads/2017/02/AH8A2142-1024x718.jpg',
     images: [
-      'https://www.ryhmarakennuttajat.fi/api/thumbnail?img=/files/ryhmarakennuttajat.kotisivukone.com/Vlimerenkatu_havainnekuva_katujulkisivu.jpg'
+      'https://www.saraco.fi/wp-content/uploads/2017/02/AH8A2142-1024x718.jpg',
+      'https://www.saraco.fi/wp-content/uploads/2017/02/AH8A1614-1024x682.jpg',
+      'https://www.saraco.fi/wp-content/uploads/2017/02/AH8A1593-682x1024.jpg',
+      'https://www.saraco.fi/wp-content/uploads/2017/02/AH8A1631-1024x682.jpg',
+      'https://www.saraco.fi/wp-content/uploads/2017/02/AH8A2280-1024x682.jpg',
+      'https://www.saraco.fi/wp-content/uploads/2017/02/AH8A1728-1024x682.jpg',
+      'https://www.saraco.fi/wp-content/uploads/2017/02/AH8A1565-1024x682.jpg',
+      'https://www.saraco.fi/wp-content/uploads/2017/02/AH8A1763-1024x682.jpg',
+      'https://www.saraco.fi/wp-content/uploads/2017/02/AH8A2229-1024x682.jpg'
+    ],
+    description: [
+      'Jätkäsaaressa, Välimerenkadun ja Länsisatamankadun kulmauksessa sijaitseva As Oy Helsingin Capri on valmistunut ja luovutettu asukkaille. Ryhmärakennuttamalla toteutettuun asuinkerrostaloon valmistui 44 asuinhuoneistoa, joiden asukkaat ovat jo saaneet huoneistot käyttöönsä.',
+      'As Oy Helsingin Capri on toteutettu Helsingin kaupungin vuokratontille Hitas-ehdoin. Talon on suunnitellut Arkkitehtitoimisto Brunow&Maunula Oy.'
     ],
     events: [],
     contacts: [
       {
-        name: 'V-P Rajala',
+        name: 'Rauni Kolehmainen',
         role: 'project-advisor',
-        email: 'email@email.com',
-        phone: '040 1234567',
-        initials: 'VR'
+        email: 'etunimi.sukunimi@saraco.fi',
+        phone: '+358 40 703 1828',
+        initials: 'RK'
       }
     ]
   },
@@ -146,8 +158,8 @@ export const a = [
       plot: 1,
       group: 1
     },
-    thumbnail: '/torppala/torppala0.jpg',
-    images: ['/torppala/torppala0.jpg'],
+    thumbnail: '/uusikaupunki/header.png',
+    images: ['/uusikaupunki/header.png'],
     events: [],
     contacts: [
       {
@@ -426,6 +438,87 @@ export const a = [
         email: 'etunimi.sukunimi@saraco.fi',
         phone: '+358 40 703 1828',
         initials: 'RK'
+      }
+    ]
+  },
+
+  // Koti kaupungissa Sompasaari
+  {
+    id: 11,
+    location: {
+      lat: 60.181336,
+      lng: 24.977307
+    },
+    title: 'Sompasaaren hanke',
+    projectType: 0,
+    address: 'Kaljaasi Auroorankuja, Kalasatama, Helsinki',
+    tagline: 'Sompasaaren hanke – As. Oy Helsingin Sompasaaren Sumppi',
+    description: [
+      'Sompasaaren yhteisöllinen 39 asunnon kerrostalohanke on asukaslähtöinen ryhmärakennuttamishanke, jossa talon tulevat asukkaat vastaavat kohteen suunnitteluttamisesta ja rakennuttamisesta palkkaamiensa ammattilaisten avulla. Talo tulee osoitteeseen Kaljaasi Auroran kuja, Loviseholmin puiston viereen.',
+      'Sisääntulokerroksessa sijaitsee kutsuva aula ja juhlatila, viidennen kerroksen katolla on puutarha, jonka yhteydessä on kesäkeittiö ja sauna. Kahdeksannen kerroksen saunatiloista avautuu näkymät pitkälle horisonttiin.',
+      'Talo rakennetaan energiatehokkaaksi ja laadukkaaksi. Taloon tulee ekologinen maalämpö ja -kylmä sekä jäteveden lämmöntalteenottojärjestelmä. Huoneistoihin tulee miellyttävän ja tasaisen lämmön luova lattialämmitys, huoneistokohtainen ja säädettävä ilmanvaihto.',
+      'Suunnitelmissa on perinteisten yhteistilojen lisäksi mm. 2 saunaosastoa, yhteinen monikäyttötila ja ruokasali yhteisruokailua ja muita tapahtumia varten, vierashuone sekä kuntosali. Talon katolle tullaan rakentamaan kattopuutarha, ja sen yhteyteen saunaosasto ja kesäkeittiö. Irtaimisto- ja pyörävarastot sekä verstaat rakennetaan kellarikerrokseen ja pysäköintihalli pihakannen alle.'
+    ],
+    phases: {
+      project: 4,
+      plot: 2,
+      group: 3
+    },
+    values: ['5'],
+    thumbnail:
+      'http://www.hemistan.fi/wp-content/uploads/2016/06/sompasaari2.jpg',
+    images: [
+      'http://www.hemistan.fi/wp-content/uploads/2016/06/sompasaari2.jpg',
+      'http://www.hemistan.fi/wp-content/uploads/2016/06/sompasaari_voimagraphics.jpg'
+    ],
+    events: [],
+    contacts: [
+      {
+        name: 'Koti kaupungissa RY',
+        role: 'association',
+        email: 'sompasaari.rrhanke@gmail.com',
+        initials: 'KK'
+      }
+    ]
+  },
+
+  // Koti kaupungissa Verkkosaari
+  {
+    id: 12,
+    location: {
+      lat: 60.191719,
+      lng: 24.981389
+    },
+    title: 'Verkkosaaren hanke',
+    projectType: 0,
+    address: 'Kaljaasi Auroorankuja, Kalasatama, Helsinki',
+    tagline: 'Verkkosaaren hanke – As Oy Kalasataman Messi',
+    description: [
+      'Yhteisiä aterioita naapureiden ja ystävien joukossa, nautiskelua kattosaunan lämmössä ja oleskelua viihtyisässä takkahuoneessa… Kalasatamaan rakentuu 40 kodin yhteisöllinen talo, jossa asutaan laadukkaasti ja nautitaan elämästä.',
+      'As Oy Kalasataman Messistä tulee yhteisöllinen talo, johon tulee runsaasti kaikkien asukkaiden käytettävissä olevia yhteistiloja: pohjakerrokseen yhteiskeittiö ja olohuone, 7. kerroksen katolle kaksi saunaa ja takkahuone sekä kesäkeittiö ja kattoterassi. Neloskerrokseen tulee vierashuone, harrastehuone sekä kattoterassi laatikkoviljelyä varten.',
+      'Talon pohjakerrokseen rakennetaan irtaimisto- ja pyörävarastot sekä verstastila. Pysäköinti tulee sisäpihalle pihakannen alle. Pysäköinnin lisäksi sisäpihalle suunnitellaan korttelin yhteistä viheraluetta.',
+      'Verkkosaaren tontti on kahden pihakadun kulmassa. Tontille nousee L-kirjaimen muotoinen talo, jonka Kalasatamankadun puoleinen osa on seitsenkerroksinen ja Verkkosaarenkadun puoleinen osa nelikerroksinen. Tontilla on rakennusoikeutta yhteensä 3 600 kerrosalaneliömetriä, mikä tarkoittaa noin 2 500:aa huoneistoalaneliömetriä. Talo on osa seitsemän taloyhtiön korttelia, ja sen suunnittelee arkkitehtitoimisto Sarlin+Sopanen. Hankkeen rakennuttajakonsultiksi on valittu Rakennuttajatoimisto HTJ.'
+    ],
+    phases: {
+      project: 4,
+      plot: 2,
+      group: 3
+    },
+    values: ['5'],
+    thumbnail:
+      'http://www.hemistan.fi/wp-content/uploads/2016/06/messi_kadunpuoli.png',
+    images: [
+      'http://www.hemistan.fi/wp-content/uploads/2016/06/messi_kadunpuoli.png',
+      'http://www.hemistan.fi/wp-content/uploads/2016/06/messi_pihanpuoli.png',
+      'http://www.hemistan.fi/wp-content/uploads/2016/06/messi_takkahuone.png'
+    ],
+    events: [],
+    contacts: [
+      {
+        name: 'Koti kaupungissa RY',
+        role: 'project-advisor',
+        email: 'sompasaari.rrhanke@gmail.com',
+        initials: 'KK'
       }
     ]
   }
