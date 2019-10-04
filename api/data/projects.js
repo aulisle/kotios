@@ -10,9 +10,9 @@ export const a = [
     tagline: 'Firan konsulttivetoinen hanke',
     values: ['resources'],
     phases: {
-      project: 3,
-      plot: 1,
-      group: 2
+      project: 4,
+      plot: 2,
+      group: 3
     },
     thumbnail:
       'https://www.fira.fi/wp-content/uploads/2019/06/SSL-julkisivu-merelta-800.jpg',
@@ -42,9 +42,9 @@ export const a = [
     tagline: 'Firan konsulttivetoinen hanke',
     values: ['resources'],
     phases: {
-      project: 1,
-      plot: 1,
-      group: 1
+      project: 3,
+      plot: 2,
+      group: 3
     },
     thumbnail:
       'https://www.fira.fi/wp-content/uploads/2017/12/jatkassari_kerrostalo_1360x900-1360x900.jpg',
@@ -73,9 +73,9 @@ export const a = [
     tagline: 'Saraco D&M konsulttivetoinen hanke',
     values: ['resources'],
     phases: {
-      project: 1,
-      plot: 1,
-      group: 1
+      project: 4,
+      plot: 2,
+      group: 3
     },
     thumbnail:
       'https://www.ryhmarakennuttajat.fi/api/thumbnail?img=/files/ryhmarakennuttajat.kotisivukone.com/Vlimerenkatu_havainnekuva_katujulkisivu.jpg&width=216',
@@ -155,6 +155,7 @@ export const a = [
       lat: 60.426251,
       lng: 22.323354
     },
+    address: 'Skanssi, Turku',
     projectType: 4,
     values: ['natural', '0', '1', '2', '3', '4', '5', '6', '7'],
     title: 'Skanssin Rento-hanke',
@@ -207,6 +208,7 @@ export const a = [
     },
     title: 'Torppalan aluesuunnittelu',
     projectType: 4,
+    address: 'Torppala, Turku',
     tagline:
       'Torppala Kaarinan ja Turun rajalla, ekologinen kylä Itämeren rannalla, Ihmisen hyvä asua ja olla.',
     description: ['Torppala on Torppala'],

@@ -46,6 +46,9 @@ const userModule = {
           },
           location: {
             type: 'geo_point'
+          },
+          address: {
+            type: 'text'
           }
         }
       }
@@ -70,12 +73,13 @@ const userModule = {
           },
           thumbnail: project.thumbnail,
           phases: project.phases,
-          values: project.values
+          values: project.values,
+          address: project.address
         }
       })
     } catch (e) {
       //eslint-disable-next-line
-      console.log('INDEXING ERROR', e)
+      Logger.error('INDEXING ERROR', e)
     }
   },
 
@@ -95,7 +99,8 @@ const userModule = {
           },
           thumbnail: project.thumbnail,
           phases: project.phases,
-          values: project.values
+          values: project.values,
+          address: project.address
         }
       ]
     })

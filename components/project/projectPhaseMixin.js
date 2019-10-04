@@ -43,11 +43,11 @@ const mixin = {
     progress(phaseType) {
       let percentage = 0
       if (phaseType.name === 'project') {
-        percentage = this.calcPercentage(phaseType.phase, 4)
+        percentage = this.calcPercentage(phaseType.phase, 5)
       } else if (phaseType.name === 'plot') {
-        percentage = this.calcPercentage(phaseType.phase, 2)
-      } else if (phaseType.name === 'group') {
         percentage = this.calcPercentage(phaseType.phase, 3)
+      } else if (phaseType.name === 'group') {
+        percentage = this.calcPercentage(phaseType.phase, 4)
       }
 
       return `${percentage * 100}%`

@@ -9,6 +9,9 @@
             <md-icon>{{ projectTypeIcon }}</md-icon>
             <span class="text">{{ projectType }}</span>
           </h2>
+          <p v-if="project.address">
+            {{ project.address }}
+          </p>
 
           <project-values
             v-if="project.values"

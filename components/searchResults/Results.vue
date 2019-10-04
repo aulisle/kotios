@@ -14,13 +14,33 @@
         @mouseleave="setHover(null)"
       >
         <img :src="result.thumbnail" class="thumbnail" />
-        <div>
+
+        <div class="result-content">
+          <v-card-text class="result-type">
+            <span>
+              {{ getProjectType(result) }}
+            </span>
+
+            <div
+              v-if="result.phases && result.phases.group < 3"
+              class="notice positive"
+            >
+              Etsitään kiinnostuneita
+            </div>
+            <div
+              v-else-if="result.phases && result.phases.project === 4"
+              class="notice complete"
+            >
+              Valmis hanke
+            </div>
+          </v-card-text>
           <v-card-title class="result-title">
             {{ result.title }}
           </v-card-title>
           <v-card-text>
-            <p class="result-type">{{ getProjectType(result) }}</p>
-            <p class="result-phases">
+            <p class="result-address">{{ result.address }}</p>
+
+            <!--<p class="result-phases">
               <span
                 v-for="phase in getPhases(result.phases)"
                 :key="phase.name"
@@ -29,7 +49,7 @@
                 <md-icon>{{ phase.icon }}</md-icon>
                 {{ $t(`project.${phase.name}.${phase.phase}`) }}
               </span>
-            </p>
+            </p>-->
             <p class="result-tagline">{{ result.tagline }}</p>
           </v-card-text>
         </div>
@@ -105,18 +125,62 @@ $result-border: 1px solid $color-hr;
   text-decoration: none !important;
 }
 
-.result-title {
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-  font-weight: 800;
+.notice {
+  padding: 2px 6px;
+  border-radius: 2px;
+  font-size: $font-xs;
+  opacity: 0.8;
+
+  &.positive {
+    background-color: #22bf22;
+    color: $color-text-alt;
+    border: 1px solid #22bf22;
+  }
+
+  &.complete {
+    color: $color-primary;
+    border: 1px solid #{$color-primary};
+  }
 }
 
-.result-type {
-  text-transform: uppercase;
-  letter-spacing: $tracking-mid;
-  font-size: $font-s;
-  color: $color-text-secondary;
-  margin-top: 0px;
+.result-content {
+  width: 100%;
+}
+
+.results {
+  .result-type {
+    text-transform: uppercase;
+    letter-spacing: $tracking-mid;
+    font-size: $font-s;
+    color: $color-text-secondary;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .result-title {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-weight: 800;
+    margin-top: 5px;
+    padding-top: 0px;
+  }
+
+  .result-address {
+    color: $color-text-secondary;
+    font-size: $font-s;
+    margin-bottom: 0px;
+  }
+
+  .result-tagline {
+    font-size: $font-s;
+    color: $color-text-secondary;
+    margin-top: 5px;
+  }
 }
 
 $margin-result-x: 5px;
@@ -139,11 +203,6 @@ $margin-result-x: 5px;
     margin-right: 5px;
     color: $color-text-faint !important;
   }
-}
-
-.result-tagline {
-  font-size: $font-s;
-  color: $color-text-secondary;
 }
 
 @media screen and (min-width: #{$search-breakpoint-sm}) {
