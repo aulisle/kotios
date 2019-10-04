@@ -7,6 +7,7 @@ export const a = [
     },
     projectType: 2,
     title: 'Sompasaarenlaituri 12',
+    address: 'Sompasaarenlaituri 12, Helsinki',
     tagline: 'Firan konsulttivetoinen hanke',
     values: ['resources'],
     phases: {
@@ -39,6 +40,7 @@ export const a = [
     },
     projectType: 2,
     title: 'Malagankatu 2',
+    address: 'Malagankatu 2, Helsinki',
     tagline: 'Firan konsulttivetoinen hanke',
     values: ['resources'],
     phases: {
@@ -70,6 +72,7 @@ export const a = [
     },
     projectType: 2,
     title: 'Välimerenkatu 24',
+    address: 'Välimerenkatu 24, Helsinki',
     tagline: 'Saraco D&M konsulttivetoinen hanke',
     values: ['resources'],
     phases: {
@@ -101,6 +104,7 @@ export const a = [
     },
     projectType: 0,
     title: 'Kankaan ryhmärakennushanke',
+    address: 'Jyväskylä',
     values: ['rento'],
     tagline: 'Uniikki mahdollisuus aloittaa juuri sinunlaisesi hanke',
     phases: {
@@ -129,6 +133,7 @@ export const a = [
     },
     projectType: 4,
     title: 'Uudenkaupungin puukerrostalo',
+    address: 'Uusikaupunki',
     tagline: 'Elämisen iloa',
     values: ['eco'],
     phases: {
@@ -208,7 +213,7 @@ export const a = [
     },
     title: 'Torppalan aluesuunnittelu',
     projectType: 4,
-    address: 'Torppala, Turku',
+    address: 'Torppala, Kaarina',
     tagline:
       'Torppala Kaarinan ja Turun rajalla, ekologinen kylä Itämeren rannalla, Ihmisen hyvä asua ja olla.',
     description: ['Torppala on Torppala'],
