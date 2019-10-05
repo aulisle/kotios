@@ -14,7 +14,10 @@ const translations = {
     'what-is': 'Asukasläheisyys',
     search: 'Hankkeet',
     'add-project': 'Jätä ilmoitus',
-    'for-partners': 'Kumppaneille'
+    'for-partners': 'Kumppaneille',
+    php: 'Osallistaminen',
+    process: 'Rento',
+    faq: 'UKK'
   },
   settings: {
     'change-password': 'Vaihda salasana',
