@@ -15,7 +15,7 @@ const translations = {
     search: 'Hankkeet',
     'add-project': 'Jätä ilmoitus',
     'for-partners': 'Kumppaneille',
-    php: 'Osallistaminen',
+    phenomenon: 'Osallistaminen',
     process: 'Rento',
     faq: 'UKK'
   },

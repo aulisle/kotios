@@ -10,7 +10,7 @@
           Suomen osallistavat asuntohankkeet yhdessä paikassa.
         </h2>
 
-        <nuxt-link :to="{ name: 'what-is' }" class="what-is-link">
+        <nuxt-link :to="{ name: 'phenomenon' }" class="what-is-link">
           Mitä on osallistaminen?
         </nuxt-link>
 

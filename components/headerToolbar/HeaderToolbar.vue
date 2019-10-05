@@ -92,7 +92,7 @@ export default {
     routes() {
       return [
         { name: 'search', exact: false },
-        { name: 'php', exact: false },
+        { name: 'phenomenon', exact: false },
         { name: 'process', exact: false },
         { name: 'faq', exact: false }
       ]
@@ -147,6 +147,9 @@ export default {
 
 .link-container {
   margin-right: 12px;
+  a {
+    font-size: $font-s;
+  }
 }
 
 .links {
