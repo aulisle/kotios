@@ -7,11 +7,11 @@
           <span>Rento</span>
         </h1>
         <h2>
-          Suomen osallistava asuntohankkeet yhdessä paikassa.
+          Suomen osallistavat asuntohankkeet yhdessä paikassa.
         </h2>
 
         <nuxt-link :to="{ name: 'what-is' }" class="what-is-link">
-          Mitä tämä on?
+          Mitä on osallistaminen?
         </nuxt-link>
 
         <v-card class="search-card" :elevation="7">
