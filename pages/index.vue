@@ -7,7 +7,7 @@
           <span>Rento</span>
         </h1>
         <h2>
-          Suomen asukasläheinen rakennuttaminen yhdessä paikassa.
+          Suomen osallistava asuntohankkeet yhdessä paikassa.
         </h2>
 
         <nuxt-link :to="{ name: 'what-is' }" class="what-is-link">
