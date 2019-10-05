@@ -92,8 +92,9 @@ export default {
     routes() {
       return [
         { name: 'search', exact: false },
-        { name: 'what-is', exact: false },
-        { name: 'add-project', exact: false }
+        { name: 'php', exact: false },
+        { name: 'process', exact: false },
+        { name: 'faq', exact: false }
       ]
     },
 

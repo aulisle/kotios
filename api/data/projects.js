@@ -125,9 +125,9 @@ export const a = [
     values: ['rento'],
     tagline: 'Uniikki mahdollisuus aloittaa juuri sinunlaisesi hanke',
     phases: {
-      project: 1,
-      plot: 1,
-      group: 1
+      project: 0,
+      plot: 0,
+      group: 0
     },
     thumbnail: '/torppala/torppala0.jpg',
     images: ['/torppala/torppala0.jpg'],
