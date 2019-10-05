@@ -129,8 +129,11 @@ export const a = [
       plot: 0,
       group: 0
     },
-    thumbnail: '/torppala/torppala0.jpg',
-    images: ['/torppala/torppala0.jpg'],
+    thumbnail:
+      'https://upload.wikimedia.org/wikipedia/commons/3/3b/Jyv%C3%A4skyl%C3%A4_-_Paperitehtaankatu_1-2.jpg',
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/3/3b/Jyv%C3%A4skyl%C3%A4_-_Paperitehtaankatu_1-2.jpg'
+    ],
     events: [],
     contacts: [
       {
@@ -519,6 +522,74 @@ export const a = [
         role: 'project-advisor',
         email: 'sompasaari.rrhanke@gmail.com',
         initials: 'KK'
+      }
+    ]
+  },
+
+  // Tampere
+  {
+    id: 13,
+    location: {
+      lat: 61.497797,
+      lng: 23.760895
+    },
+    projectType: 0,
+    title: 'Tampereen hanke',
+    address: 'Tampere',
+    values: ['rento'],
+    tagline: 'Uniikki mahdollisuus aloittaa juuri sinunlaisesi hanke',
+    phases: {
+      project: 0,
+      plot: 0,
+      group: 0
+    },
+    thumbnail:
+      'https://upload.wikimedia.org/wikipedia/commons/3/3c/Tampere_view_2.jpg',
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/3/3c/Tampere_view_2.jpg'
+    ],
+    events: [],
+    contacts: [
+      {
+        name: 'V-P Rajala',
+        role: 'project-advisor',
+        email: 'email@email.com',
+        phone: '040 1234567',
+        initials: 'VR'
+      }
+    ]
+  },
+
+  // Oulu
+  {
+    id: 14,
+    location: {
+      lat: 65.01243,
+      lng: 25.465369
+    },
+    projectType: 0,
+    title: 'Oulun hanke',
+    address: 'Oulu',
+    values: ['rento'],
+    tagline: 'Uniikki mahdollisuus aloittaa juuri sinunlaisesi hanke',
+    phases: {
+      project: 0,
+      plot: 0,
+      group: 0
+    },
+    thumbnail:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Kirkkokatu_Oulu_20121206_03.JPG/2560px-Kirkkokatu_Oulu_20121206_03.JPG',
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Kirkkokatu_Oulu_20121206_03.JPG/2560px-Kirkkokatu_Oulu_20121206_03.JPG'
+    ],
+    events: [],
+    contacts: [
+      {
+        name: 'V-P Rajala',
+        role: 'project-advisor',
+        email: 'email@email.com',
+        phone: '040 1234567',
+        initials: 'VR'
       }
     ]
   }

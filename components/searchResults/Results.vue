@@ -22,10 +22,20 @@
             </span>
 
             <div
-              v-if="result.phases && result.phases.group < 3"
-              class="notice positive"
+              v-if="
+                result.phases &&
+                  result.phases.group == 0 &&
+                  result.phases.plot == 0
+              "
+              class="notice possible"
             >
               Etsitään kiinnostuneita
+            </div>
+            <div
+              v-else-if="result.phases && result.phases.group < 3"
+              class="notice positive"
+            >
+              Liittyminen avoinna
             </div>
             <div
               v-else-if="result.phases && result.phases.project === 4"
@@ -130,6 +140,11 @@ $result-border: 1px solid $color-hr;
   border-radius: 2px;
   font-size: $font-xs;
   opacity: 0.8;
+
+  &.possible {
+    color: $color-1;
+    border: 1px solid #{$color-1};
+  }
 
   &.positive {
     background-color: #22bf22;
