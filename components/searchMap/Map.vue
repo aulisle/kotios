@@ -65,7 +65,7 @@ export default {
   },
 
   computed: {
-    ...mapState('search', ['results', 'boundingBox'])
+    ...mapState('search', ['results', 'boundingBox', 'searchBounds'])
   },
 
   watch: {
@@ -261,21 +261,55 @@ export default {
     mapBoundsChanged: debounce(function() {
       const bounds = this.gmap.getBounds()
 
-      this.$store.dispatch('search/search', {
-        query: {
-          bounds: {
-            northeast: {
-              lat: bounds.getNorthEast().lat(),
-              lng: bounds.getNorthEast().lng()
-            },
-            southwest: {
-              lat: bounds.getSouthWest().lat(),
-              lng: bounds.getSouthWest().lng()
-            }
+      const query = {
+        bounds: {
+          northeast: {
+            lat: bounds.getNorthEast().lat(),
+            lng: bounds.getNorthEast().lng()
+          },
+          southwest: {
+            lat: bounds.getSouthWest().lat(),
+            lng: bounds.getSouthWest().lng()
           }
         }
+      }
+
+      if (this.isSmallMovement(query.bounds)) {
+        // If there is only a small movement,
+        // do not start another search
+        return
+      }
+
+      this.$store.dispatch('search/search', {
+        query
       })
-    }, 500)
+    }, 500),
+
+    isSmallMovement(bounds) {
+      const boundsWidth = bounds.northeast.lat - bounds.southwest.lat
+      const boundsHeight = bounds.northeast.lng - bounds.southwest.lng
+
+      if (
+        this.searchBounds &&
+        Math.abs(bounds.northeast.lat - this.searchBounds.northeast.lat) /
+          boundsWidth <
+          0.02 &&
+        Math.abs(bounds.northeast.lng - this.searchBounds.northeast.lng) /
+          boundsWidth <
+          0.02 &&
+        Math.abs(bounds.southwest.lat - this.searchBounds.southwest.lat) /
+          boundsHeight <
+          0.02 &&
+        Math.abs(bounds.southwest.lng - this.searchBounds.southwest.lng) /
+          boundsHeight <
+          0.02
+      ) {
+        // If the bounds are very close to the original ones, do not update the search
+        return true
+      }
+
+      return false
+    }
   }
 }
 </script>
