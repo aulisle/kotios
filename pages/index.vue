@@ -2,13 +2,13 @@
   <div class="">
     <div class="hero">
       <div class="container-base">
-        <h1 class="product-name">
+        <!--<h1 class="product-name">
           <img src="/rento-logo.svg" class="hero-logo" />
           <span>Rento</span>
+        </h1>-->
+        <h1 class="tagline">
+          Osallistavien asuntohankkeiden koti
         </h1>
-        <h2>
-          Suomen osallistavat asuntohankkeet yhdessä paikassa.
-        </h2>
 
         <nuxt-link :to="{ name: 'phenomenon' }" class="what-is-link">
           Mitä on osallistaminen?
@@ -81,6 +81,13 @@ export default {
   background-image: url('/desk.jpg');
   background-size: cover;
   background-position: 0% 100%;
+
+  .tagline {
+    font-size: 5rem;
+    font-weight: 900;
+    margin-bottom: -20px;
+    margin-top: 30px;
+  }
 }
 
 .product-name {
@@ -96,8 +103,8 @@ export default {
 }
 
 .search-card {
-  margin-top: 50px;
-  margin-bottom: 320px;
+  margin-top: 200px;
+  margin-bottom: 120px;
   max-width: 600px;
   background-color: rgba(#fff, 1);
   background-image: url('/architecture-1857175_1280.jpg');

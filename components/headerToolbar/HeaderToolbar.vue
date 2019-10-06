@@ -5,6 +5,7 @@
         <nuxt-link :to="{ name: 'index' }">
           <div class="logo">
             <img src="/rento-logo.svg" class="logo-img" />
+            RENTO
           </div>
         </nuxt-link>
 

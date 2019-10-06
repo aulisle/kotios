@@ -14,7 +14,7 @@
     </div>
 
     <div class="container-base key-points">
-      <h2 class="models-header">Hauskempi, halvempi, helpompi</h2>
+      <h2 class="models-header">Helpompi, halvempi, hauskempi</h2>
 
       <div class="grid key-points-grid">
         <div>

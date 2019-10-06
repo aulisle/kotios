@@ -17,7 +17,7 @@ const translations = {
     'for-partners': 'Kumppaneille',
     phenomenon: 'Osallistaminen',
     process: 'Rento',
-    faq: 'UKK'
+    faq: 'Usein kysyttyä'
   },
   settings: {
     'change-password': 'Vaihda salasana',
