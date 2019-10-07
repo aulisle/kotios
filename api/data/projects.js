@@ -30,7 +30,7 @@ export const a = [
     contacts: [
       {
         name: 'Rauni Kolehmainen',
-        role: 'project-advisor',
+        role: 'customer-service-chief',
         email: 'etunimi.sukunimi@saraco.fi',
         phone: '+358 40 703 1828',
         initials: 'RK'
@@ -106,7 +106,7 @@ export const a = [
     contacts: [
       {
         name: 'Rauni Kolehmainen',
-        role: 'project-advisor',
+        role: 'customer-service-chief',
         email: 'etunimi.sukunimi@saraco.fi',
         phone: '+358 40 703 1828',
         initials: 'RK'
@@ -348,7 +348,7 @@ export const a = [
     contacts: [
       {
         name: 'Rauni Kolehmainen',
-        role: 'project-advisor',
+        role: 'customer-service-chief',
         email: 'etunimi.sukunimi@saraco.fi',
         phone: '+358 40 703 1828',
         initials: 'RK'
@@ -394,7 +394,7 @@ export const a = [
     contacts: [
       {
         name: 'Rauni Kolehmainen',
-        role: 'project-advisor',
+        role: 'customer-service-chief',
         email: 'etunimi.sukunimi@saraco.fi',
         phone: '+358 40 703 1828',
         initials: 'RK'
@@ -437,7 +437,7 @@ export const a = [
     contacts: [
       {
         name: 'Rauni Kolehmainen',
-        role: 'project-advisor',
+        role: 'customer-service-chief',
         email: 'etunimi.sukunimi@saraco.fi',
         phone: '+358 40 703 1828',
         initials: 'RK'

@@ -172,7 +172,8 @@ const translations = {
     role: {
       consultant: 'Konsultti',
       facilitator: 'Fasilitaattori',
-      'project-advisor': 'Hankeneuvoja'
+      'project-advisor': 'Hankeneuvoja',
+      'customer-service-chief': 'Asiakaspalvelupäällikkö'
     }
   }
 }
