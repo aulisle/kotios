@@ -7,8 +7,8 @@
         </h1>
         <p>
           Osallistava asuntohanke on vaihtoehto perinteisille
-          tuotantokeskeisel­le toimintamallille. Siinä asukkaat pääsevät
-          hankkeen aikana vaikuttamaan tuleviin elintiloihinsa.
+          tuotantokeskeisil­le toimintamalleille. Siinä asukkaat pääsevät
+          hankkeen aikana vaikuttamaan ja päättämään ratkaisuista.
         </p>
       </div>
     </div>
