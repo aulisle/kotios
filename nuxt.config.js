@@ -19,7 +19,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Rento — Osallistavan asuntotuotannon edistäjä'
+        content: 'Rento — Osallistavien asuntohankkeiden koti'
       }
     ],
     link: [
