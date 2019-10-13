@@ -10,9 +10,16 @@
           Osallistavien asuntohankkeiden koti
         </h1>
 
-        <nuxt-link :to="{ name: 'phenomenon' }" class="what-is-link">
-          Mitä on osallistaminen?
-        </nuxt-link>
+        <div>
+          <nuxt-link :to="{ name: 'phenomenon' }" class="what-is-link">
+            Mitä on osallistaminen?
+          </nuxt-link>
+        </div>
+        <div>
+          <nuxt-link :to="{ name: 'rento' }" class="what-is-link">
+            Miten Rento edistää osallistamista?
+          </nuxt-link>
+        </div>
 
         <v-card class="search-card" :elevation="7">
           <v-card-title class="search-title">

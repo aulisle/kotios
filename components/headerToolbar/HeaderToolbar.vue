@@ -94,7 +94,7 @@ export default {
       return [
         { name: 'search', exact: false },
         { name: 'phenomenon', exact: false },
-        { name: 'process', exact: false },
+        { name: 'rento', exact: false },
         { name: 'faq', exact: false }
       ]
     },

@@ -105,7 +105,7 @@
         </div>
       </div>
 
-      <nuxt-link :to="{ name: 'process' }">
+      <nuxt-link :to="{ name: 'rento' }">
         <base-button class="md-primary md-large md-raised why-rento">
           Miten Rento tukee hankkeita?
         </base-button>

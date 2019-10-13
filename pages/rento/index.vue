@@ -21,10 +21,10 @@
             <h2>Ratkaisut</h2>
             <div>
               <p>
-                Roolisi kasvaessa asuntohankkeessa kohtaat suurempia haasteita
-                ja riskejä. Rento tarjoaa ratkaisuja, joilla voit osallistua
-                hankkeeseen turvallisesti, helposti ja hauskasti, oli hanke
-                millainen tahansa.
+                Osallistavaa asuntohanketta ei voi toteuttaa ilman apuvoimia.
+                Rento tarjoaa ratkaisuja, joilla voit osallistua hankkeeseen
+                turvallisesti, helposti ja hauskasti, oli hanke millainen
+                tahansa.
               </p>
               <p>
                 Olemme jakaneet tarjontamme palveluihin, joista voit vapaasti
@@ -44,7 +44,7 @@
             <p>
               Rento-polku on yksityiskohtaisesti suunniteltu ja hankkeellesi
               räätälöity reitti hankkeen toteuttamiselle. Sillä varmistetaan,
-              että hankkeesi toteutuu turvallisesti, tehokkaasti ja hauskasti.
+              että hankkeesi toteutuu turvallisesti, nopeasti ja hauskasti.
               Rento-polulla keskityt vain oleelliseen - oman elämäsi
               suunnitteluun.
             </p>
@@ -61,6 +61,8 @@
               Rento-tarjoaa ilmaisen esittelyn osallistavalle
               asuntohankkeellesi. Esittelemälläsi hanketta voit löytää sille
               ihanat asukkaat ja luot osallistavan asuntohankkeen ilmiötä.
+              Tavoitteenamme on, että osallistavat asuntohankkeet eivät olisi
+              vain marginaalista toimintaa, vaan niistä syntyisi oikea ilmiö.
             </p>
           </v-card>
         </div>
@@ -83,14 +85,14 @@
           <h3>Rento-ammattilaiset</h3>
           <h4>Taattua laatua</h4>
           <p>
-            Yhteistyökumppaneidemme joukosta löydät ammattilaiset, jotka
-            toteuttavat hankkeesi varmasti ja sujuvasti. Rento-kumppaneiden
-            laatu varmistetaan "tulemalla heitä lähelle" ja tukemalla heitä.
+            Yhteistyökumppaneidemme joukosta löydät ammattilaiset, jotka tukevat
+            hankkeenne etenemistä. Rento-kumppaneiden laatu varmistetaan
+            kouluttamalla ja tukemalla tiiviisti heitä.
           </p>
 
-          <base-button class="md-primary"
-            >Lue lisää kriteereistämme</base-button
-          >
+          <base-button class="md-primary">
+            Lue lisää kriteereistämme
+          </base-button>
         </div>
         <img src="/what-is/hero-2.jpg" />
       </div>
@@ -99,18 +101,19 @@
         <img src="/what-is/hero-2.jpg" />
 
         <div>
-          <h3>Rento-ryhmäytyminen - Tulossa</h3>
+          <h3>Rento-ryhmäytyminen - Tulossa syksyllä 2019</h3>
           <h4>Hankkeellesi ihanat asukkaat</h4>
           <p>
             Löydä hankkeellesi sopivat asukkaat Rento-ryhmäytymistyökalun
-            avulla.
+            avulla. Sen avulla voit olla mukavasti potentiaalisten asukkaiden
+            kanssa vuorovaikutuksessa.
           </p>
         </div>
       </div>
 
       <div class="container-base feature">
         <div>
-          <h3>Rento-suunnittelutyökalut - Tulossa</h3>
+          <h3>Rento-suunnittelutyökalut - Tulossa 2020</h3>
           <h4>Suunnittele reilusti</h4>
           <p>
             Rento-suunnittelutyökalut on luotu juuri osallistavia
@@ -124,7 +127,7 @@
       <div class="container-base feature">
         <img src="/what-is/hero-2.jpg" />
         <div>
-          <h3>Rento-projektinhallinta - Tulossa</h3>
+          <h3>Rento-projektinhallinta - Tulossa 2020</h3>
           <h4>Varmista, että hankkeesi valmistuu ajallaan</h4>
           <p>
             Projektinhallinan avulla seuraat projektin etenemistä ja varmistat,
