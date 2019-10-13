@@ -13,7 +13,8 @@
         </h1>
 
         <p>
-          Rento on osallistavia asuntohankkeita edistävä ratkaisupaketti
+          Rento on palvelukokonaisuus, joka tarjoaa osallistavia asuntohankkeita
+          edistäviä ratkaisuja
         </p>
       </div>
     </div>
@@ -36,7 +37,7 @@
               </nuxt-link>
 
               <p class="add-top-margin">
-                Olemme jakaneet tarjontamme palveluihin, joista voit vapaasti
+                Olemme jakaneet tarjontamme ratkaisuihin, joista voit vapaasti
                 valita juuri sinun hankkeellesi sopivan kokonaisuuden.
               </p>
             </div>
@@ -96,9 +97,10 @@
           <h3>Rento-ammattilaiset</h3>
           <h4>Taattua laatua</h4>
           <p>
-            Yhteistyökumppaneidemme joukosta löydät ammattilaiset, jotka tukevat
-            hankkeenne etenemistä. Rento-kumppaneiden laatu varmistetaan
-            kouluttamalla ja tukemalla tiiviisti heitä.
+            Yhteistyökumppaneidemme joukosta löydät ammattilaiset, joita
+            käytette apuna hankkeenne suunnittelussa ja toteutuksessa.
+            Rento-kumppaneiden laatu varmistetaan kouluttamalla, tukemalla ja
+            seuraamalla tiiviisti heidän työskentelyään.
           </p>
 
           <base-button class="md-primary">
@@ -112,12 +114,12 @@
         <img src="/what-is/grouping.jpg" />
 
         <div>
-          <h3>Rento-ryhmäytyminen - Tulossa syksyllä 2019</h3>
+          <h3>Rento-ryhmäytyminen - Tulossa talvella 2019</h3>
           <h4>Hankkeellesi ihanat asukkaat</h4>
           <p>
             Löydä hankkeellesi sopivat asukkaat Rento-ryhmäytymistyökalun
-            avulla. Sen avulla voit olla mukavasti potentiaalisten asukkaiden
-            kanssa vuorovaikutuksessa.
+            avulla. Sen avulla voit olla potentiaalisten asukkaiden kanssa
+            mukavasti vuorovaikutuksessa.
           </p>
         </div>
       </div>
@@ -129,8 +131,12 @@
             <h4>Suunnittele reilusti</h4>
             <p>
               Rento-suunnittelutyökalut on luotu juuri osallistavia
-              asuntohankkeita sopivaksi. Niillä demokraattisesti päätäminen
+              asuntohankkeita varten. Niillä päätäminen demokraattisesti
               inspiroi ja innostaa.
+            </p>
+            <p>
+              Suunnittelutyökaluihin kuuluu esimerkiksi verkkoalusta, jossa
+              voidaan tehdä ja kerätä hanketta koskevia päätöksiä.
             </p>
           </v-card>
         </div>
@@ -141,7 +147,7 @@
           <h3>Rento-projektinhallinta - Tulossa 2020</h3>
           <h4>Varmista, että hankkeesi valmistuu ajallaan</h4>
           <p>
-            Projektinhallinan avulla seuraat projektin etenemistä ja varmistat,
+            Projektinhallinan avulla seuraat hankkeen etenemistä ja varmistat,
             että eri tuotokset valmistuvat ajallaan.
           </p>
         </div>
