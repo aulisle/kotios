@@ -148,8 +148,8 @@
           <h3>Rento-projektinhallinta - Tulossa myöhemmin</h3>
           <h4>Varmista, että hankkeesi valmistuu ajallaan</h4>
           <p>
-            Projektinhallinan avulla seuraat hankkeen etenemistä ja varmistat,
-            että eri tuotokset valmistuvat ajallaan.
+            Projektinhallinan avulla varmistat, että hankkeesi suunnitelmat
+            toteutuvat myös käytännössä ja ajallaan.
           </p>
         </div>
         <img src="/what-is/project-management.jpg" />

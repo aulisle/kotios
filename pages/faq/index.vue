@@ -93,7 +93,7 @@ export default {
           title:
             'Kuinka nopeasti pääsen asumaan uuteen kotiini, jos se on toteutettu osallistavasti?',
           answer:
-            'Osallistavat asuntohankkeet, erityisesti ryhmä- ja asunto-osuuskuntahankkeet voivat kestää pidempään, kuin normaali asuntotuotanto. Rento-polulla toteutetut hankkeet vievät keskimäärin 2-3 vuotta. Ilman Rento-polkua hankkeet vievät 4-7 vuotta.'
+            'Osallistavat asuntohankkeet, erityisesti ryhmä- ja asunto-osuuskuntahankkeet voivat kestää pidempään, kuin normaali asuntotuotanto. Rento-polulla toteutetut hankkeet vievät keskimäärin 2-3 vuotta. Ilman Rento-polkua hankkeet vievät noin 4-7 vuotta.'
         },
         {
           title: 'Ketkä muut toimijat tukevat osallistavia asuntohankkeita?',
