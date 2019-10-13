@@ -35,15 +35,15 @@
         </div>
       </div>
 
-      <div class="feature-wrapper two">
+      <div v-scroll-reveal class="feature-wrapper two">
         <div class="container-base feature">
           <img src="/what-is/rento-polku.png" />
           <div>
             <h3>Rento-polku</h3>
-            <h4>Reitti parempaan asumiseen</h4>
+            <h4>Polku parempaan asumiseen</h4>
             <p>
               Rento-polku on yksityiskohtaisesti suunniteltu ja hankkeellesi
-              räätälöity reitti hankkeen toteuttamiselle. Sillä varmistetaan,
+              räätälöity menetelmä hankkeen toteuttamiselle. Sillä varmistetaan,
               että hankkeesi toteutuu turvallisesti, nopeasti ja hauskasti.
               Rento-polulla keskityt vain oleelliseen - oman elämäsi
               suunnitteluun.
@@ -52,7 +52,7 @@
         </div>
       </div>
 
-      <div class="feature-wrapper one">
+      <div v-scroll-reveal class="feature-wrapper one">
         <div class="container-base feature">
           <v-card class="elevation-3 card">
             <h3>Kohde-esittelyt</h3>
@@ -61,6 +61,9 @@
               Rento-tarjoaa ilmaisen esittelyn osallistavalle
               asuntohankkeellesi. Esittelemälläsi hanketta voit löytää sille
               ihanat asukkaat ja luot osallistavan asuntohankkeen ilmiötä.
+            </p>
+
+            <p>
               Tavoitteenamme on, että osallistavat asuntohankkeet eivät olisi
               vain marginaalista toimintaa, vaan niistä syntyisi oikea ilmiö.
             </p>
@@ -68,8 +71,8 @@
         </div>
       </div>
 
-      <div class="container-base feature">
-        <img src="/what-is/hero-2.jpg" />
+      <div v-scroll-reveal class="container-base feature">
+        <img src="/what-is/consulting.jpg" />
         <div>
           <h3>Rento-hankeneuvonta</h3>
           <h4>Autamme hankkeesi alkuun</h4>
@@ -80,7 +83,7 @@
         </div>
       </div>
 
-      <div class="container-base feature">
+      <div v-scroll-reveal class="container-base feature">
         <div>
           <h3>Rento-ammattilaiset</h3>
           <h4>Taattua laatua</h4>
@@ -94,11 +97,11 @@
             Lue lisää kriteereistämme
           </base-button>
         </div>
-        <img src="/what-is/hero-2.jpg" />
+        <img src="/what-is/architect.jpg" />
       </div>
 
-      <div class="container-base feature">
-        <img src="/what-is/hero-2.jpg" />
+      <div v-scroll-reveal class="container-base feature">
+        <img src="/what-is/grouping.jpg" />
 
         <div>
           <h3>Rento-ryhmäytyminen - Tulossa syksyllä 2019</h3>
@@ -111,21 +114,21 @@
         </div>
       </div>
 
-      <div class="container-base feature">
-        <div>
-          <h3>Rento-suunnittelutyökalut - Tulossa 2020</h3>
-          <h4>Suunnittele reilusti</h4>
-          <p>
-            Rento-suunnittelutyökalut on luotu juuri osallistavia
-            asuntohankkeita sopivaksi. Niillä demokraattisesti päätäminen
-            inspiroi ja innostaa.
-          </p>
+      <div v-scroll-reveal class="feature-wrapper three">
+        <div class="container-base feature">
+          <v-card class="elevation-3 card">
+            <h3>Rento-suunnittelutyökalut - Tulossa 2020</h3>
+            <h4>Suunnittele reilusti</h4>
+            <p>
+              Rento-suunnittelutyökalut on luotu juuri osallistavia
+              asuntohankkeita sopivaksi. Niillä demokraattisesti päätäminen
+              inspiroi ja innostaa.
+            </p>
+          </v-card>
         </div>
-        <img src="/what-is/hero-2.jpg" />
       </div>
 
-      <div class="container-base feature">
-        <img src="/what-is/hero-2.jpg" />
+      <div v-scroll-reveal class="container-base feature">
         <div>
           <h3>Rento-projektinhallinta - Tulossa 2020</h3>
           <h4>Varmista, että hankkeesi valmistuu ajallaan</h4>
@@ -134,9 +137,12 @@
             että eri valmistuvat ajallaan.
           </p>
         </div>
+        <img src="/what-is/project-management.jpg" />
       </div>
 
-      <div class="container-base feature extra-bottom">
+      <div v-scroll-reveal class="container-base feature extra-bottom">
+        <img src="/what-is/purchasing.jpg" />
+
         <div>
           <h3>Rento-hankinnat - Tulossa</h3>
           <h4>Turvalliset hankinnat ja kilpailuttaminen</h4>
@@ -145,7 +151,6 @@
             asuntohankkeelle.
           </p>
         </div>
-        <img src="/what-is/hero-2.jpg" />
       </div>
     </div>
   </div>
@@ -234,6 +239,8 @@ export default {}
     font-size: $font-xxl;
     padding-bottom: 30px;
     font-weight: 900;
+    color: $color-primary;
+    text-transform: uppercase;
   }
 
   p {
@@ -274,6 +281,7 @@ export default {}
 
   h4 {
     font-size: $font-l;
+    color: $color-primary;
   }
 }
 
@@ -289,6 +297,11 @@ export default {}
 
   &.two {
     background-color: white;
+  }
+
+  &.three {
+    margin-top: 100px;
+    background-image: url('/what-is/planning.jpg');
   }
 }
 

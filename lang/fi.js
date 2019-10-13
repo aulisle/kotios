@@ -16,7 +16,7 @@ const translations = {
     'add-project': 'Jätä ilmoitus',
     'for-partners': 'Kumppaneille',
     phenomenon: 'Osallistaminen',
-    process: 'Rento',
+    rento: 'Rento',
     faq: 'Usein kysyttyä'
   },
   settings: {

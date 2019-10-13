@@ -2,12 +2,11 @@
   <div class="">
     <div class="hero">
       <div class="container-base">
-        <!--<h1 class="product-name">
-          <img src="/rento-logo.svg" class="hero-logo" />
-          <span>Rento</span>
-        </h1>-->
         <h1 class="tagline">
           Osallistavien asuntohankkeiden koti
+          <nuxt-link :to="{ name: 'rento' }">
+            <v-icon class="primary-color">mdi-help-circle-outline</v-icon>
+          </nuxt-link>
         </h1>
 
         <div>
@@ -15,9 +14,10 @@
             Mitä on osallistaminen?
           </nuxt-link>
         </div>
+
         <div>
           <nuxt-link :to="{ name: 'rento' }" class="what-is-link">
-            Miten Rento edistää osallistamista?
+            Mikä on Rento?
           </nuxt-link>
         </div>
 
@@ -141,5 +141,12 @@ export default {
 
 .what-is-link {
   font-size: 1.5em;
+}
+
+.primary-color {
+  color: $color-primary !important;
+  font-size: $font-xl;
+  position: absolute;
+  margin-left: 5px;
 }
 </style>
