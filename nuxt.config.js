@@ -99,7 +99,15 @@ export default {
     [
       '@nuxtjs/vuetify',
       {
-        treeShake: false
+        treeShake: false,
+        theme: {
+          light: true,
+          themes: {
+            light: {
+              primary: '#1bb8d1'
+            }
+          }
+        }
       }
     ],
     '~/modules/api'
