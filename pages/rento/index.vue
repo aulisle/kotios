@@ -134,7 +134,7 @@
           <h4>Varmista, että hankkeesi valmistuu ajallaan</h4>
           <p>
             Projektinhallinan avulla seuraat projektin etenemistä ja varmistat,
-            että eri valmistuvat ajallaan.
+            että eri tuotokset valmistuvat ajallaan.
           </p>
         </div>
         <img src="/what-is/project-management.jpg" />
