@@ -13,8 +13,8 @@
         </h1>
 
         <p>
-          Rento on palvelukokonaisuus, joka tarjoaa osallistavia asuntohankkeita
-          edistäviä ratkaisuja
+          Rento on digitaalinen alusta ja palvelukokonaisuus, joka tarjoaa
+          osallistavia asuntohankkeita edistäviä ratkaisuja
         </p>
       </div>
     </div>
@@ -27,19 +27,20 @@
             <div>
               <p>
                 Osallistavaa asuntohanketta ei voi toteuttaa ilman apuvoimia.
-                Rento tarjoaa ratkaisuja, joilla voit osallistua hankkeeseen
-                turvallisesti, helposti ja hauskasti, oli hanke millainen
-                tahansa.
+                Monet rakennuttamiseen liittyvät seikat vaativat asiantuntevaa
+                osaamista. Rento tarjoaa ratkaisuja, joilla voit osallistua
+                hankkeeseen turvallisesti, helposti ja hauskasti, oli hanke
+                millainen tahansa.
               </p>
 
-              <nuxt-link :to="{ name: 'phenomenon' }">
+              <p>
+                Ratkaisuistamme voit valita juuri sinun hankkeellesi sopivan
+                kokonaisuuden.
+              </p>
+
+              <nuxt-link :to="{ name: 'phenomenon' }" class="add-top-margin">
                 Mitä ovat osallistavat asuntohankkeet?
               </nuxt-link>
-
-              <p class="add-top-margin">
-                Olemme jakaneet tarjontamme ratkaisuihin, joista voit vapaasti
-                valita juuri sinun hankkeellesi sopivan kokonaisuuden.
-              </p>
             </div>
           </div>
         </div>
@@ -127,7 +128,7 @@
       <div v-scroll-reveal class="feature-wrapper three">
         <div class="container-base feature">
           <v-card class="elevation-3 card">
-            <h3>Rento-suunnittelutyökalut - Tulossa 2020</h3>
+            <h3>Rento-suunnittelutyökalut - Tulossa myöhemmin</h3>
             <h4>Suunnittele reilusti</h4>
             <p>
               Rento-suunnittelutyökalut on luotu juuri osallistavia
@@ -144,7 +145,7 @@
 
       <div v-scroll-reveal class="container-base feature">
         <div>
-          <h3>Rento-projektinhallinta - Tulossa 2020</h3>
+          <h3>Rento-projektinhallinta - Tulossa myöhemmin</h3>
           <h4>Varmista, että hankkeesi valmistuu ajallaan</h4>
           <p>
             Projektinhallinan avulla seuraat hankkeen etenemistä ja varmistat,
@@ -158,7 +159,7 @@
         <img src="/what-is/purchasing.jpg" />
 
         <div>
-          <h3>Rento-hankinnat - Tulossa</h3>
+          <h3>Rento-hankinnat - Tulossa myöhemmin</h3>
           <h4>Turvalliset hankinnat ja kilpailuttaminen</h4>
           <p>
             Helpot ja turvalliset hankinnat ja kilpailuttaminen osallistavalle
@@ -237,10 +238,14 @@ export default {}
     padding-bottom: 100px;
     padding-left: 35px;
     text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .add-top-margin {
-    padding-top: 50px;
+    margin-top: 50px;
   }
 
   .fake-margin {
@@ -263,6 +268,7 @@ export default {}
 
   p {
     font-size: $font-m;
+    max-width: 700px;
   }
 }
 

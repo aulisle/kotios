@@ -9,19 +9,19 @@ export const getPhaseTypes = phases => {
     })
   }
 
-  if (typeof phases.project !== 'undefined') {
-    res.push({
-      name: 'project',
-      icon: 'account_tree',
-      phase: phases.project
-    })
-  }
-
   if (typeof phases.plot !== 'undefined') {
     res.push({
       name: 'plot',
       icon: 'layers',
       phase: phases.plot
+    })
+  }
+
+  if (typeof phases.project !== 'undefined') {
+    res.push({
+      name: 'project',
+      icon: 'account_tree',
+      phase: phases.project
     })
   }
 
