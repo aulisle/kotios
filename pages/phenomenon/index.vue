@@ -18,22 +18,24 @@
 
       <div class="grid key-points-grid">
         <div>
-          <md-icon class="point-icon">home</md-icon>
+          <v-icon class="point-icon">mdi-snowflake</v-icon>
 
           <h3>Yksilöllinen</h3>
 
-          Mahdollisuutesi saada asunto, jota ei löydy markkinoilta valmiina.
+          Mahdollisuutesi saada tarpeitasi vastaava asunto, jota ei löydy
+          markkinoilta valmiina.
         </div>
         <div>
-          <md-icon class="point-icon">home</md-icon>
+          <v-icon class="point-icon">mdi-cart-plus</v-icon>
           <h3>
             Rahaa elämiseen
           </h3>
           Hanketyypit, joissa asukkaat toimivat rakennuttajina voivat olla jopa
-          20% edullisempia, kuin muu asuntotuotanto.
+          20% edullisempia, kuin muu asuntotuotanto sekä rakennus- että
+          asumisvaiheessa.
         </div>
         <div>
-          <md-icon class="point-icon">home</md-icon>
+          <v-icon class="point-icon">mdi-home-heart</v-icon>
           <h3>
             Taloudellista ja ekologista
           </h3>

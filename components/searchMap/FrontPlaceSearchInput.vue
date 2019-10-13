@@ -16,7 +16,7 @@
     <base-button
       class="md-primary md-raised search-button"
       @click="launchSearch"
-      >Hae hankkeet</base-button
+      >Hae hankkeita</base-button
     >
   </div>
 </template>
