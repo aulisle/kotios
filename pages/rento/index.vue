@@ -11,6 +11,10 @@
         <h1 class="hero-title">
           Rento
         </h1>
+
+        <p>
+          Rento on osallistavia asuntohankkeita edistävä ratkaisupaketti
+        </p>
       </div>
     </div>
 
@@ -26,7 +30,12 @@
                 turvallisesti, helposti ja hauskasti, oli hanke millainen
                 tahansa.
               </p>
-              <p>
+
+              <nuxt-link :to="{ name: 'phenomenon' }">
+                Mitä ovat osallistavat asuntohankkeet?
+              </nuxt-link>
+
+              <p class="add-top-margin">
                 Olemme jakaneet tarjontamme palveluihin, joista voit vapaasti
                 valita juuri sinun hankkeellesi sopivan kokonaisuuden.
               </p>
@@ -36,17 +45,16 @@
       </div>
 
       <div v-scroll-reveal class="feature-wrapper two">
-        <div class="container-base feature">
+        <div class="container-base feature wide-img">
           <img src="/what-is/rento-polku.png" />
           <div>
             <h3>Rento-polku</h3>
             <h4>Polku parempaan asumiseen</h4>
             <p>
               Rento-polku on yksityiskohtaisesti suunniteltu ja hankkeellesi
-              räätälöity menetelmä hankkeen toteuttamiselle. Sillä varmistetaan,
-              että hankkeesi toteutuu turvallisesti, nopeasti ja hauskasti.
-              Rento-polulla keskityt vain oleelliseen - oman elämäsi
-              suunnitteluun.
+              räätälöity toteutustapa. Sillä varmistetaan, että hankkeesi
+              toteutuu turvallisesti, nopeasti ja mukavasti. Rento-polulla
+              keskityt vain oleelliseen — oman elämäsi suunnitteluun.
             </p>
           </div>
         </div>
@@ -58,9 +66,9 @@
             <h3>Kohde-esittelyt</h3>
             <h4>Löydä kontakteja ja rakenna ilmiötä</h4>
             <p>
-              Rento-tarjoaa ilmaisen esittelyn osallistavalle
-              asuntohankkeellesi. Esittelemälläsi hanketta voit löytää sille
-              ihanat asukkaat ja luot osallistavan asuntohankkeen ilmiötä.
+              Rento-tarjoaa ilmaisen esittelyalustan osallistavalle
+              asuntohankkeellesi. Esittelemällä hankettasi voit löytää sille
+              ihanat asukkaat ja kasvatat osallistavan asuntohankkeen ilmiötä.
             </p>
 
             <p>
@@ -225,6 +233,10 @@ export default {}
     text-align: center;
   }
 
+  .add-top-margin {
+    padding-top: 50px;
+  }
+
   .fake-margin {
     width: 50%;
   }
@@ -282,6 +294,17 @@ export default {}
   h4 {
     font-size: $font-l;
     color: $color-primary;
+  }
+
+  &.wide-img {
+    img {
+      width: 65%;
+      object-fit: contain;
+      max-height: 700px;
+    }
+    > div {
+      width: 45%;
+    }
   }
 }
 

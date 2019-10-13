@@ -92,8 +92,8 @@ export default {
 
     routes() {
       return [
-        { name: 'search', exact: false },
         { name: 'phenomenon', exact: false },
+        { name: 'search', exact: false },
         { name: 'rento', exact: false },
         { name: 'faq', exact: false }
       ]

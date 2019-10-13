@@ -4,9 +4,6 @@
       <div class="container-base">
         <h1 class="tagline">
           Osallistavien asuntohankkeiden koti
-          <nuxt-link :to="{ name: 'rento' }">
-            <v-icon class="primary-color">mdi-help-circle-outline</v-icon>
-          </nuxt-link>
         </h1>
 
         <div>
@@ -23,7 +20,7 @@
 
         <v-card class="search-card" :elevation="7">
           <v-card-title class="search-title">
-            Löydä hankkeita
+            Mukaan hankkeeseen?
           </v-card-title>
           <v-card-title class="actions">
             <front-place-search-input />
@@ -110,7 +107,7 @@ export default {
 }
 
 .search-card {
-  margin-top: 200px;
+  margin-top: 120px;
   margin-bottom: 120px;
   max-width: 600px;
   background-color: rgba(#fff, 1);

@@ -2,7 +2,7 @@
   <div class="front-search">
     <base-autocomplete
       class="search-input"
-      label="Sinua kiinnostava alue"
+      label="Anna kiinnostava alue"
       :value="mSearchQuery"
       :options="placeSuggestions"
       @input="updateSearchQuery"
@@ -16,7 +16,7 @@
     <base-button
       class="md-primary md-raised search-button"
       @click="launchSearch"
-      >Hae</base-button
+      >Hae hankkeet</base-button
     >
   </div>
 </template>
@@ -38,5 +38,6 @@ export default {
 
 .search-button {
   margin-left: 30px;
+  flex-shrink: 0;
 }
 </style>
