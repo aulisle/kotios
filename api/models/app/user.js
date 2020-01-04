@@ -18,6 +18,7 @@ export const passwordTokenSchema = {
     required: true
   }
 }
+
 const passwordTokenSchemaInstance = mongoose.Schema(passwordTokenSchema)
 
 export const schema = {

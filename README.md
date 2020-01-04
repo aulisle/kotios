@@ -48,3 +48,8 @@ in-depth debugger.
 
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+
+
+## In case of Elasticsearch trouble
+
+curl -XPUT -H "Content-Type: application/json" http://localhost:9200/_all/_settings --data-binary '{\"index.blocks.read_only_allow_delete\": null}'

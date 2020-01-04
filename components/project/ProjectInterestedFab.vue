@@ -16,6 +16,7 @@
         </div>
       </template>
       <v-list>
+        <v-list-item @click="like">Tykkää</v-list-item>
         <v-list-item>Seuraa</v-list-item>
         <v-list-item>Jaa</v-list-item>
         <v-list-item>Ota yhteyttä hankkeeseen</v-list-item>

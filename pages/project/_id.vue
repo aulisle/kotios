@@ -4,7 +4,26 @@
     <div class="container-base page-content">
       <div class="heading-row">
         <div>
-          <h1 class="project-heading">{{ project.title }}</h1>
+          <h1 class="project-heading">
+            {{ project.title }}
+          </h1>
+          <div>
+            <md-button
+              class="md-primary md-raised like-button"
+              @click="showLikeReason = true"
+            >
+              <md-icon class="text-white">thumb_up</md-icon> Tykkää 1.2k
+            </md-button>
+            <v-dialog v-model="showLikeReason" max-width="400">
+              <v-card>
+                <v-card-title>Miksi pidät kohteesta?</v-card-title>
+                <v-card-text></v-card-text>
+                <v-card-actions>
+                  <v-btn @click="showLikeReason = false">Sulje</v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-dialog>
+          </div>
           <h2 class="project-type">
             <md-icon>{{ projectTypeIcon }}</md-icon>
             <span class="text">{{ projectType }}</span>
@@ -93,6 +112,12 @@ export default {
   },
 
   mixins: [projectTypeMixin],
+
+  data() {
+    return {
+      showLikeReason: false
+    }
+  },
 
   head() {
     return {
@@ -197,6 +222,15 @@ export default {
   bottom: 20px;
   right: 20px;
   left: auto;
+}
+
+.like-button {
+  margin-left: 0px;
+  &.md-button.md-theme-default.md-raised:not([disabled]).md-primary
+    .md-icon-font {
+    color: white;
+    margin-right: 10px;
+  }
 }
 
 @media (min-width: 992px) {

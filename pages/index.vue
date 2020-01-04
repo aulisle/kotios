@@ -3,30 +3,22 @@
     <div class="hero">
       <div class="container-base">
         <h1 class="tagline">
-          Osallistavien asuntohankkeiden koti
+          Fiksumpi tapa hankkia koti
         </h1>
 
         <div>
-          <nuxt-link :to="{ name: 'phenomenon' }" class="what-is-link">
-            Mitä on osallistaminen?
-          </nuxt-link>
+          VAKA on osallistavia asuntohankkeita tukeva alustapalvelu.
         </div>
-
-        <div>
-          <nuxt-link :to="{ name: 'rento' }" class="what-is-link">
-            Mikä on Rento?
-          </nuxt-link>
-        </div>
-
-        <v-card class="search-card" :elevation="7">
-          <v-card-title class="search-title">
-            Mukaan hankkeeseen?
-          </v-card-title>
-          <v-card-title class="actions">
-            <front-place-search-input />
-          </v-card-title>
-        </v-card>
       </div>
+    </div>
+
+    <div class="container-base">
+      <v-card elevation="0">
+        <v-card-title>
+          Uskomme, että osallistavat asuntohankkeet ovat rakennuttamisen
+          tulevaisuus.
+        </v-card-title>
+      </v-card>
     </div>
 
     <div class="container-base">
@@ -38,14 +30,14 @@
 
 <script>
 import FeaturedDisplay from '@/components/featured/FeaturedDisplay'
-import FrontPlaceSearchInput from '@/components/searchMap/FrontPlaceSearchInput'
+// import FrontPlaceSearchInput from '@/components/searchMap/FrontPlaceSearchInput'
 
 export default {
   auth: false,
 
   components: {
-    FeaturedDisplay,
-    FrontPlaceSearchInput
+    FeaturedDisplay
+    // FrontPlaceSearchInput
   },
 
   head() {
@@ -76,13 +68,15 @@ export default {
 
 <style scoped lang="scss">
 .hero {
-  background: rgba(37, 48, 59, 1);
+  background: #f9fafb;
   background: linear-gradient(
-    135deg,
-    rgba(37, 48, 59, 1) 0%,
-    rgba(11, 19, 43, 1) 100%
+    to bottom,
+    #f9fafb,
+    #f5f8f9,
+    #f1f5f8,
+    #ecf3f6,
+    #e8f1f3
   );
-  background-image: url('/desk.jpg');
   background-size: cover;
   background-position: 0% 100%;
 
