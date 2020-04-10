@@ -107,9 +107,9 @@
         </div>
       </div>
 
-      <nuxt-link :to="{ name: 'rento' }">
-        <base-button class="md-primary md-large md-raised why-rento">
-          Miten Rento tukee hankkeita?
+      <nuxt-link :to="{ name: 'kotios' }">
+        <base-button class="md-primary md-large md-raised why-kotios">
+          Miten Kotios tukee hankkeita?
         </base-button>
       </nuxt-link>
     </div>
@@ -226,7 +226,7 @@ export default {}
   }
 }
 
-.why-rento {
+.why-kotios {
   margin-top: 80px;
   margin-bottom: 50px;
 }

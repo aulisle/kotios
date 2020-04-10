@@ -1,4 +1,4 @@
-# Rento
+# Kotios
 
 Nuxt.js (Vue) + Express + MongodDB - Baugruppe application.
 

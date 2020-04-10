@@ -12,14 +12,14 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: 'Rento',
+    title: 'Kotios',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: 'Rento — Osallistavien asuntohankkeiden koti'
+        content: 'Kotios — Fiksumpi tapa hankkia uusi koti'
       }
     ],
     link: [

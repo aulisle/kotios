@@ -1,5 +1,5 @@
 const translations = {
-  'product-name': 'Rento',
+  'product-name': 'Kotios',
   routes: {
     index: 'Etusivu',
     login: 'Kirjaudu sisään',
@@ -16,7 +16,7 @@ const translations = {
     'add-project': 'Jätä ilmoitus',
     'for-partners': 'Kumppaneille',
     phenomenon: 'Osallistaminen',
-    rento: 'Mikä on Rento?',
+    kotios: 'Mikä on Kotios?',
     faq: 'Usein kysyttyä'
   },
   settings: {
@@ -159,7 +159,7 @@ const translations = {
       resources: 'Resurssien optimointi',
       natural: 'Luonnollisuus',
       solar: 'Aurinkoenergia',
-      rento: 'Rento-rakennuttaminen',
+      kotios: 'Kotios-rakennuttaminen',
       0: 'Ryhmärakennuttaminen',
       1: 'Asunto-osuuskunta',
       2: 'Rakennetaan yhdessä',

@@ -122,7 +122,7 @@ export const a = [
     projectType: 0,
     title: 'Kankaan ryhmärakennushanke',
     address: 'Jyväskylä',
-    values: ['rento'],
+    values: ['kotios'],
     tagline: 'Uniikki mahdollisuus aloittaa juuri sinunlaisesi hanke',
     phases: {
       project: 0,
@@ -183,7 +183,7 @@ export const a = [
     address: 'Skanssi, Turku',
     projectType: 4,
     values: ['natural', '0', '1', '2', '3', '4', '5', '6', '7'],
-    title: 'Skanssin Rento-hanke',
+    title: 'Skanssin Kotios-hanke',
     tagline: 'TERVETULOA SKANSSIIN – edistyksellisen energiatehokkuuden kotiin',
     phases: {
       project: 0,
@@ -536,7 +536,7 @@ export const a = [
     projectType: 0,
     title: 'Tampereen hanke',
     address: 'Tampere',
-    values: ['rento'],
+    values: ['kotios'],
     tagline: 'Uniikki mahdollisuus aloittaa juuri sinunlaisesi hanke',
     phases: {
       project: 0,
@@ -570,7 +570,7 @@ export const a = [
     projectType: 0,
     title: 'Oulun hanke',
     address: 'Oulu',
-    values: ['rento'],
+    values: ['kotios'],
     tagline: 'Uniikki mahdollisuus aloittaa juuri sinunlaisesi hanke',
     phases: {
       project: 0,

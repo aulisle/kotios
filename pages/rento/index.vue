@@ -9,11 +9,11 @@
         <hr />
 
         <h1 class="hero-title">
-          Rento
+          Kotios
         </h1>
 
         <p>
-          Rento on digitaalinen alusta ja palvelukokonaisuus, joka tarjoaa
+          Kotioss on digitaalinen alusta ja palvelukokonaisuus, joka tarjoaa
           osallistavia asuntohankkeita edistäviä ratkaisuja
         </p>
       </div>
@@ -28,7 +28,7 @@
               <p>
                 Osallistavaa asuntohanketta ei voi toteuttaa ilman apuvoimia.
                 Monet rakennuttamiseen liittyvät seikat vaativat asiantuntevaa
-                osaamista. Rento tarjoaa ratkaisuja, joilla voit osallistua
+                osaamista. Kotioss tarjoaa ratkaisuja, joilla voit osallistua
                 hankkeeseen turvallisesti, helposti ja hauskasti, oli hanke
                 millainen tahansa.
               </p>
@@ -48,14 +48,14 @@
 
       <div v-scroll-reveal class="feature-wrapper two">
         <div class="container-base feature wide-img">
-          <img src="/what-is/rento-polku.png" />
+          <img src="/what-is/kotios-polku.png" />
           <div>
-            <h3>Rento-polku</h3>
+            <h3>Kotioss-polku</h3>
             <h4>Polku parempaan asumiseen</h4>
             <p>
-              Rento-polku on yksityiskohtaisesti suunniteltu ja hankkeellesi
+              Kotioss-polku on yksityiskohtaisesti suunniteltu ja hankkeellesi
               räätälöity toteutustapa. Sillä varmistetaan, että hankkeesi
-              toteutuu turvallisesti, nopeasti ja mukavasti. Rento-polulla
+              toteutuu turvallisesti, nopeasti ja mukavasti. Kotioss-polulla
               keskityt vain oleelliseen — oman elämäsi suunnitteluun.
             </p>
           </div>
@@ -68,7 +68,7 @@
             <h3>Kohde-esittelyt</h3>
             <h4>Löydä kontakteja ja rakenna ilmiötä</h4>
             <p>
-              Rento-tarjoaa ilmaisen esittelyalustan osallistavalle
+              Kotioss-tarjoaa ilmaisen esittelyalustan osallistavalle
               asuntohankkeellesi. Esittelemällä hankettasi voit löytää sille
               ihanat asukkaat ja kasvatat osallistavan asuntohankkeen ilmiötä.
             </p>
@@ -84,23 +84,23 @@
       <div v-scroll-reveal class="container-base feature">
         <img src="/what-is/consulting.jpg" />
         <div>
-          <h3>Rento-hankeneuvonta</h3>
+          <h3>Kotioss-hankeneuvonta</h3>
           <h4>Autamme hankkeesi alkuun</h4>
           <p>
-            Ilmainen Rento-hankeneuvonta ohjeistaa ja auttaa siinä, kuinka voit
-            tehdä osallistavasta ideastasi totta.
+            Ilmainen Kotioss-hankeneuvonta ohjeistaa ja auttaa siinä, kuinka
+            voit voit tehdä osallistavasta ideastasi totta.
           </p>
         </div>
       </div>
 
       <div v-scroll-reveal class="container-base feature">
         <div>
-          <h3>Rento-ammattilaiset</h3>
+          <h3>Kotioss-ammattilaiset</h3>
           <h4>Taattua laatua</h4>
           <p>
             Yhteistyökumppaneidemme joukosta löydät ammattilaiset, joita
             käytette apuna hankkeenne suunnittelussa ja toteutuksessa.
-            Rento-kumppaneiden laatu varmistetaan kouluttamalla, tukemalla ja
+            Kotioss-kumppaneiden laatu varmistetaan kouluttamalla, tukemalla ja
             seuraamalla tiiviisti heidän työskentelyään.
           </p>
 
@@ -115,10 +115,10 @@
         <img src="/what-is/grouping.jpg" />
 
         <div>
-          <h3>Rento-ryhmäytyminen - Tulossa talvella 2019</h3>
+          <h3>Kotioss-ryhmäytyminen - Tulossa talvella 2019</h3>
           <h4>Hankkeellesi ihanat asukkaat</h4>
           <p>
-            Löydä hankkeellesi sopivat asukkaat Rento-ryhmäytymistyökalun
+            Löydä hankkeellesi sopivat asukkaat Kotioss-ryhmäytymistyökalun
             avulla. Sen avulla voit olla potentiaalisten asukkaiden kanssa
             mukavasti vuorovaikutuksessa.
           </p>
@@ -128,10 +128,10 @@
       <div v-scroll-reveal class="feature-wrapper three">
         <div class="container-base feature">
           <v-card class="elevation-3 card">
-            <h3>Rento-suunnittelutyökalut - Tulossa myöhemmin</h3>
+            <h3>Kotioss-suunnittelutyökalut - Tulossa myöhemmin</h3>
             <h4>Suunnittele reilusti</h4>
             <p>
-              Rento-suunnittelutyökalut on luotu juuri osallistavia
+              Kotioss-suunnittelutyökalut on luotu juuri osallistavia
               asuntohankkeita varten. Niillä päätäminen demokraattisesti
               inspiroi ja innostaa.
             </p>
@@ -145,7 +145,7 @@
 
       <div v-scroll-reveal class="container-base feature">
         <div>
-          <h3>Rento-projektinhallinta - Tulossa myöhemmin</h3>
+          <h3>Kotioss-projektinhallinta - Tulossa myöhemmin</h3>
           <h4>Varmista, että hankkeesi valmistuu ajallaan</h4>
           <p>
             Projektinhallinan avulla varmistat, että hankkeesi suunnitelmat
@@ -159,7 +159,7 @@
         <img src="/what-is/purchasing.jpg" />
 
         <div>
-          <h3>Rento-hankinnat - Tulossa myöhemmin</h3>
+          <h3>Kotioss-hankinnat - Tulossa myöhemmin</h3>
           <h4>Turvalliset hankinnat ja kilpailuttaminen</h4>
           <p>
             Helpot ja turvalliset hankinnat ja kilpailuttaminen osallistavalle

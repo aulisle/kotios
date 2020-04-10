@@ -15,15 +15,15 @@
           lenkkipolut omalta kotiovelta.
         </p>
         <p>
-          <md-icon class="rento">nature</md-icon>joen varrella, metsän reunalla,
-          pellon laidalla
+          <md-icon class="kotios">nature</md-icon>joen varrella, metsän
+          reunalla, pellon laidalla
         </p>
         <p>
-          <md-icon class="rento">location_city</md-icon>lähiöelämää,
+          <md-icon class="kotios">location_city</md-icon>lähiöelämää,
           pientaloasumista
         </p>
-        <p><md-icon class="rento">timeline</md-icon>5km Kauppatorilta</p>
-        <p><md-icon class="rento">timeline</md-icon>2km Torppalan koulu</p>
+        <p><md-icon class="kotios">timeline</md-icon>5km Kauppatorilta</p>
+        <p><md-icon class="kotios">timeline</md-icon>2km Torppalan koulu</p>
         <div class="blogs">
           <h3>Kirjoituksia</h3>
           <a v-for="(blog, idx) in blogs" :key="idx" :href="blog.url">
@@ -84,7 +84,7 @@ export default {
   text-align: justify;
 }
 
-.rento {
+.kotios {
   color: $color-primary !important;
   margin-right: 10px;
 }

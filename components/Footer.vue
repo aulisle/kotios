@@ -1,8 +1,8 @@
 <template>
   <footer class="footer">
     <div class="column copyright">
-      <img src="/rento-logo.svg" class="logo" alt="logo" />
-      © Rento 2019 – rentopaikka.fi
+      <img src="/kotios-logo.svg" class="logo" alt="logo" />
+      © Kotios 2019 – kotiospaikka.fi
     </div>
 
     <div class="links-row">

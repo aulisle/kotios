@@ -11,11 +11,11 @@ import { debounce } from 'lodash'
 
 import Vue from 'vue'
 
-let RentoMarker = null
+let KotiosMarker = null
 
 const createMarker = (result, self) => {
-  if (RentoMarker) {
-    const marker = new RentoMarker()
+  if (KotiosMarker) {
+    const marker = new KotiosMarker()
     marker.latlng = {
       lat: () => result.location.lat,
       lng: () => result.location.lng
@@ -147,22 +147,22 @@ export default {
         self.gmap.fitBounds(bounds)
         self.gmap.panToBounds(bounds)
 
-        RentoMarker = () => {}
+        KotiosMarker = () => {}
 
-        RentoMarker.prototype = new google.maps.OverlayView()
+        KotiosMarker.prototype = new google.maps.OverlayView()
 
-        RentoMarker.prototype.remove = function() {
+        KotiosMarker.prototype.remove = function() {
           if (this.div) {
             this.div.parentNode.removeChild(this.div)
             this.div = null
           }
         }
 
-        RentoMarker.prototype.getPosition = function() {
+        KotiosMarker.prototype.getPosition = function() {
           return this.latlng
         }
 
-        RentoMarker.prototype.draw = function() {
+        KotiosMarker.prototype.draw = function() {
           const selfie = this
           let div = this.div
           if (!div) {

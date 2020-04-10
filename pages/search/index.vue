@@ -23,13 +23,13 @@
           Näytä listaus
         </base-button>
       </div>
-      <rento-map class="map-content" />
+      <kotios-map class="map-content" />
     </div>
   </div>
 </template>
 
 <script>
-import RentoMap from '@/components/searchMap/Map'
+import KotiosMap from '@/components/searchMap/Map'
 import Results from '@/components/searchResults/Results'
 
 export default {
@@ -42,7 +42,7 @@ export default {
   },
 
   components: {
-    RentoMap,
+    KotiosMap,
     Results
   },
 

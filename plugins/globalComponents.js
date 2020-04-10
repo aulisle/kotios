@@ -28,7 +28,7 @@ Vue.component('transition-pop', TransitionPop)
 const createTitle = {
   install: Vue => {
     Vue.prototype.$createTitle = name => {
-      return `Rento | ${name}`
+      return `Kotios | ${name}`
     }
 
     Vue.prototype.$createSocialMeta = ({ title, description, image, url }) => {

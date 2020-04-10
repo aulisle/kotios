@@ -33,7 +33,7 @@ console.log('SENDGRID API KEY', sendgridApiKey)
 const sendgridSenderEmail = process.env.SENDGRID_SENDER_EMAIL || ''
 const frontEndUrl = process.env.PUBLIC_URL || ''
 
-const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost/rento'
+const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost/kotios'
 
 // Add the API client id and secret to the database
 const apiClientId = process.env.API_CLIENT_ID || 'api-client-id'

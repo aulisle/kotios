@@ -80,7 +80,7 @@ export default {
         },
         {
           title: 'Mikä on Rennon ansaintamalli?',
-          answer: 'Rento alustaliiketoiminnan periaatteisiin.' // TODO: Tähän lisää
+          answer: 'Kotios alustaliiketoiminnan periaatteisiin.' // TODO: Tähän lisää
         },
         {
           title: 'Kuinka voin aloittaa hankkeen?',
@@ -93,7 +93,7 @@ export default {
           title:
             'Kuinka nopeasti pääsen asumaan uuteen kotiini, jos se on toteutettu osallistavasti?',
           answer:
-            'Osallistavat asuntohankkeet, erityisesti ryhmä- ja asunto-osuuskuntahankkeet voivat kestää pidempään, kuin normaali asuntotuotanto. Rento-polulla toteutetut hankkeet vievät keskimäärin 2-3 vuotta. Ilman Rento-polkua hankkeet vievät noin 4-7 vuotta.'
+            'Osallistavat asuntohankkeet, erityisesti ryhmä- ja asunto-osuuskuntahankkeet voivat kestää pidempään, kuin normaali asuntotuotanto. Kotioss-polulla toteutetut hankkeet vievät keskimäärin 2-3 vuotta. IlmanKotiosos-polkua hankkeet vievät noin 4-7 vuotta.'
         },
         {
           title: 'Ketkä muut toimijat tukevat osallistavia asuntohankkeita?',
@@ -101,9 +101,9 @@ export default {
             'Osallistavia asuntohankkeita tukevat esimerkiksi Ryhmärakennuttajat RY ja ARA. Konsulttivetoisia hankkeita järjestävät muun muassa Saraco D&M Oy sekä Fira.'
         },
         {
-          title: 'Onko Rento rakennuttajakonsulttipalvelua?',
+          title: 'Onko Kotioss rakennuttajakonsulttipalvelua?',
           answer:
-            'Rento ei ole rakennuttajakonsultti. Rento välittää osallistavien asuntohankkeiden tarpeisiin oman alansa ammattilaisia. Ammattilaiset ovat itsenäisiä yrittäjiä, mutta jotka täyttävät Rento-vaatimukset.'
+            'Kotioss ei ole rakennuttajakonsultti.Kotiosos välittää osallistavien asuntohankkeiden tarpeisiin oman alansa ammattilaisia. Ammattilaiset ovat itsenäisiä yrittäjiä, mutta jotka täyttäväKotiosios-vaatimukset.'
         }
       ]
     }

@@ -1,7 +1,7 @@
 {
-  "name": "rento",
+  "name": "kotios",
   "version": "1.0.0",
-  "description": "Rento Baugruppe application",
+  "description": "Kotios Baugruppe application",
   "author": "Aulis Leinonen",
   "private": true,
   "scripts": {

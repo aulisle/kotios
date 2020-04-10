@@ -4,7 +4,7 @@
       <div class="toolbar-section-start">
         <nuxt-link :to="{ name: 'index' }">
           <div class="logo">
-            <img src="/rento-logo.svg" class="logo-img" />
+            <img src="/kotios-logo.svg" class="logo-img" />
             RENTO
           </div>
         </nuxt-link>
@@ -94,7 +94,7 @@ export default {
       return [
         { name: 'phenomenon', exact: false },
         { name: 'search', exact: false },
-        { name: 'rento', exact: false },
+        { name: 'kotios', exact: false },
         { name: 'faq', exact: false }
       ]
     },
