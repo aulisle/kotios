@@ -89,9 +89,7 @@ const emailer = {
       dreamsUrl
     }).then(html => {
       const data = { ...config, to: email, subject: DREAMS_SUBJECT, html }
-      // sgMail.send(data)
-      // eslint-disable-next-line
-      console.log('data', data)
+      sgMail.send(data)
     })
   }
 }
