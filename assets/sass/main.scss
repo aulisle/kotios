@@ -1,10 +1,12 @@
 
 @import "~vue-material/dist/theme/engine"; // Import the theme engine
 @import "_variables.scss";
+@import "fonts.scss";
 @import "toast.scss";
 @import "dialog.scss";
 @import "button.scss";
 @import "attachment.scss";
+
 
 @include md-register-theme("default", (
   primary: $color-primary, // The primary color of the application
@@ -12,9 +14,6 @@
 ));
 
 @import "~vue-material/dist/theme/all"; // Apply the theme
-
-
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700,800&display=swap');
 
 html, body
 {
