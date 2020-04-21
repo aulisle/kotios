@@ -78,16 +78,18 @@ export default {
 
   modules: [
     '@nuxtjs/dotenv',
+    'nuxt-client-init-module',
     [
       '@nuxtjs/axios',
       {
         baseURL: `http://${process.env.HOST || 'localhost'}:${process.env
           .PORT || 3000}/`,
 
-        https: process.env.NODE_ENV === 'production'
+        https: process.env.NODE_ENV === 'production',
+        withCredentials: true
       }
     ],
-    '@nuxtjs/auth',
+    // '@nuxtjs/auth',
     [
       '@nuxtjs/toast',
       {
@@ -104,14 +106,17 @@ export default {
           light: true,
           themes: {
             light: {
-              primary: '#1bb8d1'
+              primary: '#281348',
+              secondary: '#ffffff',
+              accent: '#EA376D'
             }
           }
         }
       }
-    ],
-    '~/modules/api'
+    ]
   ],
+
+  buildModules: ['@nuxtjs/gtm', '@nuxtjs/google-analytics'],
 
   plugins: [
     { src: '~/plugins/babel.js', ssr: false },
@@ -162,7 +167,8 @@ export default {
 
   serverMiddleware: [
     // API middleware
-    'redirect-ssl'
+    'redirect-ssl',
+    '~/api'
   ],
 
   env: {
@@ -183,5 +189,17 @@ export default {
   loading: {
     color: '#1bb8d1',
     height: '2px'
+  },
+
+  gtm: {
+    id: 'GTM-MSJJN49'
+  },
+
+  googleAnalytics: {
+    id: 'UA-163453529-1',
+    debug: {
+      enabled: true,
+      sendHitTask: true
+    }
   }
 }

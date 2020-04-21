@@ -17,7 +17,8 @@ const translations = {
     'for-partners': 'Kumppaneille',
     phenomenon: 'Osallistaminen',
     kotios: 'Mikä on Kotios?',
-    faq: 'Usein kysyttyä'
+    faq: 'Usein kysyttyä',
+    'interest-map': 'Pöhinä'
   },
   settings: {
     'change-password': 'Vaihda salasana',
@@ -174,6 +175,19 @@ const translations = {
       facilitator: 'Fasilitaattori',
       'project-advisor': 'Hankeneuvoja',
       'customer-service-chief': 'Asiakaspalvelupäällikkö'
+    }
+  },
+  dreams: {
+    importantOptions: {
+      economy: 'Taloudellisuus',
+      neighbours: 'Naapurit',
+      style: 'Tyyli',
+      owning: 'Omistusasuminen',
+      renting: 'Vuokra-asuminen',
+      customisation: 'Yksilöinti',
+      ecology: 'Ekologisuus',
+      functionality: 'Toiminnallisuus',
+      'common-spaces': 'Yhteistilat'
     }
   }
 }

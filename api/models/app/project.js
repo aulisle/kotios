@@ -65,6 +65,6 @@ export const schema = {
 }
 
 const schemaInstance = mongoose.Schema(schema)
-const modelInstance = mongoose.model('client', schemaInstance)
+const modelInstance = mongoose.model('project', schemaInstance)
 
 export default modelInstance

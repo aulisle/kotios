@@ -189,9 +189,9 @@ $column-margin: 40px;
 }
 
 .social-icon {
-  width: 18px;
-  height: 18px;
-  margin-right: 10px;
+  width: $u3;
+  height: $u3;
+  margin-right: $u1;
 }
 
 .facebook {

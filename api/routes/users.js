@@ -13,6 +13,14 @@ const router = express.Router()
 const applyRoutes = app => {
   // Users can access their own details with the
   // user-route
+  router.use((req, res, next) => {
+    Object.setPrototypeOf(req, app.request)
+    Object.setPrototypeOf(res, app.response)
+    req.res = res
+    res.req = req
+    next()
+  })
+
   router
     .route('/user')
     .get(requireLogin, controller.current.get)

@@ -18,7 +18,7 @@
 
 html, body
 {
-  background-color: #F9FAFB;
+  background-color: $color-text-secondary;
   color: $color-text-primary;
   letter-spacing: 0.5px;
   font-family: $font-stack-body;
@@ -28,6 +28,8 @@ html, body
 
 html {
   body {
+    width: 100vw;
+    overflow-x: hidden;
     font-size: 1.0rem;
   }
 }
@@ -49,11 +51,6 @@ html {
 a, a:hover, a:focus, a:visited
 {
   color: #000;
-}
-
-.container-base {
-  margin: 0;
-  width: 100%;
 }
 
 .container-wide {
@@ -85,17 +82,14 @@ a, a:hover, a:focus, a:visited
   border-bottom: 1px solid $color-hr;
 }
 
-.md-card {
-  border-radius: 5px;
+.v-application {
+  .v-text-field fieldset, 
+  .v-text-field .v-input__control, 
+  .v-text-field .v-input__slot {
+    border-radius: $border-radius;
+  }
 }
 
-.md-table {
-  flex-flow: initial !important;
-}
-
-.md-overlay.md-fixed, body > .md-overlay {
-  z-index: 10;
-}
 
 h1 {
   font-size: 20px;
@@ -104,11 +98,15 @@ h1 {
 
 h1, h2, h3, h4 {
   font-family: $font-stack-heading;
-  color: $color-text-secondary;
+  color: $color-text-primary;
 }
 
 h2 {
-  font-weight: normal;
+  @include h2-primary;
+}
+
+h3 {
+  @include h3-primary;
 }
 
 hr {
@@ -119,9 +117,10 @@ hr {
 }
 
 .container-base {
+  margin: 0;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: $margin-page;
+  padding-left: $margin-page;
   margin-right: auto;
   margin-left: auto;
 }
@@ -189,6 +188,7 @@ div.back-link {
 body {
   .v-application {
     font-family: $font-stack-body;
+    background: $color-text-secondary !important;
   }
 
   .md-drawer.md-temporary {
@@ -204,67 +204,29 @@ body {
   }  
 }
 
-
-@media (max-width: 600px) {
-  .container-wide {
-    margin: 0px 30px;
-  }
-
-  .hero {
-    h3 {
-      font-size: 23px;
-    }
-  }
-
-  .md-drawer.md-permanent {
-    position: fixed !important;
-  }
-}
-
 body {
-  @media (min-width: 576px){
+  @include media-breakpoint-up(md) {
     .container-base {
-        max-width: 540px;
+        max-width: $container-md;
     }
   }
   
-  @media (min-width: 768px){
+  @include media-breakpoint-up(lg) {
     .container-base {
-        max-width: 720px;
+        max-width: $container-lg;
     }
   }
   
-  @media (min-width: 992px) {
+  @include media-breakpoint-up(xl) {
     .container-base {
-        max-width: 960px;
+        max-width: $container-xl;
     }
   }
   
-  @media (min-width: 1200px) {
+  @include media-breakpoint-up(xxl) {
     .container-base {
-        max-width: 1140px;
+        max-width: $container-xxl;
     }
-  }
-}
-
-
-
-
-@media only screen and (max-width: 768px) {
-  .lg-only {
-    display: none !important;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .lg-hide {
-    display: none !important;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .sm-only {
-    display: none !important;
   }
 }
 

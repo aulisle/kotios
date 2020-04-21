@@ -1,91 +1,143 @@
 <template>
-  <div class="">
+  <div class="index-page">
     <div class="hero">
+      <div class="blobs">
+        <img src="/blobs/front-top.svg" class="hero-bg-img bg-img-top" />
+        <img src="/blobs/front-bottom.svg" class="hero-bg-img bg-img-bottom" />
+      </div>
+
       <div class="container-base">
         <h1 class="tagline">
           Fiksumpi tapa hankkia koti
         </h1>
 
-        <div>
-          VAKA on osallistavia asuntohankkeita tukeva alustapalvelu.
-        </div>
+        <p class="description">
+          Uusi asunto huippusijainnilla, sinun suunnittelemanasi ja
+          markkinahintaa halvemmalla. Miltä kuulostaa?
+        </p>
       </div>
     </div>
 
-    <div class="container-base">
-      <v-card elevation="0">
-        <v-card-title>
-          Uskomme, että osallistavat asuntohankkeet ovat rakennuttamisen
-          tulevaisuus.
-        </v-card-title>
-      </v-card>
+    <div class="container-base section-margin">
+      <h2>
+        Ihmiset ovat erilaisia – miksi kotien pitäisi olla samanlaisia?
+      </h2>
+      <p>
+        Kotios auttaa sinua luomaan itsellesi unelmakodin, jota et saisi
+        valmiina markkinoilta. Tämä on mahdollista vain osallistamalla.
+        Palvelumme yhdistää samanhenkiset asukkaat ja tukee rakennuttamisen
+        kaikissa vaiheissa aina unelmoinnista muuttoon saakka.
+      </p>
     </div>
 
-    <div class="container-base">
-      <h2 class="featured-heading">Upeita hankkeita</h2>
-      <featured-display :featured="featured" />
+    <div class="container-base section-margin">
+      <h2 class="featured-heading">Miten se toimii?</h2>
+      <p>
+        Osallistavassa kodinhankinnassa sinun ja perheesi rooli kasvaa. Et ole
+        enää sivusta katsoja vaan pääset mukaan päättämään oman kotisi
+        ratkaisuista. Tuemme sinua aina unelmoinnista muuttoon asti.
+      </p>
     </div>
   </div>
 </template>
 
 <script>
-import FeaturedDisplay from '@/components/featured/FeaturedDisplay'
-// import FrontPlaceSearchInput from '@/components/searchMap/FrontPlaceSearchInput'
-
 export default {
   auth: false,
 
-  components: {
-    FeaturedDisplay
-    // FrontPlaceSearchInput
-  },
+  components: {},
 
   head() {
     return {
       title: this.$createTitle(this.$t('routes.index'))
-    }
-  },
-
-  asyncData({ $axios }) {
-    return $axios.get('/api/featured').then(({ data }) => {
-      return {
-        featured: data
-      }
-    })
-  },
-
-  methods: {
-    search() {
-      if (this.searchQuery) {
-        this.$router.push({ name: 'search', query: { city: this.searchQuery } })
-      } else {
-        this.$router.push({ name: 'search' })
-      }
     }
   }
 }
 </script>
 
 <style scoped lang="scss">
+.index-page {
+  margin-bottom: $u20;
+}
+
 .hero {
-  background: #f9fafb;
-  background: linear-gradient(
-    to bottom,
-    #f9fafb,
-    #f5f8f9,
-    #f1f5f8,
-    #ecf3f6,
-    #e8f1f3
-  );
+  background: $color-primary;
   background-size: cover;
   background-position: 0% 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container-base {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tagline,
+  .description {
+    text-align: center;
+    color: $color-text-secondary;
+  }
 
   .tagline {
     font-size: 5rem;
     font-weight: 900;
-    margin-bottom: -20px;
-    margin-top: 30px;
+    margin-bottom: $u2;
   }
+
+  .description {
+    max-width: $u50;
+  }
+
+  .hero-bg-img {
+    position: absolute;
+    width: 300px;
+    z-index: 0;
+  }
+
+  .blobs {
+    z-index: 0;
+  }
+
+  .container-base {
+    z-index: 1;
+  }
+
+  .bg-img-top {
+    left: -140px;
+    top: -40px;
+  }
+
+  .bg-img-bottom {
+    left: auto;
+    right: -100px;
+    top: auto;
+    bottom: 50px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    .hero-bg-img {
+      width: 500px;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    .hero-bg-img {
+      width: 50vw;
+    }
+
+    .bg-img-top {
+      top: -20vw;
+    }
+  }
+}
+
+.section-margin {
+  margin-top: $u15;
 }
 
 .product-name {

@@ -47,7 +47,7 @@ export default {
         {
           title: 'Mitä jos osallistava asuntohanke epäonnistuu?',
           answer:
-            'Jos hankkeessa ei ole mukana riittävää asiantuntijuutta, on epäonnistumisen riski toki olemassa. Osaamattoman projektinjohdon takia hankkeen aikataulu voi venyä tai rahoituksen saaminen voi muodostua ongelmaksi. Kun asioihin perehtyy huolellisesti etukäteen ja hyödyntää ammattilaisten apua, hankkeella on erittäin hyvät onnistumisen mahdollisuudet. RENTO-palvelun kautta tarvittavat asiantuntijat on helppo löytää.'
+            'Jos hankkeessa ei ole mukana riittävää asiantuntijuutta, on epäonnistumisen riski toki olemassa. Osaamattoman projektinjohdon takia hankkeen aikataulu voi venyä tai rahoituksen saaminen voi muodostua ongelmaksi. Kun asioihin perehtyy huolellisesti etukäteen ja hyödyntää ammattilaisten apua, hankkeella on erittäin hyvät onnistumisen mahdollisuudet. KOTIOS-palvelun kautta tarvittavat asiantuntijat on helppo löytää.'
         },
         {
           title:
@@ -79,8 +79,9 @@ export default {
             'Osallistava asuntohanke tarjoaa ihmisille tavan vaikuttaa ympäristönsä kehittämiseen kaupungissakin. Valittavissa ovat kestävät ratkaisut tilojen, energian ja materiaalien suhteen. Suuremmassa mittakaavassa ajateltuna tällä tavalla voisi tulevaisuudessa luoda kokonaisen unelmakaupungin.'
         },
         {
-          title: 'Mikä on Rennon ansaintamalli?',
-          answer: 'Kotios alustaliiketoiminnan periaatteisiin.' // TODO: Tähän lisää
+          title: 'Mikä on Kotioksen ansaintamalli?',
+          answer:
+            'Kotioksen liiketoimintamalli perustuu välittäjätoimintaan. Kun palveluntarjoajan työ on välitetty kauttamme hankkeelle, pidätämme siitä prosenttiosuuden välityspalkkiona. Prosenttiosuus riippuu työn arvosta ja se on 1%-10% välillä. Meidän etumme on siis, että hankkeenne etenee aikataulussa ja sujuvasti. Esimerkiksi ryhmäytyminen on asukaslähtöisille hankkeille ilmaista, sillä siinä ei tarvita palveluntarjoajien apua.' // TODO: Tähän lisää
         },
         {
           title: 'Kuinka voin aloittaa hankkeen?',
@@ -93,7 +94,7 @@ export default {
           title:
             'Kuinka nopeasti pääsen asumaan uuteen kotiini, jos se on toteutettu osallistavasti?',
           answer:
-            'Osallistavat asuntohankkeet, erityisesti ryhmä- ja asunto-osuuskuntahankkeet voivat kestää pidempään, kuin normaali asuntotuotanto. Kotioss-polulla toteutetut hankkeet vievät keskimäärin 2-3 vuotta. IlmanKotiosos-polkua hankkeet vievät noin 4-7 vuotta.'
+            'Osallistavat asuntohankkeet, erityisesti ryhmä- ja asunto-osuuskuntahankkeet voivat kestää pidempään, kuin normaali asuntotuotanto. Kotios-polulla toteutetut hankkeet vievät keskimäärin 2-3 vuotta. Ilman Kotios-polkua hankkeet vievät noin 4-7 vuotta.'
         },
         {
           title: 'Ketkä muut toimijat tukevat osallistavia asuntohankkeita?',
@@ -101,9 +102,9 @@ export default {
             'Osallistavia asuntohankkeita tukevat esimerkiksi Ryhmärakennuttajat RY ja ARA. Konsulttivetoisia hankkeita järjestävät muun muassa Saraco D&M Oy sekä Fira.'
         },
         {
-          title: 'Onko Kotioss rakennuttajakonsulttipalvelua?',
+          title: 'Onko Kotios rakennuttajakonsulttipalvelua?',
           answer:
-            'Kotioss ei ole rakennuttajakonsultti.Kotiosos välittää osallistavien asuntohankkeiden tarpeisiin oman alansa ammattilaisia. Ammattilaiset ovat itsenäisiä yrittäjiä, mutta jotka täyttäväKotiosios-vaatimukset.'
+            'Kotios ei ole rakennuttajakonsultti. Kotios on osallistavien asuntohankkeiden ekosyysteemi. Se välittää osallistavien asuntohankkeiden tarpeisiin oman alansa ammattilaisia. Ammattilaiset ovat itsenäisiä yrittäjiä, mutta jotka täyttävät Kotios-vaatimukset.'
         }
       ]
     }

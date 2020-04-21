@@ -3,10 +3,13 @@
     <md-toolbar class="header-toolbar elevation-0" elevation="0">
       <div class="toolbar-section-start">
         <nuxt-link :to="{ name: 'index' }">
-          <div class="logo">
-            <img src="/kotios-logo.svg" class="logo-img" />
-            RENTO
-          </div>
+          <div class="logo">Koti<span class="narrow">os</span></div>
+        </nuxt-link>
+        <nuxt-link :to="{ name: 'beta-notice' }" class="beta-link">
+          Beta
+          <base-icon class="info-icon" color="text-secondary">
+            mdi-information
+          </base-icon>
         </nuxt-link>
 
         <place-search-input v-if="showSearch" class="search" />
@@ -14,39 +17,34 @@
 
       <div class="md-toolbar-section-end links">
         <base-button
-          class="md-icon-button lg-hide"
+          color="secondary"
+          text
+          class="mobile-menu-toggle"
           @click.prevent="togglePanel"
         >
-          <md-icon>menu</md-icon>
+          <base-icon color="secondary">mdi-menu</base-icon>
         </base-button>
 
-        <div class="link-container">
+        <div class="desktop-link-container">
           <nuxt-link
             v-for="route in routes"
             :key="route.name"
             :to="{ name: route.name }"
             :class="{ exact: route.exact }"
-            class="lg-only"
           >
             {{ $t(`routes.${route.name}`) }}
           </nuxt-link>
-
-          <nuxt-link v-if="!loggedIn" :to="{ name: 'login' }">
-            {{ $t('login') }}
-          </nuxt-link>
         </div>
-
-        <account-menu
-          v-if="loggedIn"
-          :user="user"
-          :routes="personalRoutes"
-          @logout="logout"
-        />
       </div>
     </md-toolbar>
+    <div class="pseudo-header" />
 
     <!-- Mobile menu -->
-    <md-drawer :md-active.sync="panelOpen" md-swipeable class="lg-hide">
+    <md-drawer
+      :md-active.sync="panelOpen"
+      md-swipeable
+      class="mobile-menu-drawer"
+    >
       <md-list>
         <md-list-item v-for="route in routes" :key="route.name">
           <nuxt-link :to="{ name: route.name }">
@@ -62,12 +60,10 @@
 
 <script>
 import { mapState } from 'vuex'
-import AccountMenu from './AccountMenu'
 import PlaceSearchInput from '../searchMap/ToolbarPlaceSearchInput'
 
 export default {
   components: {
-    AccountMenu,
     PlaceSearchInput
   },
 
@@ -93,7 +89,7 @@ export default {
     routes() {
       return [
         { name: 'phenomenon', exact: false },
-        { name: 'search', exact: false },
+        { name: 'interest-map', exact: false },
         { name: 'kotios', exact: false },
         { name: 'faq', exact: false }
       ]
@@ -127,30 +123,39 @@ export default {
 .logo {
   display: flex;
   font-family: $font-stack-button;
-  font-weight: bold;
-  flex-direction: column;
-  font-size: 8px;
-  letter-spacing: 1.4px;
+  font-weight: 900;
+  font-size: 16px;
   text-transform: uppercase;
+  color: $color-text-secondary;
+  align-items: baseline;
+  .narrow {
+    font-weight: 400;
+  }
 }
 
-.logo-img {
-  height: 30px;
+.beta-link {
+  display: flex;
+  align-items: center;
+  color: $color-text-secondary !important;
+  opacity: 0.4;
+  margin-left: $u2;
+
+  .info-icon {
+    margin-left: $u1;
+    color: $color-text-secondary !important;
+  }
 }
 
 .header-toolbar {
   height: $top-bar-height;
   padding: 0px $margin-page;
-  background-color: white;
-  border-bottom: 1px solid $color-hr;
+  background-color: $color-primary;
   box-sizing: border-box;
+  position: fixed;
 }
 
-.link-container {
-  margin-right: 12px;
-  a {
-    font-size: $font-s;
-  }
+.pseudo-header {
+  height: $top-bar-height;
 }
 
 .links {
@@ -163,7 +168,7 @@ export default {
     text-transform: uppercase;
     font-family: $font-stack-heading;
     font-weight: bold;
-    padding-bottom: 4px;
+    padding-bottom: $u1;
   }
 
   a:hover {
@@ -176,7 +181,31 @@ export default {
 
   .nuxt-link-exact-active.exact,
   .nuxt-link-active:not(.exact) {
-    color: $color-primary;
+    color: $color-text-primary-hover;
+  }
+}
+
+.desktop-link-container {
+  display: none;
+  margin-right: 12px;
+  a,
+  a:visited {
+    font-size: $font-s;
+    color: $color-text-secondary;
+  }
+  a:hover {
+    color: $color-text-primary-hover;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .mobile-menu-drawer,
+  .mobile-menu-toggle {
+    display: none;
+  }
+
+  .desktop-link-container {
+    display: block;
   }
 }
 

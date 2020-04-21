@@ -1,8 +1,7 @@
 <template>
   <footer class="footer">
     <div class="column copyright">
-      <img src="/kotios-logo.svg" class="logo" alt="logo" />
-      © Kotios 2019 – kotiospaikka.fi
+      © Kotios 2020 – kotios.fi
     </div>
 
     <div class="links-row">
@@ -74,7 +73,7 @@ export default {
 <style lang="scss" scoped>
 footer {
   padding: 30px;
-  background-color: #333;
+  background-color: $color-primary;
   color: $color-text-alt;
   display: flex;
   justify-content: space-between;

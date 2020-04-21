@@ -9,12 +9,14 @@
               {{ contact.initials }}
             </span>
           </v-avatar>
-          <h3>{{ contact.name }}</h3>
-          <p>{{ $t(`project.role.${contact.role}`) }}</p>
-          <p>{{ contact.email }}</p>
-          <p>{{ contact.phone }}</p>
-          <div class="content-right">
-            <base-button class="md-primary md-raised">Ota yhteyttä</base-button>
+          <h3 class="name">{{ contact.name }}</h3>
+          <p class="field">{{ $t(`project.role.${contact.role}`) }}</p>
+          <p class="field">{{ contact.email }}</p>
+          <p class="field">{{ contact.phone }}</p>
+          <div class="contact-button">
+            <base-button @click="openMail(contact.email)">
+              Ota yhteyttä
+            </base-button>
           </div>
         </div>
       </v-card>
@@ -28,6 +30,13 @@ export default {
     contacts: {
       type: Array,
       required: true
+    }
+  },
+
+  methods: {
+    openMail(email) {
+      var win = window.open(`mailto:${email}`, '_blank')
+      win.focus()
     }
   }
 }
@@ -48,5 +57,18 @@ export default {
   grid-column-gap: 30px;
   grid-row-gap: 30px;
   margin-top: 20px;
+}
+
+.name {
+  margin-top: $u1;
+}
+
+.field {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.contact-button {
+  margin-top: $u3;
 }
 </style>

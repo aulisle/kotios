@@ -129,7 +129,7 @@ export default {
 
 $card-width: 400px;
 $card-height: 450px;
-$marker-size: 38px;
+$marker-size: $u5;
 
 .card {
   position: absolute;

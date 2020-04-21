@@ -5,11 +5,15 @@ import 'vue-material/dist/vue-material.min.css'
 
 import BaseButton from '~/components/base/BaseButton.vue'
 import BaseInput from '~/components/base/BaseInput.vue'
+import BaseLink from '~/components/base/BaseLink.vue'
 import BasePasswordInput from '~/components/base/BasePasswordInput.vue'
 import BaseToggle from '~/components/base/BaseToggle.vue'
 import BaseRadioGroup from '~/components/base/BaseRadioGroup.vue'
 import BaseSelect from '~/components/base/BaseSelect.vue'
 import BaseFile from '~/components/base/BaseFile.vue'
+import BaseIcon from '~/components/base/BaseIcon.vue'
+import BaseSlider from '~/components/base/BaseSlider.vue'
+import BaseFieldSet from '~/components/base/BaseFieldSet.vue'
 import BaseAutocomplete from '~/components/base/BaseAutocomplete.vue'
 import TransitionPop from '~/components/base/TransitionPop.vue'
 
@@ -24,6 +28,10 @@ Vue.component('base-select', BaseSelect)
 Vue.component('base-file', BaseFile)
 Vue.component('base-autocomplete', BaseAutocomplete)
 Vue.component('transition-pop', TransitionPop)
+Vue.component('base-link', BaseLink)
+Vue.component('base-icon', BaseIcon)
+Vue.component('base-slider', BaseSlider)
+Vue.component('base-field-set', BaseFieldSet)
 
 const createTitle = {
   install: Vue => {

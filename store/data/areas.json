@@ -1,0 +1,47 @@
+[
+  {
+    "id": "helsinki",
+    "location": {
+      "lat": 60.16952,
+      "lng": 24.93545
+    },
+    "type": 0,
+    "interest": 3
+  },
+  {
+    "id": "jyvaskyla",
+    "location": {
+      "lat": 62.24147,
+      "lng": 25.72088
+    },
+    "type": 0,
+    "interest": 1
+  },
+  {
+    "id": "tampere",
+    "location": {
+      "lat": 61.49911,
+      "lng": 23.78712
+    },
+    "type": 0,
+    "interest": 0
+  },
+  {
+    "id": "turku",
+    "location": {
+      "lat": 60.45148,
+      "lng": 22.26869
+    },
+    "type": 0,
+    "interest": 0
+  },
+  {
+    "id": "uusikaupunki",
+    "location": {
+      "lat": 60.80043,
+      "lng": 21.40841
+    },
+    "type": 0,
+    "interest": 0
+  }
+]

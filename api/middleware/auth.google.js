@@ -2,7 +2,6 @@ import UserModel from '../models/app/user'
 import { createSocialUser } from '../models/app/user.create'
 
 import axios from 'axios'
-import search from '../search'
 
 const getOrCreateGoogleUser = googleData => {
   return UserModel.findOne({
@@ -22,10 +21,6 @@ const getOrCreateGoogleUser = googleData => {
           if (err) {
             return reject(err)
           }
-
-          // Update user index
-          search.indexUser(userRes)
-
           return resolve(userRes)
         })
       })

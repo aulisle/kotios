@@ -8,8 +8,6 @@
 
 import { default as applyMiddlewares } from './middleware'
 
-import elasticsearch from './search'
-
 import initDb from './models'
 import initRoutes from './routes'
 
@@ -39,7 +37,7 @@ const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost/kotios'
 const apiClientId = process.env.API_CLIENT_ID || 'api-client-id'
 const apiClientSecret = process.env.API_CLIENT_SECRET || 'api-client-secret'
 
-const elasticHost = process.env.BONSAI_URL || 'localhost:9200'
+// const elasticHost = process.env.BONSAI_URL || 'localhost:9200'
 
 // Create express instance
 const app = express()
@@ -66,7 +64,7 @@ const startup = async () => {
   )
 
   try {
-    await elasticsearch.init(elasticHost)
+    // await elasticsearch.init(elasticHost)
 
     Logger.info(`Initiated elasticsearch`)
   } catch (err) {

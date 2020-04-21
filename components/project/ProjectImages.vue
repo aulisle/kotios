@@ -1,5 +1,8 @@
 <template>
-  <div v-viewer="{ movable: false, toolbar: false }" class="images">
+  <div
+    v-viewer="{ movable: false, toolbar: false, title: false }"
+    class="images"
+  >
     <button class="hero-img">
       <img :src="images[0]" />
     </button>

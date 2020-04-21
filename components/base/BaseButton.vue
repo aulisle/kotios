@@ -1,9 +1,13 @@
 <template>
-  <md-button v-on="$listeners"><slot /></md-button>
+  <v-btn v-bind="$attrs" :color="color" v-on="$listeners"><slot /></v-btn>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    color: { type: String, default: 'primary' }
+  }
+}
 </script>
 
 <style></style>

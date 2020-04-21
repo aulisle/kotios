@@ -1,17 +1,10 @@
 <template>
-  <md-field :class="{ 'md-invalid': errors.length !== 0 }">
-    <label>{{ label }}</label>
-    <md-input
-      :value="value"
-      :placeholder="placeholder"
-      :type="type"
-      :disabled="disabled"
-      @input="input"
-    />
-    <span v-if="errors && errors.length > 0" class="md-error">
-      {{ errors[0] }}
-    </span>
-  </md-field>
+  <v-text-field
+    :outlined="outlined"
+    v-bind="$attrs"
+    @input="input"
+    v-on="$listeners"
+  />
 </template>
 
 <script>
@@ -19,12 +12,7 @@ import Vue from 'vue'
 
 export default {
   props: {
-    value: { type: String, required: true },
-    placeholder: { type: String, default: '' },
-    type: { type: String, default: 'text' },
-    label: { type: String, default: '' },
-    errors: { type: Array, default: () => [] },
-    disabled: { type: Boolean, default: false }
+    outlined: { type: Boolean, default: true }
   },
 
   methods: {

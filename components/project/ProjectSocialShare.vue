@@ -1,8 +1,8 @@
 <template>
   <div class="project-social">
-    <h2 class="align-right-lg">
+    <!--<h2 class="align-right-lg">
       Tee kohteesta menestys
-    </h2>
+    </h2>-->
     <p class="align-right-lg">
       Jaa kohde
     </p>
@@ -112,7 +112,7 @@ export default {
   }
 }
 
-@media (min-width: 992px) {
+@include media-breakpoint-up(lg) {
   .align-right-lg {
     padding-bottom: 5px;
     padding-top: 0px;

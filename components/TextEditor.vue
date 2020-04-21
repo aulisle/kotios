@@ -89,7 +89,7 @@ export default {
 
 .text-editor .editable .ProseMirror {
   border: 1px solid $color-hr;
-  padding: 24px;
+  padding: $u3;
   max-height: 500px;
   overflow: auto;
 }

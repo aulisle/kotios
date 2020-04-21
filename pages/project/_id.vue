@@ -2,46 +2,20 @@
   <div>
     <project-images :images="project.images" />
     <div class="container-base page-content">
+      <h1 class="project-heading">
+        {{ project.title }}
+      </h1>
       <div class="heading-row">
         <div>
-          <h1 class="project-heading">
-            {{ project.title }}
-          </h1>
-          <div>
-            <md-button
-              class="md-primary md-raised like-button"
-              @click="showLikeReason = true"
-            >
-              <md-icon class="text-white">thumb_up</md-icon> Tykkää 1.2k
-            </md-button>
-            <v-dialog v-model="showLikeReason" max-width="400">
-              <v-card>
-                <v-card-title>Miksi pidät kohteesta?</v-card-title>
-                <v-card-text></v-card-text>
-                <v-card-actions>
-                  <v-btn @click="showLikeReason = false">Sulje</v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-dialog>
-          </div>
-          <h2 class="project-type">
-            <md-icon>{{ projectTypeIcon }}</md-icon>
-            <span class="text">{{ projectType }}</span>
-          </h2>
           <p v-if="project.address">
-            {{ project.address }}
+            {{ project.address.line1 }}, {{ project.address.postCode }}
+            {{ project.address.city }}
           </p>
-
-          <project-values
-            v-if="project.values"
-            class="project-values"
-            :values="project.values"
-          />
         </div>
         <project-social-share :project="project" />
       </div>
 
-      <project-phases class="project-phases" :phases="project.phases" />
+      <!--<project-phases class="project-phases" :phases="project.phases" />-->
     </div>
     <md-content>
       <div class="container-base">
@@ -59,13 +33,14 @@
               </p>
             </template>
           </div>
-          <div>
+          <!--<div>
             <project-neighbourhood
               v-if="project.neighbourhood"
               class="project-events"
             />
             <project-events class="project-events" :events="project.events" />
           </div>
+          -->
         </div>
       </div>
     </md-content>
@@ -75,38 +50,41 @@
       <project-contact class="project-contact" :contacts="project.contacts" />
       <project-extra-table class="project-extra-table" :project="project" />
     </div>
-
-    <div class="fab">
-      <project-interested-fab :title="project.title" />
+    <div class="container-base">
+      <base-button @click="addDream">Kohde...</base-button>
     </div>
+    <!--<div class="fab">
+      <project-interested-fab :title="project.title" />
+    </div>-->
   </div>
 </template>
 
 <script>
 import ProjectImages from '@/components/project/ProjectImages'
 import ProjectSocialShare from '@/components/project/ProjectSocialShare'
-import ProjectPhases from '@/components/project/ProjectPhases'
+// import ProjectPhases from '@/components/project/ProjectPhases'
 import ProjectMap from '@/components/project/ProjectMap'
 import ProjectContact from '@/components/project/ProjectContact'
-import ProjectEvents from '@/components/project/ProjectEvents'
-import ProjectValues from '@/components/project/ProjectValues'
-import ProjectNeighbourhood from '@/components/project/ProjectNeighbourhood'
-import ProjectInterestedFab from '@/components/project/ProjectInterestedFab'
+// import ProjectEvents from '@/components/project/ProjectEvents'
+// import ProjectValues from '@/components/project/ProjectValues'
+// import ProjectNeighbourhood from '@/components/project/ProjectNeighbourhood'
+// import ProjectInterestedFab from '@/components/project/ProjectInterestedFab'
 // import ProjectHouseholds from '@/components/project/ProjectHouseholds'
 import ProjectExtraTable from '@/components/project/ProjectExtraTable'
 import projectTypeMixin from '@/components/project/projectTypeMixin'
+import { TYPES } from '@/store/defineDream'
 
 export default {
   components: {
     ProjectImages,
     ProjectSocialShare,
-    ProjectPhases,
+    // ProjectPhases,
     ProjectMap,
     ProjectContact,
-    ProjectEvents,
-    ProjectValues,
-    ProjectNeighbourhood,
-    ProjectInterestedFab,
+    // ProjectEvents,
+    // ProjectValues,
+    // ProjectNeighbourhood,
+    // ProjectInterestedFab,
     // ProjectHouseholds,
     ProjectExtraTable
   },
@@ -115,7 +93,11 @@ export default {
 
   data() {
     return {
-      showLikeReason: false
+      showLikeReason: false,
+      project: {
+        images: ['/blobs/blue.svg'],
+        phases: {}
+      }
     }
   },
 
@@ -133,14 +115,28 @@ export default {
     }
   },
 
-  asyncData({ $axios, params }) {
-    return $axios.get(`/api/projects/${params.id}`).then(({ data }) => {
-      // eslint-disable-next-line
-      console.log('DATA', data)
-      return {
-        project: data
-      }
-    })
+  async fetch() {
+    const getProject = this.$store.getters['interestMap/project']
+
+    this.project = getProject(this.$route.params.id)
+
+    if (!this.project) {
+      this.error('Projektia ei löytynyt')
+    }
+  },
+
+  methods: {
+    addDream() {
+      this.$store.commit('defineDream/initType', TYPES.PLOT)
+      this.$store.commit('defineDream/setValue', {
+        field: 'projectId',
+        value: this.project.id
+      })
+
+      this.$store.dispatch('defineDream/saveNew').then(() => {
+        this.$router.push({ name: 'dream-step-2' })
+      })
+    }
   }
 }
 </script>
@@ -233,7 +229,7 @@ export default {
   }
 }
 
-@media (min-width: 992px) {
+@include media-breakpoint-up(lg) {
   .heading-row {
     justify-content: space-between;
     flex-direction: row;
@@ -254,7 +250,7 @@ export default {
   }
 }
 
-@media (min-width: 1200px) {
+@include media-breakpoint-up(xxl) {
   .long-description {
     width: 600px;
   }

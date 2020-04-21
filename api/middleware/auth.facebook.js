@@ -1,7 +1,6 @@
 import UserModel from '../models/app/user'
 import { createSocialUser } from '../models/app/user.create'
 
-import search from '../search'
 import axios from 'axios'
 
 const getOrCreateFbUser = fbData => {
@@ -22,9 +21,6 @@ const getOrCreateFbUser = fbData => {
           if (err) {
             return reject(err)
           }
-
-          // Update user index
-          search.indexUser(userRes)
 
           return resolve(userRes)
         })

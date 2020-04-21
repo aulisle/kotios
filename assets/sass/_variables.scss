@@ -1,21 +1,26 @@
-$font-stack-heading: 'Lato', sans-serif;
-$font-stack-body: 'Lato', sans-serif;
-$font-stack-button: 'Lato', sans-serif;
+$font-stack-heading: 'Gilroy', sans-serif;
+$font-stack-body: 'Gilroy', sans-serif;
+$font-stack-button: 'Gilroy', sans-serif;
 
-$color-primary: #1bb8d1;
-$color-accent: #edf900;
-$color-1: #74b199;
+$color-primary: #281348;
+$color-accent: #EA376D;
+$color-1: #EB0D8C;
+$color-2: #07A14A;
+$color-3: #214497;
 
 $color-accent-alt: lighten(#edf900, 30%);
 $color-text-accent-alt: #000000;
 
-$color-text-primary: lighten(#000, 13%);
-$color-text-primary-hover: lighten(#000, 40%);
-$color-text-secondary: lighten(#000, 40%);
-$color-text-faint: lighten(#000, 60%);
+$color-text-primary: #281348;
+$color-text-primary-hover: lighten($color-primary, 40%);
+$color-text-secondary: #fff;
+$color-text-faint: lighten(#281348, 60%);
 $color-text-alt: #fff;
 $color-text-alt-hover: rgba(255, 255, 255, 0.8);
 $color-text-black: black;
+
+$color-bg-1: lighten($color-primary, 80%);
+
 $color-hr: rgba(0, 0, 0, 0.1);
 $color-snackbar: #323232;
 
@@ -23,13 +28,12 @@ $color-facebook: #3c5a99;
 $color-twitter: #1da1f2;
 $color-whatsapp: #25D366;
 
-$border-radius: 4px;
-$margin-page: 30px;
+$border-radius: 0;
 
 $tracking-mid: 1.2px;
 $tracking-wide: 2px;
 
-$top-bar-height: 70px;
+$top-bar-height: 64px;
 
 $font-s: 0.9rem;
 $font-xs: 0.7rem;
@@ -42,3 +46,106 @@ $search-breakpoint-sm: 800px;
 $search-breakpoint-md: 900px;
 $search-breakpoint-l: 1200px;
 $search-breakpoint-xl: 1750px;
+
+$screen-md: 576px;
+$screen-lg: 768px;
+$screen-xl: 992px;
+$screen-xxl: 1200px;
+
+$container-md: 540px;
+$container-lg: 720px;
+$container-xl: 960px;
+$container-xxl: 1140px;
+
+$u1: 8px;
+$u2: 16px;
+$u3: 24px;
+$u4: 32px;
+$u5: 40px;
+$u6: 48px;
+$u7: 56px;
+$u8: 64px;
+$u9: 72px;
+$u10: 80px;
+$u15: 120px;
+$u20: 160px;
+$u50: 400px;
+
+$margin-page: $u4;
+
+@mixin h1-primary {
+
+}
+
+@mixin h1-alt {
+
+}
+
+@mixin h2-primary {
+  color: $color-text-primary;
+  font-size: $font-xl;
+  font-weight: 700;
+  font-family: $font-stack-heading;
+  text-transform: none;
+  line-height: 1;
+  margin-bottom: $u3;
+}
+
+@mixin h2-alt {
+
+}
+
+@mixin h3-primary {
+  color: $color-text-primary;
+  font-size: $font-l;
+  font-weight: 700;
+  font-family: $font-stack-heading;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: $u3;
+}
+
+@mixin h3-alt {
+
+}
+
+@mixin h4-primary {
+  color: $color-text-primary;
+  font-size: $font-s;
+  font-weight: 600;
+  font-family: $font-stack-heading;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+@mixin h4-alt {
+  @include h4-primary;
+  color: $color-text-secondary
+}
+
+
+@mixin media-breakpoint-up($breakpoint) {
+  @if $breakpoint == md {
+    @media (min-width: $screen-md) { 
+      @content;
+    }
+  }
+
+  @if $breakpoint == lg {
+    @media (min-width: $screen-lg) { 
+      @content;
+    }
+  }
+
+  @if $breakpoint == xl {
+    @media (min-width: $screen-xl) { 
+      @content;
+    }
+  }
+
+  @if $breakpoint == xxl {
+    @media (min-width: $screen-xxl) { 
+      @content;
+    }
+  }
+}

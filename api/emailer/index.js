@@ -3,11 +3,16 @@
  */
 
 import sgMail from '@sendgrid/mail'
-import { renderInvitation, renderResetPassword } from './templates'
+import {
+  renderInvitation,
+  renderResetPassword,
+  renderDreamsLink
+} from './templates'
 import moment from 'moment'
 
 const FORGOT_PASSWORD_SUBJECT = 'Unohtuneen salasanan asettaminen'
 const ACTIVATE_SUBJECT = 'Kutsu palveluun'
+const DREAMS_SUBJECT = 'Kohde lisätty'
 
 let config = {}
 let $publicUrl = ''
@@ -73,6 +78,20 @@ const emailer = {
       }
 
       sgMail.send(data)
+    })
+  },
+
+  sendDreamsUrl(email, userToken) {
+    const dreamsUrl = `${$publicUrl}my-dreams/${userToken}`
+    renderDreamsLink({
+      title: DREAMS_SUBJECT,
+      publicUrl: $publicUrl,
+      dreamsUrl
+    }).then(html => {
+      const data = { ...config, to: email, subject: DREAMS_SUBJECT, html }
+      // sgMail.send(data)
+      // eslint-disable-next-line
+      console.log('data', data)
     })
   }
 }

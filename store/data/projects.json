@@ -1,0 +1,31 @@
+[
+  {
+    "id": "uusikaupunki-blasieholmankatu",
+    "type": 1,
+    "title": "Blasieholmankatu 5",
+    "address": {
+      "line1": "Blasieholmankatu 5",
+      "postCode": "23500",
+      "city": "Uusikaupunki"
+    },
+    "location": {
+      "lat": 60.799552, 
+      "lng": 21.421183
+    },
+    "description": [],
+    "images": [
+      "https://www.uginvanhattalot.fi/wp-content/uploads/2018/08/kuva3.jpg",
+      "https://r-cf.bstatic.com/images/hotel/max1280x900/463/46369418.jpg",
+      "https://premicokodit.fi/wp-content/uploads/2018/12/Uusikaupunki-8-1920x1080.jpg"
+    ],
+    "contacts": [
+        {
+          "name": "V-P Rajala",
+          "role": "project-advisor",
+          "email": "v-p@kotios.fi",
+          "phone": "040 1234567",
+          "initials": "VR"
+        }
+    ]
+  }
+]

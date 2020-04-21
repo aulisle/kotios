@@ -1,35 +1,16 @@
 @import "_variables.scss";
 
-.md-button.b-full-width {
-  width: 100%;
-  display: block;
-  margin: 0px;
-}
-
-.md-button .md-button-content {
-  display: flex;
-  align-items: center;
-}
-
-button, .md-button-content {
-  font-family: $font-stack-button;
-}
-
 .button-margin,
 .button-margin.md-button.b-full-width {
   margin-top: 10px;
 }
 
-body .md-button.md-accent.alt.md-raised:not(:disabled) {
-  background-color: $color-accent-alt;
-  color: $color-text-accent-alt;
-  .md-button-content {
-    display: flex;
-    align-items: center;
-    i {
-      color: $color-text-accent-alt;
-    }
-  }
+.v-btn {
+  border: 1px solid !important;
+}
+
+.v-btn:not(.v-btn--round) {
+  border-radius: $border-radius;
 }
 
 .action-button {
@@ -45,8 +26,6 @@ body .md-button.md-accent.alt.md-raised:not(:disabled) {
   margin-top: 40px;
 }
 
-body {
-  .md-theme-default.md-button.md-raised:not(:disabled).md-primary {
-    color: $color-text-alt;
-  }
+a:not(.md-button):hover {
+  text-decoration: none !important;
 }
