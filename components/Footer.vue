@@ -50,7 +50,7 @@ export default {
 
   computed: {
     links() {
-      return ['data-privacy', 'for-partners']
+      return ['data-privacy']
     }
   },
 
@@ -83,6 +83,7 @@ footer {
 .column {
   display: flex;
   flex-direction: column;
+  margin-bottom: $u3;
 }
 
 .link,
@@ -90,20 +91,22 @@ footer {
   color: white !important;
 }
 
-.links-row {
-  display: flex;
-}
-
 .links-column {
-  margin-right: 40px;
+  margin-right: $u4;
 }
 
 .logo {
-  margin-bottom: 15px;
+  margin-bottom: $u2;
 }
 
 .column.copyright {
   align-items: center;
+}
+
+@include media-breakpoint-up(md) {
+  .links-row {
+    display: flex;
+  }
 }
 </style>
 

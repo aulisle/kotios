@@ -10,12 +10,12 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="56.549236mm"
-   height="56.628574mm"
-   viewBox="0 0 56.549237 56.628574"
+   width="72.56588mm"
+   height="72.258911mm"
+   viewBox="0 0 72.565881 72.258911"
    version="1.1"
    id="svg8"
-   sodipodi:docname="kotios-logo.svg"
+   sodipodi:docname="kotios-favicon.svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <defs
      id="defs2">
@@ -48,9 +48,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35355339"
-     inkscape:cx="-308.73659"
-     inkscape:cy="476.11102"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="165.72001"
+     inkscape:cy="281.24033"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -79,18 +79,24 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-29.808429,-98.789628)">
+     transform="translate(-20.756724,-90.557684)">
     <path
-       d="M 85.964744,126.93742 C 83.917375,138.8952 73.21802,158.0314 58.07848,155.12105 46.787567,152.94714 32.691328,138.70157 30.185893,127.53596 26.851003,112.64127 46.394036,101.7483 58.076581,99.345363 75.443179,95.759289 88.852954,110.05989 85.964744,126.93742 Z"
+       d="M 92.257712,128.87789 C 88.439053,143.94361 72.847824,167.30623 53.805373,162.0651 39.604045,158.15196 23.035233,138.53912 20.959528,124.02672 18.199904,104.6682 44.25593,92.723767 59.418216,90.831052 81.958988,87.999489 97.645546,107.61351 92.257712,128.87789 Z"
+       data-name="Path 650"
+       id="path4553"
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#ea376d;fill-opacity:1;stroke-width:0.81054127" />
+    <path
+       d="M 84.122441,126.94842 C 82.210353,138.11608 72.217966,155.98784 58.078782,153.2698 47.533924,151.23953 34.369104,137.93525 32.029217,127.50741 28.914682,113.5969 47.166396,103.42369 58.077008,101.17953 74.296096,97.830408 86.81981,111.18609 84.122441,126.94842 Z"
        data-name="Path 650"
        id="Path_650"
        inkscape:connector-curvature="0"
-       style="opacity:1;fill:#ea376d;stroke-width:0.6326859" />
+       style="opacity:1;fill:#281348;fill-opacity:1;stroke-width:0.59088075" />
     <path
-       style="opacity:1;fill:#281348;fill-opacity:1;stroke-width:0.43196189"
+       style="opacity:1;fill:#ea376d;fill-opacity:1;stroke-width:0.2254169"
        inkscape:connector-curvature="0"
        id="path4551"
        data-name="Path 650"
-       d="m 72.307271,125.25363 c -2.749629,7.81317 -12.145803,19.46524 -22.001439,15.76982 -7.349841,-2.7583 -15.203036,-13.96308 -15.608486,-21.76535 -0.535942,-10.40724 13.866782,-15.49684 22.005215,-15.774 12.099731,-0.42145 19.484599,10.74162 15.60471,21.76953 z" />
+       d="m 72.34841,137.42554 c -2.828862,3.26809 -9.618971,7.12949 -13.697988,3.4509 -3.041461,-2.7445 -4.712505,-9.6865 -3.417709,-13.5525 1.729466,-5.15584 9.695924,-4.87358 13.700626,-3.45222 5.955745,2.10863 7.407359,8.94085 3.415071,13.55382 z" />
   </g>
 </svg>

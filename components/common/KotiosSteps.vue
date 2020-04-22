@@ -8,7 +8,7 @@
         :step="step"
         :idx="idx"
         :show-length="showLengths"
-        :length-max="lengthMax"
+        :phase-length="step.length"
       />
     </div>
   </div>
@@ -31,10 +31,8 @@ export default {
           title: 'Unelmointi',
           description: [
             'Unelmointivaiheessa tutkaillaan ja selvitellään, mistä asuntorakentamisessa on kyse ja luodaan unelmia oman kodin ominaisuuksista.',
-            'Autamme sinua hahmottamaan oman unelmakotisi palvelumme avulla. Kuuntelemme sinua ja ohjeistamme sinut unelmiesi toteuttamisen polulle.'
-          ],
-          lengthMin: 0,
-          lengthMax: 3
+            'Autamme sinua hahmottamaan oman unelmakotisi. Kuuntelemme sinua ja ohjeistamme sinut unelmiesi toteuttamisen polulle.'
+          ]
         },
         {
           title: 'Kohtaaminen',
@@ -42,8 +40,7 @@ export default {
             'Kohtaamisessa tapaat mahdollisia tulevia naapureitasi ja löydät itsellesi sopivia paikkoja. Samalla päätät mille hankkeelle haluat lähteä mukaan.',
             'Löydät ne kaikki palvelustamme.'
           ],
-          lengthMin: 0.5,
-          lengthMax: 3
+          length: '~6kk-2v'
         },
         {
           title: 'Suunnittelu',
@@ -51,8 +48,7 @@ export default {
             'Suunnittelussa sitoudut yhdelle paikalle ja ns. hankkelle. Siinä osallistut kotisi suunnitteluun ammattilaisten avustuksella yhdessä tulevien naapureidesi kanssa.',
             'Hankkeenne saa palvelustamme ohjausta ja ammattilaisten kirjon.'
           ],
-          lengthMin: 0.5,
-          lengthMax: 1
+          length: '~6kk-1v'
         },
         {
           title: 'Rakentaminen',
@@ -61,8 +57,7 @@ export default {
             'Asukkaat voivat kantaa rakentamisessa enemmän vastuuta olemalla rakennuttajan roolissa. Vaihtoehtona on olla "avaimet käteen"-ratkaisun tilaajia.',
             'Mikä ikinä onkaan valintanne, autamme teitä.'
           ],
-          lengthMin: 0.5,
-          lengthMax: 1
+          length: '~6kk-1v'
         },
         {
           title: 'Muutto',

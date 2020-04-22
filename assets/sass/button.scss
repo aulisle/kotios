@@ -1,7 +1,6 @@
 @import "_variables.scss";
 
-.button-margin,
-.button-margin.md-button.b-full-width {
+.button-margin {
   margin-top: 10px;
 }
 
@@ -15,7 +14,7 @@
 
 .action-button {
   letter-spacing: $tracking-mid;
-  .md-icon {
+  .v-ocpm {
     margin-right: 10px;
   }
 }

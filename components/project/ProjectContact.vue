@@ -1,6 +1,11 @@
 <template>
   <div class="contact-form">
     <h2>Yhteyshenkilöt</h2>
+    <project-p>
+      Jos kiinnostuit ja haluat tietää lisää hankkeesta tai Kotioksesta,
+      hankenneuvontamme keskustelee mielellään kanssasi.
+    </project-p>
+
     <div class="cards">
       <v-card v-for="(contact, idx) in contacts" :key="idx">
         <div class="card-content">
@@ -25,7 +30,12 @@
 </template>
 
 <script>
+import ProjectP from './common/ProjectP'
+
 export default {
+  components: {
+    ProjectP
+  },
   props: {
     contacts: {
       type: Array,

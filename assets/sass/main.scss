@@ -53,7 +53,7 @@ a, a:hover, a:focus, a:visited
 }
 
 .container-wide {
-  margin: 0px 80px;
+  margin: 0px $margin-page;
 }
 
 .form-column {
@@ -264,5 +264,21 @@ body {
   .v-dialog,
   .v-card:not(.v-sheet--tile):not(.v-card--shaped) {
     border-radius: $border-radius;
+  }
+
+  .theme--light.v-application {
+    color: $color-primary;
+  }
+
+  .theme--light.v-text-field--filled > .v-input__control > .v-input__slot {
+    background: $color-accent;
+    &:hover {
+      background: $color-primary !important;
+    }
+
+    .v-select__selection--comma,
+    .v-icon {
+      color: $color-text-alt;
+    }
   }
 }

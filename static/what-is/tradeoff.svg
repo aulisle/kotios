@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="316" height="318" viewBox="0 0 316 318">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1482" data-name="Rectangle 1482" width="99" height="99" transform="translate(107 243)" fill="#fff"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect width="25" height="25" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_802" data-name="Group 802" transform="translate(-26 -251)">
+    <g id="Group_801" data-name="Group 801">
+      <text id="Helppo" transform="translate(26 425)" fill="#817797" font-size="14" font-family="Gilroy-Medium, Gilroy" font-weight="500"><tspan x="0" y="0">Helppo</tspan></text>
+      <text id="Työläs" transform="translate(301 426)" fill="#817797" font-size="14" font-family="Gilroy-Medium, Gilroy" font-weight="500"><tspan x="0" y="0">Työläs</tspan></text>
+      <text id="Hintava" transform="translate(182 566)" fill="#817797" font-size="14" font-family="Gilroy-Medium, Gilroy" font-weight="500"><tspan x="-25.011" y="0">Hintava</tspan></text>
+      <text id="Edullinen" transform="translate(182 297)" fill="#817797" font-size="14" font-family="Gilroy-Medium, Gilroy" font-weight="500"><tspan x="-28.609" y="0">Edullinen</tspan></text>
+    </g>
+    <line id="Line_82" data-name="Line 82" y1="188" transform="translate(182.5 315.5)" fill="none" stroke="#281348" stroke-width="1" opacity="0.2"/>
+    <line id="Line_83" data-name="Line 83" x2="198" transform="translate(87.5 406.5)" fill="none" stroke="#281348" stroke-width="1" opacity="0.2"/>
+    <text id="KOTIOS_kirjo" data-name="KOTIOS
+kirjo" transform="translate(78.717 357.661)" fill="#281348" font-size="20" font-family="Gilroy-Black, Gilroy" font-weight="800"><tspan x="0" y="0">KOTI</tspan><tspan y="0" font-family="Gilroy-Regular, Gilroy" font-weight="400">OS</tspan><tspan font-family="Gilroy-Regular, Gilroy" font-weight="400"><tspan x="0" y="20">kirjo</tspan></tspan></text>
+    <text id="VALTAMALLI" transform="translate(84 506)" fill="#281348" font-size="10" font-family="Gilroy-Bold, Gilroy" font-weight="700" opacity="0.56"><tspan x="0" y="0">VALTAMALLI</tspan></text>
+    <text id="ITSE-TEKEMINEN" transform="translate(258 343)" fill="#281348" font-size="10" font-family="Gilroy-Bold, Gilroy" font-weight="700" opacity="0.56"><tspan x="-37.62" y="0">ITSE-TEKEMINEN</tspan></text>
+    <path id="Path_659" data-name="Path 659" d="M28.8,2155.2c2.105-138.079,50.331-135.578,142.284-135.792.995,0,2.282-.007,3.548-.016" transform="translate(83 -1666)" fill="none" stroke="#281348" stroke-width="1" stroke-dasharray="4 4" opacity="0.07"/>
+    <circle id="Ellipse_333" data-name="Ellipse 333" cx="2.5" cy="2.5" r="2.5" transform="translate(255 351)" fill="#281348" opacity="0.3"/>
+    <circle id="Ellipse_334" data-name="Ellipse 334" cx="2.5" cy="2.5" r="2.5" transform="translate(109 485)" fill="#281348" opacity="0.3"/>
+    <g id="Mask_Group_1" data-name="Mask Group 1" transform="translate(0 105)" clip-path="url(#clip-path)">
+      <path id="Path_660" data-name="Path 660" d="M28.8,2155.2c2.105-138.079,48.479-135.573,142.284-135.792.995,0,2.282-.007,3.548-.016" transform="translate(83 -1771)" fill="none" stroke="#ea376d" stroke-width="2"/>
+    </g>
+    <text id="_" data-name="€" transform="translate(182 276)" fill="#281348" font-size="26" font-family="Gilroy-Bold, Gilroy" font-weight="700"><tspan x="-7.943" y="0">€</tspan></text>
+    <text id="_2" data-name="€€€€" transform="translate(182 543)" fill="#281348" font-size="26" font-family="Gilroy-Bold, Gilroy" font-weight="700"><tspan x="-31.772" y="0">€€€€</tspan></text>
+    <g id="Thumbs_up" data-name="Thumbs up" transform="translate(37 375)" clip-path="url(#clip-path-2)">
+      <rect id="Rectangle_1452" data-name="Rectangle 1452" width="25" height="25" fill="none"/>
+      <path id="Path_198" data-name="Path 198" d="M0,22.368V9.211L7.895,0h0a2.626,2.626,0,0,1,2.368,3.684L7.895,9.211h10a2.665,2.665,0,0,1,2.632,3.026L18.816,22.763A2.676,2.676,0,0,1,16.184,25H2.632A2.639,2.639,0,0,1,0,22.368Z" transform="translate(1)" fill="#281348" fill-rule="evenodd"/>
+    </g>
+    <g id="Thumbs_down" data-name="Thumbs down" transform="translate(308 376)" clip-path="url(#clip-path-2)">
+      <rect id="Rectangle_1453" data-name="Rectangle 1453" width="25" height="25" fill="none"/>
+      <path id="Path_199" data-name="Path 199" d="M0,22.368V9.211L7.895,0h0a2.626,2.626,0,0,1,2.368,3.684L7.895,9.211h10a2.665,2.665,0,0,1,2.632,3.026L18.816,22.763A2.676,2.676,0,0,1,16.184,25H2.632A2.639,2.639,0,0,1,0,22.368Z" transform="translate(21.56 25) rotate(180)" fill="#281348" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>

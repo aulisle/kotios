@@ -1,6 +1,6 @@
 <template>
   <transition-pop>
-    <md-toolbar v-if="showCookieConsent" class="cookie-consent">
+    <v-toolbar v-if="showCookieConsent" class="cookie-consent">
       <p>Hyväksy evästeet</p>
       <p>
         Tämä sivusto käyttää evästeitä. Jatkamalla sivuston käyttöä hyväksyt
@@ -11,13 +11,10 @@
         </nuxt-link>
       </p>
 
-      <base-button
-        class="md-primary md-raised"
-        @click="showCookieConsent = false"
-      >
+      <base-button @click="showCookieConsent = false">
         Sulje
       </base-button>
-    </md-toolbar>
+    </v-toolbar>
   </transition-pop>
 </template>
 

@@ -20,6 +20,14 @@ export default {
         hid: 'description',
         name: 'description',
         content: 'Kotios — Fiksumpi tapa hankkia uusi koti'
+      },
+      {
+        name: 'msapplication-TileColor',
+        content: '#2b5797'
+      },
+      {
+        name: 'theme-color',
+        content: '#281348'
       }
     ],
     link: [
@@ -27,6 +35,32 @@ export default {
       {
         rel: 'stylesheet',
         href: '//fonts.googleapis.com/icon?family=Material+Icons'
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        size: '32x32',
+        href: '/favicon-32x32.png'
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        size: '16x16',
+        href: '/favicon-16x16.png'
+      },
+      {
+        rel: 'manifest',
+        href: '/site.webmanifest'
+      },
+      {
+        rel: 'mask-icon',
+        href: '/safari-pinned-tab.svg',
+        color: '#5bbad5'
+      },
+      {
+        rel: 'apple-touch-icon',
+        size: '180x180',
+        href: '/apple-touch-icon.png'
       }
     ],
     script: [
@@ -108,7 +142,10 @@ export default {
             light: {
               primary: '#281348',
               secondary: '#ffffff',
-              accent: '#EA376D'
+              accent: '#EA376D',
+              'text-fields': {
+                'filled-hover': '#EA376D'
+              }
             }
           }
         }
