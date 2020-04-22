@@ -10,6 +10,7 @@
         <base-icon class="info-icon" color="text-secondary">
           mdi-information
         </base-icon>
+        <h4 v-if="showLength">Kesto ~2v</h4>
       </button>
     </template>
     <v-card class="info-card">
@@ -31,7 +32,9 @@
 export default {
   props: {
     step: { type: Object, required: true },
-    idx: { type: Number, required: true }
+    idx: { type: Number, required: true },
+    showLength: { type: Boolean, required: true },
+    lengthMax: { type: Number, required: true }
   },
   data() {
     return {

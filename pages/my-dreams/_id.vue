@@ -1,5 +1,12 @@
 <template>
-  <div>{{ dreams }}</div>
+  <div class="container-base">
+    <h2>Unelmakohteesi</h2>
+    <v-card v-for="(dream, idx) in dreams" :key="idx" class="card">
+      <v-card-title>
+        {{ dream._id }}
+      </v-card-title>
+    </v-card>
+  </div>
 </template>
 
 <script>
@@ -20,4 +27,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.card {
+  margin-top: $u4;
+}
+</style>

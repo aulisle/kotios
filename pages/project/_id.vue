@@ -14,65 +14,111 @@
         </div>
         <project-social-share :project="project" />
       </div>
-
-      <!--<project-phases class="project-phases" :phases="project.phases" />-->
     </div>
-    <md-content>
-      <div class="container-base">
-        <h2 class="project-tagline">{{ project.tagline }}</h2>
-        <project-map class="project-map" :location="project.location" />
-        <div class="columns">
-          <div class="long-description">
-            <template v-if="project.description">
-              <p
-                v-for="(paragraph, idx) in project.description"
-                :key="idx"
-                class="description-paragraph"
-              >
-                {{ paragraph }}
-              </p>
-            </template>
-          </div>
-          <!--<div>
-            <project-neighbourhood
-              v-if="project.neighbourhood"
-              class="project-events"
-            />
-            <project-events class="project-events" :events="project.events" />
-          </div>
-          -->
-        </div>
-      </div>
-    </md-content>
+    <v-tabs v-model="tab">
+      <v-tab>
+        Kohde-info
+      </v-tab>
+      <v-tab>
+        Miksi Kotios?
+      </v-tab>
+      <v-tab>
+        Sijainti ja palvelut
+      </v-tab>
+      <v-tab>
+        Hankkeen eteneminen
+      </v-tab>
+      <v-tab>
+        Hintatieto
+      </v-tab>
+      <v-tab>
+        Tontin tiedot
+      </v-tab>
+    </v-tabs>
+
+    <v-tabs-items v-model="tab">
+      <v-tab-item>
+        <v-card flat>
+          <v-card-text>
+            <h2>Uudenlainen asunnonhankinta</h2>
+            <p>
+              Tälle upealle tontille rakennetaan koteja Kotios-palvelun avulla.
+              Sen avulla sinä tulevana asukkaana pääset suurempaan rooliin
+              kotisi hankinnassa. Kotios-menetelmät tarjoavat myös joustavat
+              rahoitusmallit kuten asunto-osuuskunta-asumisen.
+            </p>
+
+            <p>
+              Keräämme hankkeelle jäseniä. Hankkeen suunnittelu käynnistyy, kun
+              ihmiset on koottu yhteen. Helpoin tapa ilmoittaa kiinnostuksesi
+              kohteesta on lisätä se omalle unelmalistallesi.
+            </p>
+            <base-button @click="addDream">
+              Ota ensiaskel kotisi hankintaan ja lisää kohde unelmalistallesi
+            </base-button>
+          </v-card-text>
+        </v-card>
+      </v-tab-item>
+      <v-tab-item>
+        <v-card flat>
+          <v-card-text>
+            <div class="container-base"></div>
+          </v-card-text>
+        </v-card>
+      </v-tab-item>
+      <v-tab-item>
+        <v-card flat>
+          <v-card-text>
+            <div class="container-base">
+              <project-map class="project-map" :location="project.location" />
+            </div>
+          </v-card-text>
+        </v-card>
+      </v-tab-item>
+      <v-tab-item>
+        <v-card flat>
+          <v-card-text>
+            <div class="container-base"><kotios-steps show-lengths /></div>
+          </v-card-text>
+        </v-card>
+      </v-tab-item>
+      <v-tab-item>
+        <v-card flat>
+          <v-card-text>
+            <div class="container-base">
+              Mistä hinta muodostuu?
+            </div>
+          </v-card-text>
+        </v-card>
+      </v-tab-item>
+      <v-tab-item>
+        <v-card flat>
+          <v-card-text>
+            <div class="container-base">
+              Tänne tontin tietoja
+            </div>
+          </v-card-text>
+        </v-card>
+      </v-tab-item>
+    </v-tabs-items>
 
     <div class="container-base">
-      <!-- <project-households class="project-households" /> -->
       <project-contact class="project-contact" :contacts="project.contacts" />
       <project-extra-table class="project-extra-table" :project="project" />
     </div>
-    <div class="container-base">
-      <base-button @click="addDream">Kohde...</base-button>
-    </div>
-    <!--<div class="fab">
-      <project-interested-fab :title="project.title" />
-    </div>-->
+    <div class="container-base"></div>
   </div>
 </template>
 
 <script>
 import ProjectImages from '@/components/project/ProjectImages'
 import ProjectSocialShare from '@/components/project/ProjectSocialShare'
-// import ProjectPhases from '@/components/project/ProjectPhases'
 import ProjectMap from '@/components/project/ProjectMap'
 import ProjectContact from '@/components/project/ProjectContact'
-// import ProjectEvents from '@/components/project/ProjectEvents'
-// import ProjectValues from '@/components/project/ProjectValues'
-// import ProjectNeighbourhood from '@/components/project/ProjectNeighbourhood'
-// import ProjectInterestedFab from '@/components/project/ProjectInterestedFab'
-// import ProjectHouseholds from '@/components/project/ProjectHouseholds'
 import ProjectExtraTable from '@/components/project/ProjectExtraTable'
 import projectTypeMixin from '@/components/project/projectTypeMixin'
 import { TYPES } from '@/store/defineDream'
+import KotiosSteps from '@/components/common/KotiosSteps'
 
 export default {
   components: {
@@ -86,18 +132,21 @@ export default {
     // ProjectNeighbourhood,
     // ProjectInterestedFab,
     // ProjectHouseholds,
-    ProjectExtraTable
+    ProjectExtraTable,
+    KotiosSteps
   },
 
   mixins: [projectTypeMixin],
 
   data() {
     return {
+      popup: true,
       showLikeReason: false,
       project: {
         images: ['/blobs/blue.svg'],
         phases: {}
-      }
+      },
+      tab: 0
     }
   },
 

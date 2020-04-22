@@ -11,7 +11,7 @@
         >
           <v-icon>mdi-plus</v-icon>
         </v-btn>
-        Lisää kohde
+        Ota ensiaskel kotisi hankintaan ja lisää alue omalle unelmalistallesi.
       </div>
     </div>
   </div>
