@@ -30,22 +30,28 @@
       </p>
     </div>
 
-    <div class="container-base section-margin">
-      <h2 class="featured-heading">Miten se toimii?</h2>
-      <p>
-        Osallistavassa kodinhankinnassa sinun ja perheesi rooli kasvaa. Et ole
-        enää sivusta katsoja vaan pääset mukaan päättämään oman kotisi
-        ratkaisuista. Tuemme sinua aina unelmoinnista muuttoon asti.
-      </p>
+    <div class="dark-bg">
+      <div class="container-base section-margin">
+        <h2 class="featured-heading">Miten se toimii?</h2>
+        <p>
+          Osallistavassa kodinhankinnassa sinun ja perheesi rooli kasvaa. Et ole
+          enää sivusta katsoja vaan pääset mukaan päättämään oman kotisi
+          ratkaisuista. Tuemme sinua aina unelmoinnista muuttoon asti.
+        </p>
+
+        <kotios-steps />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import KotiosSteps from '@/components/common/KotiosSteps'
+
 export default {
   auth: false,
 
-  components: {},
+  components: { KotiosSteps },
 
   head() {
     return {

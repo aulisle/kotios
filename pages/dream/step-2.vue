@@ -4,17 +4,19 @@
     <h2>
       Kohde on lisätty
     </h2>
-    <p>
+    <p class="add-info">
       Olet nyt unelmoinnin alussa. Et siis sitoudu vielä mihinkään, mutta voit
       vaikuttaa hankkeen aloitukseen. Voit myös lisätä muita itsellesi
       kiinnostavia kohteita.
     </p>
 
+    <kotios-steps />
+
     <h4 class="continue-dreaming-heading">
       Jatka unelmointia, kerro sinulle tärkeimmät asumisen kriteerit
     </h4>
 
-    <p>
+    <p class="continue-info">
       Seuraavien tietojen avulla selvitämme, minkälaista asumista kohteessa
       halutaan. Ilmoituksilla tiedämme, että kohteella on kysyntää. Kun
       kohteella on riittävä määrä alustavia kiinnostuneita voimme yhdistää sinut
@@ -75,9 +77,12 @@ import { mapState } from 'vuex'
 import SuccessTick from '@/components/dreams/SuccessTick.vue'
 import { email, required } from 'vuelidate/lib/validators'
 import { createEmailErrors } from '@/plugins/vuelidate'
+import KotiosSteps from '@/components/common/KotiosSteps'
+
 export default {
   components: {
-    SuccessTick
+    SuccessTick,
+    KotiosSteps
   },
 
   validations: {
@@ -222,8 +227,19 @@ export default {
 }
 
 .continue-dreaming-heading {
-  margin-top: $u4;
+  margin-top: $u8;
   margin-bottom: $u2;
+  text-align: left;
+  align-self: flex-start;
+}
+
+.continue-info {
+  align-self: flex-start;
+  text-align: left !important;
+}
+
+.add-info {
+  max-width: $u50;
 }
 
 @include media-breakpoint-up(md) {
