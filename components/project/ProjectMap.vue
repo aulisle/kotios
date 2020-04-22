@@ -29,7 +29,7 @@ export default {
           zoomControl: true,
           mapTypeControl: false,
           scaleControl: false,
-          streetViewControl: false,
+          streetViewControl: true,
           rotateControl: false,
           fullscreenControl: false
         })

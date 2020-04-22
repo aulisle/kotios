@@ -35,9 +35,9 @@ export default {
           ]
         },
         {
-          title: 'Kohtaaminen',
+          title: 'Ryhmäytyminen',
           description: [
-            'Kohtaamisessa tapaat mahdollisia tulevia naapureitasi ja löydät itsellesi sopivia paikkoja. Samalla päätät mille hankkeelle haluat lähteä mukaan.',
+            'Ryhmäytymisessä tapaat mahdollisia tulevia naapureitasi ja löydät itsellesi sopivia paikkoja. Samalla päätät mille hankkeelle haluat lähteä mukaan.',
             'Löydät ne kaikki palvelustamme.'
           ],
           length: '~6kk-2v'

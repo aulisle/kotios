@@ -33,7 +33,7 @@
       <p>
         Kotios auttaa vaihtamaan aktiivisuuttasi taloudellisiksi eduiksi ja
         yksilöllisiksi ratkaisuiksi. Tee niin paljon kuin haluat ja valitse oma
-        roolisi.
+        paikkasi Kotios-kirjosta.
       </p>
       <img src="/what-is/tradeoff.svg" class="tradeoff-img" />
     </div>

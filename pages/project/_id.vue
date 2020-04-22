@@ -34,10 +34,7 @@
 
     <v-tabs-items v-model="tab">
       <v-tab-item>
-        <project-info-tab
-          class="container-base  project-tab-item"
-          @addDream="addDream"
-        />
+        <project-info-tab class="container-base project-tab-item" />
       </v-tab-item>
       <v-tab-item>
         <project-why-tab class="container-base project-tab-item" />
@@ -48,9 +45,7 @@
         </div>
       </v-tab-item>
       <v-tab-item>
-        <div class="container-base project-tab-item">
-          <kotios-steps show-lengths />
-        </div>
+        <project-steps-tab class="container-base project-tab-item" />
       </v-tab-item>
       <v-tab-item>
         <div class="container-base project-tab-item">
@@ -64,7 +59,8 @@
       </v-tab-item>
     </v-tabs-items>
 
-    <div class="container-base">
+    <div class="container-base bottom-section">
+      <project-first-step @addDrem="addDream" />
       <project-contact class="project-contact" :contacts="project.contacts" />
     </div>
     <div class="container-base"></div>
@@ -78,9 +74,10 @@ import ProjectMap from '@/components/project/ProjectMap'
 import ProjectContact from '@/components/project/ProjectContact'
 import projectTypeMixin from '@/components/project/projectTypeMixin'
 import { TYPES } from '@/store/defineDream'
-import KotiosSteps from '@/components/common/KotiosSteps'
 import ProjectInfoTab from '@/components/project/tabs/ProjectInfoTab'
 import ProjectWhyTab from '@/components/project/tabs/ProjectWhyTab'
+import ProjectFirstStep from '@/components/project/ProjectFirstStep'
+import ProjectStepsTab from '@/components/project/tabs/ProjectStepsTab'
 
 export default {
   components: {
@@ -88,9 +85,10 @@ export default {
     ProjectSocialShare,
     ProjectMap,
     ProjectContact,
-    KotiosSteps,
+    ProjectStepsTab,
     ProjectInfoTab,
-    ProjectWhyTab
+    ProjectWhyTab,
+    ProjectFirstStep
   },
 
   mixins: [projectTypeMixin],
@@ -276,6 +274,10 @@ export default {
 
 .mobile-tab-selector {
   position: relative;
+}
+
+.bottom-section {
+  margin-top: $u10;
 }
 
 @include media-breakpoint-up(lg) {
