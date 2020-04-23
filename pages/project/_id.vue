@@ -40,22 +40,19 @@
         <project-why-tab class="container-base project-tab-item" />
       </v-tab-item>
       <v-tab-item>
-        <div class="container-base project-tab-item">
-          <project-map class="project-map" :location="project.location" />
-        </div>
+        <project-location-tab
+          :location="project.location"
+          class="container-base project-tab-item"
+        />
       </v-tab-item>
       <v-tab-item>
         <project-steps-tab class="container-base project-tab-item" />
       </v-tab-item>
       <v-tab-item>
-        <div class="container-base project-tab-item">
-          Mistä hinta muodostuu?
-        </div>
+        <project-price-tab class="container-base project-tab-item" />
       </v-tab-item>
       <v-tab-item>
-        <div class="container-base project-tab-item">
-          Tänne tontin tietoja
-        </div>
+        <project-plot-tab class="container-base project-tab-item" />
       </v-tab-item>
     </v-tabs-items>
 
@@ -70,7 +67,6 @@
 <script>
 import ProjectImages from '@/components/project/ProjectImages'
 import ProjectSocialShare from '@/components/project/ProjectSocialShare'
-import ProjectMap from '@/components/project/ProjectMap'
 import ProjectContact from '@/components/project/ProjectContact'
 import projectTypeMixin from '@/components/project/projectTypeMixin'
 import { TYPES } from '@/store/defineDream'
@@ -78,17 +74,22 @@ import ProjectInfoTab from '@/components/project/tabs/ProjectInfoTab'
 import ProjectWhyTab from '@/components/project/tabs/ProjectWhyTab'
 import ProjectFirstStep from '@/components/project/ProjectFirstStep'
 import ProjectStepsTab from '@/components/project/tabs/ProjectStepsTab'
+import ProjectLocationTab from '@/components/project/tabs/ProjectLocationTab'
+import ProjectPriceTab from '@/components/project/tabs/ProjectPriceTab'
+import ProjectPlotTab from '@/components/project/tabs/ProjectPlotTab'
 
 export default {
   components: {
     ProjectImages,
     ProjectSocialShare,
-    ProjectMap,
+    ProjectLocationTab,
     ProjectContact,
     ProjectStepsTab,
     ProjectInfoTab,
     ProjectWhyTab,
-    ProjectFirstStep
+    ProjectPriceTab,
+    ProjectFirstStep,
+    ProjectPlotTab
   },
 
   mixins: [projectTypeMixin],
@@ -213,12 +214,6 @@ export default {
 .project-phases {
   margin-top: 50px;
   margin-bottom: 30px;
-}
-
-.project-map {
-  min-height: 600px;
-  width: 100%;
-  margin-bottom: 60px;
 }
 
 .project-events {
