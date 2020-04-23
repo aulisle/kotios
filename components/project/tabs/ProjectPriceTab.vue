@@ -5,7 +5,8 @@
       Osallistavassa asuntohankkeessa kodin hinta määräytyy asukkaiden toiveiden
       ja <a href="#" @click="$emit('toWhy')">roolin</a> mukaan. Tarkkaa hinnan
       määrittelyä ennen asukkaiden ryhmäytymistä hankkeelle ei ole siis
-      mahdollista antaa.
+      mahdollista antaa. Voimme kuitenkin luvata, että osallistamalla saat
+      enemmän, kuin markkinoilta muuten.
     </project-p>
 
     <project-p>
@@ -21,88 +22,6 @@
     </project-p>
 
     <h2 class="new-section">
-      Miten voin vaikuttaa kuukausittaisiin asumiskuluihini?
-    </h2>
-    <project-p>
-      Suunnitteluratkaisut vaikuttavat tuotanto-, käyttö- ja
-      ylläpitokustannuksiin. Tässä kohteessa kohteessa asukkaat päättävät
-      suunnitteluratkaisut, joilla on suora vaikutus asumiskuluihin.
-    </project-p>
-
-    <project-p>
-      Rahoitus- ja omistusmuoto ratkaisee paljon, millaset kuukausittaiset
-      asumismenot sinulle tulee. Tontilla voidaan hyödyntää yhtä kolmesta
-      omistusmuodosta. Ne ovat suora omistus, asunto-osuuskunta ja
-      asumisosuuskunta. Rahoituksen oma pääoma, lainan takaisinmaksuaika ja
-      korko.
-    </project-p>
-
-    <comparison-table>
-      <comparison-table-heading
-        :headings="['Suora omistus', 'Vuokralla omistajaksi', 'Vuokraoikeus']"
-      />
-      <comparison-table-row title="Asuntolaina">
-        <comparison-table-cell>
-          Henkilökohtainen
-        </comparison-table-cell>
-        <comparison-table-cell>
-          Osuuskunnalla
-        </comparison-table-cell>
-        <comparison-table-cell>
-          Osuuskunnalla
-        </comparison-table-cell>
-      </comparison-table-row>
-
-      <comparison-table-row title="Lunastusoikeus">
-        <comparison-table-cell>
-          Jo lunastettu
-        </comparison-table-cell>
-        <comparison-table-cell>
-          Olemassa
-        </comparison-table-cell>
-        <comparison-table-cell>
-          Ei mahdollista
-        </comparison-table-cell>
-      </comparison-table-row>
-
-      <comparison-table-row title="Kotisi kerryttää pääomaa">
-        <comparison-table-cell>
-          <base-icon>mdi-check</base-icon>
-        </comparison-table-cell>
-        <comparison-table-cell>
-          <base-icon>mdi-check</base-icon>
-        </comparison-table-cell>
-        <comparison-table-cell>
-          <base-icon>mdi-close</base-icon>
-        </comparison-table-cell>
-      </comparison-table-row>
-
-      <comparison-table-row title="Omistettava">
-        <comparison-table-cell>
-          Asunto-osake
-        </comparison-table-cell>
-        <comparison-table-cell>
-          Osuuskunnan jäsenyys
-        </comparison-table-cell>
-        <comparison-table-cell>
-          Osuuskunnan jäsenyys
-        </comparison-table-cell>
-      </comparison-table-row>
-
-      <comparison-table-row title="Alkupääoma kodin hinnasta">
-        <comparison-table-cell>
-          minimi 30%
-        </comparison-table-cell>
-        <comparison-table-cell>
-          minimi 5%
-        </comparison-table-cell>
-        <comparison-table-cell>
-          minimi 5%
-        </comparison-table-cell>
-      </comparison-table-row>
-    </comparison-table>
-
-    <!--<h2 class="new-section">
       Mistä hankintahinta muodostuu?
     </h2>
 
@@ -141,7 +60,8 @@
         </comparison-table-cell>
       </comparison-table-row>
 
-      <comparison-table-row title="Vuokranantajan voittotavoite">
+      <!--
+        <comparison-table-row title="Vuokranantajan voittotavoite">
         <comparison-table-cell>
           <base-icon>mdi-close</base-icon> - €
         </comparison-table-cell>
@@ -149,6 +69,7 @@
           <base-icon>mdi-close</base-icon>
         </comparison-table-cell>
       </comparison-table-row>
+      -->
 
       <comparison-table-row title="Tontti">
         <comparison-table-cell>
@@ -203,12 +124,112 @@
           €
         </comparison-table-cell>
       </comparison-table-row>
-    </comparison-table>-->
+    </comparison-table>
 
+    <h2 class="new-section">
+      Miten voin vaikuttaa kuukausittaisiin asumiskuluihini?
+    </h2>
+    <project-p>
+      Suunnitteluratkaisut vaikuttavat tuotanto-, käyttö- ja
+      ylläpitokustannuksiin. Tässä kohteessa asukkaat päättävät
+      suunnitteluratkaisut, joilla on suora vaikutus asumiskuluihin.
+    </project-p>
+
+    <project-p>
+      Rahoitus- ja omistusmuoto ratkaisee paljon, millaset kuukausittaiset
+      asumismenot sinulle tulee. Tällä hankkeella hyödynnetään vuorkalla
+      omistajaksi-mallia.
+    </project-p>
+
+    <comparison-table>
+      <comparison-table-heading
+        :headings="['Omistusasuminen', 'Asunto-osuuskunta', 'Vuokra-asuminen']"
+      />
+      <comparison-table-row title="Asuntolaina">
+        <comparison-table-cell>
+          Henkilökohtainen
+        </comparison-table-cell>
+        <comparison-table-cell> Osuuskunnalla </comparison-table-cell>
+        <comparison-table-cell>
+          Vuokranantajalla
+        </comparison-table-cell>
+      </comparison-table-row>
+      <comparison-table-row title="Henkilökohtainen vastuu velasta">
+        <comparison-table-cell>
+          <base-icon>mdi-check</base-icon>
+        </comparison-table-cell>
+        <comparison-table-cell>
+          <base-icon>mdi-close</base-icon>
+        </comparison-table-cell>
+        <comparison-table-cell>
+          <base-icon>mdi-close</base-icon>
+        </comparison-table-cell>
+      </comparison-table-row>
+
+      <comparison-table-row title="Lunastusoikeus">
+        <comparison-table-cell>
+          Jo lunastettu
+        </comparison-table-cell>
+        <comparison-table-cell> Olemassa </comparison-table-cell>
+        <comparison-table-cell>
+          Ei mahdollista
+        </comparison-table-cell>
+      </comparison-table-row>
+
+      <comparison-table-row title="Kotisi kerryttää pääomaa">
+        <comparison-table-cell>
+          <base-icon>mdi-check</base-icon>
+        </comparison-table-cell>
+        <comparison-table-cell>
+          <base-icon>mdi-check</base-icon>
+        </comparison-table-cell>
+        <comparison-table-cell>
+          <base-icon>mdi-close</base-icon>
+        </comparison-table-cell>
+      </comparison-table-row>
+
+      <comparison-table-row title="Omistus">
+        <comparison-table-cell>
+          <base-icon>mdi-check</base-icon>
+          <!--Asunto-osake-->
+        </comparison-table-cell>
+        <comparison-table-cell>
+          <base-icon>mdi-check</base-icon>
+          <!--Osuuskunnan jäsenyys, kunnes asunto on lunastettu. Sen jälkeen
+          asunto-osake.-->
+        </comparison-table-cell>
+        <comparison-table-cell>
+          <base-icon>mdi-close</base-icon>
+          <!--Ei omistusta-->
+        </comparison-table-cell>
+      </comparison-table-row>
+
+      <comparison-table-row title="Vaadittu alkupääoma">
+        <comparison-table-cell>
+          ~15% vh:sta
+        </comparison-table-cell>
+        <comparison-table-cell> ~5% vh:sta</comparison-table-cell>
+        <comparison-table-cell>
+          ~2kk vuokra
+        </comparison-table-cell>
+      </comparison-table-row>
+
+      <comparison-table-row title="Maksettava">
+        <comparison-table-cell>
+          Pankkilaina + Yhtiövastike
+        </comparison-table-cell>
+        <comparison-table-cell>Vuokra + Lunastusosuus</comparison-table-cell>
+        <comparison-table-cell>
+          Vuokra
+        </comparison-table-cell>
+      </comparison-table-row>
+    </comparison-table>
+    <!--
     <project-p>
       Joka tapauksessa et joudu maksamaan esimerkiksi vuokranantajan
       voittotavoitteita.
     </project-p>
+-->
   </div>
 </template>
 

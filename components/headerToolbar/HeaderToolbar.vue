@@ -92,6 +92,7 @@ export default {
         { name: 'interest-map', exact: false },
         { name: 'kotios', exact: false },
         { name: 'faq', exact: false }
+        //{ name: 'us', exact: false }
       ]
     },
 

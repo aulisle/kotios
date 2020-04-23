@@ -13,7 +13,7 @@ export default {}
 .cell {
   text-align: center;
   padding: $u1;
-  max-width: $u10;
+  max-width: $u15;
 }
 
 .heading {
