@@ -37,6 +37,7 @@
         <project-info-tab
           class="container-base project-tab-item"
           :description="project.description"
+          @addDream="addDream"
         />
       </v-tab-item>
       <v-tab-item>

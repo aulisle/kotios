@@ -57,7 +57,8 @@
           "role": "project-advisor",
           "email": "v-p@kotios.fi",
           "phone": "040 1234567",
-          "initials": "VR"
+          "initials": "VR",
+          "image": "http://aarnipuu.info/wp-content/uploads/2017/09/Passikuva-e1515416987328.jpg"
         }
     ],
     "plot": {
@@ -103,13 +104,14 @@
       "https://premicokodit.fi/wp-content/uploads/2018/12/Uusikaupunki-8-1920x1080.jpg"
     ],
     "contacts": [
-        {
-          "name": "V-P Rajala",
-          "role": "project-advisor",
-          "email": "v-p@kotios.fi",
-          "phone": "040 1234567",
-          "initials": "VR"
-        }
+      {
+        "name": "V-P Rajala",
+        "role": "project-advisor",
+        "email": "v-p@kotios.fi",
+        "phone": "040 1234567",
+        "initials": "VR",
+        "image": "http://aarnipuu.info/wp-content/uploads/2017/09/Passikuva-e1515416987328.jpg"
+      }
     ],
     "plot": {
       "area": 3559,

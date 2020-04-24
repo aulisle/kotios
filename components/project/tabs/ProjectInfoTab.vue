@@ -20,7 +20,7 @@
               kohteita. Saat sähköpostiisi myös kiinnostavia uutisia niistä.
               Kohteen lisääminen unelmalistalle ei sido sinua vielä mihinkään.
             </project-p>
-            <base-button color="accent">
+            <base-button color="accent" block @click="$emit('addDream')">
               Lisää kohde unelmalistallesi</base-button
             >
           </v-card-text>

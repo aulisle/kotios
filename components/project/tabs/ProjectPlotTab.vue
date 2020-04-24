@@ -1,16 +1,18 @@
 <template>
-  <v-card>
-    <v-simple-table class="table">
-      <tr v-for="(row, idx) in rows" :key="idx">
-        <td>
-          {{ row.title }}
-        </td>
-        <td>
-          {{ row.value }}
-        </td>
-      </tr>
-    </v-simple-table>
-  </v-card>
+  <div>
+    <v-card>
+      <v-simple-table class="table">
+        <tr v-for="(row, idx) in rows" :key="idx">
+          <td>
+            {{ row.title }}
+          </td>
+          <td>
+            {{ row.value }}
+          </td>
+        </tr>
+      </v-simple-table>
+    </v-card>
+  </div>
 </template>
 
 <script>
