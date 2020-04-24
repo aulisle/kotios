@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Mikä on kotini hinta?</h2>
+    <h2>Mitä tämä maksaa?</h2>
     <project-p>
       Osallistavassa asuntohankkeessa kodin hinta määräytyy asukkaiden toiveiden
       ja <a href="#" @click="$emit('toWhy')">roolin</a> mukaan. Tarkkaa hinnan
@@ -10,10 +10,10 @@
     </project-p>
 
     <project-p>
-      Käännämme siis homman toisin päin. Emme kerro, paljonko kotisi tulee
-      maksamaan, vaan kysymme millaisella budjetilla olet liikkeellä.
-      Uudessakaupungissa keskineliöhinta uudiskohteille on kuitenkin noin 3
-      000€/m² ja vuokrahinta noin 12€/m². Tähänkin voit vaikuttaa
+      Käännämme siis ajattelun valtamallista toisin päin. Emme kerro, paljonko
+      kotisi tulee maksamaan, vaan kysymme millaisella budjetilla olet
+      liikkeellä. Uudessakaupungissa keskineliöhinta uudiskohteille on kuitenkin
+      noin 3 000€/m² ja vuokrahinta noin 12€/m². Tähänkin voit vaikuttaa
       aktiivisuudellasi, roolillasi ja suunnitteluratkaisuilla.
     </project-p>
     <projct-p>Onko hinnasta kysyttävää?</projct-p>
@@ -24,13 +24,32 @@
     </project-p>
 
     <h2 class="new-section">
-      Mistä hankintahinta muodostuu?
+      Mistä kotini kokonaishinta muodostuu?
+    </h2>
+    <project-p>
+      Vaikka emme voi antaa kotisi tarkkaa hintaa ennen kuin olet kertonut
+      budjettisi, voimme kuitenkin avata, miten kotisi hinta muodostuu. Se
+      voidaan jakaa kolmeen pääkuluun: hankintahinta, käyttö- ja
+      ylläpitokustannukset sekä rahoituksesta johtuvat kulut.
+    </project-p>
+
+    <project-p>
+      Hankintahintaan voit vaikuttaa ottamalla vastuuta ja osallistumalla
+      enemmän. Käyttö- ja ylläpitokustannukset ovat suoraa seurausta
+      suunnitteluratkaisuista ja rahoituksen hinta riippuu sinulle sopivasta
+      maksutavasta.
+    </project-p>
+
+    <h2 class="new-section">
+      Miten voin vaikuttaa kotini <u>hankintahintaan</u>?
     </h2>
 
     <project-p>
-      Kodin ostohinta muodostuu monesta tekijästä. Kun kotisi tehdään
-      osallistavasti Kotios-palvelun kautta, niin monet näistä välikäsistä
-      voidaan jättää pois.
+      Kodin hankintahinta muodostuu perinteisesti hankkeen aikana erinäisistä
+      hankinnoista, riskikatteista ja voittotavoitteista. Kun kotisi tehdään
+      osallistavasti Kotios-palvelun kautta, niin asukkaana voit ottaa
+      turvallisesti välikäsien tehtäviä itsellesi ja näin säästää tuntuvasti.
+      Sinua siis palkitaan omasta aktiivisuudestasi.
     </project-p>
 
     <comparison-table>
@@ -61,17 +80,6 @@
           <base-icon>mdi-close</base-icon>
         </comparison-table-cell>
       </comparison-table-row>
-
-      <!--
-        <comparison-table-row title="Vuokranantajan voittotavoite">
-        <comparison-table-cell>
-          <base-icon>mdi-close</base-icon> - €
-        </comparison-table-cell>
-        <comparison-table-cell>
-          <base-icon>mdi-close</base-icon>
-        </comparison-table-cell>
-      </comparison-table-row>
-      -->
 
       <comparison-table-row title="Tontti">
         <comparison-table-cell>
@@ -129,18 +137,21 @@
     </comparison-table>
 
     <h2 class="new-section">
-      Miten voin vaikuttaa kuukausittaisiin asumiskuluihini?
+      Miten voin vaikuttaa <u>käyttö- ja ylläpitokustannuksiin</u>?
     </h2>
     <project-p>
-      Suunnitteluratkaisut vaikuttavat tuotanto-, käyttö- ja
-      ylläpitokustannuksiin. Tässä kohteessa asukkaat päättävät
-      suunnitteluratkaisut, joilla on suora vaikutus asumiskuluihin.
+      Kotisi suunnitteluratkaisut vaikuttavat suoraan kuukausittaisiin
+      asumiskuluihisi. Tässä kohteessa asukkaat päättävät suunnitteluratkaisut,
+      joten sinulla on valta määrittää omat asumisenaikaiset kulusi. Tässä
+      kuitenkin tulee kuitenkin muistaa, että tämä on yleensä hankinta- ja
+      käyttö-/ylläpitokustannusten tasapainottelua.
     </project-p>
 
+    <h2 class="new-section">Mitä rahoitusvaihtoehtoja minulla on?</h2>
     <project-p>
-      Rahoitus- ja omistusmuoto ratkaisee paljon, millaset kuukausittaiset
-      asumismenot sinulle tulee. Tällä hankkeella hyödynnetään vuorkalla
-      omistajaksi-mallia.
+      Myös rahoitus- ja omistusmuoto ratkaisee paljon, millaset kuukausittaiset
+      asumismenot sinulle muodostuvat. Tällä hankkeella hyödynnetään "vuokralla
+      omistajaksi" asunto-osuuskunta-mallia.
     </project-p>
 
     <comparison-table>
