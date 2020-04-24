@@ -34,7 +34,10 @@
 
     <v-tabs-items v-model="tab">
       <v-tab-item>
-        <project-info-tab class="container-base project-tab-item" />
+        <project-info-tab
+          class="container-base project-tab-item"
+          :description="project.description"
+        />
       </v-tab-item>
       <v-tab-item>
         <project-why-tab class="container-base project-tab-item" />
@@ -52,7 +55,10 @@
         <project-price-tab class="container-base project-tab-item" />
       </v-tab-item>
       <v-tab-item>
-        <project-plot-tab class="container-base project-tab-item" />
+        <project-plot-tab
+          class="container-base project-tab-item"
+          :plot="project.plot"
+        />
       </v-tab-item>
     </v-tabs-items>
 
@@ -60,7 +66,6 @@
       <project-first-step @addDrem="addDream" />
       <project-contact class="project-contact" :contacts="project.contacts" />
     </div>
-    <div class="container-base"></div>
   </div>
 </template>
 
@@ -150,10 +155,12 @@ export default {
   async fetch() {
     const getProject = this.$store.getters['interestMap/project']
 
-    this.project = getProject(this.$route.params.id)
+    const project = getProject(this.$route.params.id)
 
-    if (!this.project) {
-      this.error('Projektia ei löytynyt')
+    // eslint-disable-next-line
+    console.log('PROJECT', project)
+    if (project) {
+      this.project = project
     }
   },
 

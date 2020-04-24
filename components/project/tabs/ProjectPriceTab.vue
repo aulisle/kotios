@@ -16,9 +16,11 @@
       000€/m² ja vuokrahinta noin 12€/m². Tähänkin voit vaikuttaa
       aktiivisuudellasi, roolillasi ja suunnitteluratkaisuilla.
     </project-p>
-    <projct-p>Onko hinnasta kysyttävää? </projct-p>
+    <projct-p>Onko hinnasta kysyttävää?</projct-p>
     <project-p>
-      <base-button>Ota yhteyttä hankeneuvojaamme</base-button>
+      <base-button class="contact-button">
+        Ota yhteyttä hankeneuvojaamme
+      </base-button>
     </project-p>
 
     <h2 class="new-section">
@@ -147,9 +149,9 @@
       />
       <comparison-table-row title="Asuntolaina">
         <comparison-table-cell>
-          Henkilökohtainen
+          Asunto-yhtiöllä
         </comparison-table-cell>
-        <comparison-table-cell> Osuuskunnalla </comparison-table-cell>
+        <comparison-table-cell>Osuuskunnalla</comparison-table-cell>
         <comparison-table-cell>
           Vuokranantajalla
         </comparison-table-cell>
@@ -170,7 +172,7 @@
         <comparison-table-cell>
           Jo lunastettu
         </comparison-table-cell>
-        <comparison-table-cell> Olemassa </comparison-table-cell>
+        <comparison-table-cell>Olemassa </comparison-table-cell>
         <comparison-table-cell>
           Ei mahdollista
         </comparison-table-cell>
@@ -206,9 +208,9 @@
 
       <comparison-table-row title="Vaadittu alkupääoma">
         <comparison-table-cell>
-          ~15% vh:sta
+          ~30% markkinahinnasta
         </comparison-table-cell>
-        <comparison-table-cell> ~5% vh:sta</comparison-table-cell>
+        <comparison-table-cell> ~5% tuotantohinnasta</comparison-table-cell>
         <comparison-table-cell>
           ~2kk vuokra
         </comparison-table-cell>
@@ -216,7 +218,7 @@
 
       <comparison-table-row title="Maksettava">
         <comparison-table-cell>
-          Pankkilaina + Yhtiövastike
+          Yhtiövastike + Grynderin velkajärjestely
         </comparison-table-cell>
         <comparison-table-cell>Vuokra + Lunastusosuus</comparison-table-cell>
         <comparison-table-cell>
@@ -260,5 +262,8 @@ export default {
 <style lang="scss" scoped>
 .new-section {
   margin-top: $u10;
+}
+.contact-button {
+  margin-top: $u2;
 }
 </style>

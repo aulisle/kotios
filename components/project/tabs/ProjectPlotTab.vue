@@ -15,22 +15,38 @@
 
 <script>
 export default {
-  data() {
-    return {
-      rows: [
-        {
+  props: {
+    plot: {
+      type: Object,
+      required: true
+    }
+  },
+
+  computed: {
+    rows() {
+      const res = []
+      if (this.plot.owner) {
+        res.push({
           title: 'Tontin omistaja',
           value: 'Varpe Oy'
-        },
-        {
+        })
+      }
+
+      if (this.plot.area) {
+        res.push({
           title: 'Tontin pinta-ala',
-          value: '3 559m²'
-        },
-        {
+          value: `${this.plot.area}m²`
+        })
+      }
+
+      if (this.plot.buildable) {
+        res.push({
           title: 'Tontin rakennusoikeus',
-          value: '2 800k-m² 2-3 kerroksella'
-        }
-      ]
+          value: `${this.plot.buildable}m²`
+        })
+      }
+
+      return res
     }
   }
 }

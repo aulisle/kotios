@@ -90,9 +90,9 @@ export default {
       return [
         { name: 'phenomenon', exact: false },
         { name: 'interest-map', exact: false },
+        { name: 'projects', exact: false },
         { name: 'kotios', exact: false },
         { name: 'faq', exact: false }
-        //{ name: 'us', exact: false }
       ]
     },
 

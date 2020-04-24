@@ -18,7 +18,8 @@ const translations = {
     phenomenon: 'Osallistaminen',
     kotios: 'Mikä on Kotios?',
     faq: 'Usein kysyttyä',
-    'interest-map': 'Pöhinä'
+    'interest-map': 'Pöhinä',
+    projects: 'Hankkeet'
   },
   settings: {
     'change-password': 'Vaihda salasana',

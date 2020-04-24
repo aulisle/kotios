@@ -1,7 +1,11 @@
 <template>
   <tr>
-    <th class="heading" colspan="3"></th>
-    <th v-for="(heading, idx) in headings" :key="idx" class="heading">
+    <th class="heading empty" colspan="3"></th>
+    <th
+      v-for="(heading, idx) in headings"
+      :key="idx"
+      class="heading heading-item"
+    >
       {{ heading }}
     </th>
   </tr>
@@ -19,5 +23,12 @@ export default {
 .heading {
   padding: $u2;
   max-width: $u15;
+}
+.heading-item:not(:nth-child(2)) {
+  border-left: 1px solid $color-text-faint;
+}
+
+.empty {
+  background-color: $color-bg-1;
 }
 </style>

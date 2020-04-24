@@ -11,5 +11,6 @@ export default {}
 <style lang="scss" scoped>
 .comparison-table {
   width: 100%;
+  border-collapse: collapse;
 }
 </style>

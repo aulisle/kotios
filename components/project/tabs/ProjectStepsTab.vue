@@ -12,7 +12,7 @@
       asukkaat.
     </project-p>
 
-    <kotios-steps show-lengths />
+    <kotios-steps show-lengths class="steps" />
   </div>
 </template>
 
@@ -28,4 +28,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.steps {
+  align-items: flex-start;
+}
+</style>

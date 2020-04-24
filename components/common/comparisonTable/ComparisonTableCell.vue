@@ -12,8 +12,11 @@ export default {}
 <style lang="scss" scoped>
 .cell {
   text-align: center;
-  padding: $u1;
+  padding: $u1 $u2;
   max-width: $u15;
+  &:not(:nth-child(2)) {
+    border-left: 1px solid $color-text-faint;
+  }
 }
 
 .heading {
