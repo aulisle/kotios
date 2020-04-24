@@ -19,7 +19,7 @@
       },
       {
         "type": "p",
-        "text": "Blasieholmankadulle rakennetaan idyllinen puukerrostalo, jonka asunnot suunnitellaan asukkaiden toiveet toteuttaen. Kodikkaat ja viihtyisät yhteistilat ja merinäköalat tarjoava kattoterassi takaavat ihastuttavan kyläyhteisön kaupungin keskellä. Ja kuten aidot Uusikaupunkilaiset sanoisivat: \"Onhan meil meri iha rannas!\"!"
+        "text": "Blasieholmankadulle rakennetaan kerrostalo, joka suunnitellaan asukkaiden toiveet toteuttaen. Sen vieressä on ihastuttavia vanhoja puutaloja, joten voisit inspiroitua suunnittelemaan tänne esimerkiksi idyllisen puukerrostalon. Kodikkaat ja viihtyisät yhteistilat ja merinäköalat tarjoava kattoterassi voisivat taata ihastuttavan kyläyhteisön kaupungin keskellä. Ja kuten aidot Uusikaupunkilaiset sanoisivat: \"Onhan meil meri iha rannas!\"!"
       },
       {
         "type": "h2",
@@ -27,11 +27,11 @@
       },
       {
         "type": "p",
-        "text": "Tämän lähemmäksi et Uudenkaupungin palveluja pääse! Uusikaupunki on idyllinen pikkukaupunki, joka tarjoaa monipuoliset palvelut, hyvät liikuntamahdollisuudet ja mielenkiintoista kulttuuritarjontaa. Pikkukaupungin kiireetön, mutta aktiivinen elämänmeno tempaa mukaansa. Blasienholmankadun puukerrostalossa kaikki on vain lyhyen kävelymatkan päässä. Itäpuiston kuntoradalle on matkaa vain pari korttelia ja Ruokolanjärven ja Käätyjärven maisemia pääset ihailemaan 5 minuutin kävelymatkan päässä. Juna-asema on vieressä ja sairaala on tien toisella puolella."
+        "text": "Tämän lähemmäksi et Uudenkaupungin palveluja pääse! Uusikaupunki on idyllinen pikkukaupunki, joka tarjoaa monipuoliset palvelut, hyvät liikuntamahdollisuudet ja mielenkiintoista kulttuuritarjontaa. Pikkukaupungin kiireetön, mutta aktiivinen elämänmeno tempaa mukaansa. Blasieholmankadun kerrostalossa kaikki on vain lyhyen kävelymatkan päässä. Itäpuiston kuntoradalle on matkaa vain pari korttelia ja Ruokolanjärven ja Käätyjärven maisemia pääset ihailemaan 5 minuutin kävelymatkan päässä. Rautatieasema on vieressä ja sairaala on tien toisella puolella."
       },
       {
         "type": "h2",
-        "text": "Omistusamusta vuokrakohteen hinnalla"
+        "text": "Omistusasumista vuokrakohteen hinnalla"
       },
       {
         "type": "p",
@@ -47,6 +47,7 @@
       }
     ],
     "images": [
+      "/uusikaupunki/header.png",
       "https://www.uginvanhattalot.fi/wp-content/uploads/2018/08/kuva3.jpg",
       "https://r-cf.bstatic.com/images/hotel/max1280x900/463/46369418.jpg",
       "https://premicokodit.fi/wp-content/uploads/2018/12/Uusikaupunki-8-1920x1080.jpg"
@@ -83,7 +84,7 @@
     "description": [
       {
         "type": "h2",
-        "text": "Omistusamusta vuokrakohteen hinnalla"
+        "text": "Omistusasuamista vuokrakohteen hinnalla"
       },
       {
         "type": "p",

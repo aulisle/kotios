@@ -15,11 +15,12 @@ const translations = {
     search: 'Hankkeet',
     'add-project': 'Jätä ilmoitus',
     'for-partners': 'Kumppaneille',
-    phenomenon: 'Osallistaminen',
+    phenomenon: 'Osallistava asuntohanke',
     kotios: 'Mikä on Kotios?',
     faq: 'Usein kysyttyä',
-    'interest-map': 'Pöhinä',
-    projects: 'Hankkeet'
+    'interest-map': 'Kartta',
+    projects: 'Avoimet hankkeet',
+    contact: 'Ota yhteyttä'
   },
   settings: {
     'change-password': 'Vaihda salasana',
