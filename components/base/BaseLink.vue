@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="to"><slot /> </router-link>
+  <router-link class="base-link" :to="to"><slot /> </router-link>
 </template>
 
 <script>
@@ -10,4 +10,11 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.base-link {
+  color: $color-accent !important;
+  &:hover {
+    color: $color-accent-hover !important;
+  }
+}
+</style>

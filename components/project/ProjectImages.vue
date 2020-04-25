@@ -7,7 +7,7 @@
       <video autoplay muted loop class="hero-img">
         <source :src="video" />
       </video>
-      <h2>Blasieholmankatu 5</h2>
+      <h2>{{ title }}</h2>
     </div>
     <button v-else class="hero-img">
       <img :src="images[0]" />
@@ -23,6 +23,7 @@
 <script>
 export default {
   props: {
+    title: { type: String, required: true },
     images: { type: Array, required: true },
     video: { validator: () => true, default: '' }
   },

@@ -1,6 +1,10 @@
 <template>
   <div>
-    <project-images :images="project.images" :video="project.video" />
+    <project-images
+      :images="project.images"
+      :video="project.video"
+      :title="project.title"
+    />
     <div class="container-base">
       <h1 class="project-heading">
         {{ project.title }}
@@ -70,16 +74,15 @@
 
     <div v-show="!interestedClosed" class="floating-box">
       <v-card>
-        <v-card-title
-          >Kiinnostuitko? <v-spacer />
+        <v-card-title>
+          Kiinnostuitko? <v-spacer />
           <base-icon @click="interestedClosed = true">mdi-close</base-icon>
         </v-card-title>
         <v-card-text>
-          <project-p>
+          <p>
             Unelmalista on oma listasi, johon voit kerätä kiinnostavia kohteita.
-            Saat myös sähköpostiisi uutisia niistä. Kohteen lisääminen
-            unelmalistalle ei sido sinua vielä mihinkään.
-          </project-p>
+            Saat myös sähköpostiisi uutisia niistä.
+          </p>
           <base-button
             color="accent"
             block

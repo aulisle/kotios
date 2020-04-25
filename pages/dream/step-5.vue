@@ -3,13 +3,64 @@
     <success-tick variant="front-bottom" />
     <h2>Hienoa, budjettisi on tallennettu!</h2>
 
-    <h3>Mitä seuraavaksi?</h3>
-    <p>Rekryä muita. Jaa sivu sosiaalisessa mediassa.</p>
-    <p>Ota meihin yhteyttä.</p>
-    <p>Lisää toinen kohde.</p>
+    <h2>Mitä seuraavaksi?</h2>
+    <h3>Jaa sivu</h3>
+    <p>
+      Tunnetko jonkun joka voisi olla kiinnostunut osallistamisesta tai kodin
+      rakentamisesta? Jaa sivu sosiaalisessa mediassa.
+    </p>
+    <social-sharing :url="path()" inline-template>
+      <div class="network-icons">
+        <network network="email">
+          <button class="social-btn email">
+            <md-icon class="icon">email</md-icon>
+          </button>
+        </network>
+
+        <network network="facebook">
+          <button class="social-btn facebook">
+            <i class="fab fa-facebook-f icon" />
+          </button>
+        </network>
+
+        <network network="twitter">
+          <button class="social-btn twitter">
+            <i class="fab fa-twitter icon" />
+          </button>
+        </network>
+
+        <network network="whatsapp">
+          <button class="social-btn whatsapp" v-on="on">
+            <i class="fab fa-whatsapp icon"></i>
+          </button>
+        </network>
+      </div>
+    </social-sharing>
+
+    <h3>Ota meihin yhteyttä.</h3>
+    <p>
+      Jos jotain jäi epäselväksi tai haluat keskustella lisää palvelumme kanssa,
+      voit
+      <base-link :to="{ name: 'contact' }">ottaa meihin yhteyttä</base-link>.
+    </p>
 
     <div class="full-width bottom">
-      <base-button block x-large color="accent" :to="{ name: 'interest-map' }">
+      <base-button
+        block
+        :to="{ name: 'interest-map-add' }"
+        color="accent"
+        x-large
+        class="bottom-button"
+      >
+        Lisää toinen kohde
+      </base-button>
+      <base-button
+        block
+        x-large
+        outlined
+        :to="{ name: 'interest-map' }"
+        class="bottom-button"
+      >
         Palaa kartalle
       </base-button>
     </div>
@@ -27,6 +78,14 @@ export default {
     ) {
       redirect({ name: 'interest-map' })
     }
+  },
+
+  methods: {
+    path() {
+      if (process.client) {
+        return window.location.origin
+      }
+    }
   }
 }
 </script>
@@ -41,9 +100,53 @@ export default {
   margin-bottom: $u10;
 }
 
+.bottom-button {
+  margin-top: $u1;
+}
+
 @include media-breakpoint-up(md) {
   .bottom {
     max-width: 500px;
+  }
+}
+</style>
+
+<style lang="scss" global>
+.step-5-layout {
+  flex-shrink: 0;
+
+  .network-icons {
+    display: flex;
+    margin-left: -5px;
+  }
+
+  .social-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 5px;
+
+    &.email {
+      background-color: #333;
+    }
+
+    &.facebook {
+      background-color: $color-facebook;
+    }
+
+    &.twitter {
+      background-color: $color-twitter;
+    }
+
+    &.whatsapp {
+      background-color: $color-whatsapp;
+    }
+
+    .icon {
+      color: white !important;
+      font-size: 20px;
+      line-height: 50px;
+    }
   }
 }
 </style>

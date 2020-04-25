@@ -121,10 +121,12 @@ const controller = {
       if (!updateResult) {
         // eslint-disable-next-line
         console.error('NO UPDATE RESULT!')
+
+        // TODO: CREATE SUCH DREAM SESSION
         return next()
       }
 
-      await saveDreamToLead(updateResult.dreams[0])
+      // await saveDreamToLead(updateResult.dreams[0])
     } catch (e) {
       // eslint-disable-next-line
       console.error(e)
@@ -139,7 +141,7 @@ const controller = {
     if (!email) {
       next()
     }
-
+    /*
     const lead = await Lead.findOne({ email: email.toLowerCase() })
 
     if (!lead) {
@@ -147,6 +149,7 @@ const controller = {
     }
 
     emailer.sendDreamsUrl(email, lead._id)
+    */
     res.json({ ok: 'true' })
   },
 
