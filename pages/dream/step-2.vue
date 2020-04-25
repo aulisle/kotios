@@ -1,97 +1,116 @@
 <template>
   <div class="container-base step-2-layout">
-    <success-tick />
-    <h2>
-      Kohde on lisätty
+    <h2 class="heading">
+      Kohteen lisääminen unelmalistalle
     </h2>
-    <p class="add-info">
-      Olet nyt unelmoinnin alussa. Et siis sitoudu vielä mihinkään, mutta voit
-      vaikuttaa hankkeen aloitukseen. Voit myös lisätä muita itsellesi
-      kiinnostavia kohteita.
-    </p>
-
-    <kotios-steps />
-
-    <h4 class="continue-dreaming-heading">
-      Jatka unelmointia, kerro sinulle tärkeimmät asumisen kriteerit
-    </h4>
 
     <p class="continue-info">
-      Seuraavien tietojen avulla selvitämme, minkälaista asumista kohteessa
-      halutaan. Ilmoituksilla tiedämme, että kohteella on kysyntää. Kun
-      kohteella on riittävä määrä alustavia kiinnostuneita voimme yhdistää sinut
-      myös muihin samankaltaisiin unelmoijiin ja hankkeenne voi alkaa.
+      Seuraavien tietojen avulla selvitämme, minkälaista asumista haluat
+      kyseisellä paikalla ja millaisista tiedoista olet kiinnostunut.
     </p>
 
-    <base-field-set v-if="type === 0" title="Kodin maksimietäisyys pisteestä">
-      <div class="inline-input">
-        <v-slider v-model="distanceModel" thumb-label :thumb-size="48">
-          <template v-slot:thumb-label="{ value }"> {{ value }}km </template>
-        </v-slider>
-        <div class="input-value">{{ distance }}km</div>
-      </div>
-    </base-field-set>
-    <base-field-set title="Valitse, mitkä ovat tärkeimpiä asumisessa">
-      <div class="multiple-options">
+    <p class="continue-info">
+      Ilmoituksilla tiedämme myös, että kohteella on kysyntää. Kun kohteella on
+      riittävä määrä alustavia kiinnostuneita voimme yhdistää sinut myös muihin
+      samankaltaisiin unelmoijiin ja hankkeenne voi alkaa.
+    </p>
+
+    <div class="new-section" />
+
+    <validation-observer
+      ref="observer"
+      v-slot="{ invalid }"
+      tag="form"
+      class="form"
+      @submit.prevent="finalise"
+    >
+      <base-field-set v-if="type === 0" title="Kodin maksimietäisyys pisteestä">
+        <base-input
+          v-model="titleModel"
+          label="Kohteen nimi"
+          hint="Anna kohteelle tai alueelle kuvaava nimi"
+          rules="required"
+          required
+        />
+      </base-field-set>
+
+      <base-field-set v-if="type === 0" title="Kodin maksimietäisyys pisteestä">
+        <div class="inline-input">
+          <base-input
+            v-model="distanceModel"
+            type="number"
+            class="inline-input-field"
+            flat
+            :outlined="false"
+          />
+          <div class="input-value">km</div>
+        </div>
+      </base-field-set>
+
+      <base-field-set title="Valitse, mitkä ovat tärkeimpiä asumisessa">
+        <div class="multiple-options">
+          <base-button
+            v-for="option in importantOptions"
+            :key="option"
+            :outlined="!importantSelected(option)"
+            class="multiple-option"
+            @click="toggleImportantOption(option)"
+          >
+            {{ $t(`dreams.importantOptions.${option}`) }}
+          </base-button>
+        </div>
+      </base-field-set>
+
+      <base-field-set title="Yhteystiedot">
+        <p class="contact-info-text">
+          Jotta voimme tulevaisuudessa yhdistää sinut samanlaisiin unelmoijiin,
+          jätä sähköpostiosoitteesi. Saat sähköpostiisi myös listan lisäämistäsi
+          kohteista.
+        </p>
+        <base-input
+          v-model="emailModel"
+          label="Sähköposti"
+          rules="required|email"
+          required
+        />
+
+        <p class="contact-info-text">
+          Lähettämällä lomakkeen tiedot pääset automaattisesti mukaan myös
+          Asiakas- ja markkinointirekisteriimme, johon kuuluvana saat
+          ensimmäisten joukossa tietoa uusista kohteistamme ja sitä kautta
+          mahdollisuuden vaikuttaa niiden kehittämiseen.
+          <base-external-link href="/data-privacy">
+            Lue lisää täältä.
+          </base-external-link>
+        </p>
+
+        <base-checkbox
+          v-model="acceptTermsAndConditions"
+          label="Kyllä, hyväksyn tietojeni liittämisen Asiakas- ja markkinointirekisteriin"
+          rules="true"
+          required
+        />
+      </base-field-set>
+
+      <div class="full-width bottom">
         <base-button
-          v-for="option in importantOptions"
-          :key="option"
-          :outlined="!importantSelected(option)"
-          class="multiple-option"
-          @click="toggleImportantOption(option)"
+          block
+          x-large
+          color="accent"
+          :disabled="invalid"
+          @click="finalise"
         >
-          {{ $t(`dreams.importantOptions.${option}`) }}
+          Tallenna kohde unelmalistallesi
         </base-button>
       </div>
-    </base-field-set>
-
-    <base-field-set title="Yhteystiedot">
-      <p class="contact-info-text">
-        Jotta voimme tulevaisuudessa yhdistää sinut samanlaisiin unelmoijiin,
-        jätä sähköpostiosoitteesi. Saat sähköpostiisi myös listan lisäämistäsi
-        kohteista.
-      </p>
-      <base-input
-        v-model="$v.emailModel.$model"
-        label="Sähköposti"
-        :errors="emailErrors"
-      />
-    </base-field-set>
-
-    <div class="full-width bottom">
-      <base-button
-        block
-        x-large
-        color="accent"
-        :disabled="$v.invalid"
-        @click="finalise"
-      >
-        Tallenna kohteen tarkemmat tiedot
-      </base-button>
-    </div>
+    </validation-observer>
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
-import SuccessTick from '@/components/dreams/SuccessTick.vue'
-import { email, required } from 'vuelidate/lib/validators'
-import { createEmailErrors } from '@/plugins/vuelidate'
-import KotiosSteps from '@/components/common/KotiosSteps'
 
 export default {
-  components: {
-    SuccessTick,
-    KotiosSteps
-  },
-
-  validations: {
-    emailModel: {
-      required,
-      email
-    }
-  },
-
   data() {
     return {
       importantOptions: [
@@ -103,7 +122,8 @@ export default {
         'ecology',
         'functionality',
         'common-spaces'
-      ]
+      ],
+      acceptTermsAndConditions: false
     }
   },
   computed: {
@@ -112,22 +132,26 @@ export default {
       'location',
       'distance',
       'importantAspects',
-      'email'
+      'email',
+      'title'
     ]),
-    emailErrors() {
-      return createEmailErrors(this.$v.emailModel, this)
-    },
+
     distanceModel: {
       get() {
         return this.distance
       },
+
       set(val) {
+        if (typeof val === 'string') {
+          val = parseInt(val)
+        }
         this.$store.dispatch('defineDream/setValue', {
           field: 'distance',
           value: val
         })
       }
     },
+
     emailModel: {
       get() {
         return this.email
@@ -135,6 +159,18 @@ export default {
       set(val) {
         this.$store.commit('defineDream/setValue', {
           field: 'email',
+          value: val
+        })
+      }
+    },
+
+    titleModel: {
+      get() {
+        return this.title
+      },
+      set(val) {
+        this.$store.dispatch('defineDream/setValue', {
+          field: 'title',
           value: val
         })
       }
@@ -165,7 +201,12 @@ export default {
       })
     },
 
-    finalise() {
+    async finalise() {
+      const valid = await this.$refs.observer.validate()
+      if (!valid) {
+        return
+      }
+
       this.$store.commit('defineDream/setValue', {
         field: 'email',
         value: this.email
@@ -199,6 +240,18 @@ export default {
   }
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  margin-top: $u10;
+  margin-bottom: $u8;
+}
+
 .full-width {
   width: 100%;
   margin-top: $u3;
@@ -218,11 +271,19 @@ export default {
 
 .inline-input {
   display: flex;
+  align-items: center;
 
   .input-value {
-    margin-top: 4px;
-    min-width: $u5;
+    min-width: $u10;
+    margin-left: $u2;
+    margin-bottom: $u2;
     @include h4-primary;
+  }
+
+  .inline-input-field {
+    max-width: $u10;
+    margin-top: 0;
+    padding-top: 0;
   }
 }
 
@@ -234,8 +295,11 @@ export default {
 }
 
 .continue-info {
-  align-self: flex-start;
-  text-align: left !important;
+  max-width: $u50;
+}
+
+.new-section {
+  margin-top: $u7;
 }
 
 .add-info {

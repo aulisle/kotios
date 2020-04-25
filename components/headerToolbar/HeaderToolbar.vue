@@ -34,6 +34,20 @@
           >
             {{ $t(`routes.${route.name}`) }}
           </nuxt-link>
+
+          <nuxt-link
+            v-for="route in extraRoutes"
+            :key="route.name"
+            :to="{ name: route.name }"
+            :class="{ exact: route.exact }"
+            class="extra"
+          >
+            {{ $t(`routes.${route.name}`) }}
+          </nuxt-link>
+
+          <base-button color="secondary" text class="extra-toggle">
+            <base-icon color="secondary">mdi-dots-horizontal</base-icon>
+          </base-button>
         </div>
       </div>
     </md-toolbar>
@@ -46,7 +60,16 @@
       class="mobile-menu-drawer"
     >
       <md-list>
+        <!-- Basic routes -->
         <md-list-item v-for="route in routes" :key="route.name">
+          <nuxt-link :to="{ name: route.name }">
+            <base-button @click="togglePanel">
+              {{ $t(`routes.${route.name}`) }}
+            </base-button>
+          </nuxt-link>
+        </md-list-item>
+        <!-- Extra routes -->
+        <md-list-item v-for="route in extraRoutes" :key="route.name">
           <nuxt-link :to="{ name: route.name }">
             <base-button @click="togglePanel">
               {{ $t(`routes.${route.name}`) }}
@@ -104,7 +127,11 @@ KotiOS-alusta tarjoaa uudenlaisen osallistavan asuntorakennuttamisen mallin. Pal
         // Osallistava vs ei osallistava
         // Asunto-osuuskuntamalli
         { name: 'projects', exact: false },
-        { name: 'interest-map', exact: false },
+        { name: 'interest-map', exact: false }
+      ]
+    },
+    extraRoutes() {
+      return [
         { name: 'faq', exact: false },
         { name: 'contact', exact: false }
       ]
@@ -211,9 +238,13 @@ KotiOS-alusta tarjoaa uudenlaisen osallistavan asuntorakennuttamisen mallin. Pal
   a:hover {
     color: $color-text-primary-hover;
   }
+
+  .extra {
+    display: none;
+  }
 }
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(xl) {
   .mobile-menu-drawer,
   .mobile-menu-toggle {
     display: none;
@@ -221,6 +252,18 @@ KotiOS-alusta tarjoaa uudenlaisen osallistavan asuntorakennuttamisen mallin. Pal
 
   .desktop-link-container {
     display: block;
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .desktop-link-container {
+    .extra {
+      display: inline;
+    }
+
+    .extra-toggle {
+      display: none;
+    }
   }
 }
 

@@ -141,7 +141,7 @@ export default {
   align-items: center;
 
   .input-value {
-    margin-top: 4px;
+    margin-bottom: $u1;
     min-width: $u10;
     margin-left: $u2;
     @include h4-primary;
@@ -149,7 +149,6 @@ export default {
 
   .inline-input-field {
     max-width: $u10;
-    max-height: 30px;
     margin-top: 0;
     padding-top: 0;
   }

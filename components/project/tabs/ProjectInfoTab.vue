@@ -1,31 +1,66 @@
 <template>
   <div class="tabs-wrapper">
     <div class="tabs-left">
-      <template v-for="(item, idx) in description">
-        <h2 v-if="item.type === 'h2'" :key="idx">
-          {{ item.text }}
-        </h2>
-        <project-p v-if="item.type === 'p'" :key="idx">
-          {{ item.text }}
-        </project-p>
-      </template>
-    </div>
-    <div class="tabs-right">
-      <div class="tabs-right-content">
-        <v-card>
-          <v-card-title>Kiinnostuitko?</v-card-title>
-          <v-card-text>
-            <project-p>
-              Unelmalista on oma listasi, johon voit kerätä kiinnostavia
-              kohteita. Saat sähköpostiisi myös kiinnostavia uutisia niistä.
-              Kohteen lisääminen unelmalistalle ei sido sinua vielä mihinkään.
-            </project-p>
-            <base-button color="accent" block @click="$emit('addDream')">
-              Lisää kohde unelmalistallesi</base-button
+      <template v-for="(section, idx) in description">
+        <div v-if="section.type === 1" :key="idx" class="type-1">
+          <div class="type-1-imgs">
+            <img v-for="img in section.imgs" :key="img" :src="img" />
+          </div>
+          <div class="type-1-text">
+            <h2>{{ section.title }}</h2>
+            <project-p
+              v-for="(paragraph, pIdx) in section.paragraphs"
+              :key="pIdx"
             >
-          </v-card-text>
-        </v-card>
-      </div>
+              {{ paragraph }}
+            </project-p>
+          </div>
+        </div>
+
+        <div v-if="section.type === 2" :key="idx" class="type-2">
+          <div class="type-2-text">
+            <h2>{{ section.title }}</h2>
+            <project-p
+              v-for="(paragraph, pIdx) in section.paragraphs"
+              :key="pIdx"
+            >
+              {{ paragraph }}
+            </project-p>
+          </div>
+          <div class="type-2-imgs">
+            <img v-for="img in section.imgs" :key="img" :src="img" />
+          </div>
+        </div>
+
+        <div v-if="section.type === 3" :key="idx" class="type-3">
+          <h2 class="type-3-heading">{{ section.title }}</h2>
+          <div class="type-3-imgs">
+            <img v-for="img in section.imgs" :key="img" :src="img" />
+          </div>
+          <project-p
+            v-for="(paragraph, pIdx) in section.paragraphs"
+            :key="pIdx"
+            class="type-3-paragraph"
+          >
+            {{ paragraph }}
+          </project-p>
+        </div>
+
+        <div v-if="section.type === 4" :key="idx" class="type-4">
+          <div class="type-4-imgs">
+            <img v-for="img in section.imgs" :key="img" :src="img" />
+          </div>
+          <div class="type-4-text">
+            <h2>{{ section.title }}</h2>
+            <project-p
+              v-for="(paragraph, pIdx) in section.paragraphs"
+              :key="pIdx"
+            >
+              {{ paragraph }}
+            </project-p>
+          </div>
+        </div>
+      </template>
     </div>
   </div>
 </template>
@@ -60,13 +95,98 @@ h2:not(:first-child) {
   }
 
   .tabs-right {
-    width: $u50;
+    width: $u40;
     margin-left: $u3;
   }
 
   .tabs-right-content {
     position: sticky;
     top: $u20;
+  }
+
+  .description-element {
+    max-width: $u60;
+  }
+
+  .type-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .type-1-imgs {
+    max-width: $u60;
+    margin: $u10;
+    margin-left: 0;
+
+    img + img {
+      margin-top: $u5;
+    }
+  }
+
+  .type-1-text {
+    max-width: $u60;
+  }
+
+  .type-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .type-2-imgs {
+    max-width: $u70;
+    margin: $u10;
+    margin-right: 0;
+
+    img + img {
+      margin-top: $u5;
+    }
+  }
+
+  .type-2-text {
+    max-width: $u50;
+  }
+
+  .type-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: $u20;
+    margin-bottom: $u20;
+    background-color: $color-bg-1;
+    padding-top: $u15;
+    padding-bottom: $u8;
+  }
+
+  .type-3-paragraph {
+    max-width: $u70;
+    text-align: center;
+  }
+
+  .type-3-heading {
+    margin-bottom: $u6;
+  }
+
+  .type-4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .type-4-imgs {
+    max-width: $u80;
+    margin: $u10;
+    margin-left: 0;
+
+    img + img {
+      margin-top: $u5;
+    }
+  }
+
+  .type-4-text {
+    max-width: $u50;
   }
 }
 </style>

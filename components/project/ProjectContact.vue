@@ -20,7 +20,7 @@
           <p class="field">{{ contact.email }}</p>
           <p class="field">{{ contact.phone }}</p>
           <div class="contact-button">
-            <base-button @click="openMail(contact.email)">
+            <base-button color="accent" @click="openMail(contact.email)">
               Ota yhteyttä
             </base-button>
           </div>
@@ -64,10 +64,10 @@ export default {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-column-gap: $u4;
+  grid-row-gap: $u4;
+  margin-top: $u5;
 }
 
 .name {

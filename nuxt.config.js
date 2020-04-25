@@ -105,6 +105,8 @@ export default {
       }
     },
 
+    transpile: ['vee-validate/dist/rules'],
+
     extractCss: {
       allChunks: true
     }
@@ -161,6 +163,7 @@ export default {
     '~/plugins/filters.js',
     '~/plugins/i18n.js',
     '~/plugins/vuelidate.js',
+    '~/plugins/veeValidate.js',
     '~/plugins/vueCheckView.js',
     '~/plugins/socialSharing.js',
     { src: '~/plugins/googleMaps.js', ssr: false },

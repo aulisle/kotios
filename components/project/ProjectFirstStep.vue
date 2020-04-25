@@ -14,7 +14,11 @@
       saat uutisia siinä olevista kohteista. Kohteen lisääminen unelmalistalle
       ei sido sinua vielä mihinkään.
     </project-p>
-    <base-button color="accent" @click="$emit('addDream')">
+    <base-button
+      color="accent"
+      class="add-dream-button"
+      @click="$emit('addDream')"
+    >
       Lisää kohde unelmalistallesi
     </base-button>
   </div>
@@ -30,4 +34,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.add-dream-button {
+  margin-top: $u2;
+}
+</style>

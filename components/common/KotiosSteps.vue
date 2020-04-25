@@ -1,6 +1,5 @@
 <template>
   <div class="steps-container">
-    <h2>Stepit kotios</h2>
     <div>
       <kotios-step
         v-for="(step, idx) in steps"

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <project-images :images="project.images" />
+    <project-images :images="project.images" :video="project.video" />
     <div class="container-base">
       <h1 class="project-heading">
         {{ project.title }}
@@ -67,6 +67,30 @@
       <project-first-step @addDrem="addDream" />
       <project-contact class="project-contact" :contacts="project.contacts" />
     </div>
+
+    <div v-show="!interestedClosed" class="floating-box">
+      <v-card>
+        <v-card-title
+          >Kiinnostuitko? <v-spacer />
+          <base-icon @click="interestedClosed = true">mdi-close</base-icon>
+        </v-card-title>
+        <v-card-text>
+          <project-p>
+            Unelmalista on oma listasi, johon voit kerätä kiinnostavia kohteita.
+            Saat myös sähköpostiisi uutisia niistä. Kohteen lisääminen
+            unelmalistalle ei sido sinua vielä mihinkään.
+          </project-p>
+          <base-button
+            color="accent"
+            block
+            class="floating-add-button"
+            @click="addDream"
+          >
+            Lisää kohde unelmalistallesi
+          </base-button>
+        </v-card-text>
+      </v-card>
+    </div>
   </div>
 </template>
 
@@ -108,6 +132,7 @@ export default {
         images: ['/blobs/blue.svg'],
         phases: {}
       },
+      interestedClosed: false,
       tab: 0,
       tabs: [
         {
@@ -158,8 +183,6 @@ export default {
 
     const project = getProject(this.$route.params.id)
 
-    // eslint-disable-next-line
-    console.log('PROJECT', project)
     if (project) {
       this.project = project
     }
@@ -171,6 +194,10 @@ export default {
       this.$store.commit('defineDream/setValue', {
         field: 'projectId',
         value: this.project.id
+      })
+      this.$store.commit('defineDream/setValue', {
+        field: 'title',
+        value: this.project.title
       })
 
       this.$store.dispatch('defineDream/saveNew').then(() => {
@@ -283,6 +310,14 @@ export default {
   margin-top: $u10;
 }
 
+.floating-box {
+  display: none;
+}
+
+.floating-add-button {
+  margin-top: $u2;
+}
+
 @include media-breakpoint-up(lg) {
   .heading-row {
     justify-content: space-between;
@@ -309,6 +344,18 @@ export default {
 
   .mobile-tab-selector {
     display: none;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .floating-box {
+    position: sticky;
+    display: block;
+    float: right;
+    bottom: $u4;
+    right: $u4;
+    max-width: $u40;
+    margin-bottom: $u4;
   }
 }
 

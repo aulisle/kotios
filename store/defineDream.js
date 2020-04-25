@@ -10,6 +10,7 @@ export const TYPES = {
 export const state = () => ({
   _id: null,
   type: null, // null, 'area' or 'plot'
+  title: '',
 
   // PLOT specific
   projectId: null,
@@ -33,6 +34,7 @@ export const mutations = {
   initType(state, type) {
     state.finishedSteps = 0
     state._id = null
+    state.title = ''
 
     if (type === TYPES.AREA) {
       state.projectId = null

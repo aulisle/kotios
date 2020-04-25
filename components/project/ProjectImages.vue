@@ -3,7 +3,13 @@
     v-viewer="{ movable: false, toolbar: false, title: false }"
     class="images"
   >
-    <button class="hero-img">
+    <div v-if="video && video !== ''" class="video-container">
+      <video autoplay muted loop class="hero-img">
+        <source :src="video" />
+      </video>
+      <h2>Blasieholmankatu 5</h2>
+    </div>
+    <button v-else class="hero-img">
       <img :src="images[0]" />
     </button>
     <div class="thumbnails">
@@ -17,11 +23,16 @@
 <script>
 export default {
   props: {
-    images: { type: Array, required: true }
+    images: { type: Array, required: true },
+    video: { validator: () => true, default: '' }
   },
 
   computed: {
     leftOverImgs() {
+      if (this.video && this.video !== '') {
+        return this.images
+      }
+
       if (!this.images || this.images.length < 2) {
         return []
       }
@@ -41,6 +52,19 @@ export default {
   flex-direction: column;
 }
 
+.video-container {
+  position: relative;
+  h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: $color-text-secondary;
+    text-shadow: 2px 2px 10px #000000f0;
+  }
+}
+
 .hero-img {
   width: 100%;
   display: flex;
@@ -48,6 +72,8 @@ export default {
   justify-content: stretch;
   overflow: hidden;
   position: relative;
+  max-height: 85vh;
+  object-fit: cover;
 
   img {
     object-fit: cover;
@@ -62,16 +88,18 @@ export default {
 
 .thumbnails {
   display: flex;
-  height: 60px;
-  margin-top: 10px;
+  margin-top: $u3;
+  margin-bottom: $u10;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+
   img {
-    width: 80px;
-    height: 60px;
+    width: $u30;
+    height: $u20;
     object-fit: contain;
-    margin-right: 10px;
-    border: 1px solid darken(white, 10%);
+    margin-right: $u3;
+    background: 1px solid darken(white, 5%);
   }
 }
 </style>

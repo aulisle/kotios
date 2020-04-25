@@ -87,10 +87,10 @@ const emailer = {
       title: DREAMS_SUBJECT,
       publicUrl: $publicUrl,
       dreamsUrl
-    }).then(html => {
+    }) /*.then(html => {
       const data = { ...config, to: email, subject: DREAMS_SUBJECT, html }
       sgMail.send(data)
-    })
+    })*/
   }
 }
 

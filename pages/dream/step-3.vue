@@ -2,19 +2,16 @@
   <div class="container-base step-3-layout">
     <success-tick variant="front-bottom" />
     <h2>
-      Kohteen tarkemmat tiedot on määritelty
+      Kohde on lisätty unelmalistallesi
     </h2>
-    <p>
-      Olet vaikuttanut jo paljon kohteen aloitukseen. On 150% todennäköisempää,
-      että kohteessa.
-    </p>
 
     <p>
-      Mikäli haluat olla enemmän aktiivinen, ole yhteydessä meihin ja muihin.
+      Olet nyt ilmoittanut alustavan kiinnostuksesi, joka ei sido sinua
+      mihinkään. Saat myös uutisia kohteseen liittyen.
     </p>
 
     <div class="bottom">
-      <p>Haluatko vaikuttaa myös budjetin suhteen?</p>
+      <p>Haluatko määrittää myös budjetin?</p>
 
       <base-button
         block

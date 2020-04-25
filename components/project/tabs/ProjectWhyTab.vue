@@ -1,5 +1,15 @@
 <template>
   <div>
+    <div class="exhange-activity">
+      <h2>Vaihda aktiivisuutesi eduiksi</h2>
+      <p>
+        Kotios auttaa vaihtamaan aktiivisuuttasi taloudellisiksi eduiksi ja
+        yksilöllisiksi ratkaisuiksi, turvallisesti. Tee niin paljon kuin haluat
+        ja valitse oma paikkasi Kotios-kirjosta.
+      </p>
+      <img src="/what-is/tradeoff.svg" class="tradeoff-img" />
+    </div>
+
     <div class="grid key-points-grid">
       <div>
         <v-icon class="point-icon">mdi-snowflake</v-icon>
@@ -14,9 +24,8 @@
         <h3>
           Rahaa elämiseen
         </h3>
-        Hanketyypit, joissa asukkaat toimivat rakennuttajina voivat olla jopa
-        20% edullisempia, kuin muu asuntotuotanto sekä rakennus- että
-        asumisvaiheessa.
+        Voit vaihtaa aktiivisuuttasi taloudelliseksi eduiksi ottamalla suuremman
+        roolin kotisi tuotannossa.
       </div>
       <div>
         <v-icon class="point-icon">mdi-home-heart</v-icon>
@@ -27,15 +36,6 @@
         valinnassa. Voit vaikuttaa siihen, että kotisi rakennetaan
         mahdollisimman järkevästi.
       </div>
-    </div>
-    <div class="exhange-activity">
-      <h2>Vaihda aktiivisuutesi eduiksi</h2>
-      <p>
-        Kotios auttaa vaihtamaan aktiivisuuttasi taloudellisiksi eduiksi ja
-        yksilöllisiksi ratkaisuiksi. Tee niin paljon kuin haluat ja valitse oma
-        paikkasi Kotios-kirjosta.
-      </p>
-      <img src="/what-is/tradeoff.svg" class="tradeoff-img" />
     </div>
   </div>
 </template>
@@ -76,7 +76,8 @@ export default {}
 }
 
 .exhange-activity {
-  margin-top: $u20;
+  margin-top: $u10;
+  margin-bottom: $u10;
   display: flex;
   flex-direction: column;
   align-items: center;

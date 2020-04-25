@@ -191,6 +191,11 @@ const translations = {
       functionality: 'Toiminnallisuus',
       'common-spaces': 'Yhteistilat'
     }
+  },
+  validations: {
+    true: 'Tämä kenttä on pakollinen',
+    required: 'Tämä kenttä on pakollinen',
+    email: 'Anna oikea sähköpostiosoite'
   }
 }
 

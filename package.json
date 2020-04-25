@@ -62,6 +62,7 @@
     "tiptap-extensions": "^1.29.0",
     "v-viewer": "^1.5.1",
     "validator": "^11.1.0",
+    "vee-validate": "^3.3.0",
     "vue": "^2.6.11",
     "vue-check-view": "^0.3.0",
     "vue-i18n": "^8.17.0",

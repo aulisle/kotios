@@ -12,6 +12,10 @@
   border-radius: $border-radius;
 }
 
+.v-btn.v-btn--text {
+  border-color: transparent !important;
+}
+
 .action-button {
   letter-spacing: $tracking-mid;
   .v-ocpm {

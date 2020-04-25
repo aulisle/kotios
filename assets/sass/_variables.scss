@@ -8,6 +8,8 @@ $color-1: #EB0D8C;
 $color-2: #07A14A;
 $color-3: #214497;
 
+$color-error: #EB0D8C;
+
 $color-accent-alt: lighten(#edf900, 30%);
 $color-text-accent-alt: #000000;
 
@@ -18,9 +20,11 @@ $color-text-faint: lighten(#281348, 60%);
 $color-text-alt: #fff;
 $color-text-alt-hover: rgba(255, 255, 255, 0.8);
 $color-text-black: black;
+$color-accent-hover: lighten($color-accent, 20%);
 
 $color-bg-1: lighten($color-primary, 80%);
 $color-bg-2: #f0ecf5;
+$color-bg-3: #876fab;
 
 $color-hr: rgba(0, 0, 0, 0.1);
 $color-snackbar: #323232;
@@ -51,12 +55,12 @@ $search-breakpoint-xl: 1750px;
 $screen-md: 576px;
 $screen-lg: 768px;
 $screen-xl: 992px;
-$screen-xxl: 1200px;
+$screen-xxl: 1300px;
 
 $container-md: 540px;
 $container-lg: 720px;
 $container-xl: 960px;
-$container-xxl: 1140px;
+$container-xxl: 1200px;
 
 $u1: 8px;
 $u2: 16px;
@@ -70,7 +74,11 @@ $u9: 72px;
 $u10: 80px;
 $u15: 120px;
 $u20: 160px;
+$u30: 240px;
+$u40: 320px;
 $u50: 400px;
+$u60: 480px;
+$u70: 560px;
 $u80: 640px;
 $u100: 800px;
 
