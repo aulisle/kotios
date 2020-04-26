@@ -111,18 +111,13 @@ export default {
 
     routes() {
       return [
-        { name: 'kotios', exact: false },
+        { name: 'index', exact: true },
         // Sama kuin etusivu!
         // Laura + Tomi tarina
         // Mitä kotios tekee missäkin vaiheessa
         // Meidän pärstät
         // Osallistavasta asuntohankkeesta lyhyt kertomus + linkki
 
-        /**
-         * KotiOS - Osallistamalla parempaa elämää
-Nykypäivän rakennuskulttuuri ei aina vastaa asiakkaan yksilöllisiin tarpeisiin. KotiOS haluaa muuttaa tätä kulttuuria paremmaksi ja nostaa asiakkaan rakennusprojektin kuninkaaksi. Mielestämme jokaisen tulisi pystyä toteuttamaan omat asumisen unelmansa, ja saada rahoilleen vastineeksi koti ja asuinympäristö, joilla on asukkaalle aito merkitys.
-KotiOS-alusta tarjoaa uudenlaisen osallistavan asuntorakennuttamisen mallin. Palvelumme tuo yhteen asukkaat, rakentajat, suunnittelijat ja kiinnostavat asuinpaikat. Pidämme huolen, että pääset itse ideoimaan, suunnittelemaan ja toteuttamaan yhdessä muiden samanhenkisten kanssa kodin, jossa toteutuvat juuri sinulle tärkeät asiat. Koko projektin ajan tukenasi on selkeä toimintamalli ja valikoitunut joukko osaavia ammattilaisia, joiden kanssa ryhmärakennuttamishanke etenee hallitusti maaliin.
-         */
         { name: 'phenomenon', exact: false },
         // Osallistava vs ei osallistava
         // Asunto-osuuskuntamalli

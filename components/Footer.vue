@@ -72,7 +72,7 @@ export default {
 
 <style lang="scss" scoped>
 footer {
-  padding: 30px;
+  padding: $u3 $margin-page;
   background-color: $color-primary;
   color: $color-text-alt;
   display: flex;

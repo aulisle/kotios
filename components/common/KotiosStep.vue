@@ -1,5 +1,5 @@
 <template>
-  <v-dialog v-model="dialog" max-width="640">
+  <v-dialog v-if="!large" v-model="dialog" max-width="640">
     <template v-slot:activator="{ on }">
       <button class="step" v-on="on">
         <div class="blob-container">
@@ -28,6 +28,24 @@
       </v-card-actions>
     </v-card>
   </v-dialog>
+  <div v-else class="large">
+    <div class="large-blob">
+      <div class="blob-container">
+        <img :src="getBlob(idx)" class="blob" />
+        <h2 class="blob-number">{{ idx + 1 }}</h2>
+      </div>
+    </div>
+    <div class="large-text">
+      <div class="large-title">
+        <div class="large-title-text">
+          <h3 class="step-title">{{ step.title }}</h3>
+          <h4 v-if="phaseLength" class="duration">Kesto {{ phaseLength }}</h4>
+        </div>
+      </div>
+
+      <p v-for="(p, pIdx) in step.description" :key="pIdx">{{ p }}</p>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -36,7 +54,8 @@ export default {
     step: { type: Object, required: true },
     idx: { type: Number, required: true },
     showLength: { type: Boolean, default: false },
-    phaseLength: { type: String, default: '' }
+    phaseLength: { type: String, default: '' },
+    large: { type: Boolean, default: false }
   },
   data() {
     return {
@@ -100,5 +119,45 @@ export default {
 
 .duration {
   margin-left: $u4;
+}
+
+.large {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: $u5;
+
+  .large-title {
+    display: flex;
+    align-items: center;
+  }
+
+  .large-text {
+    margin-left: $u4;
+  }
+
+  .large-title-text {
+    margin-bottom: $u3;
+  }
+
+  .step-title,
+  .duration {
+    margin-left: 0;
+  }
+
+  .blob-container {
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .large-blob {
+    flex-shrink: 0;
+  }
+
+  .blob {
+    height: $u15;
+    width: $u15;
+    fill: $color-accent;
+    flex-shrink: 0;
+  }
 }
 </style>

@@ -1,14 +1,9 @@
 <template>
   <div class="index-page">
     <div class="hero">
-      <div class="blobs">
-        <img src="/blobs/front-top.svg" class="hero-bg-img bg-img-top" />
-        <img src="/blobs/front-bottom.svg" class="hero-bg-img bg-img-bottom" />
-      </div>
-
       <div class="container-base">
         <h1 class="tagline">
-          Fiksumpi tapa hankkia koti
+          Rikastuttavampi tapa hankkia koti
         </h1>
 
         <p class="description">
@@ -18,28 +13,69 @@
       </div>
     </div>
 
-    <div class="container-base section-margin">
-      <h2>
-        Ihmiset ovat erilaisia – miksi kotien pitäisi olla samanlaisia?
-      </h2>
-      <p>
-        Kotios auttaa sinua luomaan itsellesi unelmakodin, jota et saisi
-        valmiina markkinoilta. Tämä on mahdollista vain osallistamalla.
-        Palvelumme yhdistää samanhenkiset asukkaat ja tukee rakennuttamisen
-        kaikissa vaiheissa aina unelmoinnista muuttoon saakka.
-      </p>
+    <div class="container-base section-margin different-section">
+      <div class="different-section-images">
+        <img src="/about-us/stand-out.jpg" />
+      </div>
+      <div class="different-section-text">
+        <h2>Ihmiset ovat erilaisia – miksi kotien pitäisi olla samanlaisia?</h2>
+        <p>
+          Nykypäivän rakennuskulttuuri ei aina vastaa asiakkaan yksilöllisiin
+          tarpeisiin. KotiOS haluaa muuttaa tätä kulttuuria paremmaksi ja nostaa
+          asiakkaan rakennusprojektin kuninkaaksi. Mielestämme jokaisen tulisi
+          pystyä toteuttamaan omat asumisen unelmansa, ja saada rahoilleen
+          vastineeksi koti ja asuinympäristö, joilla on asukkaalle aito
+          merkitys.
+        </p>
+        <p>
+          KotiOS-alusta tarjoaa uudenlaisen osallistavan asuntorakennuttamisen
+          mallin. Palvelumme tuo yhteen asukkaat, rakentajat, suunnittelijat ja
+          kiinnostavat asuinpaikat. Pidämme huolen, että pääset itse ideoimaan,
+          suunnittelemaan ja toteuttamaan yhdessä muiden samanhenkisten kanssa
+          kodin, jossa toteutuvat juuri sinulle tärkeät asiat. Koko projektin
+          ajan tukenasi on selkeä toimintamalli ja valikoitunut joukko osaavia
+          ammattilaisia, joiden kanssa hankkeesi etenee hallitusti maaliin.
+        </p>
+      </div>
     </div>
 
     <div class="dark-bg">
-      <div class="container-base section-margin">
-        <h2 class="featured-heading">Miten se toimii?</h2>
-        <p>
-          Osallistavassa kodinhankinnassa sinun ja perheesi rooli kasvaa. Et ole
-          enää sivusta katsoja vaan pääset mukaan päättämään oman kotisi
-          ratkaisuista. Tuemme sinua aina unelmoinnista muuttoon asti.
-        </p>
+      <div class="container-base section-margin steps-section">
+        <div class="steps-start">
+          <div class="steps-sticky">
+            <h2 class="featured-heading">KOTIOS polku</h2>
+            <p>
+              Osallistavassa kodinhankinnassa sinun ja perheesi rooli kasvaa. Et
+              ole enää sivusta katsoja vaan pääset mukaan päättämään oman kotisi
+              ratkaisuista. Me ja palveluntarjoajaverkostomme tukee sinua aina
+              unelmoinnista muuttoon asti.
+            </p>
+          </div>
+        </div>
 
-        <kotios-steps />
+        <kotios-steps large class="steps-end" />
+      </div>
+    </div>
+
+    <div class="container-base">
+      <h2>Keitä me olemme?</h2>
+
+      <div class="employee-cards">
+        <employee-card
+          first-name="Veli-Pekka"
+          last-name="Rajala"
+          image="http://aarnipuu.info/wp-content/uploads/2017/09/Passikuva-e1515416987328.jpg"
+          role="Palveluidean kehittäjä ja Kotios-neuvoja"
+          description="Veli-Pekka, tuttavammin VP, on kokenut osallistavan rakennushankkeen asiantuntija. Hän on jo vuodesta 2015 seuraannut, tutkinut ja pohtinut, kuinka osallistamista voitaisiin tehdä paremmin."
+        />
+
+        <employee-card
+          first-name="Aulis"
+          last-name="Leinonen"
+          image="/about-us/aulis.jpg"
+          role="Digiman"
+          description="Aulis vastaa Kotioksella digitaalisten ratkaisuiden kehittämisestä. Hänen työskentelyään motivoi hänen unelmansa toteuttaminen; hän voisi toden teolla sanoa: 'Olin mukana Suomen rakennuttamisen isoimmassa muutoksessa.'"
+        />
       </div>
     </div>
   </div>
@@ -47,11 +83,12 @@
 
 <script>
 import KotiosSteps from '@/components/common/KotiosSteps'
+import EmployeeCard from '@/components/front/EmployeeCard'
 
 export default {
   auth: false,
 
-  components: { KotiosSteps },
+  components: { KotiosSteps, EmployeeCard },
 
   head() {
     return {
@@ -76,6 +113,9 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url('/what-is/hero-3.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
 
   .container-base {
     display: flex;
@@ -139,6 +179,10 @@ export default {
     .bg-img-top {
       top: -20vw;
     }
+
+    .tagline {
+      max-width: $u100;
+    }
   }
 }
 
@@ -197,5 +241,45 @@ export default {
   font-size: $font-xl;
   position: absolute;
   margin-left: 5px;
+}
+
+@include media-breakpoint-up(lg) {
+  .employee-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($u50, 1fr));
+    grid-gap: $u8;
+  }
+
+  .different-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .different-section-images {
+    width: $u60;
+  }
+
+  .different-section-text {
+    width: $u50;
+  }
+
+  .steps-section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .steps-start {
+    max-width: $u50;
+  }
+  .steps-end {
+    max-width: $u80;
+  }
+
+  .steps-sticky {
+    position: sticky;
+    top: 50%;
+    margin-bottom: $u10;
+  }
 }
 </style>

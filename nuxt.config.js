@@ -19,7 +19,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Kotios — Fiksumpi tapa hankkia uusi koti'
+        content: 'Kotios — Rikastuttavampi tapa hankkia uusi koti'
       },
       {
         name: 'msapplication-TileColor',

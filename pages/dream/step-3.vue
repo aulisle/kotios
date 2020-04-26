@@ -67,6 +67,10 @@ export default {
     text-align: center;
   }
 
+  p {
+    max-width: $u50;
+  }
+
   .bottom {
     margin-top: $u10;
     width: 100%;
@@ -79,7 +83,8 @@ export default {
 
 @include media-breakpoint-up(md) {
   .bottom {
-    max-width: 500px;
+    min-width: $u80;
+    max-width: $u80;
   }
 }
 </style>

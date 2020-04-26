@@ -1,7 +1,7 @@
 const translations = {
   'product-name': 'Kotios',
   routes: {
-    index: 'Etusivu',
+    index: 'Kotios',
     login: 'Kirjaudu sisään',
     plans: 'Oma kokoelma',
     'manage-users': 'Käyttäjähallinta',

@@ -1,6 +1,6 @@
 import DreamSession from '../../models/app/dreamSession'
 import Lead from '../../models/app/lead'
-import emailer from '../../emailer'
+// import emailer from '../../emailer'
 
 const saveDreamToLead = async dream => {
   if (!dream.data || !dream.data.email || !dream._id) {

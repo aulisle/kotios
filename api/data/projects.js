@@ -217,7 +217,7 @@ export const a = [
       'Turun kaupunki asettaa yleisellä tarjouskilpailulla ammattirakentajille tarjottavaksi vapaarahoitteiseen asuntotuotantoon asuinkerrostalojen korttelialueen (AK-1) ja sitä palvelevan autopaikoitukselle varatun korttelialueen (LPA-1) osan Skanssin kaupunginosassa.',
       'Skanssissa pyritään kehittämään uudenlaisia energian tuotannon, käytön ja seurannan ratkaisuja. Alueella halutaan kehittää ja pilotoida rakennuskohtaisten ratkaisujen lisäksi myös alueellisia uusia energiaratkaisuja, kuten matalalämpöistä kaukolämpöverkkoa. Skanssin alueelle on laadittu energialiite, jossa sovitaan tavoista, joilla osapuolet edistävät uusiutuvan ja kierrätetyn energian käyttöä, veden- ja energiakulutuksen tehokkuutta sekä kaksisuuntaista energiakauppaa Skanssin alueella. Tontinsaajan tulee toteuttaa energialiitteen mukaiset pakolliset vaatimukset, minkä lisäksi tarjousten vertailussa lisäarvoa tuo sitoutuminen energialiitteen valinnaisten kohtien täyttämiseen.',
       'Kaupungin tavoitteena on korttelin nopea toteutuminen, laadukas suunnittelu ja rakentaminen sekä monipuolinen asuntojakauma.',
-      'Tule toteuttamaan fiksumpi tapa omantyyliseen asumiseen!'
+      'Tule toteuttamaan rikastuttavampi tapa omantyyliseen asumiseen!'
     ],
     history: [],
     neighbourhood: 'skanssi',

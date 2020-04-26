@@ -2,14 +2,17 @@
   <div class="container-base step-5-layout">
     <success-tick variant="front-bottom" />
     <h2>Hienoa, budjettisi on tallennettu!</h2>
+    <p>
+      Voimme nyt ehdottaa sinulle tarkemmin sopivia kohteita.
+    </p>
 
-    <h2>Mitä seuraavaksi?</h2>
+    <h2 class="new-section">Mitä seuraavaksi?</h2>
     <h3>Jaa sivu</h3>
     <p>
       Tunnetko jonkun joka voisi olla kiinnostunut osallistamisesta tai kodin
       rakentamisesta? Jaa sivu sosiaalisessa mediassa.
     </p>
-    <social-sharing :url="path()" inline-template>
+    <social-sharing :url="path()" inline-template class="social">
       <div class="network-icons">
         <network network="email">
           <button class="social-btn email">
@@ -37,14 +40,14 @@
       </div>
     </social-sharing>
 
-    <h3>Ota meihin yhteyttä.</h3>
+    <h3 class="new-section">Ota meihin yhteyttä</h3>
     <p>
-      Jos jotain jäi epäselväksi tai haluat keskustella lisää palvelumme kanssa,
-      voit
+      Jos jotain jäi epäselväksi tai haluat keskustella lisää KotiOS-palvelusta
+      kanssamme, voit
       <base-link :to="{ name: 'contact' }">ottaa meihin yhteyttä</base-link>.
     </p>
 
-    <div class="full-width bottom">
+    <div class="full-width bottom new-section">
       <base-button
         block
         :to="{ name: 'interest-map-add' }"
@@ -98,6 +101,19 @@ export default {
   align-items: center;
   margin-top: $u4;
   margin-bottom: $u10;
+
+  p {
+    max-width: $u50;
+    text-align: center;
+  }
+
+  .new-section {
+    margin-top: $u10;
+  }
+
+  .social {
+    margin-top: $u5;
+  }
 }
 
 .bottom-button {
@@ -106,7 +122,8 @@ export default {
 
 @include media-breakpoint-up(md) {
   .bottom {
-    max-width: 500px;
+    width: $u80;
+    max-width: $u80;
   }
 }
 </style>
