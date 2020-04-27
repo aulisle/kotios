@@ -61,7 +61,10 @@
 
       <comparison-table title="Kotioksella et maksa turhasta">
         <comparison-table-heading :headings="headings" />
-        <comparison-table-row title="Grynderin voittotavoite">
+        <comparison-table-row
+          title="Grynderin voittotavoite"
+          help="Grynderillä tarkoitetaan valta-asuntotuotannossa rakennuttavaa yritystä. Tyypillisesti grynderi on rakennusliike."
+        >
           <comparison-table-cell>
             <base-icon>mdi-close</base-icon>
           </comparison-table-cell>
@@ -133,7 +136,10 @@
           </comparison-table-cell>
         </comparison-table-row>
 
-        <comparison-table-row title="Kotios-palvelu">
+        <comparison-table-row
+          title="Kotios-palvelu"
+          help="Kotios-palvelun hinnoittelu perustuu sen kautta tilattujen palveluntarjoajien välityspalkkioon. Tarkka palvelun hinta riippuu tekemistänne hankinnoista ja niiden suuruuksista. Esimerkiksi ryhmäytyminen on hankkeellenne ilmaista. Käytännössä palvelun kokonaishinta on noin 0,5%-3% välillä kotisi hankintakustannuksista."
+        >
           <comparison-table-cell>
             <base-icon>mdi-minus</base-icon>
           </comparison-table-cell>

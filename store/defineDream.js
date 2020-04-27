@@ -115,6 +115,8 @@ export const actions = {
     }
 
     this.$axios.put(`/api/dreams/update/${state._id}`, state).then(res => {
+      // eslint-disable-next-line
+      console.log('UPDATE', res)
       // Save the ID in case a new dream needed to be created
       commit('setValue', { field: '_id', value: res.data._id })
     })

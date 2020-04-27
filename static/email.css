@@ -1,6 +1,6 @@
 body {
   background: #fafafa;
-  font-family: 'Roboto', arial, sans-serif;
+  font-family: 'Gilroy', arial, sans-serif;
   text-align: center;
 }
 
@@ -14,6 +14,10 @@ h1 {
 .hero {
   padding: 50px 0px;
   background-color: #281348;
+}
+
+.kotios-logo {
+  max-width: 120px;
 }
 
 h1 {
@@ -35,4 +39,48 @@ a {
 
 p {
   padding: 10px;
+}
+
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://kotios-staging.herokuapp.com/fonts/Gilroy-Thin.otf');
+  font-weight: 200;
+}
+
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://kotios-staging.herokuapp.com/fonts/Gilroy-Light.otf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://kotios-staging.herokuapp.com/fonts/Gilroy-Regular.otf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://kotios-staging.herokuapp.com/fonts/Gilroy-SemiBold.otf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://kotios-staging.herokuapp.com/fonts/Gilroy-Bold.otf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://kotios-staging.herokuapp.com/fonts/Gilroy-Bold.otf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://kotios-staging.herokuapp.com/fonts/Gilroy-Black.otf');
+  font-weight: 800;
 }

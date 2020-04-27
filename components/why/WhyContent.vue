@@ -51,7 +51,7 @@
 
       <div class="container-base stats-container">
         <div class="stat">
-          <h3>10</h3>
+          <h3>8</h3>
           <h4>Suomessa viime vuonna valmistunutta osallistavaa hanketta</h4>
         </div>
         <div class="stat">

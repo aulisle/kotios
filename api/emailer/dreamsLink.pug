@@ -3,10 +3,9 @@ html
   head
   title #{title}
   link(rel="stylesheet", href=css, data-inline)
-  link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap", data-inline)
   body
     div(class='hero')
-      img(src=publicUrl + "kotios-logo.svg", data-inline)
-      h1 Kotios - #{title}
+      img(src=publicUrl + "kotios-logo-white.svg", data-inline, class='kotios-logo')
+      h1 #{title}
     p Hienoa, loit kohteen. Voit katsoa lisäämäsi kohteet alla olevasta linkistä.
     a(class='button', href=dreamsUrl) Katso kohteeni

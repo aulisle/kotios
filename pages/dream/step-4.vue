@@ -75,6 +75,10 @@ export default {
         if (typeof val === 'string') {
           val = parseInt(val)
         }
+
+        // eslint-disable-next-line
+        console.log('SET VALUE', val)
+
         this.$store.dispatch('defineDream/setValue', {
           field: 'startingCapital',
           value: val

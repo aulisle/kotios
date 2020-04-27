@@ -18,6 +18,9 @@ const saveDreamToLead = async dream => {
   let lead = await Lead.findOne({ email })
 
   if (!lead) {
+    // eslint-disable-next-line
+    console.log('CREATING LEAD', email, dream)
+
     // Create new if the lead does not exist yet
     lead = new Lead({
       email,
@@ -35,6 +38,9 @@ const saveDreamToLead = async dream => {
   }).exec()
 
   if (!leadWithDream) {
+    // eslint-disable-next-line
+    console.log('UPDATING LEAD', email, dream)
+
     // If there is no lead with dream, push a new one in
     await Lead.findOneAndUpdate(
       {
@@ -136,7 +142,7 @@ const controller = {
       return next()
     }
 
-    res.json(req.body)
+    res.json({ ...req.body, _id: dreamId })
   },
 
   sendEmail: async (req, res, next) => {
@@ -146,7 +152,9 @@ const controller = {
     }
     const lead = await Lead.findOne({ email: email.toLowerCase() })
 
-    if (!lead) {
+    // eslint-disable-next-line
+    console.log('GOT LEAD', lead)
+    if (lead == null) {
       next()
     }
 

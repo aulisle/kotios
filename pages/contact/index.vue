@@ -97,6 +97,7 @@ export default {
 
 .form {
   margin-top: $u5;
+  margin-bottom: $u10;
   max-width: $u100;
 }
 </style>
