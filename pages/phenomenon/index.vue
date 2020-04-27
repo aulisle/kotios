@@ -1,5 +1,7 @@
 <template>
   <div>
+    <interested-bar />
+
     <div class="hero">
       <div class="container-base">
         <h1 class="hero-title">
@@ -54,10 +56,12 @@
 
 <script>
 import WhyContent from '@/components/why/WhyContent'
+import InterestedBar from '@/components/common/InterestedBar'
 
 export default {
   components: {
-    WhyContent
+    WhyContent,
+    InterestedBar
   }
 }
 </script>

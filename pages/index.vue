@@ -1,5 +1,7 @@
 <template>
   <div class="index-page">
+    <interested-bar />
+
     <div class="hero">
       <div class="container-base">
         <h1 class="tagline">
@@ -87,11 +89,12 @@
 <script>
 import KotiosSteps from '@/components/common/KotiosSteps'
 import EmployeeCard from '@/components/front/EmployeeCard'
+import InterestedBar from '@/components/common/InterestedBar'
 
 export default {
   auth: false,
 
-  components: { KotiosSteps, EmployeeCard },
+  components: { KotiosSteps, EmployeeCard, InterestedBar },
 
   head() {
     return {

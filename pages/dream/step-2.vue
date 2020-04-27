@@ -109,8 +109,10 @@
 
 <script>
 import { mapState } from 'vuex'
+import TextToNumber from '@/components/common/textToNumberMixin'
 
 export default {
+  mixins: [TextToNumber],
   data() {
     return {
       importantOptions: [
@@ -142,9 +144,7 @@ export default {
       },
 
       set(val) {
-        if (typeof val === 'string') {
-          val = parseInt(val)
-        }
+        val = this.textToNumber(val)
         this.$store.dispatch('defineDream/setValue', {
           field: 'distance',
           value: val

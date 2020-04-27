@@ -50,6 +50,7 @@
 
 <script>
 import { mapState } from 'vuex'
+import TextToNumber from '@/components/common/textToNumberMixin'
 export default {
   filters: {
     toMoney(val) {
@@ -64,6 +65,7 @@ export default {
       }
     }
   },
+  mixins: [TextToNumber],
   computed: {
     ...mapState('defineDream', ['startingCapital', 'moneyPerMonth']),
     startingCapitalModel: {
@@ -72,12 +74,7 @@ export default {
       },
 
       set(val) {
-        if (typeof val === 'string') {
-          val = parseInt(val)
-        }
-
-        // eslint-disable-next-line
-        console.log('SET VALUE', val)
+        val = this.textToNumber(val)
 
         this.$store.dispatch('defineDream/setValue', {
           field: 'startingCapital',
@@ -90,9 +87,7 @@ export default {
         return this.moneyPerMonth
       },
       set(val) {
-        if (typeof val === 'string') {
-          val = parseInt(val)
-        }
+        val = this.textToNumber(val)
 
         this.$store.dispatch('defineDream/setValue', {
           field: 'moneyPerMonth',

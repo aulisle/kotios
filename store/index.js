@@ -5,6 +5,7 @@ export const actions = {
 
   async nuxtClientInit({ dispatch }) {
     await dispatch('getSessionState')
+    await dispatch('interestedBar/initInterestedBar')
   },
 
   async getSessionState({ dispatch, commit }) {
