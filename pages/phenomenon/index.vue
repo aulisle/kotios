@@ -5,16 +5,18 @@
         <h1 class="hero-title">
           Osallistavassa asuntohankkeessa asukkaat pääsevät vaikuttamaan
         </h1>
+        <!--
         <p>
           Osallistava asuntohanke on vaihtoehto perinteisille
           tuotantokeskeisil­le toimintamalleille. Siinä asukkaat pääsevät
           hankkeen aikana vaikuttamaan ja päättämään ratkaisuista.
         </p>
+        -->
       </div>
     </div>
 
-    <div class="container-base key-points">
-      <h2 class="models-header">Helpompi, halvempi, hauskempi</h2>
+    <!--<div class="container-base key-points">
+      <h2 class="models-header">Yksilöllinen, halvempi, hauskempi</h2>
 
       <div class="grid key-points-grid">
         <div>
@@ -44,80 +46,20 @@
           mahdollisimman järkevästi.
         </div>
       </div>
-    </div>
+    </div>-->
 
-    <div class="container-base models">
-      <h2 class="models-header">
-        Hanketyyppi joka asujalle
-      </h2>
-
-      <p class="models-description">
-        Osallistavien asuntohankkeiden kirjo on laaja. Niillä voidaan toteuttaa
-        niin pientaloja kuin kerrostaloja sekä omistus- ja asumisoikeusasuntoja.
-        Suurimmat osallistamisen edut saavutetaan alueilla, joissa
-        omakotitalorakentaminen ei ole mahdollista.
-      </p>
-
-      <div class="grid">
-        <div class="project-type">
-          <h3>Ryhmärakennushanke</h3>
-          <p>
-            Ryhmärakennuttamisessa joukko tavallisia kansalaisia toimii yhteisen
-            rakennushankkeen rakennuttajina.
-          </p>
-          <base-button class="md-primary">
-            Näytä ryhmärakennushankkeet
-          </base-button>
-        </div>
-        <div class="project-type">
-          <h3>Asunto-osuuskuntahanke</h3>
-          <p>
-            Asunto-osuuskuntahankkeessa kansalaiset muodostavat
-            asunto-osuuskunnan, joka toimii hankkeen rakennuttajana. Hanketyyppi
-            mahdollistaa uudenlaisia rahoitus- ja omistusmuotoja.
-          </p>
-
-          <base-button class="md-primary">
-            Näytä asunto-osuuskuntahankkeet
-          </base-button>
-        </div>
-        <div class="project-type">
-          <h3>Konsulttivetoinen hanke</h3>
-          <p>
-            Konsulttivetoisessa hankkeessa konsultti perustaa ja suunnittelee
-            hankkeen. Asukkaat pääsevät yksilöimään suunnitelmia ja
-            rakennuttavat hankkeen.
-          </p>
-
-          <base-button class="md-primary">
-            Näytä konsulttivetoiset hankkeet
-          </base-button>
-        </div>
-        <div class="project-type">
-          <h3>Rakennuttajavetoinen hanke</h3>
-          <p>
-            Rakennuttajavetoisessa hankkeessa rakennuttaja osallistaa tulevat
-            asukkaat hankkeen aikana. Rakennuttaja suunnittelee ja toteuttaa
-            hankkeen oikeiden asukkaiden toiveiden mukaisesti.
-          </p>
-
-          <base-button class="md-primary">
-            Näytä rakennuttajavetoiset hankkeet
-          </base-button>
-        </div>
-      </div>
-
-      <nuxt-link :to="{ name: 'kotios' }">
-        <base-button class="md-primary md-large md-raised why-kotios">
-          Miten Kotios tukee hankkeita?
-        </base-button>
-      </nuxt-link>
-    </div>
+    <why-content />
   </div>
 </template>
 
 <script>
-export default {}
+import WhyContent from '@/components/why/WhyContent'
+
+export default {
+  components: {
+    WhyContent
+  }
+}
 </script>
 
 <style lang="scss" scoped>

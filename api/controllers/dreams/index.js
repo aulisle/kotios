@@ -1,11 +1,17 @@
 import DreamSession from '../../models/app/dreamSession'
 import Lead from '../../models/app/lead'
-// import emailer from '../../emailer'
+import emailer from '../../emailer'
 
 const saveDreamToLead = async dream => {
   if (!dream.data || !dream.data.email || !dream._id) {
     return
   }
+
+  // Remove existing dreams with the ID
+  await Lead.findOneAndUpdate(
+    { dreams: { _id: dream._id } },
+    { $pull: { dreams: { _id: dream._id } } }
+  )
 
   const email = dream.data.email.toLowerCase()
 
@@ -119,14 +125,11 @@ const controller = {
       ).exec()
 
       if (!updateResult) {
-        // eslint-disable-next-line
-        console.error('NO UPDATE RESULT!')
-
-        // TODO: CREATE SUCH DREAM SESSION
-        return next()
+        // If one didn't exist yet, create a new one
+        return this.new(req, res)
       }
 
-      // await saveDreamToLead(updateResult.dreams[0])
+      await saveDreamToLead(updateResult.dreams[0])
     } catch (e) {
       // eslint-disable-next-line
       console.error(e)
@@ -141,7 +144,6 @@ const controller = {
     if (!email) {
       next()
     }
-    /*
     const lead = await Lead.findOne({ email: email.toLowerCase() })
 
     if (!lead) {
@@ -149,7 +151,6 @@ const controller = {
     }
 
     emailer.sendDreamsUrl(email, lead._id)
-    */
     res.json({ ok: 'true' })
   },
 

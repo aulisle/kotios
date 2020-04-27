@@ -7,7 +7,12 @@
             {{ row.title }}
           </td>
           <td>
-            {{ row.value }}
+            <base-external-link v-if="row.link" :href="row.link">
+              {{ row.value }}
+            </base-external-link>
+            <template v-else>
+              {{ row.value }}
+            </template>
           </td>
         </tr>
       </v-simple-table>
@@ -30,7 +35,8 @@ export default {
       if (this.plot.owner) {
         res.push({
           title: 'Tontin omistaja',
-          value: 'Varpe Oy'
+          value: this.plot.owner,
+          link: this.plot.ownerUrl
         })
       }
 

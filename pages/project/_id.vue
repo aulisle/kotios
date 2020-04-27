@@ -45,7 +45,7 @@
         />
       </v-tab-item>
       <v-tab-item>
-        <project-why-tab class="container-base project-tab-item" />
+        <project-why-tab class="project-tab-item" />
       </v-tab-item>
       <v-tab-item>
         <project-location-tab

@@ -17,12 +17,14 @@ import BaseIcon from '~/components/base/BaseIcon.vue'
 import BaseSlider from '~/components/base/BaseSlider.vue'
 import BaseFieldSet from '~/components/base/BaseFieldSet.vue'
 import BaseAutocomplete from '~/components/base/BaseAutocomplete.vue'
+import BaseTextarea from '~/components/base/BaseTextarea.vue'
 import TransitionPop from '~/components/base/TransitionPop.vue'
 
 Vue.use(VueMaterial)
 
 Vue.component('base-button', BaseButton)
 Vue.component('base-input', BaseInput)
+Vue.component('base-textarea', BaseTextarea)
 Vue.component('base-toggle', BaseToggle)
 Vue.component('base-password-input', BasePasswordInput)
 Vue.component('base-radio-group', BaseRadioGroup)

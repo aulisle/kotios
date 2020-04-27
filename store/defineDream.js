@@ -109,12 +109,16 @@ export const actions = {
     dispatch('sendToApi')
   }, DEBOUNCE_RATE),
 
-  sendToApi({ state, dispatch }) {
+  sendToApi({ state, dispatch, commit }) {
     if (!state._id) {
       return
     }
 
-    this.$axios.put(`/api/dreams/update/${state._id}`, state)
+    this.$axios.put(`/api/dreams/update/${state._id}`, state).then(res => {
+      // Save the ID in case a new dream needed to be created
+      commit('setValue', { field: '_id', value: res.data._id })
+    })
+
     dispatch('session/save', null, { root: true })
   },
 
@@ -134,7 +138,8 @@ export const actions = {
   async finishSoftValues({ state, commit, dispatch, getters }) {
     await this.$axios
       .put(`/api/dreams/update/${state._id}`, getters['serialised'])
-      .then(() => {
+      .then(res => {
+        commit('setValue', { field: '_id', value: res.data._id })
         return this.$axios.post(`/api/dreams/email`, { email: state.email })
       })
       .then(() => {
@@ -146,7 +151,8 @@ export const actions = {
   async finishBudget({ state, commit, dispatch, getters }) {
     await this.$axios
       .put(`/api/dreams/update/${state._id}`, getters['serialised'])
-      .then(() => {
+      .then(res => {
+        commit('setValue', { field: '_id', value: res.data._id })
         commit('setValue', { field: 'finishedSteps', values: 3 })
         dispatch('session/save', null, { root: true })
       })

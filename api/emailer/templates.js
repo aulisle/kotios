@@ -5,6 +5,7 @@ import Logger from '../../plugins/logger'
 const invite = require.resolve('./invite.pug')
 const reset = require.resolve('./reset.pug')
 const dreamsLink = require.resolve('./dreamsLink.pug')
+const contactQuery = require.resolve('./contactQuery.pug')
 
 const renderer = new Renderer()
 
@@ -54,6 +55,22 @@ export const renderDreamsLink = ({ title, publicUrl, dreamsUrl }) => {
   const css = `${publicUrl}email.css`
   return renderer
     .render(dreamsLink, { title, publicUrl, dreamsUrl, css })
+    .then(result => {
+      if (process.env.NODE_ENV === 'development') {
+        previewEmail({ to: '', from: '', subject: 'subject', html: result })
+      }
+
+      return result
+    })
+    .catch(err => {
+      Logger.error(err)
+    })
+}
+
+export const renderContactQuery = ({ name, email, message, publicUrl }) => {
+  const css = `${publicUrl}email.css`
+  return renderer
+    .render(contactQuery, { name, publicUrl, message, email, css })
     .then(result => {
       if (process.env.NODE_ENV === 'development') {
         previewEmail({ to: '', from: '', subject: 'subject', html: result })

@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+  title #{title}
+  link(rel="stylesheet", href=css, data-inline)
+  link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap", data-inline)
+  body
+    div(class='hero')
+      h1 Yhteydenotto - #{name}
+    p #{name} on ottanut Kotios-palveluun yhteyttä yhteydenottolomakkeella. 
+    p Hänen sähköpostinsa on #{email}.
+    p Viesti:
+    p #{message}

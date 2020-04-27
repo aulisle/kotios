@@ -55,6 +55,7 @@
     ],
     "plot": {
       "owner": "Varpe Oy",
+      "ownerUrl": "http://www.varpe.fi",
       "area": 3559,
       "buildable": 5600
     }

@@ -43,7 +43,7 @@ export default {
 
   img {
     width: 100%;
-    height: $u50;
+    height: $u40;
     object-fit: cover;
   }
 

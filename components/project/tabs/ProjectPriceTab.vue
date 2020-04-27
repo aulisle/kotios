@@ -6,7 +6,7 @@
       ja <a href="#" @click="$emit('toWhy')">roolin</a> mukaan. Tarkkaa hinnan
       määrittelyä ennen asukkaiden ryhmäytymistä hankkeelle ei ole siis
       mahdollista antaa. Voimme kuitenkin luvata, että osallistamalla saat
-      enemmän, kuin markkinoilta muuten.
+      rahallesi enemmän vastinetta, kuin markkinoilta muuten.
     </project-p>
 
     <project-p>
@@ -63,82 +63,82 @@
         <comparison-table-heading :headings="headings" />
         <comparison-table-row title="Grynderin voittotavoite">
           <comparison-table-cell>
-            €
+            <base-icon>mdi-close</base-icon>
           </comparison-table-cell>
           <comparison-table-cell highlight>
-            <base-icon color="white">mdi-emoticon</base-icon>
+            <base-icon color="white">mdi-minus</base-icon>
           </comparison-table-cell>
         </comparison-table-row>
 
         <comparison-table-row title="Grynderin riskikate">
           <comparison-table-cell>
-            €
+            <base-icon>mdi-close</base-icon>
           </comparison-table-cell>
           <comparison-table-cell highlight>
-            <base-icon color="white">mdi-emoticon</base-icon>
+            <base-icon color="white">mdi-minus</base-icon>
           </comparison-table-cell>
         </comparison-table-row>
 
         <comparison-table-row title="Asunnonvälittäjän komissio">
           <comparison-table-cell>
-            €
+            <base-icon>mdi-close</base-icon>
           </comparison-table-cell>
           <comparison-table-cell highlight>
-            <base-icon color="white">mdi-emoticon</base-icon>
+            <base-icon color="white">mdi-minus</base-icon>
           </comparison-table-cell>
         </comparison-table-row>
 
         <comparison-table-row title="Tontti">
           <comparison-table-cell>
-            €
+            <base-icon>mdi-close</base-icon>
           </comparison-table-cell>
           <comparison-table-cell highlight>
-            €
+            <base-icon color="white">mdi-close</base-icon>
           </comparison-table-cell>
         </comparison-table-row>
 
         <comparison-table-row title="Rahoitus">
           <comparison-table-cell>
-            €
+            <base-icon>mdi-close</base-icon>
           </comparison-table-cell>
           <comparison-table-cell highlight>
-            €
+            <base-icon color="white">mdi-close</base-icon>
           </comparison-table-cell>
         </comparison-table-row>
 
         <comparison-table-row title="Markkinointi">
           <comparison-table-cell>
-            €
+            <base-icon>mdi-close</base-icon>
           </comparison-table-cell>
           <comparison-table-cell highlight>
-            €
+            <base-icon color="white">mdi-close</base-icon>
           </comparison-table-cell>
         </comparison-table-row>
 
         <comparison-table-row title="Suunnittelu">
           <comparison-table-cell>
-            €
+            <base-icon>mdi-close</base-icon>
           </comparison-table-cell>
           <comparison-table-cell highlight>
-            €
+            <base-icon color="white">mdi-close</base-icon>
           </comparison-table-cell>
         </comparison-table-row>
 
         <comparison-table-row title="Rakennutus">
           <comparison-table-cell>
-            €
+            <base-icon>mdi-close</base-icon>
           </comparison-table-cell>
           <comparison-table-cell highlight>
-            €
+            <base-icon color="white">mdi-close</base-icon>
           </comparison-table-cell>
         </comparison-table-row>
 
         <comparison-table-row title="Kotios-palvelu">
           <comparison-table-cell>
-            <base-icon>mdi-emoticon</base-icon>
+            <base-icon>mdi-minus</base-icon>
           </comparison-table-cell>
           <comparison-table-cell highlight>
-            €
+            <base-icon color="white">mdi-close</base-icon>
           </comparison-table-cell>
         </comparison-table-row>
       </comparison-table>
@@ -284,7 +284,10 @@ export default {
 
   data() {
     return {
-      headings: ['Valtatuotanto', { title: 'Kotios', highlight: true }]
+      headings: [
+        'Lisää hintaa valtatuotannossa',
+        { title: 'Lisää hintaa Kotios-kodissa', highlight: true }
+      ]
     }
   }
 }

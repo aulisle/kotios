@@ -6,7 +6,8 @@ import sgMail from '@sendgrid/mail'
 import {
   renderInvitation,
   renderResetPassword,
-  renderDreamsLink
+  renderDreamsLink,
+  renderContactQuery
 } from './templates'
 import moment from 'moment'
 
@@ -16,6 +17,8 @@ const DREAMS_SUBJECT = 'Kohde lisätty'
 
 let config = {}
 let $publicUrl = ''
+
+const SERVICE_EMAILS = ['aulis.leinonen@reason.fi']
 
 const emailer = {
   /**
@@ -91,6 +94,23 @@ const emailer = {
       const data = { ...config, to: email, subject: DREAMS_SUBJECT, html }
       sgMail.send(data)
     })*/
+  },
+
+  sendContactQuery({ email, message, name }) {
+    renderContactQuery({
+      publicUrl: $publicUrl,
+      email,
+      message,
+      name
+    }).then(html => {
+      const data = {
+        ...config,
+        to: SERVICE_EMAILS,
+        subject: `Kotios yhteydenotto - ${name}`,
+        html
+      }
+      sgMail.send(data)
+    })
   }
 }
 

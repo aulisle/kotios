@@ -28,7 +28,10 @@
           merkitys.
         </p>
         <p>
-          KotiOS-alusta tarjoaa uudenlaisen osallistavan asuntorakennuttamisen
+          KotiOS-palvelu tarjoaa uudenlaisen
+          <base-link :to="{ name: 'phenomenon' }">
+            osallistavan asuntorakennuttamisen
+          </base-link>
           mallin. Palvelumme tuo yhteen asukkaat, rakentajat, suunnittelijat ja
           kiinnostavat asuinpaikat. Pidämme huolen, että pääset itse ideoimaan,
           suunnittelemaan ja toteuttamaan yhdessä muiden samanhenkisten kanssa
@@ -107,7 +110,7 @@ export default {
   background: $color-primary;
   background-size: cover;
   background-position: 0% 100%;
-  height: 100vh;
+  height: 80vh;
   position: relative;
   overflow: hidden;
   display: flex;
