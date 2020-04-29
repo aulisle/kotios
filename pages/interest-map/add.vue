@@ -1,6 +1,5 @@
 <template>
   <div class="container-base">
-    <map-heading title="Lisää unelmakoti" :back="{ name: 'interest-map' }" />
     <div class="map-center">
       <base-icon size="48" class="map-marker-aim">mdi-map-marker</base-icon>
     </div>
@@ -13,18 +12,14 @@
 </template>
 
 <script>
-import MapHeading from '@/components/interestMap/MapHeading'
 import { TYPES } from '@/store/defineDream'
 export default {
-  components: {
-    MapHeading
-  },
   fetch({ store }) {
     store.commit('interestMap/setMode', 'add')
 
     store.commit('defineDream/initType', TYPES.AREA)
     store.commit('defineDream/setValue', {
-      field: 'center',
+      field: 'location',
       value: store.state.interestMap.center
     })
   },

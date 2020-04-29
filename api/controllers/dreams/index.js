@@ -73,34 +73,38 @@ const saveDreamToLead = async dream => {
   ).exec()
 }
 
+const createNew = async (req, res) => {
+  let dreamSession = await DreamSession.findOne({
+    sessionId: req.sessionID
+  }).exec()
+
+  if (!dreamSession || dreamSession.length == 0) {
+    dreamSession = new DreamSession({
+      sessionId: req.sessionID,
+      dreams: [],
+      createdAt: new Date()
+    })
+  }
+
+  // Remove ID
+  delete req.body._id
+
+  dreamSession.dreams = [
+    ...dreamSession.dreams,
+    { data: req.body, createdAt: new Date() }
+  ]
+
+  await dreamSession.save()
+
+  await saveDreamToLead(dreamSession.dreams[dreamSession.dreams.length - 1])
+
+  // Return the new dream
+  return res.json(dreamSession.dreams[dreamSession.dreams.length - 1])
+}
+
 const controller = {
   new: async (req, res) => {
-    let dreamSession = await DreamSession.findOne({
-      sessionId: req.sessionID
-    }).exec()
-
-    if (!dreamSession || dreamSession.length == 0) {
-      dreamSession = new DreamSession({
-        sessionId: req.sessionID,
-        dreams: [],
-        createdAt: new Date()
-      })
-    }
-
-    // Remove ID
-    delete req.body._id
-
-    dreamSession.dreams = [
-      ...dreamSession.dreams,
-      { data: req.body, createdAt: new Date() }
-    ]
-
-    await dreamSession.save()
-
-    await saveDreamToLead(dreamSession.dreams[dreamSession.dreams.length - 1])
-
-    // Return the new dream
-    return res.json(dreamSession.dreams[dreamSession.dreams.length - 1])
+    return createNew(req, res)
   },
 
   update: async (req, res, next) => {
@@ -132,7 +136,7 @@ const controller = {
 
       if (!updateResult) {
         // If one didn't exist yet, create a new one
-        return this.new(req, res)
+        return createNew(req, res)
       }
 
       await saveDreamToLead(updateResult.dreams[0])

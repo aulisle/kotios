@@ -1,23 +1,18 @@
 <template>
-  <interest-map class="interest-map">
+  <interest-map-container class="interest-map">
     <nuxt-child />
-  </interest-map>
+  </interest-map-container>
 </template>
 
 <script>
-import InterestMap from '@/components/interestMap/Map'
+import InterestMapContainer from '@/components/interestMap/InterestMapContainer'
 
 export default {
   components: {
-    InterestMap
+    InterestMapContainer
   },
   layout: 'interest-map'
 }
 </script>
 
-<style lang="scss" scoped>
-.interest-map {
-  position: relative;
-  height: calc(100vh - #{$top-bar-height});
-}
-</style>
+<style lang="scss" scoped></style>

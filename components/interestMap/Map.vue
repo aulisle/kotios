@@ -168,7 +168,9 @@ export default {
   },
   beforeDestroy() {
     this.markers.forEach(marker => {
-      marker.vueInstance.$destroy()
+      if (marker.vueInstance) {
+        marker.vueInstance.$destroy()
+      }
     })
   },
   methods: {
