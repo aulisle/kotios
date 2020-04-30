@@ -7,7 +7,6 @@
       <video autoplay muted loop class="hero-img">
         <source :src="video" />
       </video>
-      <h2>{{ title }}</h2>
     </div>
     <button v-else class="hero-img">
       <img :src="images[0]" />

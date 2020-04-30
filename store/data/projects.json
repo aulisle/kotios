@@ -23,7 +23,7 @@
         "type": 2,
         "title": "Uusikaupunki – Idyllinen merenrantakaupunki, jossa kaikki on lähellä",
         "paragraphs": ["Tämän lähemmäksi et Uudenkaupungin palveluja pääse! Uusikaupunki on idyllinen pikkukaupunki, joka tarjoaa monipuoliset palvelut, hyvät liikuntamahdollisuudet ja mielenkiintoista kulttuuritarjontaa. Pikkukaupungin kiireetön, mutta aktiivinen elämänmeno tempaa mukaansa. Blasieholmankadun kerrostalossa kaikki on vain lyhyen kävelymatkan päässä. Itäpuiston kuntoradalle on matkaa vain pari korttelia ja Ruokolanjärven ja Käätyjärven maisemia pääset ihailemaan 5 minuutin kävelymatkan päässä. Rautatieasema on vieressä ja sairaala on tien toisella puolella."],
-        "imgs": ["/uusikaupunki/sea.jpg"]
+        "imgs": ["https://kotios-bucket.s3.eu-north-1.amazonaws.com/projects/uusikaupunki-blasieholmankatu/idyllic-port-3.jpg"]
       },
       {
         "type": 3,
@@ -38,10 +38,12 @@
       }
     ],
     "video": [
-      "/uusikaupunki/video-blasieholmankatu.mp4"
+      "https://kotios-bucket.s3.eu-north-1.amazonaws.com/videos/uki-full.mp4"
     ],
     "images": [
-      "/uusikaupunki/header.png"
+      "https://kotios-bucket.s3.eu-north-1.amazonaws.com/projects/uusikaupunki-blasieholmankatu/idyllic-hori.jpg",
+      "https://kotios-bucket.s3.eu-north-1.amazonaws.com/projects/uusikaupunki-blasieholmankatu/idyllic-hori-2.jpg",
+      "https://kotios-bucket.s3.eu-north-1.amazonaws.com/projects/uusikaupunki-blasieholmankatu/idyllic-port-3.jpg"
     ],
     "contacts": [
         {
