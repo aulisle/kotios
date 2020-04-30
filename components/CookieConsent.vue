@@ -31,12 +31,12 @@ export default {
   created() {
     if (process.client) {
       this.$nextTick(() => {
-        //const consent = localStorage.getItem('cookie-consent')
+        const consent = localStorage.getItem('cookie-consent')
 
-        //if (consent == null) {
-        this.showCookieConsent = true
-        // localStorage.setItem('cookie-consent', 'true')
-        //}
+        if (consent == null) {
+          this.showCookieConsent = true
+          localStorage.setItem('cookie-consent', 'true')
+        }
       })
     }
   }
