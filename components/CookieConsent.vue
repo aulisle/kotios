@@ -1,19 +1,21 @@
 <template>
   <transition-pop>
     <v-toolbar v-if="showCookieConsent" class="cookie-consent">
-      <p>Hyväksy evästeet</p>
-      <p>
-        Tämä sivusto käyttää evästeitä. Jatkamalla sivuston käyttöä hyväksyt
-        evästeiden käytön.
+      <div class="consent-content">
+        <p class="consent-paragraph">Hyväksy evästeet</p>
+        <p class="consent-paragraph">
+          Tämä sivusto käyttää evästeitä. Jatkamalla sivuston käyttöä hyväksyt
+          evästeiden käytön.
 
-        <nuxt-link :to="{ name: 'data-privacy' }">
-          Tietosuojakäytäntö
-        </nuxt-link>
-      </p>
+          <nuxt-link :to="{ name: 'data-privacy' }">
+            Tietosuojakäytäntö
+          </nuxt-link>
+        </p>
 
-      <base-button @click="showCookieConsent = false">
-        Sulje
-      </base-button>
+        <base-button @click="showCookieConsent = false">
+          Sulje
+        </base-button>
+      </div>
     </v-toolbar>
   </transition-pop>
 </template>
@@ -29,12 +31,12 @@ export default {
   created() {
     if (process.client) {
       this.$nextTick(() => {
-        const consent = localStorage.getItem('cookie-consent')
+        //const consent = localStorage.getItem('cookie-consent')
 
-        if (consent == null) {
-          this.showCookieConsent = true
-          localStorage.setItem('cookie-consent', 'true')
-        }
+        //if (consent == null) {
+        this.showCookieConsent = true
+        // localStorage.setItem('cookie-consent', 'true')
+        //}
       })
     }
   }
@@ -49,7 +51,20 @@ export default {
   right: 0;
   z-index: 100;
   display: flex;
+  justify-content: stretch;
+  width: 100vw;
+}
+
+.consent-content {
+  display: flex;
   justify-content: space-between;
-  padding: 15px;
+  align-items: center;
+  padding: $u2 $u6;
+  width: 100vw;
+}
+
+.consent-paragraph {
+  margin: 0;
+  margin-right: $u2;
 }
 </style>
