@@ -18,6 +18,7 @@ import BaseSlider from '~/components/base/BaseSlider.vue'
 import BaseFieldSet from '~/components/base/BaseFieldSet.vue'
 import BaseAutocomplete from '~/components/base/BaseAutocomplete.vue'
 import BaseTextarea from '~/components/base/BaseTextarea.vue'
+import BaseDropdown from '~/components/base/BaseDropdown.vue'
 import TransitionPop from '~/components/base/TransitionPop.vue'
 
 Vue.use(VueMaterial)
@@ -38,6 +39,7 @@ Vue.component('base-icon', BaseIcon)
 Vue.component('base-slider', BaseSlider)
 Vue.component('base-field-set', BaseFieldSet)
 Vue.component('base-checkbox', BaseCheckbox)
+Vue.component('base-dropdown', BaseDropdown)
 
 const createTitle = {
   install: Vue => {

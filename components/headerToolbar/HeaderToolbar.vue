@@ -31,6 +31,7 @@
             :key="route.name"
             :to="{ name: route.name }"
             :class="{ exact: route.exact }"
+            class="link-item"
           >
             {{ $t(`routes.${route.name}`) }}
           </nuxt-link>
@@ -40,14 +41,41 @@
             :key="route.name"
             :to="{ name: route.name }"
             :class="{ exact: route.exact }"
-            class="extra"
+            class="extra link-item"
           >
             {{ $t(`routes.${route.name}`) }}
           </nuxt-link>
 
-          <base-button color="secondary" text class="extra-toggle">
-            <base-icon color="secondary">mdi-dots-horizontal</base-icon>
-          </base-button>
+          <base-dropdown :active.sync="dropdownOpen" class="extra-dropdown">
+            <template v-slot:activator="{ on }">
+              <base-button
+                color="secondary"
+                text
+                class="extra-toggle"
+                v-on="on"
+              >
+                <base-icon color="secondary">mdi-dots-horizontal</base-icon>
+              </base-button>
+            </template>
+            <template>
+              <v-list flat tile dark class="extra-dropdown-list">
+                <v-list-item
+                  v-for="route in extraRoutes"
+                  :key="route.name"
+                  :to="{ name: route.name }"
+                  :class="{ exact: route.exact }"
+                  class="extra-list-item link-item"
+                  active-class="nuxt-link-active"
+                  exact-active-class="nuxt-link-exact-active"
+                  @click="closeDropdown"
+                >
+                  <v-list-item-content class="extra-dropdown-content">
+                    {{ $t(`routes.${route.name}`) }}
+                  </v-list-item-content>
+                </v-list-item>
+              </v-list>
+            </template>
+          </base-dropdown>
         </div>
       </div>
     </md-toolbar>
@@ -59,24 +87,37 @@
       md-swipeable
       class="mobile-menu-drawer"
     >
-      <md-list>
+      <v-list dark flat tile>
         <!-- Basic routes -->
-        <md-list-item v-for="route in routes" :key="route.name">
-          <nuxt-link :to="{ name: route.name }">
-            <base-button @click="togglePanel">
-              {{ $t(`routes.${route.name}`) }}
-            </base-button>
-          </nuxt-link>
-        </md-list-item>
+        <v-list-item
+          v-for="route in routes"
+          :key="route.name"
+          :to="{ name: route.name }"
+          :class="{ exact: route.exact }"
+          active-class="nuxt-link-active"
+          exact-active-class="nuxt-link-exact-active"
+          class="link-item"
+          @click="togglePanel"
+        >
+          <v-list-item-content>
+            {{ $t(`routes.${route.name}`) }}
+          </v-list-item-content>
+        </v-list-item>
         <!-- Extra routes -->
-        <md-list-item v-for="route in extraRoutes" :key="route.name">
-          <nuxt-link :to="{ name: route.name }">
-            <base-button @click="togglePanel">
-              {{ $t(`routes.${route.name}`) }}
-            </base-button>
-          </nuxt-link>
-        </md-list-item>
-      </md-list>
+        <v-list-item
+          v-for="route in extraRoutes"
+          :key="route.name"
+          :to="{ name: route.name }"
+          active-class="nuxt-link-active"
+          exact-active-class="nuxt-link-exact-active"
+          class="link-item"
+          @click="togglePanel"
+        >
+          <v-list-item-content>
+            {{ $t(`routes.${route.name}`) }}
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
     </md-drawer>
   </div>
 </template>
@@ -96,7 +137,8 @@ export default {
 
   data() {
     return {
-      panelOpen: false
+      panelOpen: false,
+      dropdownOpen: false
     }
   },
 
@@ -112,15 +154,7 @@ export default {
     routes() {
       return [
         { name: 'index', exact: true },
-        // Sama kuin etusivu!
-        // Laura + Tomi tarina
-        // Mitä kotios tekee missäkin vaiheessa
-        // Meidän pärstät
-        // Osallistavasta asuntohankkeesta lyhyt kertomus + linkki
-
         { name: 'phenomenon', exact: false },
-        // Osallistava vs ei osallistava
-        // Asunto-osuuskuntamalli
         { name: 'projects', exact: false },
         { name: 'interest-map', exact: false }
       ]
@@ -140,6 +174,10 @@ export default {
   methods: {
     togglePanel() {
       this.panelOpen = !this.panelOpen
+    },
+
+    closeDropdown() {
+      this.dropdownOpen = false
     },
 
     logout() {
@@ -215,11 +253,26 @@ export default {
   a:not(:last-child) {
     margin-right: 10px;
   }
+}
 
-  .nuxt-link-exact-active.exact,
-  .nuxt-link-active:not(.exact) {
+.link-item {
+  color: $color-text-secondary;
+  &.nuxt-link-active.exact {
+    color: $color-text-secondary;
+  }
+
+  &.nuxt-link-exact-active.exact,
+  &.nuxt-link-active:not(.exact) {
     color: $color-text-primary-hover;
   }
+}
+
+.extra-list-item {
+  margin-right: 0 !important;
+}
+
+.extra-dropdown-content {
+  white-space: nowrap;
 }
 
 .desktop-link-container {
@@ -239,6 +292,15 @@ export default {
   }
 }
 
+.mobile-menu-drawer {
+  background: $color-primary;
+  padding-top: $u5;
+}
+
+.extra-dropdown-list {
+  padding-top: $u1;
+}
+
 @include media-breakpoint-up(xl) {
   .mobile-menu-drawer,
   .mobile-menu-toggle {
@@ -256,7 +318,8 @@ export default {
       display: inline;
     }
 
-    .extra-toggle {
+    .extra-toggle,
+    .extra-dropdown {
       display: none;
     }
   }

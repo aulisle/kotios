@@ -33,7 +33,7 @@
         </network>
 
         <network network="whatsapp">
-          <button class="social-btn whatsapp" v-on="on">
+          <button class="social-btn whatsapp">
             <i class="fab fa-whatsapp icon"></i>
           </button>
         </network>
