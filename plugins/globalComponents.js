@@ -43,10 +43,6 @@ Vue.component('base-dropdown', BaseDropdown)
 
 const createTitle = {
   install: Vue => {
-    Vue.prototype.$createTitle = name => {
-      return `Kotios | ${name}`
-    }
-
     Vue.prototype.$createSocialMeta = ({ title, description, image, url }) => {
       return [
         { hid: 'og:title', name: 'og:title', content: title },

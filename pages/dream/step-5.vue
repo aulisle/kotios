@@ -73,6 +73,12 @@
 <script>
 import SuccessTick from '@/components/dreams/SuccessTick'
 export default {
+  head() {
+    return {
+      title: this.$t('routes.add-dream')
+    }
+  },
+
   components: { SuccessTick },
   fetch({ store, redirect }) {
     if (

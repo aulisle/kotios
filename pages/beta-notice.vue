@@ -23,7 +23,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head() {
+    return {
+      title: this.$t('routes.beta')
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

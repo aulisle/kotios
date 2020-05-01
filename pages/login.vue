@@ -88,7 +88,7 @@ export default {
 
   head() {
     return {
-      title: this.$createTitle(this.$t('routes.login'))
+      title: this.$t('routes.login')
     }
   },
 

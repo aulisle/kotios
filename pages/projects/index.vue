@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="hero">
-      <h1>Avoimet hankkeet</h1>
+      <h1>{{ this.$t('routes.projects') }}</h1>
     </div>
     <div class="container-base">
       <nuxt-link
@@ -40,6 +40,12 @@
 <script>
 import { mapGetters } from 'vuex'
 export default {
+  head() {
+    return {
+      title: this.$t('routes.projects')
+    }
+  },
+
   computed: {
     ...mapGetters('interestMap', ['projects'])
   }

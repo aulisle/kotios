@@ -52,6 +52,12 @@
 import { mapState } from 'vuex'
 import TextToNumber from '@/components/common/textToNumberMixin'
 export default {
+  head() {
+    return {
+      title: this.$t('routes.add-dream')
+    }
+  },
+
   filters: {
     toMoney(val) {
       if (typeof val === 'string') {

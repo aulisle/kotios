@@ -7,48 +7,8 @@
         <h1 class="hero-title">
           Osallistavassa asuntohankkeessa asukkaat pääsevät vaikuttamaan
         </h1>
-        <!--
-        <p>
-          Osallistava asuntohanke on vaihtoehto perinteisille
-          tuotantokeskeisil­le toimintamalleille. Siinä asukkaat pääsevät
-          hankkeen aikana vaikuttamaan ja päättämään ratkaisuista.
-        </p>
-        -->
       </div>
     </div>
-
-    <!--<div class="container-base key-points">
-      <h2 class="models-header">Yksilöllinen, halvempi, hauskempi</h2>
-
-      <div class="grid key-points-grid">
-        <div>
-          <v-icon class="point-icon">mdi-snowflake</v-icon>
-
-          <h3>Yksilöllinen</h3>
-
-          Mahdollisuutesi saada tarpeitasi vastaava asunto, jota ei löydy
-          markkinoilta valmiina.
-        </div>
-        <div>
-          <v-icon class="point-icon">mdi-cart-plus</v-icon>
-          <h3>
-            Rahaa elämiseen
-          </h3>
-          Hanketyypit, joissa asukkaat toimivat rakennuttajina voivat olla jopa
-          20% edullisempia, kuin muu asuntotuotanto sekä rakennus- että
-          asumisvaiheessa.
-        </div>
-        <div>
-          <v-icon class="point-icon">mdi-home-heart</v-icon>
-          <h3>
-            Taloudellista ja ekologista
-          </h3>
-          Olet alusta asti mukana kotisi ratkaisujen suunnittelussa ja
-          tekijöiden valinnassa. Voit vaikuttaa siihen, että kotisi rakennetaan
-          mahdollisimman järkevästi.
-        </div>
-      </div>
-    </div>-->
 
     <why-content />
   </div>
@@ -59,6 +19,12 @@ import WhyContent from '@/components/why/WhyContent'
 import InterestedBar from '@/components/common/InterestedBar'
 
 export default {
+  head() {
+    return {
+      title: this.$t('routes.phenomenon')
+    }
+  },
+
   components: {
     WhyContent,
     InterestedBar

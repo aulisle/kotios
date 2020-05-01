@@ -169,7 +169,7 @@ export default {
 
   head() {
     return {
-      title: this.$createTitle(this.project.title),
+      title: this.project.title,
       meta: [
         ...this.$createSocialMeta({
           title: this.project.title,

@@ -82,6 +82,11 @@ import { email, required } from 'vuelidate/lib/validators'
 import { createEmailErrors } from '@/plugins/vuelidate'
 
 export default {
+  head() {
+    return {
+      title: this.$t('routes.register')
+    }
+  },
   mixins: [SetPasswordMixin],
 
   data() {

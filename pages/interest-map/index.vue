@@ -4,6 +4,11 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: this.$t('routes.interest-map')
+    }
+  },
   fetch({ store }) {
     store.commit('interestMap/setMode', 'browse')
   }

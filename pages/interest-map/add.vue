@@ -5,7 +5,7 @@
     </div>
     <div class="map-bottom">
       <base-button block large color="accent" @click="createDream">
-        Kohteen määrittämiseen
+        Unelmakohteen määrittämiseen
       </base-button>
     </div>
   </div>
@@ -14,6 +14,12 @@
 <script>
 import { TYPES } from '@/store/defineDream'
 export default {
+  head() {
+    return {
+      title: this.$t('routes.add-dream')
+    }
+  },
+
   fetch({ store }) {
     store.commit('interestMap/setMode', 'add')
 

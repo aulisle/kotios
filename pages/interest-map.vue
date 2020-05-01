@@ -8,6 +8,11 @@
 import InterestMapContainer from '@/components/interestMap/InterestMapContainer'
 
 export default {
+  head() {
+    return {
+      title: this.$t('routes.interest-map')
+    }
+  },
   components: {
     InterestMapContainer
   },

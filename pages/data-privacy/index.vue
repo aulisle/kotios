@@ -115,6 +115,11 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: this.$t('routes.data-privacy')
+    }
+  },
   auth: false
 }
 </script>

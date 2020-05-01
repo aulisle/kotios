@@ -24,6 +24,11 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: this.$t('routes.faq')
+    }
+  },
   data() {
     return {
       questions: [

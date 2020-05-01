@@ -46,6 +46,11 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: 'Yhteystiedot'
+    }
+  },
   data() {
     return {
       name: '',

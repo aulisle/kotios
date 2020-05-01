@@ -11,7 +11,13 @@
             Tietosuojakäytäntö
           </nuxt-link>
         </p>
+        <p class="mobile-consent-text">
+          Hyväksy eväät.
 
+          <nuxt-link :to="{ name: 'data-privacy' }">
+            Tietosuojakäytäntö
+          </nuxt-link>
+        </p>
         <base-button @click="showCookieConsent = false">
           Sulje
         </base-button>
@@ -59,12 +65,29 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: $u2 $u6;
   width: 100vw;
+  padding-right: $u6;
 }
 
 .consent-paragraph {
   margin: 0;
   margin-right: $u2;
+  display: none;
+}
+
+.mobile-consent-text {
+  margin: 0;
+}
+
+@include media-breakpoint-up(md) {
+  .mobile-consent-text {
+    display: none;
+  }
+  .consent-paragraph {
+    display: inline-block;
+  }
+  .consent-content {
+    padding: $u2 $u6;
+  }
 }
 </style>

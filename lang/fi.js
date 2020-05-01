@@ -20,7 +20,10 @@ const translations = {
     faq: 'Usein kysyttyä',
     'interest-map': 'Kartta',
     projects: 'Avoimet hankkeet',
-    contact: 'Yhteystiedot'
+    contact: 'Yhteystiedot',
+    'add-dream': 'Lisää unelmakohde',
+    'my-dreams': 'Unelmalistani',
+    beta: 'Beta'
   },
   settings: {
     'change-password': 'Vaihda salasana',

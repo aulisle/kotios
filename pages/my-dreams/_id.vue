@@ -66,6 +66,12 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: this.$t('routes.my-dreams')
+    }
+  },
+
   filters: {
     toLocation(val) {
       if (val != null && val.lat && val.lng) {

@@ -12,14 +12,15 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: 'Kotios',
+    title: 'KotiOS',
+    titleTemplate: '%s — KotiOS',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: 'Kotios — Rikastuttavampi tapa hankkia uusi koti'
+        content: 'KotiOS — Rikastuttavampi tapa hankkia uusi koti'
       },
       {
         name: 'msapplication-TileColor',
@@ -28,6 +29,24 @@ export default {
       {
         name: 'theme-color',
         content: '#281348'
+      },
+      { hid: 'og:title', name: 'og:title', content: 'KotiOS' },
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: 'KotiOS — Rikastuttavampi tapa hankkia uusi koti'
+      },
+      { hid: 'og:image', name: 'og:image', content: '/social-cover.jpg' },
+      { hid: 'twitter:title', name: 'twitter:title', content: 'KotiOS' },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content: 'KotiOS — Rikastuttavampi tapa hankkia uusi koti'
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: '/social-cover.jpg'
       }
     ],
     link: [

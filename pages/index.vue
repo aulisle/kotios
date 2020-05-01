@@ -98,7 +98,7 @@ export default {
 
   head() {
     return {
-      title: this.$createTitle(this.$t('routes.index'))
+      title: 'Etusivu'
     }
   }
 }
