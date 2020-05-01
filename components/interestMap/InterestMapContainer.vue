@@ -116,6 +116,7 @@ export default {
 
 .drawer {
   overflow-x: hidden;
+  max-width: 70vw;
 }
 
 .dream-section {
@@ -130,5 +131,6 @@ export default {
   width: 360px;
   padding: $u1 $u1;
   overflow-x: hidden;
+  max-width: 70vw;
 }
 </style>

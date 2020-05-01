@@ -282,7 +282,11 @@ body {
     }
   }
   
-.theme--dark.v-list {
-  background: $color-primary;
-}
+  .theme--dark.v-list {
+    background: $color-primary;
+  }
+  
+  .v-card__title {
+    word-break: keep-all !important;
+  }
 }

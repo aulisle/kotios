@@ -62,11 +62,12 @@
       </div>
     </div>
 
-    <div class="container-base">
+    <div class="container-base employee-section">
       <h2>Keitä me olemme?</h2>
 
       <div class="employee-cards">
         <employee-card
+          class="employee-card"
           first-name="Veli-Pekka"
           last-name="Rajala"
           image="http://aarnipuu.info/wp-content/uploads/2017/09/Passikuva-e1515416987328.jpg"
@@ -75,6 +76,7 @@
         />
 
         <employee-card
+          class="employee-card"
           first-name="Aulis"
           last-name="Leinonen"
           image="/about-us/aulis.jpg"
@@ -136,7 +138,7 @@ export default {
   }
 
   .tagline {
-    font-size: 5rem;
+    font-size: $font-xl;
     font-weight: 900;
     margin-bottom: $u2;
   }
@@ -175,6 +177,9 @@ export default {
     .hero-bg-img {
       width: 500px;
     }
+    .tagline {
+      font-size: $font-3xl;
+    }
   }
 
   @include media-breakpoint-up(xxl) {
@@ -190,6 +195,10 @@ export default {
       max-width: $u100;
     }
   }
+}
+
+.employee-card {
+  margin-bottom: $u5;
 }
 
 .section-margin {
@@ -249,13 +258,25 @@ export default {
   margin-left: 5px;
 }
 
-@include media-breakpoint-up(lg) {
-  .employee-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax($u50, 1fr));
-    grid-gap: $u8;
-  }
+.different-section-images {
+  margin-bottom: $u5;
+}
 
+.steps-section {
+  margin-top: $u5;
+}
+
+.employee-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($u25, 1fr));
+  grid-gap: $u8;
+}
+
+.employee-section {
+  margin-top: $u5;
+}
+
+@include media-breakpoint-up(xl) {
   .different-section {
     display: flex;
     align-items: center;
@@ -264,6 +285,8 @@ export default {
 
   .different-section-images {
     width: $u60;
+    margin-bottom: 0;
+    margin-right: $u6;
   }
 
   .different-section-text {
@@ -273,6 +296,11 @@ export default {
   .steps-section {
     display: flex;
     justify-content: space-between;
+    margin-top: $u15;
+  }
+
+  .employee-section {
+    margin-top: $u10;
   }
 
   .steps-start {

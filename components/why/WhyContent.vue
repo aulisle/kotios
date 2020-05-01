@@ -85,108 +85,24 @@
       </div>
     </div>
 
-    <div class="differences-section container-base">
-      <h3>Kuinka osallistaminen eroaa valta-asuntotuotannosta?</h3>
+    <div class="differences-section ">
+      <div class="container-base">
+        <h3>Kuinka osallistaminen eroaa valta-asuntotuotannosta?</h3>
 
-      <comparison-table title="">
-        <comparison-table-heading
-          :headings="[
-            'Valta-asuntotuotanto',
-            { title: 'Osallistaminen', highlight: true }
-          ]"
-        />
-        <comparison-table-row title="Sinun roolisi kodin hankinnassa">
-          <comparison-table-cell>
-            Passiivinen markkinaobjekti
-          </comparison-table-cell>
-          <comparison-table-cell highlight>
-            Aktiivinen toimija
-          </comparison-table-cell>
-        </comparison-table-row>
+        <why-comparison-table class="desktop" />
+      </div>
 
-        <comparison-table-row title="Kenellä on valta">
-          <comparison-table-cell>
-            Myyjällä
-          </comparison-table-cell>
-          <comparison-table-cell highlight>
-            Sinulla
-          </comparison-table-cell>
-        </comparison-table-row>
-
-        <comparison-table-row
-          title="Kodin suunnittelu ja toteutus asukkaiden ehdoilla"
-        >
-          <comparison-table-cell>
-            Ei
-          </comparison-table-cell>
-          <comparison-table-cell highlight>
-            Kyllä
-          </comparison-table-cell>
-        </comparison-table-row>
-
-        <comparison-table-row title="Kodin yksilöintimahdollisuudet">
-          <comparison-table-cell>
-            Asunnon pintamateriaalit yms.
-          </comparison-table-cell>
-          <comparison-table-cell highlight>
-            Julkisivu, Yhteistilat, Pintamateriaalit, jne.
-          </comparison-table-cell>
-        </comparison-table-row>
-
-        <comparison-table-row title="Mahdollisuus ottaa enemmän vastuuta">
-          <comparison-table-cell>
-            Ei
-          </comparison-table-cell>
-          <comparison-table-cell highlight>
-            Kyllä
-          </comparison-table-cell>
-        </comparison-table-row>
-
-        <comparison-table-row
-          title="Asumismenot suunniteltu sinulle sopiviksi pitkällä aikavälillä"
-        >
-          <comparison-table-cell>
-            Ei
-          </comparison-table-cell>
-          <comparison-table-cell highlight>
-            Kyllä
-          </comparison-table-cell>
-        </comparison-table-row>
-
-        <comparison-table-row title="Maksat vain oleellisesta">
-          <comparison-table-cell>
-            Ei
-          </comparison-table-cell>
-          <comparison-table-cell highlight>
-            Kyllä
-          </comparison-table-cell>
-        </comparison-table-row>
-
-        <comparison-table-row title="Yhteisöllisyys sisäänrakennettuna">
-          <comparison-table-cell>
-            Ei
-          </comparison-table-cell>
-          <comparison-table-cell highlight>
-            Kyllä
-          </comparison-table-cell>
-        </comparison-table-row>
-      </comparison-table>
+      <why-comparison-table class="mobile" />
     </div>
   </div>
 </template>
 
 <script>
-import ComparisonTable from '@/components/common/comparisonTable/ComparisonTable'
-import ComparisonTableHeading from '@/components/common/comparisonTable/ComparisonTableHeading'
-import ComparisonTableRow from '@/components/common/comparisonTable/ComparisonTableRow'
-import ComparisonTableCell from '@/components/common/comparisonTable/ComparisonTableCell'
+import WhyComparisonTable from './WhyComparisonTable'
 
 export default {
   components: {
-    ComparisonTable,
-    ComparisonTableHeading,
-    ComparisonTableRow,
-    ComparisonTableCell
+    WhyComparisonTable
   }
 }
 </script>
@@ -208,6 +124,9 @@ export default {
   }
 
   .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     h3 {
       margin-bottom: 0;
       font-size: 40px;
@@ -237,15 +156,11 @@ export default {
 }
 
 .meaningful-section {
-  margin-top: $u8;
   margin-bottom: $u10;
 }
 
 .meaningful-images {
-  img {
-    margin-top: $u3;
-    margin-left: $u5;
-  }
+  margin-top: $u4;
 }
 
 .kotios-paragraph {
@@ -253,8 +168,12 @@ export default {
 }
 
 .activity-section {
-  margin-top: $u20;
+  margin-top: $u10;
   margin-bottom: $u10;
+}
+
+.activity-images {
+  margin-bottom: $u4;
 }
 
 .stats-section {
@@ -270,7 +189,18 @@ export default {
   margin-bottom: $u20;
 }
 
+.desktop {
+  display: none;
+}
+
 @include media-breakpoint-up(lg) {
+  .desktop {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
+
   .meaningful-section,
   .activity-section {
     display: flex;
@@ -279,9 +209,12 @@ export default {
   }
 
   .meaningful-images {
-    max-width: $u80;
+    max-width: $u50;
+    margin-top: 0;
+
     img {
       margin-top: $u3;
+      margin-left: $u5;
     }
   }
 
@@ -289,8 +222,14 @@ export default {
     max-width: $u40;
   }
 
+  .activity-section {
+    margin-top: $u20;
+  }
+
   .activity-images {
+    margin-bottom: 0;
     max-width: $u80;
+    margin-right: $u4;
   }
 
   .activity-text {
@@ -300,6 +239,12 @@ export default {
   .stats-container {
     display: flex;
     justify-content: space-between;
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .meaningful-images {
+    max-width: $u80;
   }
 }
 </style>

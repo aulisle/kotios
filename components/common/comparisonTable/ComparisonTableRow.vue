@@ -53,6 +53,7 @@ export default {
   text-align: left;
   padding: $u2;
   background-color: $color-bg-1;
+  font-size: $font-xs;
 }
 
 .comparison-row:nth-child(even) {
@@ -67,5 +68,11 @@ export default {
   margin-left: $u1;
   opacity: 0.4;
   color: $color-primary !important;
+}
+
+@include media-breakpoint-up(xl) {
+  .row-heading {
+    font-size: $font-m;
+  }
 }
 </style>

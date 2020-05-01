@@ -83,6 +83,18 @@ h2:not(:first-child) {
   margin-top: $u8;
 }
 
+.type-1-text,
+.type-3-text,
+.type-4-text {
+  margin-top: $u3;
+}
+
+.type-1,
+.type-2,
+.type-3 {
+  margin-bottom: $u10;
+}
+
 @include media-breakpoint-up(lg) {
   .tabs-wrapper {
     display: flex;

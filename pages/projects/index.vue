@@ -8,6 +8,7 @@
         v-for="(project, idx) in projects"
         :key="project.id"
         :to="{ name: 'project-id', params: { id: project.id } }"
+        class="project-card"
       >
         <div :class="`layout-${idx}`">
           <div class="layout-image-wrapper">
@@ -25,11 +26,13 @@
           <div class="layout-text">
             <h2>{{ project.title }}</h2>
             <p>{{ project.address.line1 }}, {{ project.address.city }}</p>
+
             <base-button
               :to="{ name: 'project-id', params: { id: project.id } }"
               color="accent"
-              >Lue lisää</base-button
             >
+              Lue lisää
+            </base-button>
           </div>
         </div>
       </nuxt-link>
@@ -54,13 +57,25 @@ export default {
 
 <style lang="scss" scoped>
 .hero {
-  background: transparent;
+  background: $color-primary;
+  margin-bottom: $u10;
+
   h1 {
     text-align: center;
-    color: $color-primary;
+    color: $color-text-secondary;
   }
 }
-@include media-breakpoint-up(lg) {
+
+.layout-0,
+.layout-1 {
+  margin-bottom: $u5;
+}
+
+.layout-image-wrapper {
+  margin-bottom: $u2;
+}
+
+@include media-breakpoint-up(xl) {
   .layout-0,
   .layout-1 {
     display: flex;
@@ -77,6 +92,11 @@ export default {
     width: $u60;
     height: $u40;
     object-fit: cover;
+    margin-bottom: 0;
+  }
+
+  .layout-image-wrapper {
+    margin-right: $u6;
   }
 
   .layout-text {

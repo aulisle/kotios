@@ -55,6 +55,7 @@ export default {
 .heading {
   padding: $u2;
   max-width: $u15;
+  font-size: $font-xs;
 }
 
 .heading-item:not(:nth-child(2)) {
@@ -74,5 +75,11 @@ export default {
   margin-left: $u2;
   opacity: 0.4;
   color: $color-primary !important;
+}
+
+@include media-breakpoint-up(xl) {
+  .heading {
+    font-size: $font-m;
+  }
 }
 </style>

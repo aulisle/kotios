@@ -43,7 +43,7 @@ export default {
 
   img {
     width: 100%;
-    height: $u40;
+    height: $u20;
     object-fit: cover;
   }
 
@@ -66,7 +66,6 @@ export default {
   }
 
   .description-position {
-    position: relative;
     height: 0px;
     margin-top: -20px;
   }

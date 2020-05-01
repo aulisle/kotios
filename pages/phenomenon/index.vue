@@ -10,7 +10,7 @@
       </div>
     </div>
 
-    <why-content />
+    <why-content class="why-content" />
   </div>
 </template>
 
@@ -48,7 +48,7 @@ export default {
   }
 
   h1 {
-    font-size: $font-xxl;
+    font-size: $font-l;
     text-align: center;
   }
 
@@ -141,5 +141,17 @@ export default {
 .why-kotios {
   margin-top: 80px;
   margin-bottom: 50px;
+}
+
+.why-content {
+  margin-top: $u10;
+}
+
+@include media-breakpoint-up(md) {
+  .hero {
+    h1 {
+      font-size: $font-xxl;
+    }
+  }
 }
 </style>

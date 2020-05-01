@@ -95,9 +95,19 @@
       <div class="full-width bottom">
         <base-button
           block
+          color="accent"
+          :disabled="invalid"
+          class="btn-mobile"
+          @click="finalise"
+        >
+          Tallenna kohde unelmalistallesi
+        </base-button>
+        <base-button
+          block
           x-large
           color="accent"
           :disabled="invalid"
+          class="btn-desktop"
           @click="finalise"
         >
           Tallenna kohde unelmalistallesi
@@ -310,10 +320,24 @@ export default {
 .add-info {
   max-width: $u50;
 }
+.form {
+  width: 100%;
+}
+
+.btn-desktop {
+  display: none;
+}
 
 @include media-breakpoint-up(md) {
   .bottom {
     max-width: 500px;
+  }
+
+  .btn-mobile {
+    display: none;
+  }
+  .btn-desktop {
+    display: block;
   }
 }
 </style>

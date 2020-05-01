@@ -1,7 +1,7 @@
 <template>
   <v-slide-y-transition>
-    <v-toolbar v-if="showBar" flat class="interested-bar">
-      <div class="container-base bar-content">
+    <div v-if="showBar" class="interested-bar">
+      <div class="container-wide bar-content">
         Kiinnostuitko?
         <v-spacer />
         <base-button color="primary" text small @click="toProjects">
@@ -14,7 +14,7 @@
 
         <base-icon class="close-button" @click="close">mdi-close</base-icon>
       </div>
-    </v-toolbar>
+    </div>
   </v-slide-y-transition>
 </template>
 
@@ -48,12 +48,32 @@ export default {
   position: fixed;
   z-index: 1000;
   width: 100%;
+  background: $color-text-secondary;
 }
+
 .bar-content {
-  display: flex;
-  align-items: center;
+  position: relative;
+  padding: $u1;
+  padding-right: $u2;
 }
+
 .close-button {
-  margin-left: $u2;
+  position: absolute;
+  top: $u1;
+
+  right: -$u2;
+}
+
+@include media-breakpoint-up(lg) {
+  .bar-content {
+    align-items: center;
+    display: flex;
+  }
+
+  .close-button {
+    position: relative;
+    top: 0;
+    margin-right: $u2;
+  }
 }
 </style>

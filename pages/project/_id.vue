@@ -57,7 +57,7 @@
         <project-steps-tab class="container-base project-tab-item" />
       </v-tab-item>
       <v-tab-item>
-        <project-price-tab class="container-base project-tab-item" />
+        <project-price-tab class="project-tab-item" />
       </v-tab-item>
       <v-tab-item>
         <project-plot-tab
@@ -68,7 +68,7 @@
     </v-tabs-items>
 
     <div class="container-base bottom-section">
-      <project-first-step @addDrem="addDream" />
+      <project-first-step @addDream="addDream" />
       <project-contact class="project-contact" :contacts="project.contacts" />
     </div>
 
@@ -216,7 +216,6 @@ export default {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: $tracking-wide;
-  font-size: 2rem;
 }
 
 .project-tagline {
@@ -322,6 +321,10 @@ export default {
 }
 
 @include media-breakpoint-up(lg) {
+  .project-heading {
+    font-size: $font-xl;
+  }
+
   .heading-row {
     justify-content: space-between;
     flex-direction: row;

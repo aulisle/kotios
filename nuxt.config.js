@@ -7,6 +7,8 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
+const description = 'KotiOS — Rikastuttavampi tapa hankkia uusi koti'
+
 export default {
   /*
    ** Headers of the page
@@ -20,7 +22,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'KotiOS — Rikastuttavampi tapa hankkia uusi koti'
+        content: description
       },
       {
         name: 'msapplication-TileColor',
@@ -34,14 +36,14 @@ export default {
       {
         hid: 'og:description',
         name: 'og:description',
-        content: 'KotiOS — Rikastuttavampi tapa hankkia uusi koti'
+        content: description
       },
       { hid: 'og:image', name: 'og:image', content: '/social-cover.jpg' },
       { hid: 'twitter:title', name: 'twitter:title', content: 'KotiOS' },
       {
         hid: 'twitter:description',
         name: 'twitter:description',
-        content: 'KotiOS — Rikastuttavampi tapa hankkia uusi koti'
+        content: description
       },
       {
         hid: 'twitter:image',

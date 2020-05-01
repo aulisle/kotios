@@ -36,7 +36,7 @@ export default {
   align-items: flex-start;
 }
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(xl) {
   .steps-container {
     display: flex;
     justify-content: space-between;

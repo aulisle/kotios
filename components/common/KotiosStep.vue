@@ -101,6 +101,11 @@ export default {
   margin-left: $u3;
   text-transform: none;
   text-align: left;
+  font-size: $font-m;
+}
+
+.duration {
+  font-size: $font-xs;
 }
 
 .blob-number {
@@ -112,13 +117,13 @@ export default {
 }
 
 .info-icon {
-  margin-left: $u2;
+  margin-left: $u1;
   opacity: 0.4;
   color: $color-primary !important;
 }
 
 .duration {
-  margin-left: $u4;
+  margin-left: $u2;
 }
 
 .large {
@@ -158,6 +163,16 @@ export default {
     width: $u15;
     fill: $color-accent;
     flex-shrink: 0;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .step-title {
+    font-size: $font-l;
+  }
+  .duration {
+    font-size: $font-m;
+    margin-left: $u4;
   }
 }
 </style>

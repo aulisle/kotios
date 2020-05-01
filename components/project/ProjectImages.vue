@@ -95,11 +95,22 @@ export default {
   flex-wrap: wrap;
 
   img {
-    width: $u30;
-    height: $u20;
+    margin-top: $u2;
+    width: $u15;
+    height: $u10;
     object-fit: contain;
-    margin-right: $u3;
+    margin-right: $u1;
+    margin-left: $u1;
     background: 1px solid darken(white, 5%);
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .thumbnails {
+    img {
+      width: $u20;
+      height: $u10;
+    }
   }
 }
 </style>

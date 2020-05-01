@@ -83,10 +83,10 @@ export default {
   }
 
   .social-btn {
-    width: 50px;
-    height: 50px;
     border-radius: 50%;
     margin-left: 5px;
+    width: $u5;
+    height: $u5;
 
     &.email {
       background-color: #333;
@@ -106,13 +106,22 @@ export default {
 
     .icon {
       color: white !important;
-      font-size: 20px;
-      line-height: 50px;
+      font-size: 18px;
+      line-height: $u5;
     }
   }
 }
 
 @include media-breakpoint-up(lg) {
+  .social-btn {
+    width: $u6;
+    height: $u6;
+    .icon {
+      font-size: 20px;
+      line-height: $u6;
+    }
+  }
+
   .align-right-lg {
     padding-bottom: 5px;
     padding-top: 0px;

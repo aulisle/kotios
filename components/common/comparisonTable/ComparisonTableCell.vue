@@ -19,6 +19,8 @@ export default {
   text-align: center;
   padding: $u1 $u2;
   max-width: $u15;
+  font-weight: 400;
+  font-size: $font-xs;
 
   &:not(:nth-child(2)):not(.highlight) {
     border-left: 1px solid $color-text-faint;
@@ -37,5 +39,11 @@ export default {
 .highlight {
   background-color: $color-primary;
   color: $color-text-secondary;
+}
+
+@include media-breakpoint-up(xl) {
+  .cell {
+    font-size: $font-m;
+  }
 }
 </style>
