@@ -35,7 +35,7 @@
         </base-button>
       </div>
       <div class="meaningful-images">
-        <img src="/uusikaupunki/sea.jpg" />
+        <img src="/uusikaupunki/sea.jpg" alt="Kodillasi on merkitystä" />
       </div>
     </div>
 
@@ -67,7 +67,10 @@
 
     <div class="container-base activity-section">
       <div class="activity-images">
-        <img src="/uusikaupunki/piggy-bank.jpg" />
+        <img
+          src="/uusikaupunki/piggy-bank.jpg"
+          alt="Säästä olemalla aktiivinen"
+        />
       </div>
       <div class="activity-text">
         <h3>Säästä olemalla aktiivinen</h3>

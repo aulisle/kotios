@@ -1,6 +1,10 @@
 <template>
   <div class="success-tick">
-    <img :src="`/blobs/${variant}.svg`" class="success-bg" />
+    <img
+      :src="`/blobs/${variant}.svg`"
+      class="success-bg"
+      alt="Tominto onnistunut"
+    />
     <base-icon :size="120" color="secondary" class="success-tick-icon">
       mdi-check
     </base-icon>

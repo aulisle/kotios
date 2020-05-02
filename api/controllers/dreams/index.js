@@ -113,7 +113,7 @@ const controller = {
     if (!req.sessionID) {
       // eslint-disable-next-line
       console.log('NO SESSION ID!')
-      next()
+      return next()
     }
 
     // Remove ID
@@ -152,14 +152,14 @@ const controller = {
   sendEmail: async (req, res, next) => {
     const { email } = req.body
     if (!email) {
-      next()
+      return next()
     }
     const lead = await Lead.findOne({ email: email.toLowerCase() })
 
     // eslint-disable-next-line
     console.log('GOT LEAD', lead)
     if (lead == null) {
-      next()
+      return next()
     }
 
     emailer.sendDreamsUrl(email, lead._id)
@@ -175,8 +175,8 @@ const controller = {
     console.log('ID', id)
     const lead = await Lead.findById(id)
 
-    if (!lead) {
-      next()
+    if (!lead || lead == null || !lead.dreams) {
+      return next()
     }
 
     res.json(lead.dreams)

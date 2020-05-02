@@ -27,7 +27,7 @@ export const requireFields = fields => {
     })
 
     if (!err) {
-      next()
+      return next()
     }
   }
 }
@@ -42,7 +42,7 @@ export const requireFields = fields => {
 export const requireLogin = (req, res, next) => {
   authUser(req, res, $app)
     .then(() => {
-      next()
+      return next()
     })
     .catch(err => {
       res.status(err.code || 500).json(err)

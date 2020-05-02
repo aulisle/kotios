@@ -21,7 +21,12 @@
             >
               <source :src="project.video" />
             </video>
-            <img v-else :src="project.images[0]" class="layout-image" />
+            <img
+              v-else
+              :src="project.images[0]"
+              class="layout-image"
+              :alt="project.title"
+            />
           </div>
           <div class="layout-text">
             <h2>{{ project.title }}</h2>

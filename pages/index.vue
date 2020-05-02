@@ -17,7 +17,7 @@
 
     <div class="container-base section-margin different-section">
       <div class="different-section-images">
-        <img src="/about-us/stand-out.jpg" />
+        <img src="/about-us/stand-out.jpg" alt="Ihmiset ovat erilaisia" />
       </div>
       <div class="different-section-text">
         <h2>Ihmiset ovat erilaisia – miksi kotien pitäisi olla samanlaisia?</h2>

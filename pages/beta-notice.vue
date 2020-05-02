@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="beta-hero-container">
-      <img src="/blobs/beta.svg" class="hero-bg" />
+      <img src="/blobs/beta.svg" class="hero-bg" alt="Taustakuva" />
       <div class="container-base hero-text">
         <h2 class="beta-hero">Beta</h2>
       </div>

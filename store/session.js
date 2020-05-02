@@ -24,7 +24,7 @@ export const actions = {
   }, DEBOUNCE_RATE),
 
   saveToApi({ rootState }) {
-    return this.$axios.put(`/api/session`, rootState)
+    return this.$axios.put(`/api/session`, rootState, { progress: false })
   },
 
   loadFromApi({ commit }) {

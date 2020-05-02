@@ -10,7 +10,11 @@
       <v-card v-for="(contact, idx) in contacts" :key="idx">
         <div class="card-content">
           <v-avatar class="indigo" :size="60">
-            <img v-if="contact.image" :src="contact.image" />
+            <img
+              v-if="contact.image"
+              :src="contact.image"
+              :alt="contact.name"
+            />
             <span v-else class="white--text headline">
               {{ contact.initials }}
             </span>

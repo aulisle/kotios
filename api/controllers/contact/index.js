@@ -4,7 +4,7 @@ const controller = {
   sendEmail: async (req, res, next) => {
     const { email, name, message } = req.body
     if (!email || !name || !message) {
-      next()
+      return next()
     }
 
     emailer.sendContactQuery({ email, name, message })

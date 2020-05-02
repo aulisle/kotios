@@ -17,13 +17,13 @@
         "type": 1,
         "title": "Kyläyhteisö keskellä kaupunkia!",
         "paragraphs": ["Blasieholmankadulle rakennetaan kerrostalo, joka suunnitellaan asukkaiden toiveet toteuttaen. Sen vieressä on ihastuttavia vanhoja puutaloja, joten voisit inspiroitua suunnittelemaan tänne esimerkiksi idyllisen puukerrostalon. Kodikkaat ja viihtyisät yhteistilat ja merinäköalat tarjoava kattoterassi voisivat taata ihastuttavan kyläyhteisön kaupungin keskellä. Ja kuten aidot Uusikaupunkilaiset sanoisivat: \"Onhan meil meri iha rannas!\"!"],
-        "imgs": ["/uusikaupunki/dream-2.jpg"]
+        "imgs": [{ "url": "/uusikaupunki/dream-2.jpg", "alt": "Kyläyhteisö keskellä kaupunkia" }]
       },
       {
         "type": 2,
         "title": "Uusikaupunki – Idyllinen merenrantakaupunki, jossa kaikki on lähellä",
         "paragraphs": ["Tämän lähemmäksi et Uudenkaupungin palveluja pääse! Uusikaupunki on idyllinen pikkukaupunki, joka tarjoaa monipuoliset palvelut, hyvät liikuntamahdollisuudet ja mielenkiintoista kulttuuritarjontaa. Pikkukaupungin kiireetön, mutta aktiivinen elämänmeno tempaa mukaansa. Blasieholmankadun kerrostalossa kaikki on vain lyhyen kävelymatkan päässä. Itäpuiston kuntoradalle on matkaa vain pari korttelia ja Ruokolanjärven ja Käätyjärven maisemia pääset ihailemaan 5 minuutin kävelymatkan päässä. Rautatieasema on vieressä ja sairaala on tien toisella puolella."],
-        "imgs": ["https://kotios-bucket.s3.eu-north-1.amazonaws.com/projects/uusikaupunki-blasieholmankatu/idyllic-port-3.jpg"]
+        "imgs": [{ "url": "https://kotios-bucket.s3.eu-north-1.amazonaws.com/projects/uusikaupunki-blasieholmankatu/idyllic-port-3.jpg", "alt": "Idyllinen merenrantakaupunki, jossa kaikki on lähellä" }]
       },
       {
         "type": 3,
@@ -34,7 +34,7 @@
         "type": 4,
         "title": "Edulliset rakennus- ja asumiskustannukset",
         "paragraphs": ["Perinteinen rakennuttaminen tähtää korkeisiin katteisiin, eikä rakennuksen energiaratkaisuja välttämättä mietitä edullisten asumiskustannusten näkökulmasta. KotiOS-palvelun avulla rakennutetaan asukasläheisiä koteja niin, että asuminen on edullista ja ekologista ja asunto on suunniteltu juuri sinun unelmasi huomioon ottaen. Markkinahintoja edullisemmat rakennuskustannuksemme perustuvat yhteistyöhön asiakkaan kanssa. Kun turhat välikädet jätetään prosessista pois, on lopputuloksena edullinen ja yksilöity unelmiesi koti!"],
-        "imgs": ["/uusikaupunki/happy.jpg"]
+        "imgs": [{ "url": "/uusikaupunki/happy.jpg", "alt": "Edulliset rakennus- ja asumiskustannukset"}]
       }
     ],
     "video": [

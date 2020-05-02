@@ -3,7 +3,7 @@
     <template v-slot:activator="{ on }">
       <button class="step" v-on="on">
         <div class="blob-container">
-          <img :src="getBlob(idx)" class="blob" />
+          <img :src="getBlob(idx)" class="blob" :alt="`Vaiheen ${idx} pallo`" />
           <h2 class="blob-number">{{ idx + 1 }}</h2>
         </div>
         <h3 class="step-title">{{ step.title }}</h3>
@@ -31,7 +31,7 @@
   <div v-else class="large">
     <div class="large-blob">
       <div class="blob-container">
-        <img :src="getBlob(idx)" class="blob" />
+        <img :src="getBlob(idx)" class="blob" :alt="`Vaiheen ${idx} pallo`" />
         <h2 class="blob-number">{{ idx + 1 }}</h2>
       </div>
     </div>

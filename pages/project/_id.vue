@@ -181,13 +181,21 @@ export default {
     }
   },
 
-  async fetch() {
-    const getProject = this.$store.getters['interestMap/project']
+  watch: {
+    tab(val) {
+      this.$gtm.push({ event: 'projectTabChange', tab: this.tabs[val].text })
+    }
+  },
 
-    const project = getProject(this.$route.params.id)
+  async asyncData({ error, store, params }) {
+    const getProject = store.getters['interestMap/project']
+
+    const project = getProject(params.id)
 
     if (project) {
-      this.project = project
+      return { project }
+    } else {
+      error({ statusCode: 404, message: 'Projektia ei löynyt' })
     }
   },
 

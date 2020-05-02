@@ -79,7 +79,7 @@ export default {
   margin: 0;
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(xl) {
   .mobile-consent-text {
     display: none;
   }

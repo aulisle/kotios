@@ -4,7 +4,7 @@
     @mouseenter="showDescription = true"
     @mouseleave="showDescription = false"
   >
-    <img :src="image" />
+    <img :src="image" :alt="`Kuva ${firstName} ${lastName}`" />
     <h3 class="name">{{ firstName }} {{ lastName }}</h3>
     <p class="role">{{ role }}</p>
 

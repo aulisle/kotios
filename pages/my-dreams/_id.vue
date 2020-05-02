@@ -44,6 +44,7 @@
               <img
                 v-else
                 class="project-image"
+                :alt="dream.project.title"
                 :src="dream.project.images[0]"
               />
             </div>
@@ -102,13 +103,16 @@ export default {
   async asyncData({ $axios, params, error }) {
     return $axios
       .get(`/api/dreams/my-dreams/${params.id}`)
-      .then(({ data }) => {
+      .then(res => {
+        if (!res.data) {
+          return error({ statusCode: 404, message: 'Unelmia ei löytynyt' })
+        }
         return {
-          dreams: data
+          dreams: res.data
         }
       })
-      .catch(e => {
-        error(e)
+      .catch(() => {
+        return error({ statusCode: 404, message: 'Unelmia ei löytynyt' })
       })
   },
 

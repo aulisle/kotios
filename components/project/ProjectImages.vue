@@ -9,11 +9,11 @@
       </video>
     </div>
     <button v-else class="hero-img">
-      <img :src="images[0]" />
+      <img :src="images[0]" :alt="`Kuva ${title}`" />
     </button>
     <div class="thumbnails">
       <button v-for="(image, idx) in leftOverImgs" :key="idx">
-        <img :src="image" />
+        <img :src="image" :alt="`Kuva ${idx + 1}`" />
       </button>
     </div>
   </div>

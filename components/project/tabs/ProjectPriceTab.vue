@@ -27,7 +27,10 @@
     </div>
     <div class="total-price-section new-section container-base">
       <div class="total-price-start">
-        <img src="/uusikaupunki/piggy-bank.jpg" />
+        <img
+          src="/uusikaupunki/piggy-bank.jpg"
+          alt="Mistä kotini kokonaishinta muodostuu?"
+        />
       </div>
       <div class="total-price-end">
         <h2>
@@ -78,7 +81,10 @@
         </project-p>
       </div>
       <div class="running-costs-end">
-        <img src="/uusikaupunki/coffee.jpg" />
+        <img
+          src="/uusikaupunki/coffee.jpg"
+          alt="Mitä rahoitusvaihtoehtoja minulla on?"
+        />
       </div>
     </div>
 

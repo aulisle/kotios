@@ -113,13 +113,23 @@ footer {
 <style lang="scss">
 footer {
   .social {
-    width: 25px;
-    height: 25px;
-    line-height: 30px;
+    width: $u4;
+    height: $u4;
+    line-height: $u4;
     margin-right: 5px;
   }
 }
 i.social.md-icon.md-theme-default {
   color: white;
+}
+
+@include media-breakpoint-up(md) {
+  footer {
+    .social {
+      width: $u3;
+      height: $u3;
+      line-height: $u3;
+    }
+  }
 }
 </style>

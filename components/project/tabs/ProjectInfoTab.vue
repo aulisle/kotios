@@ -4,7 +4,12 @@
       <template v-for="(section, idx) in description">
         <div v-if="section.type === 1" :key="idx" class="type-1">
           <div class="type-1-imgs">
-            <img v-for="img in section.imgs" :key="img" :src="img" />
+            <img
+              v-for="img in section.imgs"
+              :key="img.url"
+              :src="img.url"
+              :alt="img.alt"
+            />
           </div>
           <div class="type-1-text">
             <h2>{{ section.title }}</h2>
@@ -28,14 +33,24 @@
             </project-p>
           </div>
           <div class="type-2-imgs">
-            <img v-for="img in section.imgs" :key="img" :src="img" />
+            <img
+              v-for="img in section.imgs"
+              :key="img.url"
+              :src="img.url"
+              :alt="img.alt"
+            />
           </div>
         </div>
 
         <div v-if="section.type === 3" :key="idx" class="type-3">
           <h2 class="type-3-heading">{{ section.title }}</h2>
           <div class="type-3-imgs">
-            <img v-for="img in section.imgs" :key="img" :src="img" />
+            <img
+              v-for="img in section.imgs"
+              :key="img.url"
+              :src="img.url"
+              :alt="img.alt"
+            />
           </div>
           <project-p
             v-for="(paragraph, pIdx) in section.paragraphs"
@@ -48,7 +63,12 @@
 
         <div v-if="section.type === 4" :key="idx" class="type-4">
           <div class="type-4-imgs">
-            <img v-for="img in section.imgs" :key="img" :src="img" />
+            <img
+              v-for="img in section.imgs"
+              :key="img.url"
+              :src="img.url"
+              :alt="img.alt"
+            />
           </div>
           <div class="type-4-text">
             <h2>{{ section.title }}</h2>
