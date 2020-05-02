@@ -1,7 +1,5 @@
 export const actions = {
-  async nuxtServerInit({ dispatch }) {
-    await dispatch('getSessionState')
-  },
+  async nuxtServerInit() {},
 
   async nuxtClientInit({ dispatch }) {
     await dispatch('getSessionState')

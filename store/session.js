@@ -24,11 +24,13 @@ export const actions = {
   }, DEBOUNCE_RATE),
 
   saveToApi({ rootState }) {
-    return this.$axios.put(`/api/session`, rootState, { progress: false })
+    return this.$axios.put(`/api/session`, rootState, {
+      progress: false
+    })
   },
 
   loadFromApi({ commit }) {
-    return this.$axios.get(`/api/session`).then(({ data }) => {
+    return this.$axios.get(`/api/session`, null).then(({ data }) => {
       if (data) {
         commit('setSessionId', data.id)
       }

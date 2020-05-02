@@ -21,7 +21,7 @@ const applyBaseMiddlewares = app => {
 
   app.oauth = new OAuth2Server({
     model,
-    accessTokenLifetime: 10 * 60 * 24 * 30,
+    accessTokenLifetime: 0,
     allowBearerTokensInQueryString: true,
     requireClientAuthentication: { password: false }
   })
@@ -31,9 +31,10 @@ const applyBaseMiddlewares = app => {
   app.use(
     session({
       secret: 'super-secret-key',
-      resave: false,
+      resave: true,
       saveUninitialized: false,
-      cookie: { maxAge: 60000 },
+      rolling: false,
+      cookie: { maxAge: null },
       store: new MongoStore({
         mongooseConnection: mongoose.connection,
         collection: 'express-session'

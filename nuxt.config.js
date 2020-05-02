@@ -143,7 +143,7 @@ export default {
           .PORT || 3000}/`,
 
         https: process.env.NODE_ENV === 'production',
-        withCredentials: true
+        credentials: true
       }
     ],
     // '@nuxtjs/auth',

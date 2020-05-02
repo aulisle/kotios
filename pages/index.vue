@@ -48,7 +48,7 @@
       <div class="container-base section-margin steps-section">
         <div class="steps-start">
           <div class="steps-sticky">
-            <h2 class="featured-heading">KOTIOS polku</h2>
+            <h2 class="featured-heading">KotiOS-polku</h2>
             <p>
               Osallistavassa kodinhankinnassa sinun ja perheesi rooli kasvaa. Et
               ole enää sivusta katsoja vaan pääset mukaan päättämään oman kotisi

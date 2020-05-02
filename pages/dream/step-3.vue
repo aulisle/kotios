@@ -80,6 +80,9 @@ export default {
   .bottom {
     margin-top: $u10;
     width: 100%;
+    p {
+      max-width: unset;
+    }
   }
 
   .bottom-button {
