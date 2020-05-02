@@ -162,8 +162,7 @@ export default {
           value: 5,
           text: 'Tontin tiedot'
         }
-      ],
-      tabTexts: ['kohde-info', 'meh']
+      ]
     }
   },
 
@@ -224,13 +223,6 @@ export default {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: $tracking-wide;
-}
-
-.project-tagline {
-  font-weight: 800;
-  font-size: 1.8rem;
-  padding-top: 40px;
-  padding-bottom: 40px;
 }
 
 .page-content {
