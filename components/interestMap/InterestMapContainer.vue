@@ -120,7 +120,7 @@ export default {
 }
 
 .dream-section {
-  margin-top: $u15;
+  margin-top: $u5;
 }
 
 .hide-button {
@@ -132,5 +132,11 @@ export default {
   padding: $u1 $u1;
   overflow-x: hidden;
   max-width: 70vw;
+}
+
+@include media-breakpoint-up(xxl) {
+  .dream-section {
+    margin-top: $u15;
+  }
 }
 </style>
