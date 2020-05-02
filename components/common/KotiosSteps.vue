@@ -67,7 +67,7 @@ export default {
         {
           title: 'Asuminen',
           description: [
-            'Jee, pääset muuttamaan uuteen upeaan kotiisi ja aloittamaan asumisen!',
+            'Jes, pääset muuttamaan uuteen upeaan kotiisi ja aloittamaan asumisen!',
             'Halutessanne saatte palvelustamme taloyhtiöstrategian, joka antaa eväät sujuvaan kiinteistönhallintaan.'
           ]
         }
