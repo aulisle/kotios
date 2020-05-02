@@ -144,7 +144,7 @@ export default {
         },
         {
           value: 1,
-          text: 'Miksi kotios?'
+          text: 'Miksi KotiOS?'
         },
         {
           value: 2,

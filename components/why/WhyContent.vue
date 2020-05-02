@@ -27,11 +27,11 @@
         <h3 class="kotios-paragraph">KotiOS</h3>
         <p>
           Unelmien toteuttaminen yksin on työlästä ja uhkarohkeaa. Tämän vuoksi
-          Kotios-palvelu tarjoaa apua sinulle.
+          KotiOS-palvelu tarjoaa apua sinulle.
         </p>
 
         <base-button :to="{ name: 'index' }" color="accent">
-          Lue lisää Kotioksesta
+          Lue lisää palvelusta
         </base-button>
       </div>
       <div class="meaningful-images">

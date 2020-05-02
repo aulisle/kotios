@@ -7,7 +7,7 @@
     </project-p>
     <project-p>
       Helpoin tapa ilmoittaa kiinnostuksesi kohteesta on joko lisätä se omalle
-      unelmalistallesi tai ottamalla yhteyttä hankeneuvojaan.
+      unelmalistallesi tai ottamalla yhteyttä KotiOS-neuvojaan.
     </project-p>
     <project-p>
       Unelmalista on oma listasi, johon voit kerätä kiinnostavia kohteita ja

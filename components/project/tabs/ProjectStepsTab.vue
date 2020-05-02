@@ -5,8 +5,8 @@
       <project-p>
         Hanke aloitetaan asukkaiden ryhmäytymisellä. Kokoaminen aloitetaan ns.
         ydinryhmän muodostamisesta, eli noin 3-5 kotitaloudesta, jotka
-        aktiivisesti toimivat hankkeen vetureina. Voit kysyä hankeneuvojaltamme
-        lisää ydinryhmästä ja sen tehtävistä.
+        aktiivisesti toimivat hankkeen vetureina. Voit kysyä
+        KotiOS-neuvojaltamme lisää ydinryhmästä ja sen tehtävistä.
       </project-p>
       <project-p>
         Ydinryhmän myodostamisen jälkeen autamme heitä keräämään loputkin

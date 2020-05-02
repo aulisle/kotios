@@ -21,7 +21,7 @@
       <project-p>Onko sinulla kysyttävää hinnasta?</project-p>
       <project-p>
         <base-button class="contact-button" color="accent">
-          Ota yhteyttä hankeneuvojaamme
+          Ota yhteyttä KotiOS-neuvojaamme
         </base-button>
       </project-p>
     </div>
@@ -60,7 +60,7 @@
       <project-p class="purchase-price-paragraph">
         Kodin hankintahinta muodostuu perinteisesti hankkeen aikana erinäisistä
         hankinnoista, riskikatteista ja voittotavoitteista. Kun kotisi tehdään
-        osallistavasti Kotios-palvelun kautta, niin asukkaana voit ottaa
+        osallistavasti KotiOS-palvelun kautta, niin asukkaana voit ottaa
         turvallisesti välikäsien tehtäviä itsellesi ja näin säästää tuntuvasti.
         Sinua siis palkitaan omasta aktiivisuudestasi.
       </project-p>

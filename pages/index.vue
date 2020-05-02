@@ -81,7 +81,7 @@
           last-name="Leinonen"
           image="/about-us/aulis.jpg"
           role="Digiman"
-          description="Aulis vastaa Kotioksella digitaalisten ratkaisuiden kehittämisestä. Hänen työskentelyään motivoi hänen unelmansa toteuttaminen; hän voisi toden teolla sanoa: 'Olin mukana Suomen rakennuttamisen isoimmassa muutoksessa.'"
+          description="Aulis vastaa KotiOS-palvelun digitaalisten ratkaisuiden kehittämisestä. Hänen työskentelyään motivoi hänen unelmansa toteuttaminen; hän voisi toden teolla sanoa: 'Olin mukana Suomen rakennuttamisen isoimmassa muutoksessa.'"
         />
       </div>
     </div>
