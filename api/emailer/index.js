@@ -106,7 +106,7 @@ const emailer = {
       const data = {
         ...config,
         to: SERVICE_EMAILS,
-        subject: `Kotios yhteydenotto - ${name}`,
+        subject: `KotiOS yhteydenotto - ${name}`,
         html
       }
       sgMail.send(data)

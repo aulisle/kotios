@@ -82,8 +82,8 @@
     </comparison-table-row>
 
     <comparison-table-row
-      title="Kotios-palvelu"
-      help="Kotios-palvelun hinnoittelu perustuu sen kautta tilattujen palveluntarjoajien välityspalkkioon. Tarkka palvelun hinta riippuu tekemistänne hankinnoista ja niiden suuruuksista. Esimerkiksi ryhmäytyminen on hankkeellenne ilmaista. Käytännössä palvelun kokonaishinta on noin 0,5%-3% välillä kotisi hankintakustannuksista."
+      title="KotiOS-palvelu"
+      help="KotiOS-palvelun hinnoittelu perustuu sen kautta tilattujen palveluntarjoajien välityspalkkioon. Tarkka palvelun hinta riippuu tekemistänne hankinnoista ja niiden suuruuksista. Esimerkiksi ryhmäytyminen on hankkeellenne ilmaista. Käytännössä palvelun kokonaishinta on noin 0,5%-3% välillä kotisi hankintakustannuksista."
     >
       <comparison-table-cell>
         <base-icon>mdi-minus</base-icon>

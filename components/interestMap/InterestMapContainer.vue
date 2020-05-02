@@ -15,7 +15,7 @@
             mdi-chevron-left
           </base-icon>
 
-          <h2>Kotios-kartta</h2>
+          <h2>KotiOS-kartta</h2>
           <p>
             Kartalta näet, missä on käynnissä olevia hankkeita ja
             osallistumisesta kiinnostuneita asukkaita.

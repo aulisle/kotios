@@ -71,7 +71,7 @@
           first-name="Veli-Pekka"
           last-name="Rajala"
           image="http://aarnipuu.info/wp-content/uploads/2017/09/Passikuva-e1515416987328.jpg"
-          role="Palveluidean kehittäjä ja Kotios-neuvoja"
+          role="Palveluidean kehittäjä ja KotiOS-neuvoja"
           description="Veli-Pekka, tuttavammin VP, on kokenut osallistavan rakennushankkeen asiantuntija. Hän on jo vuodesta 2015 seuraannut, tutkinut ja pohtinut, kuinka osallistamista voitaisiin tehdä paremmin."
         />
 

@@ -80,7 +80,7 @@
           saat rahallesi enemmän vastinetta, kuin markkinoilta muuten.
         </p>
         <p>
-          Kun kotisi tehdään osallistavasti Kotios-palvelun kautta, niin
+          Kun kotisi tehdään osallistavasti KotiOS-palvelun kautta, niin
           asukkaana voit ottaa turvallisesti erilaisia tehtäviä itsellesi ja
           näin säästää tuntuvasti. Sinua siis palkitaan omasta
           aktiivisuudestasi.

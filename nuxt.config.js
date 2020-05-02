@@ -248,7 +248,7 @@ export default {
   layoutTransition: 'page',
 
   loading: {
-    color: '#1bb8d1',
+    color: '#EA376D',
     height: '2px'
   },
 

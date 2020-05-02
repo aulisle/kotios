@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="column copyright">
-      © Kotios 2020 – kotios.fi
+      © KotiOS 2020 – kotios.fi
     </div>
 
     <div class="links-row">

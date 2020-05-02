@@ -168,11 +168,6 @@ const controller = {
 
   getDreams: async (req, res, next) => {
     const { id } = req.params
-
-    // eslint-disable-next-line
-    console.log('GET DREAMS')
-    // eslint-disable-next-line
-    console.log('ID', id)
     const lead = await Lead.findById(id)
 
     if (!lead || lead == null || !lead.dreams) {

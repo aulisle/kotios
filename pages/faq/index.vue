@@ -107,9 +107,9 @@ export default {
             'Osallistavia asuntohankkeita tukevat esimerkiksi Ryhmärakennuttajat RY ja ARA. Konsulttivetoisia hankkeita järjestävät muun muassa Saraco D&M Oy sekä Fira.'
         },
         {
-          title: 'Onko Kotios rakennuttajakonsulttipalvelua?',
+          title: 'Onko KotiOS rakennuttajakonsulttipalvelua?',
           answer:
-            'Kotios ei ole rakennuttajakonsultti. Kotios on osallistavien asuntohankkeiden ekosyysteemi. Se välittää osallistavien asuntohankkeiden tarpeisiin oman alansa ammattilaisia. Ammattilaiset ovat itsenäisiä yrittäjiä, mutta jotka täyttävät Kotios-vaatimukset.'
+            'KotiOS ei ole rakennuttajakonsultti. KotiOS on osallistavien asuntohankkeiden ekosyysteemi. Se välittää osallistavien asuntohankkeiden tarpeisiin oman alansa ammattilaisia. Ammattilaiset ovat itsenäisiä yrittäjiä, mutta jotka täyttävät KotiOS-vaatimukset.'
         }
       ]
     }
