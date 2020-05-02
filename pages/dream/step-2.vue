@@ -192,7 +192,7 @@ export default {
     }
   },
 
-  fetch({ store, redirect }) {
+  async fetch({ store, redirect }) {
     if (
       store.state.defineDream.type == null ||
       store.state.defineDream.finishedSteps < 1
