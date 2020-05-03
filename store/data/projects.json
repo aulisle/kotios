@@ -51,7 +51,7 @@
           "name": "V-P Rajala",
           "role": "project-advisor",
           "email": "v-p@kotios.fi",
-          "phone": "040 1234567",
+          "phone": "040 744 74 60",
           "initials": "VR",
           "image": "https://aarnipuu.info/wp-content/uploads/2017/09/Passikuva-e1515416987328.jpg"
         }
@@ -59,57 +59,6 @@
     "plot": {
       "owner": "Varpe Oy",
       "ownerUrl": "http://www.varpe.fi",
-      "area": 3559,
-      "buildable": 5600
-    }
-  },
-  {
-    "id": "jyvaskyla",
-    "type": 1,
-    "title": "Jyväskylä",
-    "address": {
-      "line1": "Jyväskylä",
-      "postCode": "23500",
-      "city": "Jyväskylä"
-    },
-    "location": {
-      "lat": 62.24147, 
-      "lng": 25.72088
-    },
-    "description": [
-      {
-        "type": "h2",
-        "text": "Omistusasuamista vuokrakohteen hinnalla"
-      },
-      {
-        "type": "p",
-        "text": "Asunto-osuuskunta mahdollistaa omistusasumisen ilman mittavaa pankkilainaa. KotiOS-kohteet rahoitetaan asunto-osuuskuntamallin mukaisesti. Rahoitus rakentuu ARAn takauslainasta ja asumisosuuskunnan liittymismaksuista. Asukkaille muodostuu vuokrasuhde osuuskuntaan ja osuuskunnan jäsenyyden kautta asukkaat pääsevät vaikuttamaan aivan kuten omistusasumisessa. Asukas maksaa osuuskunnalle 5-10 % liittymismaksun, joka oikeuttaa hallinnoimaan asuntoa. Vuokratuloilla osuuskunta kattaa rakennuslainan lyhennykset ja kaikki kiinteistön hoitokulut. Kun osuuskunnan velka on maksettu, on asunto sinun!"
-      },
-      {
-        "type": "h2",
-        "text": "Edulliset rakennus- ja asumiskustannukset"
-      },
-      {
-        "type": "p",
-        "text": "Perinteinen rakennuttaminen tähtää korkeisiin katteisiin, eikä rakennuksen energiaratkaisuja välttämättä mietitä edullisten asumiskustannusten näkökulmasta. KotiOS-palvelun avulla rakennutetaan asukasläheisiä koteja niin, että asuminen on edullista ja ekologista ja asunto on suunniteltu juuri sinun unelmasi huomioon ottaen. Markkinahintoja edullisemmat rakennuskustannuksemme perustuvat yhteistyöhön asiakkaan kanssa. Kun turhat välikädet jätetään prosessista pois, on lopputuloksena edullinen ja yksilöity unelmiesi koti!"
-      }
-    ],
-    "images": [
-      "https://www.uginvanhattalot.fi/wp-content/uploads/2018/08/kuva3.jpg",
-      "https://r-cf.bstatic.com/images/hotel/max1280x900/463/46369418.jpg",
-      "https://premicokodit.fi/wp-content/uploads/2018/12/Uusikaupunki-8-1920x1080.jpg"
-    ],
-    "contacts": [
-      {
-        "name": "V-P Rajala",
-        "role": "project-advisor",
-        "email": "v-p@kotios.fi",
-        "phone": "040 1234567",
-        "initials": "VR",
-        "image": "https://aarnipuu.info/wp-content/uploads/2017/09/Passikuva-e1515416987328.jpg"
-      }
-    ],
-    "plot": {
       "area": 3559,
       "buildable": 5600
     }
