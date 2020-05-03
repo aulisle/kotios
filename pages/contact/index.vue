@@ -88,7 +88,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .hero {
-  background-image: url(http://rentoasuminen.fi/wp-content/uploads/2018/04/rento_bg_mika_on_rento.jpg);
+  background-image: url(https://rentoasuminen.fi/wp-content/uploads/2018/04/rento_bg_mika_on_rento.jpg);
   background-size: cover;
   background-position: 50% 50%;
   display: flex;
