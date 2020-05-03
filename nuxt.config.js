@@ -176,7 +176,11 @@ export default {
     ]
   ],
 
-  buildModules: ['@nuxtjs/gtm', '@nuxtjs/google-analytics'],
+  buildModules: [
+    '@nuxtjs/gtm',
+    '@nuxtjs/google-analytics',
+    'nuxt-facebook-pixel-module'
+  ],
 
   plugins: [
     { src: '~/plugins/babel.js', ssr: false },
@@ -262,5 +266,10 @@ export default {
       enabled: process.env.NODE_ENV === 'development',
       sendHitTask: true
     }
+  },
+
+  facebook: {
+    pixelId: '819911885163547',
+    disabled: false
   }
 }
