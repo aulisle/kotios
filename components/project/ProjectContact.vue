@@ -2,7 +2,7 @@
   <div class="contact-form">
     <h2>Yhteyshenkilöt</h2>
     <project-p>
-      Jos kiinnostuit ja haluat tietää lisää hankkeesta tai KotiOS-palvelusta,
+      Jos kiinnostuit ja haluat tietää lisää hankkeesta tai KOTIOS-palvelusta,
       hankenneuvontamme keskustelee mielellään kanssasi.
     </project-p>
 

@@ -24,10 +24,10 @@
           Osallistumalla kotisi tekemiseen pääset lähemmäksi unelmiesi asumista.
         </p>
 
-        <h3 class="kotios-paragraph">KotiOS</h3>
+        <h3 class="kotios-paragraph">KOTIOS</h3>
         <p>
           Unelmien toteuttaminen yksin on työlästä ja uhkarohkeaa. Tämän vuoksi
-          KotiOS-palvelu tarjoaa apua sinulle.
+          KOTIOS-palvelu tarjoaa apua sinulle.
         </p>
 
         <base-button :to="{ name: 'index' }" color="accent">
@@ -80,7 +80,7 @@
           saat rahallesi enemmän vastinetta, kuin markkinoilta muuten.
         </p>
         <p>
-          Kun kotisi tehdään osallistavasti KotiOS-palvelun kautta, niin
+          Kun kotisi tehdään osallistavasti KOTIOS-palvelun kautta, niin
           asukkaana voit ottaa turvallisesti erilaisia tehtäviä itsellesi ja
           näin säästää tuntuvasti. Sinua siis palkitaan omasta
           aktiivisuudestasi.

@@ -23,14 +23,14 @@
         <h2>Ihmiset ovat erilaisia – miksi kotien pitäisi olla samanlaisia?</h2>
         <p>
           Nykypäivän rakennuskulttuuri ei aina vastaa asiakkaan yksilöllisiin
-          tarpeisiin. KotiOS haluaa muuttaa tätä kulttuuria paremmaksi ja nostaa
+          tarpeisiin. KOTIOS haluaa muuttaa tätä kulttuuria paremmaksi ja nostaa
           asiakkaan rakennusprojektin kuninkaaksi. Mielestämme jokaisen tulisi
           pystyä toteuttamaan omat asumisen unelmansa, ja saada rahoilleen
           vastineeksi koti ja asuinympäristö, joilla on asukkaalle aito
           merkitys.
         </p>
         <p>
-          KotiOS-palvelu tarjoaa uudenlaisen
+          KOTIOS-palvelu tarjoaa uudenlaisen
           <base-link :to="{ name: 'phenomenon' }">
             osallistavan asuntorakennuttamisen
           </base-link>
@@ -48,7 +48,7 @@
       <div class="container-base section-margin steps-section">
         <div class="steps-start">
           <div class="steps-sticky">
-            <h2 class="featured-heading">KotiOS-polku</h2>
+            <h2 class="featured-heading">KOTIOS-polku</h2>
             <p>
               Osallistavassa kodinhankinnassa sinun ja perheesi rooli kasvaa. Et
               ole enää sivusta katsoja vaan pääset mukaan päättämään oman kotisi
@@ -71,7 +71,7 @@
           first-name="Veli-Pekka"
           last-name="Rajala"
           image="https://aarnipuu.info/wp-content/uploads/2017/09/Passikuva-e1515416987328.jpg"
-          role="Palveluidean kehittäjä ja KotiOS-neuvoja"
+          role="Palveluidean kehittäjä ja KOTIOS-neuvoja"
           description="Veli-Pekka, tuttavammin VP, on kokenut osallistavan rakennushankkeen asiantuntija. Hän on jo vuodesta 2015 seuraannut, tutkinut ja pohtinut, kuinka osallistamista voitaisiin tehdä paremmin."
         />
 
@@ -81,7 +81,7 @@
           last-name="Leinonen"
           image="/about-us/aulis.jpg"
           role="Digiman"
-          description="Aulis vastaa KotiOS-palvelun digitaalisten ratkaisuiden kehittämisestä. Hänen työskentelyään motivoi hänen unelmansa toteuttaminen; hän voisi toden teolla sanoa: 'Olin mukana Suomen rakennuttamisen isoimmassa muutoksessa.'"
+          description="Aulis vastaa KOTIOS-palvelun digitaalisten ratkaisuiden kehittämisestä. Hänen työskentelyään motivoi hänen unelmansa toteuttaminen; hän voisi toden teolla sanoa: 'Olin mukana Suomen rakennuttamisen isoimmassa muutoksessa.'"
         />
       </div>
     </div>

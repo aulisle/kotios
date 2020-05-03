@@ -29,12 +29,12 @@
       {
         "type": 3,
         "title": "Omistusasumista vuokrakohteen hinnalla",
-        "paragraphs": ["Asunto-osuuskunta mahdollistaa omistusasumisen ilman mittavaa pankkilainaa. KotiOS-kohteet rahoitetaan asunto-osuuskuntamallin mukaisesti.",  "Rahoitus rakentuu ARAn takauslainasta ja asumisosuuskunnan liittymismaksuista. Asukkaille muodostuu vuokrasuhde osuuskuntaan ja osuuskunnan jäsenyyden kautta asukkaat pääsevät vaikuttamaan aivan kuten omistusasumisessa. Asukas maksaa osuuskunnalle 5-10 % liittymismaksun, joka oikeuttaa hallinnoimaan asuntoa.", "Vuokratuloilla osuuskunta kattaa rakennuslainan lyhennykset ja kaikki kiinteistön hoitokulut. Kun osuuskunnan velka on maksettu, on asunto sinun!"]
+        "paragraphs": ["Asunto-osuuskunta mahdollistaa omistusasumisen ilman mittavaa pankkilainaa. KOTIOS-kohteet rahoitetaan asunto-osuuskuntamallin mukaisesti.",  "Rahoitus rakentuu ARAn takauslainasta ja asumisosuuskunnan liittymismaksuista. Asukkaille muodostuu vuokrasuhde osuuskuntaan ja osuuskunnan jäsenyyden kautta asukkaat pääsevät vaikuttamaan aivan kuten omistusasumisessa. Asukas maksaa osuuskunnalle 5-10 % liittymismaksun, joka oikeuttaa hallinnoimaan asuntoa.", "Vuokratuloilla osuuskunta kattaa rakennuslainan lyhennykset ja kaikki kiinteistön hoitokulut. Kun osuuskunnan velka on maksettu, on asunto sinun!"]
       },
       {
         "type": 4,
         "title": "Edulliset rakennus- ja asumiskustannukset",
-        "paragraphs": ["Perinteinen rakennuttaminen tähtää korkeisiin katteisiin, eikä rakennuksen energiaratkaisuja välttämättä mietitä edullisten asumiskustannusten näkökulmasta. KotiOS-palvelun avulla rakennutetaan asukasläheisiä koteja niin, että asuminen on edullista ja ekologista ja asunto on suunniteltu juuri sinun unelmasi huomioon ottaen. Markkinahintoja edullisemmat rakennuskustannuksemme perustuvat yhteistyöhön asiakkaan kanssa. Kun turhat välikädet jätetään prosessista pois, on lopputuloksena edullinen ja yksilöity unelmiesi koti!"],
+        "paragraphs": ["Perinteinen rakennuttaminen tähtää korkeisiin katteisiin, eikä rakennuksen energiaratkaisuja välttämättä mietitä edullisten asumiskustannusten näkökulmasta. KOTIOS-palvelun avulla rakennutetaan asukasläheisiä koteja niin, että asuminen on edullista ja ekologista ja asunto on suunniteltu juuri sinun unelmasi huomioon ottaen. Markkinahintoja edullisemmat rakennuskustannuksemme perustuvat yhteistyöhön asiakkaan kanssa. Kun turhat välikädet jätetään prosessista pois, on lopputuloksena edullinen ja yksilöity unelmiesi koti!"],
         "imgs": [{ "url": "/uusikaupunki/happy.jpg", "alt": "Edulliset rakennus- ja asumiskustannukset"}]
       }
     ],

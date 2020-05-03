@@ -84,22 +84,22 @@ export default {
             'Osallistava asuntohanke tarjoaa ihmisille tavan vaikuttaa ympäristönsä kehittämiseen kaupungissakin. Valittavissa ovat kestävät ratkaisut tilojen, energian ja materiaalien suhteen. Suuremmassa mittakaavassa ajateltuna tällä tavalla voisi tulevaisuudessa luoda kokonaisen unelmakaupungin.'
         },
         {
-          title: 'Mikä on KotiOS-palvelun ansaintamalli?',
+          title: 'Mikä on KOTIOS-palvelun ansaintamalli?',
           answer:
-            'KotiOS-palvelun liiketoimintamalli perustuu välittäjätoimintaan. Kun palveluntarjoajan työ on välitetty kauttamme hankkeelle, pidätämme siitä prosenttiosuuden välityspalkkiona. Prosenttiosuus riippuu työn arvosta ja se on 1%-10% välillä. Meidän etumme on siis, että hankkeenne etenee aikataulussa ja sujuvasti. Esimerkiksi ryhmäytyminen on asukaslähtöisille hankkeille ilmaista, sillä siinä ei tarvita palveluntarjoajien apua.' // TODO: Tähän lisää
+            'KOTIOS-palvelun liiketoimintamalli perustuu välittäjätoimintaan. Kun palveluntarjoajan työ on välitetty kauttamme hankkeelle, pidätämme siitä prosenttiosuuden välityspalkkiona. Prosenttiosuus riippuu työn arvosta ja se on 1%-10% välillä. Meidän etumme on siis, että hankkeenne etenee aikataulussa ja sujuvasti. Esimerkiksi ryhmäytyminen on asukaslähtöisille hankkeille ilmaista, sillä siinä ei tarvita palveluntarjoajien apua.' // TODO: Tähän lisää
         },
         {
           title: 'Kuinka voin aloittaa hankkeen?',
           answer:
             'Ennen hankkeen aloittamista on hyvä selvittää, onko alueellasi jo olemassa olevaa hanketta. ' +
             'Hankkeen aloittamista varten tarvitset ydinryhmän. ' +
-            'Ydinryhmän muodostamiseksi voit ottaa yhteyttä KotiOS-neuvojaamme ja aloitamme selvityksen ydinryhmän löytämiseksi.'
+            'Ydinryhmän muodostamiseksi voit ottaa yhteyttä KOTIOS-neuvojaamme ja aloitamme selvityksen ydinryhmän löytämiseksi.'
         },
         {
           title:
             'Kuinka nopeasti pääsen asumaan uuteen kotiini, jos se on toteutettu osallistavasti?',
           answer:
-            'Osallistavat asuntohankkeet, erityisesti ryhmä- ja asunto-osuuskuntahankkeet voivat kestää pidempään, kuin normaali asuntotuotanto. KotiOS-polulla toteutetut hankkeet vievät keskimäärin 2-3 vuotta. Ilman KotiOS-polkua hankkeet vievät noin 4-7 vuotta.'
+            'Osallistavat asuntohankkeet, erityisesti ryhmä- ja asunto-osuuskuntahankkeet voivat kestää pidempään, kuin normaali asuntotuotanto. KOTIOS-polulla toteutetut hankkeet vievät keskimäärin 2-3 vuotta. Ilman KOTIOS-polkua hankkeet vievät noin 4-7 vuotta.'
         },
         {
           title: 'Ketkä muut toimijat tukevat osallistavia asuntohankkeita?',
@@ -107,9 +107,9 @@ export default {
             'Osallistavia asuntohankkeita tukevat esimerkiksi Ryhmärakennuttajat RY ja ARA. Konsulttivetoisia hankkeita järjestävät muun muassa Saraco D&M Oy sekä Fira.'
         },
         {
-          title: 'Onko KotiOS rakennuttajakonsulttipalvelua?',
+          title: 'Onko KOTIOS rakennuttajakonsulttipalvelua?',
           answer:
-            'KotiOS ei ole rakennuttajakonsultti. KotiOS on osallistavien asuntohankkeiden ekosyysteemi. Se välittää osallistavien asuntohankkeiden tarpeisiin oman alansa ammattilaisia. Ammattilaiset ovat itsenäisiä yrittäjiä, mutta jotka täyttävät KotiOS-vaatimukset.'
+            'KOTIOS ei ole rakennuttajakonsultti. KOTIOS on osallistavien asuntohankkeiden ekosyysteemi. Se välittää osallistavien asuntohankkeiden tarpeisiin oman alansa ammattilaisia. Ammattilaiset ovat itsenäisiä yrittäjiä, mutta jotka täyttävät KOTIOS-vaatimukset.'
         }
       ]
     }

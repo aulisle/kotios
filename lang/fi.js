@@ -1,7 +1,7 @@
 const translations = {
-  'product-name': 'KotiOS',
+  'product-name': 'KOTIOS',
   routes: {
-    index: 'KotiOS',
+    index: 'KOTIOS',
     login: 'Kirjaudu sisään',
     plans: 'Oma kokoelma',
     'manage-users': 'Käyttäjähallinta',
@@ -16,7 +16,7 @@ const translations = {
     'add-project': 'Jätä ilmoitus',
     'for-partners': 'Kumppaneille',
     phenomenon: 'Osallistava asuntohanke',
-    kotios: 'Mikä on KotiOS?',
+    kotios: 'Mikä on KOTIOS?',
     faq: 'Usein kysyttyä',
     'interest-map': 'Kartta',
     projects: 'Avoimet hankkeet',
@@ -178,7 +178,7 @@ const translations = {
     role: {
       consultant: 'Konsultti',
       facilitator: 'Fasilitaattori',
-      'project-advisor': 'KotiOS-neuvoja',
+      'project-advisor': 'KOTIOS-neuvoja',
       'customer-service-chief': 'Asiakaspalvelupäällikkö'
     }
   },

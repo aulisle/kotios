@@ -7,15 +7,15 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
-const description = 'KotiOS — Rikastuttavampi tapa hankkia uusi koti'
+const description = 'KOTIOS — Rikastuttavampi tapa hankkia uusi koti'
 
 export default {
   /*
    ** Headers of the page
    */
   head: {
-    title: 'KotiOS',
-    titleTemplate: '%s — KotiOS',
+    title: 'KOTIOS',
+    titleTemplate: '%s — KOTIOS',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -32,14 +32,14 @@ export default {
         name: 'theme-color',
         content: '#281348'
       },
-      { hid: 'og:title', name: 'og:title', content: 'KotiOS' },
+      { hid: 'og:title', name: 'og:title', content: 'KOTIOS' },
       {
         hid: 'og:description',
         name: 'og:description',
         content: description
       },
       { hid: 'og:image', name: 'og:image', content: '/social-cover.jpg' },
-      { hid: 'twitter:title', name: 'twitter:title', content: 'KotiOS' },
+      { hid: 'twitter:title', name: 'twitter:title', content: 'KOTIOS' },
       {
         hid: 'twitter:description',
         name: 'twitter:description',

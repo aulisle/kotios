@@ -42,7 +42,7 @@
 
     <h3 class="new-section">Ota meihin yhteyttä</h3>
     <p>
-      Jos jotain jäi epäselväksi tai haluat keskustella lisää KotiOS-palvelusta
+      Jos jotain jäi epäselväksi tai haluat keskustella lisää KOTIOS-palvelusta
       kanssamme, voit
       <base-link :to="{ name: 'contact' }">ottaa meihin yhteyttä</base-link>.
     </p>

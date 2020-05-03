@@ -4,7 +4,7 @@
     <h3>Laatimispäivä</h3>
     <p>25.4.2020</p>
     <h3>Rekisterinpitäjä</h3>
-    <p>KotiOS</p>
+    <p>KOTIOS</p>
     <p>R&amp;T Rakennustuotepalvelut Oy (y-tunnus 2608465-2)</p>
     <p>Keijunkatu 1, 20540 Turku</p>
     <p>Puh. 040 744 7460, v-p.rajala@rakennustuotepalvelut.fi</p>
