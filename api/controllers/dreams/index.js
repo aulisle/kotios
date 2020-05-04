@@ -3,12 +3,9 @@ import Lead from '../../models/app/lead'
 import emailer from '../../emailer'
 
 const saveDreamToLead = async dream => {
-  // eslint-disable-next-line
-  console.log('SAVING DREAM TO LEAD')
-
   if (!dream.data || !dream.data.email || !dream._id) {
     // eslint-disable-next-line
-    console.log('NO DREAM DATA OR EMAIL')
+    console.error('NO DREAM DATA OR EMAIL')
     return
   }
 
@@ -18,16 +15,11 @@ const saveDreamToLead = async dream => {
     { $pull: { dreams: { _id: dream._id } } }
   )
 
-  // eslint-disable-next-line
-  console.log('REMOVED LEAD')
   const email = dream.data.email.toLowerCase()
 
   let lead = await Lead.findOne({ email })
 
   if (!lead) {
-    // eslint-disable-next-line
-    console.log('CREATING LEAD', email, dream)
-
     // Create new if the lead does not exist yet
     lead = new Lead({
       email,
@@ -45,9 +37,6 @@ const saveDreamToLead = async dream => {
   }).exec()
 
   if (!leadWithDream) {
-    // eslint-disable-next-line
-    console.log('UPDATING LEAD', email, dream)
-
     // If there is no lead with dream, push a new one in
     await Lead.findOneAndUpdate(
       {
@@ -81,9 +70,6 @@ const saveDreamToLead = async dream => {
 }
 
 const createNew = async (req, res) => {
-  // eslint-disable-next-line
-  console.log('CREATE NEW DREAM')
-
   let dreamSession = await DreamSession.findOne({
     sessionId: req.sessionID
   }).exec()
@@ -104,8 +90,6 @@ const createNew = async (req, res) => {
     { data: req.body, createdAt: new Date() }
   ]
 
-  // eslint-disable-next-line
-  console.log('SAVING DREAM SESSION')
   await dreamSession.save()
 
   await saveDreamToLead(dreamSession.dreams[dreamSession.dreams.length - 1])
@@ -122,9 +106,6 @@ const controller = {
   update: async (req, res, next) => {
     const { dreamId } = req.params
 
-    // eslint-disable-next-line
-    console.log('RUN UPDATE DREAM')
-
     if (!req.sessionID) {
       // eslint-disable-next-line
       console.log('NO SESSION ID!')
@@ -134,9 +115,6 @@ const controller = {
     // Remove ID
     delete req.body._id
     try {
-      // eslint-disable-next-line
-      console.log('TRY ONE AND UPDATE')
-
       let updateResult = await DreamSession.findOneAndUpdate(
         {
           sessionId: req.sessionID,
@@ -157,12 +135,8 @@ const controller = {
         return createNew(req, res)
       }
 
-      // eslint-disable-next-line
-      console.log('UPDATE RESULT', updateResult)
       const dream = updateResult.dreams.find(el => el._id.equals(dreamId))
 
-      // eslint-disable-next-line
-      console.log('FOUND DREAM', dream)
       await saveDreamToLead(dream)
     } catch (e) {
       // eslint-disable-next-line
@@ -180,8 +154,6 @@ const controller = {
     }
     const lead = await Lead.findOne({ email: email.toLowerCase() })
 
-    // eslint-disable-next-line
-    console.log('GOT LEAD', lead)
     if (lead == null) {
       return next()
     }
