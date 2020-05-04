@@ -46,7 +46,7 @@ export default {
 <style lang="scss" scoped>
 .interested-bar {
   position: fixed;
-  z-index: 1000;
+  z-index: 10;
   width: 100%;
   background: $color-text-secondary;
 }
