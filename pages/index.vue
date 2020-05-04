@@ -79,7 +79,7 @@
           class="employee-card"
           first-name="Aulis"
           last-name="Leinonen"
-          image="/about-us/aulis.jpg"
+          image="https://kotios-bucket.s3.eu-north-1.amazonaws.com/assets/aulis_thumbnail.jpg"
           role="Digikehittäjä"
           description="Aulis vastaa KOTIOS-palvelun digitaalisten ratkaisuiden kehittämisestä. Hänen työskentelyään motivoi hänen unelmansa toteuttaminen; hän voisi toden teolla sanoa: 'Olin mukana Suomen rakennuttamisen isoimmassa muutoksessa.'"
         />
