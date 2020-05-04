@@ -177,7 +177,7 @@ export default {}
 
 <style lang="scss" scoped>
 .hero {
-  background-image: url('/what-is/hero-3.jpg');
+  background-image: url('https://kotios-bucket.s3.eu-north-1.amazonaws.com/assets/hero-3.jpg');
   background-size: cover;
   background-position: 50% 50%;
   background-attachment: fixed;

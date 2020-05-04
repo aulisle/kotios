@@ -34,7 +34,7 @@ export default {
 
 <style lang="scss" scoped>
 .hero {
-  background-image: url('/what-is/hero.jpg');
+  background-image: url('https://kotios-bucket.s3.eu-north-1.amazonaws.com/assets/hero.jpg');
   background-attachment: fixed;
 
   background-size: cover;

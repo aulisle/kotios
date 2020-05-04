@@ -17,7 +17,10 @@
 
     <div class="container-base section-margin different-section">
       <div class="different-section-images">
-        <img src="/about-us/stand-out.jpg" alt="Ihmiset ovat erilaisia" />
+        <img
+          src="https://kotios-bucket.s3.eu-north-1.amazonaws.com/assets/stand-out.jpg"
+          alt="Ihmiset ovat erilaisia"
+        />
       </div>
       <div class="different-section-text">
         <h2>Ihmiset ovat erilaisia – miksi kotien pitäisi olla samanlaisia?</h2>
@@ -121,7 +124,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('/what-is/hero-3.jpg');
+  background-image: url('https://kotios-bucket.s3.eu-north-1.amazonaws.com/assets/hero-3.jpg');
   background-size: cover;
   background-position: 50% 50%;
 

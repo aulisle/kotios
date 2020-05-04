@@ -35,7 +35,10 @@
         </base-button>
       </div>
       <div class="meaningful-images">
-        <img src="/uusikaupunki/sea.jpg" alt="Kodillasi on merkitystä" />
+        <img
+          src="https://kotios-bucket.s3.eu-north-1.amazonaws.com/assets/sea.jpg"
+          alt="Kodillasi on merkitystä"
+        />
       </div>
     </div>
 
@@ -68,7 +71,7 @@
     <div class="container-base activity-section">
       <div class="activity-images">
         <img
-          src="/uusikaupunki/piggy-bank.jpg"
+          src="https://kotios-bucket.s3.eu-north-1.amazonaws.com/assets/piggy-bank.jpg"
           alt="Säästä olemalla aktiivinen"
         />
       </div>

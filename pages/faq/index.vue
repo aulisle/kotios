@@ -120,7 +120,7 @@ export default {
 <style lang="scss" scoped>
 .hero {
   margin-bottom: 20px;
-  background-image: url('/what-is/hero-2.jpg');
+  background-image: url('https://kotios-bucket.s3.eu-north-1.amazonaws.com/assets/hero-2.jpg');
   background-size: cover;
   background-position: 50% 50%;
 }

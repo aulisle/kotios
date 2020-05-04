@@ -28,7 +28,7 @@
     <div class="total-price-section new-section container-base">
       <div class="total-price-start">
         <img
-          src="/uusikaupunki/piggy-bank.jpg"
+          src="https://kotios-bucket.s3.eu-north-1.amazonaws.com/assets/piggy-bank.jpg"
           alt="Mistä kotini kokonaishinta muodostuu?"
         />
       </div>
@@ -82,7 +82,7 @@
       </div>
       <div class="running-costs-end">
         <img
-          src="/uusikaupunki/coffee.jpg"
+          src="https://kotios-bucket.s3.eu-north-1.amazonaws.com/assets/coffee.jpg"
           alt="Mitä rahoitusvaihtoehtoja minulla on?"
         />
       </div>
