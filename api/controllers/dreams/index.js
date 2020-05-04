@@ -157,6 +157,9 @@ const controller = {
         return createNew(req, res)
       }
 
+      // eslint-disable-next-line
+      console.log('UPDATE RESULT', updateResult)
+
       await saveDreamToLead(updateResult.dreams[0])
     } catch (e) {
       // eslint-disable-next-line
