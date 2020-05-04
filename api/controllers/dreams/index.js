@@ -159,8 +159,11 @@ const controller = {
 
       // eslint-disable-next-line
       console.log('UPDATE RESULT', updateResult)
+      const dream = updateResult.dreams.find(dream => dream._id === dreamId)
 
-      await saveDreamToLead(updateResult.dreams[0])
+      // eslint-disable-next-line
+      console.log('FOUND DREAM', dream)
+      await saveDreamToLead(dream)
     } catch (e) {
       // eslint-disable-next-line
       console.error(e)
