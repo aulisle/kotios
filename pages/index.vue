@@ -80,7 +80,7 @@
           first-name="Aulis"
           last-name="Leinonen"
           image="/about-us/aulis.jpg"
-          role="Digiman"
+          role="Digikehittäjä"
           description="Aulis vastaa KOTIOS-palvelun digitaalisten ratkaisuiden kehittämisestä. Hänen työskentelyään motivoi hänen unelmansa toteuttaminen; hän voisi toden teolla sanoa: 'Olin mukana Suomen rakennuttamisen isoimmassa muutoksessa.'"
         />
       </div>

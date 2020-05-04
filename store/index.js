@@ -7,14 +7,19 @@ export const actions = {
   },
 
   async getSessionState({ dispatch, commit }) {
-    return dispatch('session/loadFromApi').then(data => {
-      if (!data || !data.userData) {
-        return
-      }
+    return dispatch('session/loadFromApi')
+      .then(data => {
+        if (!data || !data.userData) {
+          return
+        }
 
-      const { userData } = data
-      commit('defineDream/fromStore', userData.defineDream)
-      commit('interestMap/fromStore', userData.interestMap)
-    })
+        const { userData } = data
+        commit('defineDream/fromStore', userData.defineDream)
+        commit('interestMap/fromStore', userData.interestMap)
+      })
+      .catch(e => {
+        // eslint-disable-next-line
+        console.error(e)
+      })
   }
 }
