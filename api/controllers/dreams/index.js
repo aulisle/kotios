@@ -122,6 +122,9 @@ const controller = {
   update: async (req, res, next) => {
     const { dreamId } = req.params
 
+    // eslint-disable-next-line
+    console.log('RUN UPDATE DREAM')
+
     if (!req.sessionID) {
       // eslint-disable-next-line
       console.log('NO SESSION ID!')
