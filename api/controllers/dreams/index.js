@@ -160,8 +160,7 @@ const controller = {
       // eslint-disable-next-line
       console.log('UPDATE RESULT', updateResult)
       const dream = updateResult.dreams.find(el => {
-        // eslint-disable-next-line
-        console.log('DREAMMATCH', el._id, dreamId)
+        el._id.equals(dreamId)
         return el._id == dreamId
       })
 
