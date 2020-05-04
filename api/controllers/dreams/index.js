@@ -3,6 +3,9 @@ import Lead from '../../models/app/lead'
 import emailer from '../../emailer'
 
 const saveDreamToLead = async dream => {
+  // eslint-disable-next-line
+  console.log('SAVING DREAM TO LEAD')
+
   if (!dream.data || !dream.data.email || !dream._id) {
     // eslint-disable-next-line
     console.log('NO DREAM DATA OR EMAIL')
@@ -78,6 +81,9 @@ const saveDreamToLead = async dream => {
 }
 
 const createNew = async (req, res) => {
+  // eslint-disable-next-line
+  console.log('CREATE NEW DREAM')
+
   let dreamSession = await DreamSession.findOne({
     sessionId: req.sessionID
   }).exec()
@@ -98,6 +104,8 @@ const createNew = async (req, res) => {
     { data: req.body, createdAt: new Date() }
   ]
 
+  // eslint-disable-next-line
+  console.log('SAVING DREAM SESSION')
   await dreamSession.save()
 
   await saveDreamToLead(dreamSession.dreams[dreamSession.dreams.length - 1])
@@ -123,6 +131,9 @@ const controller = {
     // Remove ID
     delete req.body._id
     try {
+      // eslint-disable-next-line
+      console.log('TRY ONE AND UPDATE')
+
       let updateResult = await DreamSession.findOneAndUpdate(
         {
           sessionId: req.sessionID,
