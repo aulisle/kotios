@@ -159,10 +159,7 @@ const controller = {
 
       // eslint-disable-next-line
       console.log('UPDATE RESULT', updateResult)
-      const dream = updateResult.dreams.find(el => {
-        el._id.equals(dreamId)
-        return el._id == dreamId
-      })
+      const dream = updateResult.dreams.find(el => el._id.equals(dreamId))
 
       // eslint-disable-next-line
       console.log('FOUND DREAM', dream)
