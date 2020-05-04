@@ -4,6 +4,8 @@ import emailer from '../../emailer'
 
 const saveDreamToLead = async dream => {
   if (!dream.data || !dream.data.email || !dream._id) {
+    // eslint-disable-next-line
+    console.log('NO DREAM DATA OR EMAIL')
     return
   }
 
@@ -13,6 +15,8 @@ const saveDreamToLead = async dream => {
     { $pull: { dreams: { _id: dream._id } } }
   )
 
+  // eslint-disable-next-line
+  console.log('REMOVED LEAD')
   const email = dream.data.email.toLowerCase()
 
   let lead = await Lead.findOne({ email })
