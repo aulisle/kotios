@@ -24,7 +24,7 @@
       class="form"
       @submit.prevent="finalise"
     >
-      <base-field-set v-if="type === 0" title="Kodin maksimietäisyys pisteestä">
+      <base-field-set v-if="type === 0" title="Kohteen nimi">
         <base-input
           v-model="titleModel"
           label="Kohteen nimi"
