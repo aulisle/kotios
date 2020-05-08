@@ -23,8 +23,8 @@
 
           <h3 class="dream-section">Lisää alue unelmalistalle</h3>
           <p>
-            Oletko kiinnostunut osallitumisesta? Ota ensiaskel kotisi hankintaan
-            ja lisää alue omalle unelmalistallesi.
+            Oletko kiinnostunut osallistumisesta? Ota ensiaskel kotisi
+            hankintaan ja lisää alue omalle unelmalistallesi.
           </p>
           <p>
             Unelmalista on oma listasi, johon voit kerätä kiinnostavia kohteita.

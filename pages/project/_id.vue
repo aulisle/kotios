@@ -94,6 +94,7 @@
         </v-card-text>
       </v-card>
     </div>
+    <kotios-chat />
   </div>
 </template>
 
@@ -110,6 +111,7 @@ import ProjectStepsTab from '@/components/project/tabs/ProjectStepsTab'
 import ProjectLocationTab from '@/components/project/tabs/ProjectLocationTab'
 import ProjectPriceTab from '@/components/project/tabs/ProjectPriceTab'
 import ProjectPlotTab from '@/components/project/tabs/ProjectPlotTab'
+import KotiosChat from '@/components/common/KotiosChat'
 
 export default {
   components: {
@@ -122,7 +124,8 @@ export default {
     ProjectWhyTab,
     ProjectPriceTab,
     ProjectFirstStep,
-    ProjectPlotTab
+    ProjectPlotTab,
+    KotiosChat
   },
 
   mixins: [projectTypeMixin],

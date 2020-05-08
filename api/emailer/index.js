@@ -18,7 +18,7 @@ const DREAMS_SUBJECT = 'Kohde lisätty'
 let config = {}
 let $publicUrl = ''
 
-const SERVICE_EMAILS = ['aulis.leinonen@reason.fi']
+const SERVICE_EMAILS = ['aulis@kotios.fi', 'v-p@kotios.fi']
 
 const emailer = {
   /**

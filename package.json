@@ -72,6 +72,7 @@
     "vue-scroll-reveal": "^1.0.11",
     "vue-smooth-reflow": "^0.1.12",
     "vue-social-sharing": "^2.4.7",
+    "vue-tawk": "^1.0.1",
     "vuelidate": "^0.7.5",
     "vuetify": "^2.2.21",
     "winston": "^3.2.1",

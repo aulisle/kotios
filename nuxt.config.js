@@ -7,7 +7,9 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
-const description = 'KOTIOS — Rikastuttavampi tapa hankkia uusi koti'
+const description =
+  'KOTIOS — Rikastuttavampi tapa hankkia uusi koti. Tarjoamme uudenlaisen osallistavan asuntorakennuttamisen mallin. ' +
+  'Palvelumme tuo yhteen asukkaat, rakentajat, suunnittelijat ja kiinnostavat asuinpaikat.'
 
 export default {
   /*
@@ -193,7 +195,8 @@ export default {
     '~/plugins/socialSharing.js',
     { src: '~/plugins/googleMaps.js', ssr: false },
     { src: '~/plugins/directives.js', ssr: false },
-    { src: '~/plugins/imageViewer.js', ssr: false }
+    { src: '~/plugins/imageViewer.js', ssr: false },
+    { src: '~/plugins/vueTawk.js', ssr: false }
   ],
 
   router: {
@@ -263,8 +266,8 @@ export default {
   googleAnalytics: {
     id: 'UA-163453529-1',
     debug: {
-      enabled: process.env.NODE_ENV === 'development',
-      sendHitTask: true
+      enabled: false,
+      sendHitTask: false
     }
   },
 
