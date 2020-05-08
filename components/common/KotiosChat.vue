@@ -8,9 +8,7 @@ export default {
     if (this.$Tawk_API) {
       this.$Tawk_API.showWidget()
     } else {
-      this.$Tawk.$createChat(() => {
-        this.$Tawk_API.maximize()
-      })
+      this.$Tawk.$createChat(() => {})
     }
   },
   destroyed() {
