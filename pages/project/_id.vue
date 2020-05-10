@@ -20,20 +20,22 @@
       </div>
     </div>
 
-    <div class="projct-tab-selector container-base">
-      <v-tabs v-model="tab" class=" desktop-tab-bar">
-        <v-tab v-for="tabItem in tabs" :key="tabItem.value">
-          {{ tabItem.text }}
-        </v-tab>
-      </v-tabs>
-      <v-select
-        v-model="tab"
-        :items="tabs"
-        class="mobile-tab-selector"
-        attach
-        flat
-        filled
-      />
+    <div class="project-tab-selector">
+      <div class="container-base">
+        <v-tabs v-model="tab" class=" desktop-tab-bar">
+          <v-tab v-for="tabItem in tabs" :key="tabItem.value">
+            {{ tabItem.text }}
+          </v-tab>
+        </v-tabs>
+        <v-select
+          v-model="tab"
+          :items="tabs"
+          class="mobile-tab-selector"
+          attach
+          flat
+          filled
+        />
+      </div>
     </div>
 
     <v-tabs-items v-model="tab">
@@ -321,6 +323,11 @@ export default {
 
 .floating-add-button {
   margin-top: $u2;
+}
+
+.project-tab-selector {
+  margin-top: $u2;
+  border-bottom: 1px solid $color-hr;
 }
 
 @include media-breakpoint-up(lg) {

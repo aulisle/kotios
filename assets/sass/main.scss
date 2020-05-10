@@ -289,4 +289,14 @@ body {
   .v-card__title {
     word-break: keep-all !important;
   }
+  
+  .v-tab {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  .v-tab--active,
+  .v-tabs-slider {
+    background-color: $color-accent;
+    color: white !important;
+  }
 }
