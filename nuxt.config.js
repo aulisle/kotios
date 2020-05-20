@@ -8,7 +8,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 const description =
-  'KOTIOS — Rikastuttavampi tapa hankkia uusi koti. Tarjoamme uudenlaisen osallistavan asuntorakennuttamisen mallin. ' +
+  'KOTIOS — Rikastuttava tapa hankkia uusi koti. Tarjoamme uudenlaisen osallistavan asuntorakennuttamisen mallin. ' +
   'Palvelumme tuo yhteen asukkaat, rakentajat, suunnittelijat ja kiinnostavat asuinpaikat.'
 
 export default {

@@ -5,7 +5,7 @@
     <div class="hero">
       <div class="container-base">
         <h1 class="tagline">
-          Rikastuttavampi tapa hankkia koti
+          Rikastuttava tapa hankkia koti
         </h1>
 
         <p class="description">
