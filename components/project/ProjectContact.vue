@@ -3,7 +3,7 @@
     <h2>Yhteyshenkilöt</h2>
     <project-p>
       Jos kiinnostuit ja haluat tietää lisää hankkeesta tai KOTIOS-palvelusta,
-      hankenneuvontamme keskustelee mielellään kanssasi.
+      neuvontamme keskustelee mielellään kanssasi.
     </project-p>
 
     <div class="cards">

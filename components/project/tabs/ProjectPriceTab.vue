@@ -12,11 +12,10 @@
 
       <project-p>
         Käännämme ajattelun valtamallista toisin päin. Emme kerro, paljonko
-        kotisi tulee maksamaan, vaan kysymme millaisella budjetilla olet
-        liikkeellä. Uudessakaupungissa keskineliöhinta uudiskohteille on
-        kuitenkin noin 3 000€/m² ja vuokrahinta noin 12€/m². Oman kotisi
-        neliöhintaan voit vaikuttaa aktiivisuudellasi, roolillasi ja
-        suunnitteluratkaisuilla.
+        kotisi tulee maksamaan, vaan kysymme mitä asumisesi saa maksaa.
+        Uudessakaupungissa keskineliöhinta uudiskohteille on kuitenkin noin 3
+        000€/m² ja vuokrahinta noin 12€/m². Oman kotisi neliöhintaan voit
+        vaikuttaa aktiivisuudellasi, roolillasi ja suunnitteluratkaisuilla.
       </project-p>
       <project-p>Onko sinulla kysyttävää hinnasta?</project-p>
       <project-p>

@@ -29,7 +29,7 @@
       {
         "type": 3,
         "title": "Omistusasumista vuokrakohteen hinnalla",
-        "paragraphs": ["Asunto-osuuskunta mahdollistaa omistusasumisen ilman mittavaa pankkilainaa. KOTIOS-kohteet rahoitetaan asunto-osuuskuntamallin mukaisesti.",  "Rahoitus rakentuu ARAn takauslainasta ja asumisosuuskunnan liittymismaksuista. Asukkaille muodostuu vuokrasuhde osuuskuntaan ja osuuskunnan jäsenyyden kautta asukkaat pääsevät vaikuttamaan aivan kuten omistusasumisessa. Asukas maksaa osuuskunnalle 5-10 % liittymismaksun, joka oikeuttaa hallinnoimaan asuntoa.", "Vuokratuloilla osuuskunta kattaa rakennuslainan lyhennykset ja kaikki kiinteistön hoitokulut. Kun osuuskunnan velka on maksettu, on asunto sinun!"]
+        "paragraphs": ["Asunto-osuuskunta mahdollistaa omistusasumisen ilman mittavaa pankkilainaa. Tämä kohde rahoitetaan asunto-osuuskuntamallin mukaisesti.",  "Rahoitus rakentuu ARAn takauslainasta ja asumisosuuskunnan liittymismaksuista. Asukkaille muodostuu vuokrasuhde osuuskuntaan ja osuuskunnan jäsenyyden kautta asukkaat pääsevät vaikuttamaan aivan kuten omistusasumisessa. Asukas maksaa osuuskunnalle 5-10 % liittymismaksun, joka oikeuttaa hallinnoimaan asuntoa.", "Vuokratuloilla osuuskunta kattaa rakennuslainan lyhennykset ja kaikki kiinteistön hoitokulut. Kun osuuskunnan velka on maksettu, sinulla on mahdollisuus lunastaa asunto itsellesi."]
       },
       {
         "type": 4,
@@ -60,8 +60,8 @@
     "plot": {
       "owner": "Varpe Oy",
       "ownerUrl": "http://www.varpe.fi",
-      "area": 3559,
-      "buildable": 5600
+      "area": 3752,
+      "buildable": 2800
     }
   }
 ]

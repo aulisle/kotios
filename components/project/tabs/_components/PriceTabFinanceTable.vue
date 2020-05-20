@@ -20,7 +20,7 @@
     </comparison-table-row>
     <comparison-table-row title="Henkilökohtainen vastuu velasta">
       <comparison-table-cell>
-        <base-icon>mdi-minus</base-icon>
+        <base-icon>mdi-check</base-icon>
       </comparison-table-cell>
       <comparison-table-cell highlight>
         <base-icon color="white">mdi-minus</base-icon>
@@ -76,19 +76,31 @@
         >~5% tuotantohinnasta</comparison-table-cell
       >
       <comparison-table-cell>
-        ~2kk vuokra
+        ~2kk vuokravakuus
       </comparison-table-cell>
     </comparison-table-row>
 
-    <comparison-table-row title="Maksettava">
+    <comparison-table-row title="Kuukausimaksut">
       <comparison-table-cell>
-        Yhtiövastike + Grynderin velkajärjestely
+        Hoito- ja Rahoitusvastike
       </comparison-table-cell>
-      <comparison-table-cell highlight
-        >Vuokra + Lunastusosuus</comparison-table-cell
-      >
+      <comparison-table-cell highlight>
+        Omakustannus-perusteinen vuokra
+      </comparison-table-cell>
       <comparison-table-cell>
-        Vuokra
+        Markkinahinta-perusteinen vuokra
+      </comparison-table-cell>
+    </comparison-table-row>
+
+    <comparison-table-row title="Lunastusmaksu">
+      <comparison-table-cell>
+        <base-icon>mdi-minus</base-icon>
+      </comparison-table-cell>
+      <comparison-table-cell highlight>
+        <base-icon color="white">mdi-check</base-icon>
+      </comparison-table-cell>
+      <comparison-table-cell>
+        <base-icon>mdi-minus</base-icon>
       </comparison-table-cell>
     </comparison-table-row>
   </comparison-table>
