@@ -1,6 +1,8 @@
 # Kotios
 
-Nuxt.js (Vue) + Express + MongodDB - Baugruppe application.
+[Nuxt.js](https://nuxtjs.org/docs/2.x/get-started/routing) ([Vue](https://vuejs.org/v2/guide/)) + [Express](https://expressjs.com/en/starter/hello-world.html) + MongodDB - Baugruppe application.
+
+
 
 ## Build Setup
 
