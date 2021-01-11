@@ -6,9 +6,14 @@
 
 ## Build Setup
 
+In order to run the server locally, you need to install the following: 
+1. [Node.js](https://nodejs.org/en/)
+2. [MongoDB](https://www.mongodb.com/try/download/community)
+3. [elasticsearch](https://www.elastic.co/downloads/elasticsearch).
+
 Before building and running, 
 * create an `.env`-file based on `.env.template`
-* make sure you have mongodb running.
+* make sure you have mongodb and elastic running.
 
 The `.env`-file contains the environment variables.
 
